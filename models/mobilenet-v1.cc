@@ -115,55 +115,55 @@ ExecutionPlan MobileNetV1(pthreadpool_t threadpool) {
   std::generate(w4, w4 + 1152, std::ref(f32rng));
   std::generate(w5, w5 + 48, std::ref(f32rng));
   std::generate(w6, w6 + 432, std::ref(f32rng));
-std::generate(w7, w7 + 48, std::ref(f32rng));
-std::generate(w8, w8 + 4608, std::ref(f32rng));
-std::generate(w9, w9 + 96, std::ref(f32rng));
-std::generate(w10, w10 + 864, std::ref(f32rng));
-std::generate(w11, w11 + 96, std::ref(f32rng));
-std::generate(w12, w12 + 9216, std::ref(f32rng));
-std::generate(w13, w13 + 96, std::ref(f32rng));
-std::generate(w14, w14 + 864, std::ref(f32rng));
-std::generate(w15, w15 + 96, std::ref(f32rng));
-std::generate(w16, w16 + 18432, std::ref(f32rng));
-std::generate(w17, w17 + 192, std::ref(f32rng));
-std::generate(w18, w18 + 1728, std::ref(f32rng));
-std::generate(w19, w19 + 192, std::ref(f32rng));
-std::generate(w20, w20 + 36864, std::ref(f32rng));
-std::generate(w21, w21 + 192, std::ref(f32rng));
-std::generate(w22, w22 + 1728, std::ref(f32rng));
-std::generate(w23, w23 + 192, std::ref(f32rng));
-std::generate(w24, w24 + 147456, std::ref(f32rng));
-std::generate(w25, w25 + 384, std::ref(f32rng));
-std::generate(w26, w26 + 3456, std::ref(f32rng));
-std::generate(w27, w27 + 384, std::ref(f32rng));
-std::generate(w28, w28 + 147456, std::ref(f32rng));
-std::generate(w29, w29 + 384, std::ref(f32rng));
-std::generate(w30, w30 + 3456, std::ref(f32rng));
-std::generate(w31, w31 + 384, std::ref(f32rng));
-std::generate(w32, w32 + 147456, std::ref(f32rng));
-std::generate(w33, w33 + 384, std::ref(f32rng));
-std::generate(w34, w34 + 3456, std::ref(f32rng));
-std::generate(w35, w35 + 384, std::ref(f32rng));
-std::generate(w36, w36 + 147456, std::ref(f32rng));
-std::generate(w37, w37 + 384, std::ref(f32rng));
-std::generate(w38, w38 + 3456, std::ref(f32rng));
-std::generate(w39, w39 + 384, std::ref(f32rng));
-std::generate(w40, w40 + 147456, std::ref(f32rng));
-std::generate(w41, w41 + 384, std::ref(f32rng));
-std::generate(w42, w42 + 3456, std::ref(f32rng));
-std::generate(w43, w43 + 384, std::ref(f32rng));
-std::generate(w44, w44 + 147456, std::ref(f32rng));
-std::generate(w45, w45 + 384, std::ref(f32rng));
-std::generate(w46, w46 + 3456, std::ref(f32rng));
-std::generate(w47, w47 + 384, std::ref(f32rng));
-std::generate(w48, w48 + 29412, std::ref(f32rng));
-std::generate(w49, w49 + 768, std::ref(f32rng));
-std::generate(w50, w50 + 6912, std::ref(f32rng));
-std::generate(w51, w51 + 768, std::ref(f32rng));
-std::generate(w52, w52 + 589824, std::ref(f32rng));
-std::generate(w53, w53 + 768, std::ref(f32rng));
-std::generate(w54, w54 + 768000, std::ref(f32rng));
-std::generate(w55, w55 + 1000, std::ref(f32rng));
+  std::generate(w7, w7 + 48, std::ref(f32rng));
+  std::generate(w8, w8 + 4608, std::ref(f32rng));
+  std::generate(w9, w9 + 96, std::ref(f32rng));
+  std::generate(w10, w10 + 864, std::ref(f32rng));
+  std::generate(w11, w11 + 96, std::ref(f32rng));
+  std::generate(w12, w12 + 9216, std::ref(f32rng));
+  std::generate(w13, w13 + 96, std::ref(f32rng));
+  std::generate(w14, w14 + 864, std::ref(f32rng));
+  std::generate(w15, w15 + 96, std::ref(f32rng));
+  std::generate(w16, w16 + 18432, std::ref(f32rng));
+  std::generate(w17, w17 + 192, std::ref(f32rng));
+  std::generate(w18, w18 + 1728, std::ref(f32rng));
+  std::generate(w19, w19 + 192, std::ref(f32rng));
+  std::generate(w20, w20 + 36864, std::ref(f32rng));
+  std::generate(w21, w21 + 192, std::ref(f32rng));
+  std::generate(w22, w22 + 1728, std::ref(f32rng));
+  std::generate(w23, w23 + 192, std::ref(f32rng));
+  std::generate(w24, w24 + 147456, std::ref(f32rng));
+  std::generate(w25, w25 + 384, std::ref(f32rng));
+  std::generate(w26, w26 + 3456, std::ref(f32rng));
+  std::generate(w27, w27 + 384, std::ref(f32rng));
+  std::generate(w28, w28 + 147456, std::ref(f32rng));
+  std::generate(w29, w29 + 384, std::ref(f32rng));
+  std::generate(w30, w30 + 3456, std::ref(f32rng));
+  std::generate(w31, w31 + 384, std::ref(f32rng));
+  std::generate(w32, w32 + 147456, std::ref(f32rng));
+  std::generate(w33, w33 + 384, std::ref(f32rng));
+  std::generate(w34, w34 + 3456, std::ref(f32rng));
+  std::generate(w35, w35 + 384, std::ref(f32rng));
+  std::generate(w36, w36 + 147456, std::ref(f32rng));
+  std::generate(w37, w37 + 384, std::ref(f32rng));
+  std::generate(w38, w38 + 3456, std::ref(f32rng));
+  std::generate(w39, w39 + 384, std::ref(f32rng));
+  std::generate(w40, w40 + 147456, std::ref(f32rng));
+  std::generate(w41, w41 + 384, std::ref(f32rng));
+  std::generate(w42, w42 + 3456, std::ref(f32rng));
+  std::generate(w43, w43 + 384, std::ref(f32rng));
+  std::generate(w44, w44 + 147456, std::ref(f32rng));
+  std::generate(w45, w45 + 384, std::ref(f32rng));
+  std::generate(w46, w46 + 3456, std::ref(f32rng));
+  std::generate(w47, w47 + 384, std::ref(f32rng));
+  std::generate(w48, w48 + 29412, std::ref(f32rng));
+  std::generate(w49, w49 + 768, std::ref(f32rng));
+  std::generate(w50, w50 + 6912, std::ref(f32rng));
+  std::generate(w51, w51 + 768, std::ref(f32rng));
+  std::generate(w52, w52 + 589824, std::ref(f32rng));
+  std::generate(w53, w53 + 768, std::ref(f32rng));
+  std::generate(w54, w54 + 768000, std::ref(f32rng));
+  std::generate(w55, w55 + 1000, std::ref(f32rng));
   
   ExecutionPlan operators;
   xnn_status status;
@@ -203,8 +203,8 @@ std::generate(w55, w55 + 1000, std::ref(f32rng));
 
   xnn_operator_t op1 = nullptr;
   status = xnn_create_convolution2d_nhwc_f32(
-    0 /* top padding */, 2 /* right padding */,
-    2 /* bottom padding */, 0 /* left padding */,
+    1 /* top padding */, 1 /* right padding */,
+    1 /* bottom padding */, 1 /* left padding */,
     3 /* kernel height */, 3 /* kernel width */,
     1 /* subsampling height */, 1 /* subsampling width */,
     1 /* dilation_height */, 1 /* dilation_width */,
@@ -331,8 +331,8 @@ std::generate(w55, w55 + 1000, std::ref(f32rng));
 
   xnn_operator_t op5 = nullptr;
   status = xnn_create_convolution2d_nhwc_f32(
-    0 /* top padding */, 2 /* right padding */,
-    2 /* bottom padding */, 0 /* left padding */,
+    1 /* top padding */, 1 /* right padding */,
+    1 /* bottom padding */, 1 /* left padding */,
     3 /* kernel height */, 3 /* kernel width */,
     1 /* subsampling height */, 1 /* subsampling width */,
     1 /* dilation_height */, 1 /* dilation_width */,
@@ -459,8 +459,8 @@ std::generate(w55, w55 + 1000, std::ref(f32rng));
 
   xnn_operator_t op9 = nullptr;
   status = xnn_create_convolution2d_nhwc_f32(
-    0 /* top padding */, 2 /* right padding */,
-    2 /* bottom padding */, 0 /* left padding */,
+    1 /* top padding */, 1 /* right padding */,
+    1 /* bottom padding */, 1 /* left padding */,
     3 /* kernel height */, 3 /* kernel width */,
     1 /* subsampling height */, 1 /* subsampling width */,
     1 /* dilation_height */, 1 /* dilation_width */,
@@ -587,8 +587,8 @@ std::generate(w55, w55 + 1000, std::ref(f32rng));
 
   xnn_operator_t op13 = nullptr;
   status = xnn_create_convolution2d_nhwc_f32(
-    0 /* top padding */, 2 /* right padding */,
-    2 /* bottom padding */, 0 /* left padding */,
+    0 /* top padding */, 1 /* right padding */,
+    1 /* bottom padding */, 0 /* left padding */,
     3 /* kernel height */, 3 /* kernel width */,
     1 /* subsampling height */, 1 /* subsampling width */,
     1 /* dilation_height */, 1 /* dilation_width */,
@@ -651,8 +651,8 @@ std::generate(w55, w55 + 1000, std::ref(f32rng));
 
   xnn_operator_t op15 = nullptr;
   status = xnn_create_convolution2d_nhwc_f32(
-    0 /* top padding */, 2 /* right padding */,
-    2 /* bottom padding */, 0 /* left padding */,
+    0 /* top padding */, 1 /* right padding */,
+    1 /* bottom padding */, 0 /* left padding */,
     3 /* kernel height */, 3 /* kernel width */,
     1 /* subsampling height */, 1 /* subsampling width */,
     1 /* dilation_height */, 1 /* dilation_width */,
@@ -715,8 +715,8 @@ std::generate(w55, w55 + 1000, std::ref(f32rng));
 
   xnn_operator_t op17 = nullptr;
   status = xnn_create_convolution2d_nhwc_f32(
-    0 /* top padding */, 2 /* right padding */,
-    2 /* bottom padding */, 0 /* left padding */,
+    0 /* top padding */, 1 /* right padding */,
+    1 /* bottom padding */, 0 /* left padding */,
     3 /* kernel height */, 3 /* kernel width */,
     1 /* subsampling height */, 1 /* subsampling width */,
     1 /* dilation_height */, 1 /* dilation_width */,
@@ -777,8 +777,8 @@ std::generate(w55, w55 + 1000, std::ref(f32rng));
   }
     xnn_operator_t op19 = nullptr;
   status = xnn_create_convolution2d_nhwc_f32(
-    0 /* top padding */, 2 /* right padding */,
-    2 /* bottom padding */, 0 /* left padding */,
+    1 /* top padding */, 1 /* right padding */,
+    1 /* bottom padding */, 1 /* left padding */,
     3 /* kernel height */, 3 /* kernel width */,
     1 /* subsampling height */, 1 /* subsampling width */,
     1 /* dilation_height */, 1 /* dilation_width */,
@@ -840,8 +840,8 @@ std::generate(w55, w55 + 1000, std::ref(f32rng));
   
   xnn_operator_t op21 = nullptr;
   status = xnn_create_convolution2d_nhwc_f32(
-    0 /* top padding */, 2 /* right padding */,
-    2 /* bottom padding */, 0 /* left padding */,
+    1 /* top padding */, 1 /* right padding */,
+    1 /* bottom padding */, 1 /* left padding */,
     3 /* kernel height */, 3 /* kernel width */,
     1 /* subsampling height */, 1 /* subsampling width */,
     1 /* dilation_height */, 1 /* dilation_width */,
@@ -968,8 +968,8 @@ std::generate(w55, w55 + 1000, std::ref(f32rng));
   
   xnn_operator_t op25 = nullptr;
   status = xnn_create_convolution2d_nhwc_f32(
-    0 /* top padding */, 2 /* right padding */,
-    2 /* bottom padding */, 0 /* left padding */,
+    1 /* top padding */, 1 /* right padding */,
+    1 /* bottom padding */, 1 /* left padding */,
     3 /* kernel height */, 3 /* kernel width */,
     1 /* subsampling height */, 1 /* subsampling width */,
     1 /* dilation_height */, 1 /* dilation_width */,
