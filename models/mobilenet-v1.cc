@@ -20,8 +20,8 @@ ExecutionPlan MobileNetV1(pthreadpool_t threadpool) {
   alignas(16) static float v3[306432];
   alignas(16) static float v4[306432];
 
-  alignas(16) static float w0[648];
-  alignas(16) static float w1[24];
+  alignas(16) static float w0[6480];
+  alignas(16) static float w1[240];
   alignas(16) static float w2[216];
   alignas(16) static float w3[24];
 
