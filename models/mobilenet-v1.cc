@@ -44,8 +44,8 @@ ExecutionPlan MobileNetV1(pthreadpool_t threadpool) {
 
   xnn_operator_t op0 = nullptr;
   status = xnn_create_convolution2d_nchw_f32(
-    1 /* top padding */, 1 /* right padding */,
-    1 /* bottom padding */, 1 /* left padding */,
+    1 /* top padding */, 0 /* right padding */,
+    0 /* bottom padding */, 1 /* left padding */,
     3 /* kernel height */, 3 /* kernel width */,
     2 /* subsampling height */, 2 /* subsampling width */,
     1 /* dilation_height */, 1 /* dilation_width */,
