@@ -55,7 +55,7 @@ ExecutionPlan MobileNetV1(pthreadpool_t threadpool) {
     3 /* input pixel stride */,
     24 /* output pixel stride */,
     w0, w1,
-    0.0f /* output min */, 6.0f /* output max */,
+    (float)0.0f /* output min */, (float)6.0f /* output max */,
     XNN_FLAG_INPUT_NHWC/* flags */,
     &op0);
   if (status != xnn_status_success) {
