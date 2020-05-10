@@ -185,13 +185,7 @@ enum xnn_status xnn_create_convolution2d_nchw_f32(
   {
     ukernel_type = xnn_ukernel_type_dwconv;
     dwconv_parameters = &xnn_params.f32.spchw_dwconv5x5s2;
-  } else if(is_3x3 && subsampling_height == 2 && subsampling_width == 2 &&
-    input_padding_top == 1 && input_padding_left == 1 && input_padding_bottom == 1 && input_padding_right == 1 &&
-    nhwc_input && groups == 1 ){
-    xnn_log_error(
-      "WTF");
-    goto error;
-  }else {
+  } else {
     xnn_log_error(
       "failed to create Convolution operator: only selected Convolution parameters are supported");
     goto error;
