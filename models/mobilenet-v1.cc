@@ -52,10 +52,8 @@ ExecutionPlan MobileNetV1(pthreadpool_t threadpool) {
     1 /* groups */,
     3 /* input channels per group */,
     24 /* output_channels_per_group */,
-    3 /* input pixel stride */,
-    24 /* output pixel stride */,
     w0, w1,
-    (float)0.0f /* output min */, (float)6.0f /* output max */,
+    0.0f /* output min */, 6.0f /* output max */,
     XNN_FLAG_INPUT_NHWC/* flags */,
     &op0);
   if (status != xnn_status_success) {
@@ -91,8 +89,6 @@ ExecutionPlan MobileNetV1(pthreadpool_t threadpool) {
     24 /* groups */,
     1 /* input channels per group */,
     1 /* output_channels_per_group */,
-    24 /* input pixel stride */,
-    24 /* output pixel stride */,
     w2, w3,
     0.0f /* output min */, 6.0f /* output max */,
     0 /* flags */,
