@@ -914,6 +914,67 @@ SET(XNNPACK_AARCH64_NEONFMA_MICROKERNEL_SRCS
   src/math/sigmoid-neonfma-rr2-lut64-p2-div.c
   src/math/sigmoid-neonfma-rr2-p5-div.c)
 
+SET(XNNPACK_AARCH64_NEONFP16ARITH_MICROKERNEL_SRCS
+  src/f16-vbinary/gen/vaddc-minmax-neonfp16arith-x16.c
+  src/f16-vbinary/gen/vaddc-minmax-neonfp16arith-x8.c
+  src/f16-vbinary/gen/vadd-minmax-neonfp16arith-x16.c
+  src/f16-vbinary/gen/vadd-minmax-neonfp16arith-x8.c
+  src/f16-vbinary/gen/vdivc-minmax-neonfp16arith-x16.c
+  src/f16-vbinary/gen/vdivc-minmax-neonfp16arith-x8.c
+  src/f16-vbinary/gen/vdiv-minmax-neonfp16arith-x16.c
+  src/f16-vbinary/gen/vdiv-minmax-neonfp16arith-x8.c
+  src/f16-vbinary/gen/vmaxc-neonfp16arith-x16.c
+  src/f16-vbinary/gen/vmaxc-neonfp16arith-x8.c
+  src/f16-vbinary/gen/vmax-neonfp16arith-x16.c
+  src/f16-vbinary/gen/vmax-neonfp16arith-x8.c
+  src/f16-vbinary/gen/vminc-neonfp16arith-x16.c
+  src/f16-vbinary/gen/vminc-neonfp16arith-x8.c
+  src/f16-vbinary/gen/vmin-neonfp16arith-x16.c
+  src/f16-vbinary/gen/vmin-neonfp16arith-x8.c
+  src/f16-vbinary/gen/vmulc-minmax-neonfp16arith-x16.c
+  src/f16-vbinary/gen/vmulc-minmax-neonfp16arith-x8.c
+  src/f16-vbinary/gen/vmul-minmax-neonfp16arith-x16.c
+  src/f16-vbinary/gen/vmul-minmax-neonfp16arith-x8.c
+  src/f16-vbinary/gen/vrdivc-minmax-neonfp16arith-x16.c
+  src/f16-vbinary/gen/vrdivc-minmax-neonfp16arith-x8.c
+  src/f16-vbinary/gen/vrsubc-minmax-neonfp16arith-x16.c
+  src/f16-vbinary/gen/vrsubc-minmax-neonfp16arith-x8.c
+  src/f16-vbinary/gen/vsubc-minmax-neonfp16arith-x16.c
+  src/f16-vbinary/gen/vsubc-minmax-neonfp16arith-x8.c
+  src/f16-vbinary/gen/vsub-minmax-neonfp16arith-x16.c
+  src/f16-vbinary/gen/vsub-minmax-neonfp16arith-x8.c
+  src/f16-gemm/gen/1x8-minmax-neonfp16arith-ld64.c
+  src/f16-gemm/gen/4x8-minmax-neonfp16arith-ld64.c
+  src/f16-gemm/gen/6x8-minmax-neonfp16arith-ld64.c
+  src/f16-gemm/gen/8x8-minmax-neonfp16arith-ld64.c
+  src/f16-gemm/gen-inc/1x8inc-minmax-neonfp16arith-ld64.c
+  src/f16-gemm/gen-inc/4x8inc-minmax-neonfp16arith-ld64.c
+  src/f16-gemm/gen-inc/6x8inc-minmax-neonfp16arith-ld64.c
+  src/f16-gemm/gen-inc/8x8inc-minmax-neonfp16arith-ld64.c
+  src/f16-igemm/gen/1x8-minmax-neonfp16arith-ld64.c
+  src/f16-igemm/gen/4x8-minmax-neonfp16arith-ld64.c
+  src/f16-igemm/gen/6x8-minmax-neonfp16arith-ld64.c
+  src/f16-igemm/gen/8x8-minmax-neonfp16arith-ld64.c
+  src/f16-gemm/gen/1x16-minmax-neonfp16arith-ld64.c
+  src/f16-gemm/gen/4x16-minmax-neonfp16arith-ld64.c
+  src/f16-gemm/gen/6x16-minmax-neonfp16arith-ld64.c
+  src/f16-gemm/gen/8x16-minmax-neonfp16arith-ld64.c
+  src/f16-gemm/gen-inc/1x16inc-minmax-neonfp16arith-ld64.c
+  src/f16-gemm/gen-inc/4x16inc-minmax-neonfp16arith-ld64.c
+  src/f16-gemm/gen-inc/6x16inc-minmax-neonfp16arith-ld64.c
+  src/f16-gemm/gen-inc/8x16inc-minmax-neonfp16arith-ld64.c
+  src/f16-igemm/gen/1x16-minmax-neonfp16arith-ld64.c
+  src/f16-igemm/gen/4x16-minmax-neonfp16arith-ld64.c
+  src/f16-igemm/gen/6x16-minmax-neonfp16arith-ld64.c
+  src/f16-igemm/gen/8x16-minmax-neonfp16arith-ld64.c
+  src/f16-spmm/gen/8x1-minmax-neonfp16arith.c
+  src/f16-spmm/gen/8x1-minmax-neonfp16arith-unroll2.c
+  src/f16-spmm/gen/16x1-minmax-neonfp16arith.c
+  src/f16-spmm/gen/16x1-minmax-neonfp16arith-unroll2.c
+  src/f16-spmm/gen/24x1-minmax-neonfp16arith.c
+  src/f16-spmm/gen/24x1-minmax-neonfp16arith-unroll2.c
+  src/f16-spmm/gen/32x1-minmax-neonfp16arith.c
+  src/f16-spmm/gen/32x1-minmax-neonfp16arith-unroll2.c)
 
 SET(XNNPACK_SSE_MICROKERNEL_SRCS
   src/f32-avgpool/9p8x-minmax-sse-c4.c
@@ -1554,6 +1615,7 @@ IF(CMAKE_SYSTEM_PROCESSOR STREQUAL "aarch64" OR IOS_ARCH MATCHES "^arm64.*")
   LIST(APPEND XNNPACK_MICROKERNEL_SRCS ${XNNPACK_NEONFMA_MICROKERNEL_SRCS})
   LIST(APPEND XNNPACK_MICROKERNEL_SRCS ${XNNPACK_NEONV8_MICROKERNEL_SRCS})
   LIST(APPEND XNNPACK_MICROKERNEL_SRCS ${XNNPACK_AARCH64_NEONFMA_MICROKERNEL_SRCS})
+  LIST(APPEND XNNPACK_MICROKERNEL_SRCS ${XNNPACK_AARCH64_NEONFP16ARITH_MICROKERNEL_SRCS})
   LIST(APPEND XNNPACK_MICROKERNEL_SRCS ${XNNPACK_AARCH64_ASM_MICROKERNEL_SRCS})
 ENDIF()
 IF(CMAKE_SYSTEM_PROCESSOR MATCHES "^(i[3-6]86|x86_64|AMD64)$" OR IOS_ARCH MATCHES "^(i386|x86_64|AMD64)$")
@@ -1590,6 +1652,7 @@ IF(CMAKE_SYSTEM_PROCESSOR MATCHES "^armv[5-8]" OR IOS_ARCH MATCHES "^armv7")
   ENDIF()
 ENDIF()
 IF(CMAKE_SYSTEM_PROCESSOR STREQUAL "aarch64" OR IOS_ARCH MATCHES "^arm64.*")
+  SET_PROPERTY(SOURCE ${XNNPACK_AARCH64_NEONFP16ARITH_MICROKERNEL_SRCS} APPEND_STRING PROPERTY COMPILE_FLAGS " -march=armv8.2-a+fp16 ")
   SET_PROPERTY(SOURCE ${XNNPACK_AARCH64_ASM_MICROKERNEL_SRCS} APPEND_STRING PROPERTY COMPILE_FLAGS " -march=armv8.2-a+fp16 ")
   IF(IOS)
     SET_PROPERTY(SOURCE ${XNNPACK_AARCH64_ASM_MICROKERNEL_SRCS} APPEND_STRING PROPERTY COMPILE_FLAGS " -arch ${IOS_ARCH} ")
