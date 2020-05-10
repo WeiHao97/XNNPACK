@@ -54,7 +54,7 @@ ExecutionPlan MobileNetV1(pthreadpool_t threadpool) {
     24 /* output_channels_per_group */,
     w0, w1,
     0.0f /* output min */, 6.0f /* output max */,
-    XNN_FLAG_INPUT_NHWC/* flags */,
+    0/* flags */,
     &op0);
   if (status != xnn_status_success) {
     std::cerr << "failed to create operation #0" << std::endl;
