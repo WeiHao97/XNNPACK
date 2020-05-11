@@ -102,9 +102,9 @@ ExecutionPlan MobileNetV1(pthreadpool_t threadpool) {
   status = xnn_setup_convolution2d_nchw_f32(
   op1,
   1,//size_t batch_size,
-  114*112*24,//size_t input_batch_stride,
+  112*112*24,//size_t input_batch_stride,
   112*112*24,//size_t output_batch_stride,
-  114, //input_height,
+  112, //input_height,
   112, //input_width,
   &v3[0],//const float* input,
   &v4[0],//float* output,
