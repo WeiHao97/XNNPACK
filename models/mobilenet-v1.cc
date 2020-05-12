@@ -17,8 +17,8 @@ namespace models {
 
 ExecutionPlan MobileNetV1(pthreadpool_t threadpool) {
   alignas(16) static float v2[150528];
-  alignas(16) static float v3[306432];
-  alignas(16) static float v4[306432];
+  alignas(16) static float v3[301056];
+  alignas(16) static float v4[301056];
 
   alignas(16) static float w0[648];
   alignas(16) static float w1[24];
@@ -31,7 +31,7 @@ ExecutionPlan MobileNetV1(pthreadpool_t threadpool) {
   std::bernoulli_distribution random_bool_generator(0.1);//Probability of 1's
   auto f32rng = std::bind(random_bool_generator, rng);
   std::generate(v2, v2 + 150528, std::ref(f32rng));
-  std::generate(v3+301056, v3 + 306432, std::ref(f32rng));
+  std::generate(v3+301056, v3 + 301056, std::ref(f32rng));
   std::generate(w0, w0 + 648, std::ref(f32rng));
   std::generate(w1, w1 + 24, std::ref(f32rng));
   std::generate(w2, w2 + 216, std::ref(f32rng));
