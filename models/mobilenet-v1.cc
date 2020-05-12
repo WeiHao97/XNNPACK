@@ -480,8 +480,8 @@ ExecutionPlan MobileNetV1(pthreadpool_t threadpool) {
   1,//size_t batch_size,
   28*28*96,//size_t input_batch_stride,
   28*28*192,//size_t output_batch_stride,
-  56, //input_height,
-  56, //input_width,
+  28, //input_height,
+  28, //input_width,
   &v10[0],//const float* input,
   &v11[0],//float* output,
   threadpool);
