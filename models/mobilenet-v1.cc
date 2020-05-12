@@ -353,7 +353,7 @@ ExecutionPlan MobileNetV1(pthreadpool_t threadpool) {
   xnn_operator_t op5 = nullptr;
   status = xnn_create_convolution2d_nchw_f32(
     1 /* top padding */, 1 /* right padding */,
-    1 /* bottom padding */, 1 /* left padding */,
+    0 /* bottom padding */, 1 /* left padding */,
     3 /* kernel height */, 3 /* kernel width */,
     1 /* subsampling height */, 1 /* subsampling width */,
     1 /* dilation_height */, 1 /* dilation_width */,
@@ -422,8 +422,8 @@ ExecutionPlan MobileNetV1(pthreadpool_t threadpool) {
 
   xnn_operator_t op7 = nullptr;
   status = xnn_create_convolution2d_nchw_f32(
-    0 /* top padding */, 1 /* right padding */,
-    1 /* bottom padding */, 1 /* left padding */,
+    1 /* top padding */, 1 /* right padding */,
+    0 /* bottom padding */, 1 /* left padding */,
     3 /* kernel height */, 3 /* kernel width */,
     2 /* subsampling height */, 2 /* subsampling width */,
     1 /* dilation_height */, 1 /* dilation_width */,
@@ -562,8 +562,8 @@ ExecutionPlan MobileNetV1(pthreadpool_t threadpool) {
 
   xnn_operator_t op11 = nullptr;
   status = xnn_create_convolution2d_nchw_f32(
-    0 /* top padding */, 1 /* right padding */,
-    1 /* bottom padding */, 0 /* left padding */,
+    1 /* top padding */, 1 /* right padding */,
+    0 /* bottom padding */, 1 /* left padding */,
     3 /* kernel height */, 3 /* kernel width */,
     2 /* subsampling height */, 2 /* subsampling width */,
     1 /* dilation_height */, 1 /* dilation_width */,
@@ -632,8 +632,8 @@ ExecutionPlan MobileNetV1(pthreadpool_t threadpool) {
 
   xnn_operator_t op13 = nullptr;
   status = xnn_create_convolution2d_nchw_f32(
-    0 /* top padding */, 1 /* right padding */,
-    1 /* bottom padding */, 0 /* left padding */,
+    1 /* top padding */, 1 /* right padding */,
+    0 /* bottom padding */, 1 /* left padding */,
     3 /* kernel height */, 3 /* kernel width */,
     1 /* subsampling height */, 1 /* subsampling width */,
     1 /* dilation_height */, 1 /* dilation_width */,
@@ -702,8 +702,8 @@ ExecutionPlan MobileNetV1(pthreadpool_t threadpool) {
 
   xnn_operator_t op15 = nullptr;
   status = xnn_create_convolution2d_nchw_f32(
-    0 /* top padding */, 1 /* right padding */,
-    1 /* bottom padding */, 0 /* left padding */,
+    1 /* top padding */, 1 /* right padding */,
+    0 /* bottom padding */, 1 /* left padding */,
     3 /* kernel height */, 3 /* kernel width */,
     1 /* subsampling height */, 1 /* subsampling width */,
     1 /* dilation_height */, 1 /* dilation_width */,
@@ -772,8 +772,8 @@ ExecutionPlan MobileNetV1(pthreadpool_t threadpool) {
 
   xnn_operator_t op17 = nullptr;
   status = xnn_create_convolution2d_nchw_f32(
-    0 /* top padding */, 1 /* right padding */,
-    1 /* bottom padding */, 0 /* left padding */,
+    1 /* top padding */, 1 /* right padding */,
+    0 /* bottom padding */, 1 /* left padding */,
     3 /* kernel height */, 3 /* kernel width */,
     1 /* subsampling height */, 1 /* subsampling width */,
     1 /* dilation_height */, 1 /* dilation_width */,
@@ -982,8 +982,8 @@ ExecutionPlan MobileNetV1(pthreadpool_t threadpool) {
 
   xnn_operator_t op23 = nullptr;
   status = xnn_create_convolution2d_nchw_f32(
-    0 /* top padding */, 1 /* right padding */,
-    1 /* bottom padding */, 0 /* left padding */,
+    1 /* top padding */, 1 /* right padding */,
+    0 /* bottom padding */, 1 /* left padding */,
     3 /* kernel height */, 3 /* kernel width */,
     2 /* subsampling height */, 2 /* subsampling width */,
     1 /* dilation_height */, 1 /* dilation_width */,
