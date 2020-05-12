@@ -243,7 +243,7 @@ ExecutionPlan MobileNetV1(pthreadpool_t threadpool) {
     1 /* dilation_height */, 1 /* dilation_width */,
     1 /* groups */,
     24 /* input channels per group */,
-    28 /* output_channels_per_group */,
+    48 /* output_channels_per_group */,
     24 /* input pixel stride */,
     48 /* output pixel stride */,
     w4, w5,

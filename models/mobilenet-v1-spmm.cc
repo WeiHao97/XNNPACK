@@ -256,7 +256,7 @@ ExecutionPlan MobileNetV1(pthreadpool_t threadpool) {
     1 /* dilation_height */, 1 /* dilation_width */,
     1 /* groups */,
     24 /* input channels per group */,
-    28 /* output_channels_per_group */,
+    48 /* output_channels_per_group */,
     24 /* input pixel stride */,
     48 /* output pixel stride */,
     w4, w5,
@@ -758,7 +758,8 @@ ExecutionPlan MobileNetV1(pthreadpool_t threadpool) {
     std::cerr << "failed to setup operation #17" << std::endl;
     return ExecutionPlan();
   }
-    xnn_operator_t op18 = nullptr;
+  
+  xnn_operator_t op18 = nullptr;
   status = xnn_create_convolution2d_nchw_f32(
     0 /* top padding */, 0 /* right padding */,
     0 /* bottom padding */, 0 /* left padding */,
@@ -789,7 +790,8 @@ ExecutionPlan MobileNetV1(pthreadpool_t threadpool) {
     std::cerr << "failed to setup operation #18" << std::endl;
     return ExecutionPlan();
   }
-    xnn_operator_t op19 = nullptr;
+
+  xnn_operator_t op19 = nullptr;
   status = xnn_create_convolution2d_nchw_f32(
     1 /* top padding */, 1 /* right padding */,
     1 /* bottom padding */, 1 /* left padding */,
@@ -820,7 +822,8 @@ ExecutionPlan MobileNetV1(pthreadpool_t threadpool) {
     std::cerr << "failed to setup operation #19" << std::endl;
     return ExecutionPlan();
   }
-    xnn_operator_t op20 = nullptr;
+  
+  xnn_operator_t op20 = nullptr;
   status = xnn_create_convolution2d_nchw_f32(
     0 /* top padding */, 0 /* right padding */,
     0 /* bottom padding */, 0 /* left padding */,
