@@ -113,16 +113,16 @@ ExecutionPlan MobileNetV1(pthreadpool_t threadpool) {
 
     // test file open
   int size = 0; 
-  int z_count = 0;   
+  int z_count = 0;
+  string s;   
   if (inputFile) {        
-    float value;
-
-    // read the elements in the file into a vector  
-    while ( inputFile >> value ) {
-        v2[size] = value;
+    while (getline(inputFile, s))
+    {
+        v2[size] = stof(s)
         size++;
-        if(value==0) z_count++;
+        if(v2[size] == 0) z_count++;
     }
+
   }else{
         std::cout<< "Can't open file"<< "\n";
   }
