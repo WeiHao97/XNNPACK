@@ -127,7 +127,7 @@ ExecutionPlan MobileNetV1(pthreadpool_t threadpool) {
   }else{
         std::cout<< "Can't open file"<< "\n";
   }
-  std::cout<< "Size: " << size << " Sparsity: "<< z_count/150528 <<"\n";
+  std::cout<< "Size: " << size << " Sparsity: "<< (float)z_count/150528 <<"\n";
   //std::generate(v2, v2 + 150528, std::ref(f32rng));
   std::generate(w0, w0 + 648, std::ref(f32rng));
   std::generate(w1, w1 + 24, std::ref(f32rng));
