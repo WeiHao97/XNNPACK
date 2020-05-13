@@ -120,8 +120,8 @@ ExecutionPlan MobileNetV1(pthreadpool_t threadpool) {
     while (getline(inputFile, s))
     {
         v2[size] = std::stof(s);
-        size++;
         if(v2[size] == 0) z_count++;
+        size++;
     }
 
   }else{
