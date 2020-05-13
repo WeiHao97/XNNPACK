@@ -115,7 +115,7 @@ ExecutionPlan MobileNetV1(pthreadpool_t threadpool) {
     // test file open
   int size = 0; 
   int z_count = 0;
-  string s;   
+  std::string s;   
   if (inputFile) {        
     while (getline(inputFile, s))
     {
