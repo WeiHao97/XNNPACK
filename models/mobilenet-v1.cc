@@ -112,22 +112,22 @@ ExecutionPlan MobileNetV1(pthreadpool_t threadpool) {
   auto f32rng = std::bind(random_bool_generator, rng);
   std::ifstream inputFile("/users/Wei_Hao/XNNPACK/sparse_224.data");
 
-    // test file open
+  // test file open
   int size = 0; 
-  int z_count = 0;
+  //int z_count = 0;
   std::string s;   
   if (inputFile) {        
     while (getline(inputFile, s))
     {
         v2[size] = std::stof(s);
-        if(v2[size] == 0) z_count++;
+        //if(v2[size] == 0) z_count++;
         size++;
     }
 
   }else{
         std::cout<< "Can't open file"<< "\n";
   }
-  std::cout<< "Size: " << size << " Sparsity: "<< (float)z_count/150528 <<"\n";
+  //std::cout<< "Size: " << size << " Sparsity: "<< (float)z_count/150528 <<"\n";
   //std::generate(v2, v2 + 150528, std::ref(f32rng));
   std::generate(w0, w0 + 648, std::ref(f32rng));
   std::generate(w1, w1 + 24, std::ref(f32rng));
