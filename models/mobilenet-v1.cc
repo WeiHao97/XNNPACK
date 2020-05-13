@@ -16,7 +16,7 @@
 namespace models {
 
 ExecutionPlan MobileNetV1(pthreadpool_t threadpool) {
-  alignas(16) static float v2[150528];
+  alignas(16) static float v2;
   alignas(16) static float v3[301056];
   alignas(16) static float v4[301056];
   alignas(16) static float v5[602112];
@@ -108,7 +108,23 @@ ExecutionPlan MobileNetV1(pthreadpool_t threadpool) {
   auto rng = std::mt19937(random_device());
   std::bernoulli_distribution random_bool_generator(0.1);
   auto f32rng = std::bind(random_bool_generator, rng);
-  std::generate(v2, v2 + 150528, std::ref(f32rng));
+  ifstream inputFile("~/XNNPACK/sparse_85_224.data");
+
+    // test file open
+  int count = 0;   
+  if (inputFile) {        
+    float value;
+
+    // read the elements in the file into a vector  
+    while ( inputFile >> value ) {
+        v2.push_back(value);
+        if(value==0) count++;
+    }
+  }else{
+        std::cout<< "Can't open file"<< "\n";
+  }
+  std::cout<< "Size: " << v2.size() << " Sparsity"<< count/150528 <<"\n";
+  //std::generate(v2, v2 + 150528, std::ref(f32rng));
   std::generate(w0, w0 + 648, std::ref(f32rng));
   std::generate(w1, w1 + 24, std::ref(f32rng));
   std::generate(w2, w2 + 216, std::ref(f32rng));
