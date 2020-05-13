@@ -8,8 +8,10 @@
 #include <algorithm>
 #include <functional>
 #include <iostream>
+#include <fstream>
 #include <limits>
 #include <random>
+#include <string>
 
 #include "models/models.h"
 
