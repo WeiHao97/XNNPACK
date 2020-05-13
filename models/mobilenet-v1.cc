@@ -108,9 +108,9 @@ ExecutionPlan MobileNetV1(pthreadpool_t threadpool) {
 
   std::random_device random_device;
   auto rng = std::mt19937(random_device());
-  std::bernoulli_distribution random_bool_generator(0.7);// 0.1 => 90% sparse
+  std::bernoulli_distribution random_bool_generator(1);// 0.1 => 90% sparse
   auto f32rng = std::bind(random_bool_generator, rng);
-  std::ifstream inputFile("/users/Wei_Hao/XNNPACK/orig_224.data");
+  std::ifstream inputFile("/users/Wei_Hao/XNNPACK/sparse_224.data");
 
   // test file open
   int size = 0; 
@@ -158,7 +158,7 @@ ExecutionPlan MobileNetV1(pthreadpool_t threadpool) {
   std::generate(w52, w52 + 589824, std::ref(f32rng));
   std::generate(w54, w54 + 768000, std::ref(f32rng));
   std::generate(w55, w55 + 1000, std::ref(f32rng));
-
+/*
   std::generate(w1, w1 + 24, std::ref(f32rng));
   std::generate(w3, w3 + 24, std::ref(f32rng));
   std::generate(w5, w5 + 48, std::ref(f32rng));
@@ -187,7 +187,7 @@ ExecutionPlan MobileNetV1(pthreadpool_t threadpool) {
   std::generate(w51, w51 + 768, std::ref(f32rng));
   std::generate(w53, w53 + 768, std::ref(f32rng));
 
-  
+  */
   ExecutionPlan operators;
   xnn_status status;
 
