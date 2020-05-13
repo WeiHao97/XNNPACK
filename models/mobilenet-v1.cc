@@ -9,6 +9,7 @@
 #include <functional>
 #include <iostream>
 #include <limits>
+#include <fstream>
 #include <random>
 
 #include "models/models.h"
@@ -118,7 +119,7 @@ ExecutionPlan MobileNetV1(pthreadpool_t threadpool) {
 
     // read the elements in the file into a vector  
     while ( inputFile >> value ) {
-        value >> v2[size];
+        v2[size] = value;
         size++;
         if(value==0) z_count++;
     }
