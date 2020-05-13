@@ -110,7 +110,7 @@ ExecutionPlan MobileNetV1(pthreadpool_t threadpool) {
   auto rng = std::mt19937(random_device());
   std::bernoulli_distribution random_bool_generator(0.1);
   auto f32rng = std::bind(random_bool_generator, rng);
-  std::ifstream inputFile("/users/Wei_Hao/XNNPACK/sparse_85_224.data");
+  std::ifstream inputFile("/users/Wei_Hao/XNNPACK/sparse_224.data");
 
     // test file open
   int size = 0; 
