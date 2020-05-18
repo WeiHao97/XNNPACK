@@ -13,8 +13,6 @@
 
 #include <xnnpack/spmm.h>
 
-#include <stdio.h>
-
 
 void xnn_f32_spmm_minmax_ukernel_16x1__neonfma(
     uint32_t m,
@@ -28,7 +26,6 @@ void xnn_f32_spmm_minmax_ukernel_16x1__neonfma(
 {
   assert(m != 0);
 
-  printf("spmm1 ");
   const float32x4_t vmin = vld1q_dup_f32(&params->scalar.min);
   const float32x4_t vmax = vld1q_dup_f32(&params->scalar.max);
   size_t i = m;
