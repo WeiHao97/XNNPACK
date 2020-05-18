@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/u8-clamp-test.dir/test/u8-clamp.cc.o  -o u8-clamp-test libXNNPACK.a cpuinfo/libcpuinfo.a lib/libgtest.a lib/libgtest_main.a /usr/lib/aarch64-linux-gnu/libm.so clog/libclog.a pthreadpool/libpthreadpool.a lib/libgtest.a -pthread 

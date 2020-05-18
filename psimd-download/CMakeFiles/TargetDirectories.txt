@@ -1,0 +1,3 @@
+/users/Wei_Hao/XNNPACK/psimd-download/CMakeFiles/edit_cache.dir
+/users/Wei_Hao/XNNPACK/psimd-download/CMakeFiles/rebuild_cache.dir
+/users/Wei_Hao/XNNPACK/psimd-download/CMakeFiles/psimd.dir

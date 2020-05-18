@@ -1,0 +1,14 @@
+# Target labels
+ googletest
+# Source files and their labels
+/users/Wei_Hao/XNNPACK/googletest-download/CMakeFiles/googletest
+/users/Wei_Hao/XNNPACK/googletest-download/CMakeFiles/googletest.rule
+/users/Wei_Hao/XNNPACK/googletest-download/CMakeFiles/googletest-complete.rule
+/users/Wei_Hao/XNNPACK/googletest-download/googletest-prefix/src/googletest-stamp/googletest-install.rule
+/users/Wei_Hao/XNNPACK/googletest-download/googletest-prefix/src/googletest-stamp/googletest-mkdir.rule
+/users/Wei_Hao/XNNPACK/googletest-download/googletest-prefix/src/googletest-stamp/googletest-download.rule
+/users/Wei_Hao/XNNPACK/googletest-download/googletest-prefix/src/googletest-stamp/googletest-update.rule
+/users/Wei_Hao/XNNPACK/googletest-download/googletest-prefix/src/googletest-stamp/googletest-patch.rule
+/users/Wei_Hao/XNNPACK/googletest-download/googletest-prefix/src/googletest-stamp/googletest-configure.rule
+/users/Wei_Hao/XNNPACK/googletest-download/googletest-prefix/src/googletest-stamp/googletest-build.rule
+/users/Wei_Hao/XNNPACK/googletest-download/googletest-prefix/src/googletest-stamp/googletest-test.rule

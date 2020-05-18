@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/users/Wei_Hao/XNNPACK/clog-source/deps/clog/src/clog.c
+stdarg.h
+-
+string.h
+-
+stdlib.h
+-
+stdio.h
+-
+windows.h
+-
+unistd.h
+-
+android/log.h
+-
+clog.h
+-
+
+clog-source/deps/clog/include/clog.h
+stdarg.h
+-
+stdlib.h
+-
+inttypes.h
+-
+

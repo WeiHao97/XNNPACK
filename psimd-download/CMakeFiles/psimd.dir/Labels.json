@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/psimd-download/CMakeFiles/psimd"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/psimd-download/CMakeFiles/psimd.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/psimd-download/CMakeFiles/psimd-complete.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/psimd-download/psimd-prefix/src/psimd-stamp/psimd-install.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/psimd-download/psimd-prefix/src/psimd-stamp/psimd-mkdir.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/psimd-download/psimd-prefix/src/psimd-stamp/psimd-download.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/psimd-download/psimd-prefix/src/psimd-stamp/psimd-update.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/psimd-download/psimd-prefix/src/psimd-stamp/psimd-patch.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/psimd-download/psimd-prefix/src/psimd-stamp/psimd-configure.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/psimd-download/psimd-prefix/src/psimd-stamp/psimd-build.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/psimd-download/psimd-prefix/src/psimd-stamp/psimd-test.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"psimd"
+		],
+		"name" : "psimd"
+	}
+}

@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/FP16-download/CMakeFiles/fp16"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/FP16-download/CMakeFiles/fp16.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/FP16-download/CMakeFiles/fp16-complete.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/FP16-download/fp16-prefix/src/fp16-stamp/fp16-install.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/FP16-download/fp16-prefix/src/fp16-stamp/fp16-mkdir.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/FP16-download/fp16-prefix/src/fp16-stamp/fp16-download.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/FP16-download/fp16-prefix/src/fp16-stamp/fp16-update.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/FP16-download/fp16-prefix/src/fp16-stamp/fp16-patch.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/FP16-download/fp16-prefix/src/fp16-stamp/fp16-configure.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/FP16-download/fp16-prefix/src/fp16-stamp/fp16-build.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/FP16-download/fp16-prefix/src/fp16-stamp/fp16-test.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"fp16"
+		],
+		"name" : "fp16"
+	}
+}

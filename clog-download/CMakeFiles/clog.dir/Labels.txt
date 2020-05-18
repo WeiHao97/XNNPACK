@@ -1,0 +1,14 @@
+# Target labels
+ clog
+# Source files and their labels
+/users/Wei_Hao/XNNPACK/clog-download/CMakeFiles/clog
+/users/Wei_Hao/XNNPACK/clog-download/CMakeFiles/clog.rule
+/users/Wei_Hao/XNNPACK/clog-download/CMakeFiles/clog-complete.rule
+/users/Wei_Hao/XNNPACK/clog-download/clog-prefix/src/clog-stamp/clog-install.rule
+/users/Wei_Hao/XNNPACK/clog-download/clog-prefix/src/clog-stamp/clog-mkdir.rule
+/users/Wei_Hao/XNNPACK/clog-download/clog-prefix/src/clog-stamp/clog-download.rule
+/users/Wei_Hao/XNNPACK/clog-download/clog-prefix/src/clog-stamp/clog-update.rule
+/users/Wei_Hao/XNNPACK/clog-download/clog-prefix/src/clog-stamp/clog-patch.rule
+/users/Wei_Hao/XNNPACK/clog-download/clog-prefix/src/clog-stamp/clog-configure.rule
+/users/Wei_Hao/XNNPACK/clog-download/clog-prefix/src/clog-stamp/clog-build.rule
+/users/Wei_Hao/XNNPACK/clog-download/clog-prefix/src/clog-stamp/clog-test.rule

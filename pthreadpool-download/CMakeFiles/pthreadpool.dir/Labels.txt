@@ -1,0 +1,14 @@
+# Target labels
+ pthreadpool
+# Source files and their labels
+/users/Wei_Hao/XNNPACK/pthreadpool-download/CMakeFiles/pthreadpool
+/users/Wei_Hao/XNNPACK/pthreadpool-download/CMakeFiles/pthreadpool.rule
+/users/Wei_Hao/XNNPACK/pthreadpool-download/CMakeFiles/pthreadpool-complete.rule
+/users/Wei_Hao/XNNPACK/pthreadpool-download/pthreadpool-prefix/src/pthreadpool-stamp/pthreadpool-install.rule
+/users/Wei_Hao/XNNPACK/pthreadpool-download/pthreadpool-prefix/src/pthreadpool-stamp/pthreadpool-mkdir.rule
+/users/Wei_Hao/XNNPACK/pthreadpool-download/pthreadpool-prefix/src/pthreadpool-stamp/pthreadpool-download.rule
+/users/Wei_Hao/XNNPACK/pthreadpool-download/pthreadpool-prefix/src/pthreadpool-stamp/pthreadpool-update.rule
+/users/Wei_Hao/XNNPACK/pthreadpool-download/pthreadpool-prefix/src/pthreadpool-stamp/pthreadpool-patch.rule
+/users/Wei_Hao/XNNPACK/pthreadpool-download/pthreadpool-prefix/src/pthreadpool-stamp/pthreadpool-configure.rule
+/users/Wei_Hao/XNNPACK/pthreadpool-download/pthreadpool-prefix/src/pthreadpool-stamp/pthreadpool-build.rule
+/users/Wei_Hao/XNNPACK/pthreadpool-download/pthreadpool-prefix/src/pthreadpool-stamp/pthreadpool-test.rule

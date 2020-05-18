@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/u8-rmax-test.dir/test/u8-rmax.cc.o  -o u8-rmax-test libXNNPACK.a cpuinfo/libcpuinfo.a lib/libgtest.a lib/libgtest_main.a /usr/lib/aarch64-linux-gnu/libm.so clog/libclog.a pthreadpool/libpthreadpool.a lib/libgtest.a -pthread 

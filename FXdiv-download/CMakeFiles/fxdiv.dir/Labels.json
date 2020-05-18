@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/FXdiv-download/CMakeFiles/fxdiv"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/FXdiv-download/CMakeFiles/fxdiv.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/FXdiv-download/CMakeFiles/fxdiv-complete.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/FXdiv-download/fxdiv-prefix/src/fxdiv-stamp/fxdiv-install.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/FXdiv-download/fxdiv-prefix/src/fxdiv-stamp/fxdiv-mkdir.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/FXdiv-download/fxdiv-prefix/src/fxdiv-stamp/fxdiv-download.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/FXdiv-download/fxdiv-prefix/src/fxdiv-stamp/fxdiv-update.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/FXdiv-download/fxdiv-prefix/src/fxdiv-stamp/fxdiv-patch.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/FXdiv-download/fxdiv-prefix/src/fxdiv-stamp/fxdiv-configure.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/FXdiv-download/fxdiv-prefix/src/fxdiv-stamp/fxdiv-build.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/FXdiv-download/fxdiv-prefix/src/fxdiv-stamp/fxdiv-test.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"fxdiv"
+		],
+		"name" : "fxdiv"
+	}
+}

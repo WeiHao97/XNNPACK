@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/add-nd-test.dir/test/add-nd.cc.o  -o add-nd-test libXNNPACK.a lib/libgtest.a lib/libgtest_main.a /usr/lib/aarch64-linux-gnu/libm.so cpuinfo/libcpuinfo.a clog/libclog.a pthreadpool/libpthreadpool.a lib/libgtest.a -pthread 

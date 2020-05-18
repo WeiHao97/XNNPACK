@@ -1,0 +1,14 @@
+# Target labels
+ psimd
+# Source files and their labels
+/users/Wei_Hao/XNNPACK/psimd-download/CMakeFiles/psimd
+/users/Wei_Hao/XNNPACK/psimd-download/CMakeFiles/psimd.rule
+/users/Wei_Hao/XNNPACK/psimd-download/CMakeFiles/psimd-complete.rule
+/users/Wei_Hao/XNNPACK/psimd-download/psimd-prefix/src/psimd-stamp/psimd-install.rule
+/users/Wei_Hao/XNNPACK/psimd-download/psimd-prefix/src/psimd-stamp/psimd-mkdir.rule
+/users/Wei_Hao/XNNPACK/psimd-download/psimd-prefix/src/psimd-stamp/psimd-download.rule
+/users/Wei_Hao/XNNPACK/psimd-download/psimd-prefix/src/psimd-stamp/psimd-update.rule
+/users/Wei_Hao/XNNPACK/psimd-download/psimd-prefix/src/psimd-stamp/psimd-patch.rule
+/users/Wei_Hao/XNNPACK/psimd-download/psimd-prefix/src/psimd-stamp/psimd-configure.rule
+/users/Wei_Hao/XNNPACK/psimd-download/psimd-prefix/src/psimd-stamp/psimd-build.rule
+/users/Wei_Hao/XNNPACK/psimd-download/psimd-prefix/src/psimd-stamp/psimd-test.rule

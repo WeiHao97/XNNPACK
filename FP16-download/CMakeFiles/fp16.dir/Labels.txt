@@ -1,0 +1,14 @@
+# Target labels
+ fp16
+# Source files and their labels
+/users/Wei_Hao/XNNPACK/FP16-download/CMakeFiles/fp16
+/users/Wei_Hao/XNNPACK/FP16-download/CMakeFiles/fp16.rule
+/users/Wei_Hao/XNNPACK/FP16-download/CMakeFiles/fp16-complete.rule
+/users/Wei_Hao/XNNPACK/FP16-download/fp16-prefix/src/fp16-stamp/fp16-install.rule
+/users/Wei_Hao/XNNPACK/FP16-download/fp16-prefix/src/fp16-stamp/fp16-mkdir.rule
+/users/Wei_Hao/XNNPACK/FP16-download/fp16-prefix/src/fp16-stamp/fp16-download.rule
+/users/Wei_Hao/XNNPACK/FP16-download/fp16-prefix/src/fp16-stamp/fp16-update.rule
+/users/Wei_Hao/XNNPACK/FP16-download/fp16-prefix/src/fp16-stamp/fp16-patch.rule
+/users/Wei_Hao/XNNPACK/FP16-download/fp16-prefix/src/fp16-stamp/fp16-configure.rule
+/users/Wei_Hao/XNNPACK/FP16-download/fp16-prefix/src/fp16-stamp/fp16-build.rule
+/users/Wei_Hao/XNNPACK/FP16-download/fp16-prefix/src/fp16-stamp/fp16-test.rule

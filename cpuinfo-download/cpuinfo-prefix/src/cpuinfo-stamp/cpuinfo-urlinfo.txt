@@ -1,0 +1,3 @@
+repository='external project URL'
+module='https://github.com/pytorch/cpuinfo/archive/2b14e445016dd46f7de821cdf3093e2823b9ab21.zip'
+tag='SHA256=599ec5036fd225de01a866e7226ba6a5bca480d841ff0a0bede9138db7a655be'

@@ -1,0 +1,14 @@
+# Target labels
+ cpuinfo
+# Source files and their labels
+/users/Wei_Hao/XNNPACK/cpuinfo-download/CMakeFiles/cpuinfo
+/users/Wei_Hao/XNNPACK/cpuinfo-download/CMakeFiles/cpuinfo.rule
+/users/Wei_Hao/XNNPACK/cpuinfo-download/CMakeFiles/cpuinfo-complete.rule
+/users/Wei_Hao/XNNPACK/cpuinfo-download/cpuinfo-prefix/src/cpuinfo-stamp/cpuinfo-install.rule
+/users/Wei_Hao/XNNPACK/cpuinfo-download/cpuinfo-prefix/src/cpuinfo-stamp/cpuinfo-mkdir.rule
+/users/Wei_Hao/XNNPACK/cpuinfo-download/cpuinfo-prefix/src/cpuinfo-stamp/cpuinfo-download.rule
+/users/Wei_Hao/XNNPACK/cpuinfo-download/cpuinfo-prefix/src/cpuinfo-stamp/cpuinfo-update.rule
+/users/Wei_Hao/XNNPACK/cpuinfo-download/cpuinfo-prefix/src/cpuinfo-stamp/cpuinfo-patch.rule
+/users/Wei_Hao/XNNPACK/cpuinfo-download/cpuinfo-prefix/src/cpuinfo-stamp/cpuinfo-configure.rule
+/users/Wei_Hao/XNNPACK/cpuinfo-download/cpuinfo-prefix/src/cpuinfo-stamp/cpuinfo-build.rule
+/users/Wei_Hao/XNNPACK/cpuinfo-download/cpuinfo-prefix/src/cpuinfo-stamp/cpuinfo-test.rule

@@ -1,0 +1,3 @@
+/users/Wei_Hao/XNNPACK/clog-download/CMakeFiles/edit_cache.dir
+/users/Wei_Hao/XNNPACK/clog-download/CMakeFiles/rebuild_cache.dir
+/users/Wei_Hao/XNNPACK/clog-download/CMakeFiles/clog.dir

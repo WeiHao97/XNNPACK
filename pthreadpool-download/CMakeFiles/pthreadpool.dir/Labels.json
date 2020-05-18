@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/pthreadpool-download/CMakeFiles/pthreadpool"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/pthreadpool-download/CMakeFiles/pthreadpool.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/pthreadpool-download/CMakeFiles/pthreadpool-complete.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/pthreadpool-download/pthreadpool-prefix/src/pthreadpool-stamp/pthreadpool-install.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/pthreadpool-download/pthreadpool-prefix/src/pthreadpool-stamp/pthreadpool-mkdir.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/pthreadpool-download/pthreadpool-prefix/src/pthreadpool-stamp/pthreadpool-download.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/pthreadpool-download/pthreadpool-prefix/src/pthreadpool-stamp/pthreadpool-update.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/pthreadpool-download/pthreadpool-prefix/src/pthreadpool-stamp/pthreadpool-patch.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/pthreadpool-download/pthreadpool-prefix/src/pthreadpool-stamp/pthreadpool-configure.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/pthreadpool-download/pthreadpool-prefix/src/pthreadpool-stamp/pthreadpool-build.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/pthreadpool-download/pthreadpool-prefix/src/pthreadpool-stamp/pthreadpool-test.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"pthreadpool"
+		],
+		"name" : "pthreadpool"
+	}
+}

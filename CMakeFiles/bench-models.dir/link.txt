@@ -1,0 +1,2 @@
+/usr/bin/ar qc libbench-models.a  CMakeFiles/bench-models.dir/models/mobilenet-v1.cc.o CMakeFiles/bench-models.dir/models/mobilenet-v2.cc.o CMakeFiles/bench-models.dir/models/mobilenet-v3-large.cc.o CMakeFiles/bench-models.dir/models/mobilenet-v3-small.cc.o
+/usr/bin/ranlib libbench-models.a

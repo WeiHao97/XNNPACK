@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/googletest-download/CMakeFiles/googletest"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/googletest-download/CMakeFiles/googletest.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/googletest-download/CMakeFiles/googletest-complete.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/googletest-download/googletest-prefix/src/googletest-stamp/googletest-install.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/googletest-download/googletest-prefix/src/googletest-stamp/googletest-mkdir.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/googletest-download/googletest-prefix/src/googletest-stamp/googletest-download.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/googletest-download/googletest-prefix/src/googletest-stamp/googletest-update.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/googletest-download/googletest-prefix/src/googletest-stamp/googletest-patch.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/googletest-download/googletest-prefix/src/googletest-stamp/googletest-configure.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/googletest-download/googletest-prefix/src/googletest-stamp/googletest-build.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/googletest-download/googletest-prefix/src/googletest-stamp/googletest-test.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"googletest"
+		],
+		"name" : "googletest"
+	}
+}

@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/f32-sigmoid-eval.dir/eval/f32-sigmoid.cc.o  -o f32-sigmoid-eval libXNNPACK.a deps/googlebenchmark/src/libbenchmark.a /usr/lib/aarch64-linux-gnu/libm.so cpuinfo/libcpuinfo.a clog/libclog.a pthreadpool/libpthreadpool.a -pthread /usr/lib/aarch64-linux-gnu/librt.so 

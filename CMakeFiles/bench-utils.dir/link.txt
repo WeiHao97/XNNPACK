@@ -1,0 +1,2 @@
+/usr/bin/ar qc libbench-utils.a  CMakeFiles/bench-utils.dir/bench/utils.cc.o
+/usr/bin/ranlib libbench-utils.a

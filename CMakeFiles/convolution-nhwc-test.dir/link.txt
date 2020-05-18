@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/convolution-nhwc-test.dir/test/convolution-nhwc.cc.o  -o convolution-nhwc-test libXNNPACK.a lib/libgtest.a lib/libgtest_main.a /usr/lib/aarch64-linux-gnu/libm.so cpuinfo/libcpuinfo.a clog/libclog.a pthreadpool/libpthreadpool.a lib/libgtest.a -pthread 

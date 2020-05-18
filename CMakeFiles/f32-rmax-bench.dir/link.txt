@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/f32-rmax-bench.dir/bench/f32-rmax.cc.o  -o f32-rmax-bench libXNNPACK.a cpuinfo/libcpuinfo.a deps/googlebenchmark/src/libbenchmark.a libbench-utils.a /usr/lib/aarch64-linux-gnu/libm.so pthreadpool/libpthreadpool.a cpuinfo/libcpuinfo.a clog/libclog.a deps/googlebenchmark/src/libbenchmark.a -pthread /usr/lib/aarch64-linux-gnu/librt.so 

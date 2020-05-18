@@ -1,0 +1,14 @@
+# Target labels
+ googlebenchmark
+# Source files and their labels
+/users/Wei_Hao/XNNPACK/googlebenchmark-download/CMakeFiles/googlebenchmark
+/users/Wei_Hao/XNNPACK/googlebenchmark-download/CMakeFiles/googlebenchmark.rule
+/users/Wei_Hao/XNNPACK/googlebenchmark-download/CMakeFiles/googlebenchmark-complete.rule
+/users/Wei_Hao/XNNPACK/googlebenchmark-download/googlebenchmark-prefix/src/googlebenchmark-stamp/googlebenchmark-install.rule
+/users/Wei_Hao/XNNPACK/googlebenchmark-download/googlebenchmark-prefix/src/googlebenchmark-stamp/googlebenchmark-mkdir.rule
+/users/Wei_Hao/XNNPACK/googlebenchmark-download/googlebenchmark-prefix/src/googlebenchmark-stamp/googlebenchmark-download.rule
+/users/Wei_Hao/XNNPACK/googlebenchmark-download/googlebenchmark-prefix/src/googlebenchmark-stamp/googlebenchmark-update.rule
+/users/Wei_Hao/XNNPACK/googlebenchmark-download/googlebenchmark-prefix/src/googlebenchmark-stamp/googlebenchmark-patch.rule
+/users/Wei_Hao/XNNPACK/googlebenchmark-download/googlebenchmark-prefix/src/googlebenchmark-stamp/googlebenchmark-configure.rule
+/users/Wei_Hao/XNNPACK/googlebenchmark-download/googlebenchmark-prefix/src/googlebenchmark-stamp/googlebenchmark-build.rule
+/users/Wei_Hao/XNNPACK/googlebenchmark-download/googlebenchmark-prefix/src/googlebenchmark-stamp/googlebenchmark-test.rule

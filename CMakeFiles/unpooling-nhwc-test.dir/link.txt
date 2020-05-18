@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/unpooling-nhwc-test.dir/test/unpooling-nhwc.cc.o  -o unpooling-nhwc-test libXNNPACK.a lib/libgtest.a lib/libgtest_main.a /usr/lib/aarch64-linux-gnu/libm.so cpuinfo/libcpuinfo.a clog/libclog.a pthreadpool/libpthreadpool.a lib/libgtest.a -pthread 

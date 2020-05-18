@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/channel-shuffle-nc-test.dir/test/channel-shuffle-nc.cc.o  -o channel-shuffle-nc-test libXNNPACK.a lib/libgtest.a lib/libgtest_main.a /usr/lib/aarch64-linux-gnu/libm.so cpuinfo/libcpuinfo.a clog/libclog.a pthreadpool/libpthreadpool.a lib/libgtest.a -pthread 

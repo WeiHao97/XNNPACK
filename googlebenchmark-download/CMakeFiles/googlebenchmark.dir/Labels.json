@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/googlebenchmark-download/CMakeFiles/googlebenchmark"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/googlebenchmark-download/CMakeFiles/googlebenchmark.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/googlebenchmark-download/CMakeFiles/googlebenchmark-complete.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/googlebenchmark-download/googlebenchmark-prefix/src/googlebenchmark-stamp/googlebenchmark-install.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/googlebenchmark-download/googlebenchmark-prefix/src/googlebenchmark-stamp/googlebenchmark-mkdir.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/googlebenchmark-download/googlebenchmark-prefix/src/googlebenchmark-stamp/googlebenchmark-download.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/googlebenchmark-download/googlebenchmark-prefix/src/googlebenchmark-stamp/googlebenchmark-update.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/googlebenchmark-download/googlebenchmark-prefix/src/googlebenchmark-stamp/googlebenchmark-patch.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/googlebenchmark-download/googlebenchmark-prefix/src/googlebenchmark-stamp/googlebenchmark-configure.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/googlebenchmark-download/googlebenchmark-prefix/src/googlebenchmark-stamp/googlebenchmark-build.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/googlebenchmark-download/googlebenchmark-prefix/src/googlebenchmark-stamp/googlebenchmark-test.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"googlebenchmark"
+		],
+		"name" : "googlebenchmark"
+	}
+}

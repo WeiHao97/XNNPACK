@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/q8-gemm-minmax-test.dir/test/q8-gemm-minmax.cc.o  -o q8-gemm-minmax-test libXNNPACK.a cpuinfo/libcpuinfo.a lib/libgtest.a lib/libgtest_main.a /usr/lib/aarch64-linux-gnu/libm.so clog/libclog.a pthreadpool/libpthreadpool.a lib/libgtest.a -pthread 

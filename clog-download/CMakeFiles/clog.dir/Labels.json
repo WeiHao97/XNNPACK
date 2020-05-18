@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/clog-download/CMakeFiles/clog"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/clog-download/CMakeFiles/clog.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/clog-download/CMakeFiles/clog-complete.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/clog-download/clog-prefix/src/clog-stamp/clog-install.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/clog-download/clog-prefix/src/clog-stamp/clog-mkdir.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/clog-download/clog-prefix/src/clog-stamp/clog-download.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/clog-download/clog-prefix/src/clog-stamp/clog-update.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/clog-download/clog-prefix/src/clog-stamp/clog-patch.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/clog-download/clog-prefix/src/clog-stamp/clog-configure.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/clog-download/clog-prefix/src/clog-stamp/clog-build.rule"
+		},
+		{
+			"file" : "/users/Wei_Hao/XNNPACK/clog-download/clog-prefix/src/clog-stamp/clog-test.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"clog"
+		],
+		"name" : "clog"
+	}
+}

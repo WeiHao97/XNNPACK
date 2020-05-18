@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/f32-vmin-test.dir/test/f32-vmin.cc.o  -o f32-vmin-test libXNNPACK.a cpuinfo/libcpuinfo.a lib/libgtest.a lib/libgtest_main.a /usr/lib/aarch64-linux-gnu/libm.so clog/libclog.a pthreadpool/libpthreadpool.a lib/libgtest.a -pthread 

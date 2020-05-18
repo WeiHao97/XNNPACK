@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/end2end-bench.dir/bench/end2end.cc.o  -o end2end-bench libXNNPACK.a deps/googlebenchmark/src/libbenchmark.a libbench-models.a libbench-utils.a libXNNPACK.a /usr/lib/aarch64-linux-gnu/libm.so pthreadpool/libpthreadpool.a deps/googlebenchmark/src/libbenchmark.a /usr/lib/aarch64-linux-gnu/librt.so cpuinfo/libcpuinfo.a clog/libclog.a -pthread 
