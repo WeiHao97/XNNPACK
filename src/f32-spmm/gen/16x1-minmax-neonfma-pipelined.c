@@ -28,8 +28,6 @@ void xnn_f32_spmm_minmax_ukernel_16x1__neonfma_pipelined(
 
   const float32x4_t vmin = vld1q_dup_f32(&params->scalar.min);
   const float32x4_t vmax = vld1q_dup_f32(&params->scalar.max);
-  const float32x4_t zeros_f32 = {0,0,0,0};
-  const uint32x4_t zeros_f32= {0,0,0,0};
   size_t i = m;
   while XNN_LIKELY(i >= 16) {
     const float*restrict w = weights;
