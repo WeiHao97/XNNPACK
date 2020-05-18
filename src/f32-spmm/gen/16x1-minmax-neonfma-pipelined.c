@@ -28,6 +28,8 @@ void xnn_f32_spmm_minmax_ukernel_16x1__neonfma_pipelined(
 
   const float32x4_t vmin = vld1q_dup_f32(&params->scalar.min);
   const float32x4_t vmax = vld1q_dup_f32(&params->scalar.max);
+  const float32x4_t zeros_f32 = {0,0,0,0};
+  const uint32x4_t zeros_f32= {0,0,0,0};
   size_t i = m;
   while XNN_LIKELY(i >= 16) {
     const float*restrict w = weights;
@@ -41,6 +43,16 @@ void xnn_f32_spmm_minmax_ukernel_16x1__neonfma_pipelined(
     float32x4_t vaCDEF = vld1q_f32(a + 12);
     __builtin_prefetch(a + 16);
     size_t j = n;
+
+//wei
+/*--1、Vector compare equal: vceq -> ri = ai == bi ? 1...1 : 0...0; 
+If they are equal, the corresponding element in the destination vector is set to all ones.
+Otherwise, it is set to all zeros--*/
+    float32x4_t tmp1 = vaddq_f32(va0123,va4567);
+    float32x4_t tmp2 = vaddq_f32(tmp1,va89AB);
+    float32x4_t tmp3 = vaddq_f32(tmp2,vaCDEF);
+    //uint32x4_t fourth = vceqq_f32(zeros_f32,va0123);
+    if(tmp3[0] != 0 || tmp3[1] != 0 || tmp3[2] != 0 || tmp3[3] != 0){
     do {
       uint32_t nnz = *nnzmap++;
       float32x4_t vacc0123 = vw;
@@ -79,10 +91,28 @@ void xnn_f32_spmm_minmax_ukernel_16x1__neonfma_pipelined(
       vst1q_f32(c + 12, voutCDEF);
       c += m;
     } while (--j != 0);
+
     c -= m * n;
     c += 16;
     a += 16;
     i -= 16;
+  }else{    
+
+    do {
+      float32x4_t cout_ = vminq_f32(vw, vmax);
+      cout_ = vmaxq_f32(cout_, vmin);
+      vst1q_f32(c, cout_);
+      vst1q_f32(c + 4, cout_);
+      vst1q_f32(c + 8, cout_);
+      vst1q_f32(c + 12, cout_);
+      c += m;
+    } while (--j != 0);
+    c -= m * n;
+    c += 16;
+    a += 16;
+    i -= 16;}
+
+
   }
   if XNN_UNLIKELY(i != 0) {
     if (i & 8) {
