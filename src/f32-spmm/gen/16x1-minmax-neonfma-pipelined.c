@@ -27,7 +27,7 @@ void xnn_f32_spmm_minmax_ukernel_16x1__neonfma_pipelined(
     const union xnn_f32_minmax_params params[restrict XNN_MIN_ELEMENTS(1)])
 {
   assert(m != 0);
-  printf("spmm");
+//  printf("spmm");
 
   const float32x4_t vmin = vld1q_dup_f32(&params->scalar.min);
   const float32x4_t vmax = vld1q_dup_f32(&params->scalar.max);
