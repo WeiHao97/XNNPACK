@@ -3,7 +3,7 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [----------] Global test environment set-up.
 [----------] 10 tests from F32_SPMM_MINMAX_4X1__NEONFMA
 [ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA.k_eq_1
-[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA.k_eq_1 (1 ms)
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA.k_eq_1 (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA.k_gt_1
 [       OK ] F32_SPMM_MINMAX_4X1__NEONFMA.k_gt_1 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA.n_gt_1
@@ -21,49 +21,49 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA.half_sparse
 [       OK ] F32_SPMM_MINMAX_4X1__NEONFMA.half_sparse (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA.zero_weights
-[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA.zero_weights (1 ms)
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA.zero_weights (2 ms)
 [----------] 10 tests from F32_SPMM_MINMAX_4X1__NEONFMA (22 ms total)
 
 [----------] 13 tests from F32_SPMM_MINMAX_4X2__NEONFMA
 [ RUN      ] F32_SPMM_MINMAX_4X2__NEONFMA.k_eq_1
 [       OK ] F32_SPMM_MINMAX_4X2__NEONFMA.k_eq_1 (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X2__NEONFMA.k_eq_1_subtile
-[       OK ] F32_SPMM_MINMAX_4X2__NEONFMA.k_eq_1_subtile (1 ms)
+[       OK ] F32_SPMM_MINMAX_4X2__NEONFMA.k_eq_1_subtile (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X2__NEONFMA.k_gt_1
-[       OK ] F32_SPMM_MINMAX_4X2__NEONFMA.k_gt_1 (0 ms)
+[       OK ] F32_SPMM_MINMAX_4X2__NEONFMA.k_gt_1 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X2__NEONFMA.k_gt_1_subtile
-[       OK ] F32_SPMM_MINMAX_4X2__NEONFMA.k_gt_1_subtile (2 ms)
+[       OK ] F32_SPMM_MINMAX_4X2__NEONFMA.k_gt_1_subtile (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X2__NEONFMA.n_gt_2
 [       OK ] F32_SPMM_MINMAX_4X2__NEONFMA.n_gt_2 (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X2__NEONFMA.n_div_2
 [       OK ] F32_SPMM_MINMAX_4X2__NEONFMA.n_div_2 (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X2__NEONFMA.m_lt_4
-[       OK ] F32_SPMM_MINMAX_4X2__NEONFMA.m_lt_4 (2 ms)
+[       OK ] F32_SPMM_MINMAX_4X2__NEONFMA.m_lt_4 (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X2__NEONFMA.m_div_4
 [       OK ] F32_SPMM_MINMAX_4X2__NEONFMA.m_div_4 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X2__NEONFMA.m_gt_4
-[       OK ] F32_SPMM_MINMAX_4X2__NEONFMA.m_gt_4 (3 ms)
+[       OK ] F32_SPMM_MINMAX_4X2__NEONFMA.m_gt_4 (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X2__NEONFMA.qmin
 [       OK ] F32_SPMM_MINMAX_4X2__NEONFMA.qmin (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X2__NEONFMA.qmax
 [       OK ] F32_SPMM_MINMAX_4X2__NEONFMA.qmax (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X2__NEONFMA.half_sparse
-[       OK ] F32_SPMM_MINMAX_4X2__NEONFMA.half_sparse (0 ms)
+[       OK ] F32_SPMM_MINMAX_4X2__NEONFMA.half_sparse (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X2__NEONFMA.zero_weights
 [       OK ] F32_SPMM_MINMAX_4X2__NEONFMA.zero_weights (0 ms)
-[----------] 13 tests from F32_SPMM_MINMAX_4X2__NEONFMA (15 ms total)
+[----------] 13 tests from F32_SPMM_MINMAX_4X2__NEONFMA (14 ms total)
 
 [----------] 13 tests from F32_SPMM_MINMAX_4X4__NEONFMA
 [ RUN      ] F32_SPMM_MINMAX_4X4__NEONFMA.k_eq_1
-[       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.k_eq_1 (1 ms)
+[       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.k_eq_1 (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X4__NEONFMA.k_eq_1_subtile
 [       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.k_eq_1_subtile (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X4__NEONFMA.k_gt_1
 [       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.k_gt_1 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X4__NEONFMA.k_gt_1_subtile
-[       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.k_gt_1_subtile (2 ms)
+[       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.k_gt_1_subtile (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X4__NEONFMA.n_gt_4
-[       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.n_gt_4 (2 ms)
+[       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.n_gt_4 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X4__NEONFMA.n_div_4
 [       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.n_div_4 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X4__NEONFMA.m_lt_4
@@ -75,12 +75,12 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [ RUN      ] F32_SPMM_MINMAX_4X4__NEONFMA.qmin
 [       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.qmin (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X4__NEONFMA.qmax
-[       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.qmax (1 ms)
+[       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.qmax (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X4__NEONFMA.half_sparse
-[       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.half_sparse (2 ms)
+[       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.half_sparse (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X4__NEONFMA.zero_weights
 [       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.zero_weights (1 ms)
-[----------] 13 tests from F32_SPMM_MINMAX_4X4__NEONFMA (22 ms total)
+[----------] 13 tests from F32_SPMM_MINMAX_4X4__NEONFMA (21 ms total)
 
 [----------] 10 tests from F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED
 [ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.k_eq_1
@@ -90,7 +90,7 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.n_gt_1
 [       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.n_gt_1 (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.m_lt_4
-[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.m_lt_4 (4 ms)
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.m_lt_4 (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.m_div_4
 [       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.m_div_4 (4 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.m_gt_4
@@ -142,7 +142,7 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA.m_lt_8
 [       OK ] F32_SPMM_MINMAX_8X1__NEONFMA.m_lt_8 (9 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA.m_div_8
-[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA.m_div_8 (4 ms)
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA.m_div_8 (5 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA.m_gt_8
 [       OK ] F32_SPMM_MINMAX_8X1__NEONFMA.m_gt_8 (12 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA.qmin
@@ -165,17 +165,17 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [ RUN      ] F32_SPMM_MINMAX_8X2__NEONFMA.k_gt_1_subtile
 [       OK ] F32_SPMM_MINMAX_8X2__NEONFMA.k_gt_1_subtile (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X2__NEONFMA.n_gt_2
-[       OK ] F32_SPMM_MINMAX_8X2__NEONFMA.n_gt_2 (3 ms)
+[       OK ] F32_SPMM_MINMAX_8X2__NEONFMA.n_gt_2 (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X2__NEONFMA.n_div_2
-[       OK ] F32_SPMM_MINMAX_8X2__NEONFMA.n_div_2 (0 ms)
+[       OK ] F32_SPMM_MINMAX_8X2__NEONFMA.n_div_2 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X2__NEONFMA.m_lt_8
 [       OK ] F32_SPMM_MINMAX_8X2__NEONFMA.m_lt_8 (6 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X2__NEONFMA.m_div_8
 [       OK ] F32_SPMM_MINMAX_8X2__NEONFMA.m_div_8 (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X2__NEONFMA.m_gt_8
-[       OK ] F32_SPMM_MINMAX_8X2__NEONFMA.m_gt_8 (7 ms)
+[       OK ] F32_SPMM_MINMAX_8X2__NEONFMA.m_gt_8 (6 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X2__NEONFMA.qmin
-[       OK ] F32_SPMM_MINMAX_8X2__NEONFMA.qmin (1 ms)
+[       OK ] F32_SPMM_MINMAX_8X2__NEONFMA.qmin (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X2__NEONFMA.qmax
 [       OK ] F32_SPMM_MINMAX_8X2__NEONFMA.qmax (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X2__NEONFMA.half_sparse
@@ -190,11 +190,11 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [ RUN      ] F32_SPMM_MINMAX_8X4__NEONFMA.k_eq_1_subtile
 [       OK ] F32_SPMM_MINMAX_8X4__NEONFMA.k_eq_1_subtile (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X4__NEONFMA.k_gt_1
-[       OK ] F32_SPMM_MINMAX_8X4__NEONFMA.k_gt_1 (0 ms)
+[       OK ] F32_SPMM_MINMAX_8X4__NEONFMA.k_gt_1 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X4__NEONFMA.k_gt_1_subtile
-[       OK ] F32_SPMM_MINMAX_8X4__NEONFMA.k_gt_1_subtile (4 ms)
+[       OK ] F32_SPMM_MINMAX_8X4__NEONFMA.k_gt_1_subtile (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X4__NEONFMA.n_gt_4
-[       OK ] F32_SPMM_MINMAX_8X4__NEONFMA.n_gt_4 (1 ms)
+[       OK ] F32_SPMM_MINMAX_8X4__NEONFMA.n_gt_4 (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X4__NEONFMA.n_div_4
 [       OK ] F32_SPMM_MINMAX_8X4__NEONFMA.n_div_4 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X4__NEONFMA.m_lt_8
@@ -208,20 +208,20 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [ RUN      ] F32_SPMM_MINMAX_8X4__NEONFMA.qmax
 [       OK ] F32_SPMM_MINMAX_8X4__NEONFMA.qmax (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X4__NEONFMA.half_sparse
-[       OK ] F32_SPMM_MINMAX_8X4__NEONFMA.half_sparse (2 ms)
+[       OK ] F32_SPMM_MINMAX_8X4__NEONFMA.half_sparse (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X4__NEONFMA.zero_weights
-[       OK ] F32_SPMM_MINMAX_8X4__NEONFMA.zero_weights (1 ms)
-[----------] 13 tests from F32_SPMM_MINMAX_8X4__NEONFMA (38 ms total)
+[       OK ] F32_SPMM_MINMAX_8X4__NEONFMA.zero_weights (2 ms)
+[----------] 13 tests from F32_SPMM_MINMAX_8X4__NEONFMA (37 ms total)
 
 [----------] 10 tests from F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.k_eq_1
 [       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.k_eq_1 (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.k_gt_1
-[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.k_gt_1 (0 ms)
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.k_gt_1 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.n_gt_1
 [       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.n_gt_1 (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.m_lt_8
-[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.m_lt_8 (10 ms)
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.m_lt_8 (9 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.m_div_8
 [       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.m_div_8 (4 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.m_gt_8
@@ -234,7 +234,7 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.half_sparse (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.zero_weights
 [       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.zero_weights (2 ms)
-[----------] 10 tests from F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED (37 ms total)
+[----------] 10 tests from F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED (38 ms total)
 
 [----------] 12 tests from F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.k_eq_2
@@ -246,22 +246,22 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.k_div_2
 [       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.k_div_2 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.n_gt_1
-[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.n_gt_1 (5 ms)
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.n_gt_1 (4 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.m_lt_8
-[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.m_lt_8 (14 ms)
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.m_lt_8 (15 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.m_div_8
 [       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.m_div_8 (7 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.m_gt_8
 [       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.m_gt_8 (19 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.qmin
-[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.qmin (3 ms)
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.qmin (4 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.qmax
 [       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.qmax (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.half_sparse
-[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.half_sparse (4 ms)
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.half_sparse (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.zero_weights
 [       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.zero_weights (3 ms)
-[----------] 12 tests from F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2 (60 ms total)
+[----------] 12 tests from F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2 (59 ms total)
 
 [----------] 10 tests from F32_SPMM_MINMAX_12X1__NEONFMA
 [ RUN      ] F32_SPMM_MINMAX_12X1__NEONFMA.k_eq_1
@@ -279,9 +279,9 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [ RUN      ] F32_SPMM_MINMAX_12X1__NEONFMA.qmin
 [       OK ] F32_SPMM_MINMAX_12X1__NEONFMA.qmin (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_12X1__NEONFMA.qmax
-[       OK ] F32_SPMM_MINMAX_12X1__NEONFMA.qmax (2 ms)
+[       OK ] F32_SPMM_MINMAX_12X1__NEONFMA.qmax (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_12X1__NEONFMA.half_sparse
-[       OK ] F32_SPMM_MINMAX_12X1__NEONFMA.half_sparse (3 ms)
+[       OK ] F32_SPMM_MINMAX_12X1__NEONFMA.half_sparse (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_12X1__NEONFMA.zero_weights
 [       OK ] F32_SPMM_MINMAX_12X1__NEONFMA.zero_weights (2 ms)
 [----------] 10 tests from F32_SPMM_MINMAX_12X1__NEONFMA (56 ms total)
@@ -296,9 +296,9 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [ RUN      ] F32_SPMM_MINMAX_12X2__NEONFMA.k_gt_1_subtile
 [       OK ] F32_SPMM_MINMAX_12X2__NEONFMA.k_gt_1_subtile (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_12X2__NEONFMA.n_gt_2
-[       OK ] F32_SPMM_MINMAX_12X2__NEONFMA.n_gt_2 (2 ms)
+[       OK ] F32_SPMM_MINMAX_12X2__NEONFMA.n_gt_2 (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_12X2__NEONFMA.n_div_2
-[       OK ] F32_SPMM_MINMAX_12X2__NEONFMA.n_div_2 (1 ms)
+[       OK ] F32_SPMM_MINMAX_12X2__NEONFMA.n_div_2 (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_12X2__NEONFMA.m_lt_12
 [       OK ] F32_SPMM_MINMAX_12X2__NEONFMA.m_lt_12 (9 ms)
 [ RUN      ] F32_SPMM_MINMAX_12X2__NEONFMA.m_div_12
@@ -333,9 +333,9 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [ RUN      ] F32_SPMM_MINMAX_12X4__NEONFMA.m_div_12
 [       OK ] F32_SPMM_MINMAX_12X4__NEONFMA.m_div_12 (5 ms)
 [ RUN      ] F32_SPMM_MINMAX_12X4__NEONFMA.m_gt_12
-[       OK ] F32_SPMM_MINMAX_12X4__NEONFMA.m_gt_12 (21 ms)
+[       OK ] F32_SPMM_MINMAX_12X4__NEONFMA.m_gt_12 (20 ms)
 [ RUN      ] F32_SPMM_MINMAX_12X4__NEONFMA.qmin
-[       OK ] F32_SPMM_MINMAX_12X4__NEONFMA.qmin (2 ms)
+[       OK ] F32_SPMM_MINMAX_12X4__NEONFMA.qmin (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_12X4__NEONFMA.qmax
 [       OK ] F32_SPMM_MINMAX_12X4__NEONFMA.qmax (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_12X4__NEONFMA.half_sparse
@@ -346,11 +346,11 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 
 [----------] 10 tests from F32_SPMM_MINMAX_16X1__NEONFMA
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA.k_eq_1
-[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA.k_eq_1 (1 ms)
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA.k_eq_1 (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA.k_gt_1
-[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA.k_gt_1 (0 ms)
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA.k_gt_1 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA.n_gt_1
-[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA.n_gt_1 (4 ms)
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA.n_gt_1 (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA.m_lt_16
 [       OK ] F32_SPMM_MINMAX_16X1__NEONFMA.m_lt_16 (23 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA.m_div_16
@@ -371,7 +371,7 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [ RUN      ] F32_SPMM_MINMAX_16X2__NEONFMA.k_eq_1
 [       OK ] F32_SPMM_MINMAX_16X2__NEONFMA.k_eq_1 (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X2__NEONFMA.k_eq_1_subtile
-[       OK ] F32_SPMM_MINMAX_16X2__NEONFMA.k_eq_1_subtile (0 ms)
+[       OK ] F32_SPMM_MINMAX_16X2__NEONFMA.k_eq_1_subtile (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X2__NEONFMA.k_gt_1
 [       OK ] F32_SPMM_MINMAX_16X2__NEONFMA.k_gt_1 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X2__NEONFMA.k_gt_1_subtile
@@ -414,13 +414,13 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [ RUN      ] F32_SPMM_MINMAX_16X4__NEONFMA.m_div_16
 [       OK ] F32_SPMM_MINMAX_16X4__NEONFMA.m_div_16 (6 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X4__NEONFMA.m_gt_16
-[       OK ] F32_SPMM_MINMAX_16X4__NEONFMA.m_gt_16 (32 ms)
+[       OK ] F32_SPMM_MINMAX_16X4__NEONFMA.m_gt_16 (33 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X4__NEONFMA.qmin
 [       OK ] F32_SPMM_MINMAX_16X4__NEONFMA.qmin (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X4__NEONFMA.qmax
-[       OK ] F32_SPMM_MINMAX_16X4__NEONFMA.qmax (3 ms)
+[       OK ] F32_SPMM_MINMAX_16X4__NEONFMA.qmax (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X4__NEONFMA.half_sparse
-[       OK ] F32_SPMM_MINMAX_16X4__NEONFMA.half_sparse (2 ms)
+[       OK ] F32_SPMM_MINMAX_16X4__NEONFMA.half_sparse (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X4__NEONFMA.zero_weights
 [       OK ] F32_SPMM_MINMAX_16X4__NEONFMA.zero_weights (3 ms)
 [----------] 13 tests from F32_SPMM_MINMAX_16X4__NEONFMA (79 ms total)
@@ -435,28 +435,28 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.m_lt_16
 [       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.m_lt_16 (23 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.m_div_16
-[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.m_div_16 (5 ms)
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.m_div_16 (6 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.m_gt_16
 [       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.m_gt_16 (34 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.qmin
 [       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.qmin (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.qmax
-[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.qmax (3 ms)
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.qmax (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.half_sparse
-[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.half_sparse (2 ms)
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.half_sparse (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.zero_weights
-[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.zero_weights (3 ms)
-[----------] 10 tests from F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED (78 ms total)
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.zero_weights (2 ms)
+[----------] 10 tests from F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED (77 ms total)
 
 [----------] 12 tests from F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.k_eq_2
-[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.k_eq_2 (0 ms)
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.k_eq_2 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.k_lt_2
 [       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.k_lt_2 (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.k_gt_2
 [       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.k_gt_2 (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.k_div_2
-[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.k_div_2 (2 ms)
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.k_div_2 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.n_gt_1
 [       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.n_gt_1 (5 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.m_lt_16
@@ -466,20 +466,20 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.m_gt_16
 [       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.m_gt_16 (57 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.qmin
-[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.qmin (4 ms)
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.qmin (5 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.qmax
-[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.qmax (5 ms)
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.qmax (4 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.half_sparse
-[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.half_sparse (4 ms)
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.half_sparse (5 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.zero_weights
-[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.zero_weights (5 ms)
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.zero_weights (4 ms)
 [----------] 12 tests from F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2 (129 ms total)
 
 [----------] 10 tests from F32_SPMM_MINMAX_1X1__SCALAR
 [ RUN      ] F32_SPMM_MINMAX_1X1__SCALAR.k_eq_1
 [       OK ] F32_SPMM_MINMAX_1X1__SCALAR.k_eq_1 (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_1X1__SCALAR.k_gt_1
-[       OK ] F32_SPMM_MINMAX_1X1__SCALAR.k_gt_1 (0 ms)
+[       OK ] F32_SPMM_MINMAX_1X1__SCALAR.k_gt_1 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_1X1__SCALAR.n_gt_1
 [       OK ] F32_SPMM_MINMAX_1X1__SCALAR.n_gt_1 (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_1X1__SCALAR.m_lt_1
@@ -489,34 +489,34 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [ RUN      ] F32_SPMM_MINMAX_1X1__SCALAR.m_gt_1
 [       OK ] F32_SPMM_MINMAX_1X1__SCALAR.m_gt_1 (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_1X1__SCALAR.qmin
-[       OK ] F32_SPMM_MINMAX_1X1__SCALAR.qmin (2 ms)
+[       OK ] F32_SPMM_MINMAX_1X1__SCALAR.qmin (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_1X1__SCALAR.qmax
 [       OK ] F32_SPMM_MINMAX_1X1__SCALAR.qmax (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_1X1__SCALAR.half_sparse
-[       OK ] F32_SPMM_MINMAX_1X1__SCALAR.half_sparse (1 ms)
+[       OK ] F32_SPMM_MINMAX_1X1__SCALAR.half_sparse (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_1X1__SCALAR.zero_weights
 [       OK ] F32_SPMM_MINMAX_1X1__SCALAR.zero_weights (1 ms)
-[----------] 10 tests from F32_SPMM_MINMAX_1X1__SCALAR (10 ms total)
+[----------] 10 tests from F32_SPMM_MINMAX_1X1__SCALAR (11 ms total)
 
 [----------] 10 tests from F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED
 [ RUN      ] F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED.k_eq_1
 [       OK ] F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED.k_eq_1 (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED.k_gt_1
-[       OK ] F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED.k_gt_1 (0 ms)
+[       OK ] F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED.k_gt_1 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED.n_gt_1
 [       OK ] F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED.n_gt_1 (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED.m_lt_1
 [       OK ] F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED.m_lt_1 (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED.m_div_1
-[       OK ] F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED.m_div_1 (3 ms)
+[       OK ] F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED.m_div_1 (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED.m_gt_1
 [       OK ] F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED.m_gt_1 (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED.qmin
 [       OK ] F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED.qmin (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED.qmax
-[       OK ] F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED.qmax (2 ms)
+[       OK ] F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED.qmax (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED.half_sparse
-[       OK ] F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED.half_sparse (1 ms)
+[       OK ] F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED.half_sparse (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED.zero_weights
 [       OK ] F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED.zero_weights (1 ms)
 [----------] 10 tests from F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED (11 ms total)
@@ -529,42 +529,42 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [ RUN      ] F32_SPMM_MINMAX_2X1__SCALAR.n_gt_1
 [       OK ] F32_SPMM_MINMAX_2X1__SCALAR.n_gt_1 (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_2X1__SCALAR.m_lt_2
-[       OK ] F32_SPMM_MINMAX_2X1__SCALAR.m_lt_2 (2 ms)
+[       OK ] F32_SPMM_MINMAX_2X1__SCALAR.m_lt_2 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_2X1__SCALAR.m_div_2
-[       OK ] F32_SPMM_MINMAX_2X1__SCALAR.m_div_2 (2 ms)
+[       OK ] F32_SPMM_MINMAX_2X1__SCALAR.m_div_2 (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_2X1__SCALAR.m_gt_2
-[       OK ] F32_SPMM_MINMAX_2X1__SCALAR.m_gt_2 (2 ms)
+[       OK ] F32_SPMM_MINMAX_2X1__SCALAR.m_gt_2 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_2X1__SCALAR.qmin
-[       OK ] F32_SPMM_MINMAX_2X1__SCALAR.qmin (1 ms)
+[       OK ] F32_SPMM_MINMAX_2X1__SCALAR.qmin (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_2X1__SCALAR.qmax
-[       OK ] F32_SPMM_MINMAX_2X1__SCALAR.qmax (2 ms)
+[       OK ] F32_SPMM_MINMAX_2X1__SCALAR.qmax (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_2X1__SCALAR.half_sparse
-[       OK ] F32_SPMM_MINMAX_2X1__SCALAR.half_sparse (1 ms)
+[       OK ] F32_SPMM_MINMAX_2X1__SCALAR.half_sparse (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_2X1__SCALAR.zero_weights
-[       OK ] F32_SPMM_MINMAX_2X1__SCALAR.zero_weights (2 ms)
-[----------] 10 tests from F32_SPMM_MINMAX_2X1__SCALAR (15 ms total)
+[       OK ] F32_SPMM_MINMAX_2X1__SCALAR.zero_weights (1 ms)
+[----------] 10 tests from F32_SPMM_MINMAX_2X1__SCALAR (14 ms total)
 
 [----------] 10 tests from F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED
 [ RUN      ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.k_eq_1
 [       OK ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.k_eq_1 (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.k_gt_1
-[       OK ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.k_gt_1 (0 ms)
+[       OK ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.k_gt_1 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.n_gt_1
-[       OK ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.n_gt_1 (3 ms)
+[       OK ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.n_gt_1 (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.m_lt_2
 [       OK ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.m_lt_2 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.m_div_2
 [       OK ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.m_div_2 (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.m_gt_2
-[       OK ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.m_gt_2 (1 ms)
+[       OK ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.m_gt_2 (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.qmin
-[       OK ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.qmin (2 ms)
+[       OK ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.qmin (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.qmax
 [       OK ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.qmax (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.half_sparse
-[       OK ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.half_sparse (1 ms)
+[       OK ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.half_sparse (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.zero_weights
-[       OK ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.zero_weights (2 ms)
+[       OK ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.zero_weights (1 ms)
 [----------] 10 tests from F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED (14 ms total)
 
 [----------] 10 tests from F32_SPMM_MINMAX_4X1__SCALAR
@@ -577,13 +577,13 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR.m_lt_4
 [       OK ] F32_SPMM_MINMAX_4X1__SCALAR.m_lt_4 (4 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR.m_div_4
-[       OK ] F32_SPMM_MINMAX_4X1__SCALAR.m_div_4 (3 ms)
+[       OK ] F32_SPMM_MINMAX_4X1__SCALAR.m_div_4 (4 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR.m_gt_4
-[       OK ] F32_SPMM_MINMAX_4X1__SCALAR.m_gt_4 (5 ms)
+[       OK ] F32_SPMM_MINMAX_4X1__SCALAR.m_gt_4 (4 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR.qmin
-[       OK ] F32_SPMM_MINMAX_4X1__SCALAR.qmin (1 ms)
+[       OK ] F32_SPMM_MINMAX_4X1__SCALAR.qmin (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR.qmax
-[       OK ] F32_SPMM_MINMAX_4X1__SCALAR.qmax (2 ms)
+[       OK ] F32_SPMM_MINMAX_4X1__SCALAR.qmax (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR.half_sparse
 [       OK ] F32_SPMM_MINMAX_4X1__SCALAR.half_sparse (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR.zero_weights
@@ -592,49 +592,49 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 
 [----------] 10 tests from F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED
 [ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.k_eq_1
-[       OK ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.k_eq_1 (0 ms)
+[       OK ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.k_eq_1 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.k_gt_1
-[       OK ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.k_gt_1 (1 ms)
+[       OK ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.k_gt_1 (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.n_gt_1
-[       OK ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.n_gt_1 (2 ms)
+[       OK ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.n_gt_1 (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.m_lt_4
-[       OK ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.m_lt_4 (4 ms)
+[       OK ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.m_lt_4 (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.m_div_4
-[       OK ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.m_div_4 (4 ms)
+[       OK ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.m_div_4 (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.m_gt_4
 [       OK ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.m_gt_4 (4 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.qmin
 [       OK ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.qmin (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.qmax
-[       OK ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.qmax (1 ms)
+[       OK ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.qmax (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.half_sparse
-[       OK ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.half_sparse (2 ms)
+[       OK ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.half_sparse (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.zero_weights
-[       OK ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.zero_weights (1 ms)
-[----------] 10 tests from F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED (21 ms total)
+[       OK ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.zero_weights (2 ms)
+[----------] 10 tests from F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED (22 ms total)
 
 [----------] 10 tests from F32_SPMM_MINMAX_8X1__SCALAR
 [ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR.k_eq_1
-[       OK ] F32_SPMM_MINMAX_8X1__SCALAR.k_eq_1 (1 ms)
+[       OK ] F32_SPMM_MINMAX_8X1__SCALAR.k_eq_1 (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR.k_gt_1
-[       OK ] F32_SPMM_MINMAX_8X1__SCALAR.k_gt_1 (0 ms)
+[       OK ] F32_SPMM_MINMAX_8X1__SCALAR.k_gt_1 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR.n_gt_1
-[       OK ] F32_SPMM_MINMAX_8X1__SCALAR.n_gt_1 (3 ms)
+[       OK ] F32_SPMM_MINMAX_8X1__SCALAR.n_gt_1 (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR.m_lt_8
 [       OK ] F32_SPMM_MINMAX_8X1__SCALAR.m_lt_8 (10 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR.m_div_8
 [       OK ] F32_SPMM_MINMAX_8X1__SCALAR.m_div_8 (4 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR.m_gt_8
-[       OK ] F32_SPMM_MINMAX_8X1__SCALAR.m_gt_8 (12 ms)
+[       OK ] F32_SPMM_MINMAX_8X1__SCALAR.m_gt_8 (13 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR.qmin
 [       OK ] F32_SPMM_MINMAX_8X1__SCALAR.qmin (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR.qmax
-[       OK ] F32_SPMM_MINMAX_8X1__SCALAR.qmax (2 ms)
+[       OK ] F32_SPMM_MINMAX_8X1__SCALAR.qmax (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR.half_sparse
-[       OK ] F32_SPMM_MINMAX_8X1__SCALAR.half_sparse (2 ms)
+[       OK ] F32_SPMM_MINMAX_8X1__SCALAR.half_sparse (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR.zero_weights
 [       OK ] F32_SPMM_MINMAX_8X1__SCALAR.zero_weights (2 ms)
-[----------] 10 tests from F32_SPMM_MINMAX_8X1__SCALAR (38 ms total)
+[----------] 10 tests from F32_SPMM_MINMAX_8X1__SCALAR (37 ms total)
 
 [----------] 10 tests from F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED
 [ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.k_eq_1
@@ -644,7 +644,7 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.n_gt_1
 [       OK ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.n_gt_1 (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.m_lt_8
-[       OK ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.m_lt_8 (9 ms)
+[       OK ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.m_lt_8 (10 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.m_div_8
 [       OK ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.m_div_8 (4 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.m_gt_8
@@ -702,7 +702,7 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [ RUN      ] F32_SPMM_MINMAX_8X4__SCALAR.n_div_4
 [       OK ] F32_SPMM_MINMAX_8X4__SCALAR.n_div_4 (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X4__SCALAR.m_lt_8
-[       OK ] F32_SPMM_MINMAX_8X4__SCALAR.m_lt_8 (9 ms)
+[       OK ] F32_SPMM_MINMAX_8X4__SCALAR.m_lt_8 (8 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X4__SCALAR.m_div_8
 [       OK ] F32_SPMM_MINMAX_8X4__SCALAR.m_div_8 (4 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X4__SCALAR.m_gt_8
@@ -718,5 +718,5 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [----------] 13 tests from F32_SPMM_MINMAX_8X4__SCALAR (38 ms total)
 
 [----------] Global test environment tear-down
-[==========] 316 tests from 28 test suites ran. (1098 ms total)
+[==========] 316 tests from 28 test suites ran. (1096 ms total)
 [  PASSED  ] 316 tests.
