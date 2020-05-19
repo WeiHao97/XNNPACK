@@ -164,9 +164,9 @@ class SpMMMicrokernelTester {
       }
       */
 
-      for(i = 0; i<m(); i++){
+      for(int i = 0; i<m(); i++){
         if (prng() <= 0.8f) {
-          for(j = 0; j<k(); j++){
+          for(int j = 0; j<k(); j++){
             a[j*m() + i] = 0.0f;
           }
         }
