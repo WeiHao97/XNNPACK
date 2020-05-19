@@ -96,19 +96,7 @@ Otherwise, it is set to all zeros--*/
     i -= 16;
   }else{    
 
-    do {
-      float32x4_t cout_ = vminq_f32(vw, vmax);
-      cout_ = vmaxq_f32(cout_, vmin);
-      vst1q_f32(c, cout_);
-      vst1q_f32(c + 4, cout_);
-      vst1q_f32(c + 8, cout_);
-      vst1q_f32(c + 12, cout_);
-      c += m;
-    } while (--j != 0);
-    c -= m * n;
-    c += 16;
-    a += 16;
-    i -= 16;}
+}
 
 
   }
