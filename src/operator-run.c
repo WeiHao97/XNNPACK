@@ -896,6 +896,9 @@ enum xnn_status xnn_run_operator(xnn_operator_t op, pthreadpool_t threadpool)
     xnn_log_error("failed to run operator: XNNPACK is not initialized");
     return xnn_status_uninitialized;
   }
+
+  size_t output_width = op->output_width;//wei
+
   switch (op->state) {
     case xnn_run_state_invalid:
       xnn_log_error("failed to run operator: operator was not successfully setup");
@@ -1079,11 +1082,11 @@ enum xnn_status xnn_run_operator(xnn_operator_t op, pthreadpool_t threadpool)
 
 //Wei
       float n_zeros = 0;
-      for(size_t l = 0; l < op->output_width; l++ ){
+      for(size_t l = 0; l < output_width; l++ ){
         if( *(int*)( op->output + l) == 0){n_zeros++;}
       }
 
-      printf(" Sparsity: %f", n_zeros/op->output_width); 
+      printf(" Sparsity: %f", n_zeros/output_width); 
 
 
   return xnn_status_success;
