@@ -20,8 +20,6 @@
 #include <xnnpack/params.h>
 #include <xnnpack/compute.h>
 
-#include <iostream>//Wei
-
 
 void xnn_compute_grouped_gemm(
     const struct gemm_context context[restrict XNN_MIN_ELEMENTS(1)],
