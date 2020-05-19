@@ -1080,7 +1080,7 @@ enum xnn_status xnn_run_operator(xnn_operator_t op, pthreadpool_t threadpool)
 //Wei
       float n_zeros = 0;
       for(size_t l = 0; l < op->context.spmm.batched_c_stride; l++ ){
-        if( *(int*)( op->spmm_context.c + l) == 0){n_zeros++;}
+        if( *(int*)( op->context.spmm.c + l) == 0){n_zeros++;}
       }
 
       printf(" Sparsity: %f", n_zeros/op->context.spmm.batched_c_stride); 
