@@ -46,13 +46,13 @@ static void End2EndBenchmark(
         return;
       }
       //wei
-      
+      auto myop = op.get();
       float n_zeros = 0;
-      for(size_t l = 0; l < (*op.get()).output_width; l++ ){
-        if( *( (*op.get()).output + l) == 0){n_zeros++;}
+      for(size_t l = 0; l < myop->output_width; l++ ){
+        if( *( myop->output + l) == 0){n_zeros++;}
       }
 
-      std::cout<< "V" << v_num++ << " Sparsity: "<< n_zeros/(*op.get()).output_width <<"\n"; 
+      std::cout<< "V" << v_num++ << " Sparsity: "<< n_zeros/myop->output_width <<"\n"; 
 
     }
   }
