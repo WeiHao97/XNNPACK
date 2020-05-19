@@ -1083,7 +1083,7 @@ enum xnn_status xnn_run_operator(xnn_operator_t op, pthreadpool_t threadpool)
         if( *( op->output + l) == 0){n_zeros++;}
       }
 
-      std::cout<< " Sparsity: "<< n_zeros/op->output_width <<"\n"; 
+      printf(" Sparsity: %f", n_zeros/op->output_width); 
 
 
   return xnn_status_success;
