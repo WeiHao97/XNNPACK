@@ -104,13 +104,14 @@ Otherwise, it is set to all zeros--*/
       vst1q_f32(c + 4, cout_);
       vst1q_f32(c + 8, cout_);
       vst1q_f32(c + 12, cout_);
-      c += m;
+      c += m;w += nnz;w += 1;
       if XNN_LIKELY(nnz != 0) {
         do {
           a = (const float*restrict) ((uintptr_t) a + (uintptr_t) diff);
           diff = *dmap++;
         } while (--nnz != 0);
       }
+      vw = vld1q_dup_f32(w);
 
     } while (--j != 0);
     c -= m * n;
