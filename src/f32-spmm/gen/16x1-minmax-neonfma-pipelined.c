@@ -104,7 +104,7 @@ Otherwise, it is set to all zeros--*/
       vst1q_f32(c + 4, cout_);
       vst1q_f32(c + 8, cout_);
       vst1q_f32(c + 12, cout_);
-      c += m;w += nnz;
+      c += m;w += (nnz+1);
       if XNN_LIKELY(nnz != 0) {
         do {
           a = (const float*restrict) ((uintptr_t) a + (uintptr_t) diff);
