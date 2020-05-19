@@ -10,7 +10,7 @@
 #include <vector>
 
 #include <xnnpack.h>
-#include <iostream>//Wei
+//#include <iostream>//Wei
 
 #include <benchmark/benchmark.h>
 
@@ -38,7 +38,7 @@ static void End2EndBenchmark(
   }
 
   for (auto _ : state) {
-    int v_num = 0;//wei
+    //int v_num = 0;//wei
     for (const std::unique_ptr<xnn_operator, decltype(&xnn_delete_operator)>& op : execution_plan) {
       xnn_status status = xnn_run_operator(op.get(), threadpool.get());
       if (status != xnn_status_success) {
@@ -47,7 +47,7 @@ static void End2EndBenchmark(
       }
       //wei
 
-      std::cout<< "V" << v_num++<<"\n"; 
+      //std::cout<< "V" << v_num++<<"\n"; 
 
     }
   }

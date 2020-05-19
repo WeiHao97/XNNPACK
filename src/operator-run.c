@@ -20,7 +20,7 @@
 #include <xnnpack/params.h>
 #include <xnnpack/compute.h>
 
-#include <stdio.h>//wei
+//#include <stdio.h>//wei
 
 
 void xnn_compute_grouped_gemm(
@@ -1078,13 +1078,14 @@ enum xnn_status xnn_run_operator(xnn_operator_t op, pthreadpool_t threadpool)
   }
 
 //Wei
+/*
       if(op->context.spmm != NULL){
       float n_zeros = 0;
       for(size_t l = 0; l < op->context.spmm.batched_c_stride; l++ ){
         if( *(int*)( op->context.spmm.c + l) == 0){n_zeros++;}
       }
 
-      printf(" Sparsity: %f", n_zeros/op->context.spmm.batched_c_stride); }
+      printf(" Sparsity: %f", n_zeros/op->context.spmm.batched_c_stride); }*/
 
 
   return xnn_status_success;
