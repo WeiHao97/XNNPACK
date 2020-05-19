@@ -37,12 +37,19 @@ static void End2EndBenchmark(
   }
 
   for (auto _ : state) {
+    int v_num = 0;
     for (const std::unique_ptr<xnn_operator, decltype(&xnn_delete_operator)>& op : execution_plan) {
       xnn_status status = xnn_run_operator(op.get(), threadpool.get());
       if (status != xnn_status_success) {
         state.SkipWithError("failed to run a model");
         return;
       }
+      float n_zeros = 0;
+      for(size_t l = 0; l < op.get().output_width; l++ ){
+        if( *(op.get().output + l) == 0){n_zeros++;}
+      }
+
+      std::cout<< "V" << v_num++ << " Sparsity: "<< n_zeros/op.get().output_width <<"\n";
     }
   }
   state.counters["Freq"] = benchmark::utils::GetCurrentCpuFrequency();
