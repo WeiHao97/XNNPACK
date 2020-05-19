@@ -3,26 +3,26 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [----------] Global test environment set-up.
 [----------] 10 tests from F32_SPMM_MINMAX_4X1__NEONFMA
 [ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA.k_eq_1
-[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA.k_eq_1 (1 ms)
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA.k_eq_1 (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA.k_gt_1
 [       OK ] F32_SPMM_MINMAX_4X1__NEONFMA.k_gt_1 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA.n_gt_1
-[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA.n_gt_1 (2 ms)
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA.n_gt_1 (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA.m_lt_4
-[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA.m_lt_4 (4 ms)
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA.m_lt_4 (5 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA.m_div_4
 [       OK ] F32_SPMM_MINMAX_4X1__NEONFMA.m_div_4 (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA.m_gt_4
 [       OK ] F32_SPMM_MINMAX_4X1__NEONFMA.m_gt_4 (5 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA.qmin
-[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA.qmin (1 ms)
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA.qmin (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA.qmax
-[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA.qmax (2 ms)
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA.qmax (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA.half_sparse
-[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA.half_sparse (1 ms)
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA.half_sparse (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA.zero_weights
 [       OK ] F32_SPMM_MINMAX_4X1__NEONFMA.zero_weights (2 ms)
-[----------] 10 tests from F32_SPMM_MINMAX_4X1__NEONFMA (22 ms total)
+[----------] 10 tests from F32_SPMM_MINMAX_4X1__NEONFMA (24 ms total)
 
 [----------] 13 tests from F32_SPMM_MINMAX_4X2__NEONFMA
 [ RUN      ] F32_SPMM_MINMAX_4X2__NEONFMA.k_eq_1
@@ -34,7 +34,7 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [ RUN      ] F32_SPMM_MINMAX_4X2__NEONFMA.k_gt_1_subtile
 [       OK ] F32_SPMM_MINMAX_4X2__NEONFMA.k_gt_1_subtile (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X2__NEONFMA.n_gt_2
-[       OK ] F32_SPMM_MINMAX_4X2__NEONFMA.n_gt_2 (1 ms)
+[       OK ] F32_SPMM_MINMAX_4X2__NEONFMA.n_gt_2 (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X2__NEONFMA.n_div_2
 [       OK ] F32_SPMM_MINMAX_4X2__NEONFMA.n_div_2 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X2__NEONFMA.m_lt_4
@@ -44,11 +44,11 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [ RUN      ] F32_SPMM_MINMAX_4X2__NEONFMA.m_gt_4
 [       OK ] F32_SPMM_MINMAX_4X2__NEONFMA.m_gt_4 (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X2__NEONFMA.qmin
-[       OK ] F32_SPMM_MINMAX_4X2__NEONFMA.qmin (0 ms)
+[       OK ] F32_SPMM_MINMAX_4X2__NEONFMA.qmin (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X2__NEONFMA.qmax
-[       OK ] F32_SPMM_MINMAX_4X2__NEONFMA.qmax (1 ms)
+[       OK ] F32_SPMM_MINMAX_4X2__NEONFMA.qmax (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X2__NEONFMA.half_sparse
-[       OK ] F32_SPMM_MINMAX_4X2__NEONFMA.half_sparse (1 ms)
+[       OK ] F32_SPMM_MINMAX_4X2__NEONFMA.half_sparse (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X2__NEONFMA.zero_weights
 [       OK ] F32_SPMM_MINMAX_4X2__NEONFMA.zero_weights (1 ms)
 [----------] 13 tests from F32_SPMM_MINMAX_4X2__NEONFMA (15 ms total)
@@ -57,38 +57,38 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [ RUN      ] F32_SPMM_MINMAX_4X4__NEONFMA.k_eq_1
 [       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.k_eq_1 (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X4__NEONFMA.k_eq_1_subtile
-[       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.k_eq_1_subtile (1 ms)
+[       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.k_eq_1_subtile (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X4__NEONFMA.k_gt_1
-[       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.k_gt_1 (0 ms)
+[       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.k_gt_1 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X4__NEONFMA.k_gt_1_subtile
 [       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.k_gt_1_subtile (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X4__NEONFMA.n_gt_4
-[       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.n_gt_4 (2 ms)
+[       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.n_gt_4 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X4__NEONFMA.n_div_4
-[       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.n_div_4 (0 ms)
+[       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.n_div_4 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X4__NEONFMA.m_lt_4
-[       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.m_lt_4 (4 ms)
+[       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.m_lt_4 (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X4__NEONFMA.m_div_4
-[       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.m_div_4 (3 ms)
+[       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.m_div_4 (4 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X4__NEONFMA.m_gt_4
-[       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.m_gt_4 (3 ms)
+[       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.m_gt_4 (4 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X4__NEONFMA.qmin
-[       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.qmin (2 ms)
+[       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.qmin (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X4__NEONFMA.qmax
-[       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.qmax (1 ms)
+[       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.qmax (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X4__NEONFMA.half_sparse
-[       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.half_sparse (2 ms)
+[       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.half_sparse (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X4__NEONFMA.zero_weights
-[       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.zero_weights (1 ms)
-[----------] 13 tests from F32_SPMM_MINMAX_4X4__NEONFMA (22 ms total)
+[       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.zero_weights (2 ms)
+[----------] 13 tests from F32_SPMM_MINMAX_4X4__NEONFMA (24 ms total)
 
 [----------] 10 tests from F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED
 [ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.k_eq_1
 [       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.k_eq_1 (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.k_gt_1
-[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.k_gt_1 (1 ms)
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.k_gt_1 (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.n_gt_1
-[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.n_gt_1 (2 ms)
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.n_gt_1 (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.m_lt_4
 [       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.m_lt_4 (4 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.m_div_4
@@ -100,37 +100,37 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.qmax
 [       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.qmax (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.half_sparse
-[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.half_sparse (2 ms)
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.half_sparse (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.zero_weights
-[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.zero_weights (1 ms)
-[----------] 10 tests from F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED (21 ms total)
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.zero_weights (2 ms)
+[----------] 10 tests from F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED (22 ms total)
 
 [----------] 12 tests from F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2
 [ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.k_eq_2
 [       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.k_eq_2 (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.k_lt_2
-[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.k_lt_2 (1 ms)
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.k_lt_2 (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.k_gt_2
 [       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.k_gt_2 (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.k_div_2
 [       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.k_div_2 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.n_gt_1
-[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.n_gt_1 (3 ms)
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.n_gt_1 (4 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.m_lt_4
 [       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.m_lt_4 (6 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.m_div_4
-[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.m_div_4 (5 ms)
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.m_div_4 (6 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.m_gt_4
-[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.m_gt_4 (7 ms)
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.m_gt_4 (8 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.qmin
-[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.qmin (3 ms)
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.qmin (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.qmax
-[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.qmax (2 ms)
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.qmax (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.half_sparse
 [       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.half_sparse (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.zero_weights
-[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.zero_weights (2 ms)
-[----------] 12 tests from F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2 (33 ms total)
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.zero_weights (3 ms)
+[----------] 12 tests from F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2 (36 ms total)
 
 [----------] 10 tests from F32_SPMM_MINMAX_8X1__NEONFMA
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA.k_eq_1
@@ -140,30 +140,30 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA.n_gt_1
 [       OK ] F32_SPMM_MINMAX_8X1__NEONFMA.n_gt_1 (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA.m_lt_8
-[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA.m_lt_8 (9 ms)
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA.m_lt_8 (10 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA.m_div_8
 [       OK ] F32_SPMM_MINMAX_8X1__NEONFMA.m_div_8 (5 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA.m_gt_8
-[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA.m_gt_8 (12 ms)
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA.m_gt_8 (13 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA.qmin
 [       OK ] F32_SPMM_MINMAX_8X1__NEONFMA.qmin (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA.qmax
 [       OK ] F32_SPMM_MINMAX_8X1__NEONFMA.qmax (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA.half_sparse
-[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA.half_sparse (2 ms)
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA.half_sparse (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA.zero_weights
-[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA.zero_weights (1 ms)
-[----------] 10 tests from F32_SPMM_MINMAX_8X1__NEONFMA (37 ms total)
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA.zero_weights (2 ms)
+[----------] 10 tests from F32_SPMM_MINMAX_8X1__NEONFMA (41 ms total)
 
 [----------] 13 tests from F32_SPMM_MINMAX_8X2__NEONFMA
 [ RUN      ] F32_SPMM_MINMAX_8X2__NEONFMA.k_eq_1
-[       OK ] F32_SPMM_MINMAX_8X2__NEONFMA.k_eq_1 (1 ms)
+[       OK ] F32_SPMM_MINMAX_8X2__NEONFMA.k_eq_1 (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X2__NEONFMA.k_eq_1_subtile
 [       OK ] F32_SPMM_MINMAX_8X2__NEONFMA.k_eq_1_subtile (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X2__NEONFMA.k_gt_1
 [       OK ] F32_SPMM_MINMAX_8X2__NEONFMA.k_gt_1 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X2__NEONFMA.k_gt_1_subtile
-[       OK ] F32_SPMM_MINMAX_8X2__NEONFMA.k_gt_1_subtile (1 ms)
+[       OK ] F32_SPMM_MINMAX_8X2__NEONFMA.k_gt_1_subtile (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X2__NEONFMA.n_gt_2
 [       OK ] F32_SPMM_MINMAX_8X2__NEONFMA.n_gt_2 (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X2__NEONFMA.n_div_2
@@ -173,16 +173,16 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [ RUN      ] F32_SPMM_MINMAX_8X2__NEONFMA.m_div_8
 [       OK ] F32_SPMM_MINMAX_8X2__NEONFMA.m_div_8 (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X2__NEONFMA.m_gt_8
-[       OK ] F32_SPMM_MINMAX_8X2__NEONFMA.m_gt_8 (6 ms)
+[       OK ] F32_SPMM_MINMAX_8X2__NEONFMA.m_gt_8 (7 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X2__NEONFMA.qmin
 [       OK ] F32_SPMM_MINMAX_8X2__NEONFMA.qmin (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X2__NEONFMA.qmax
-[       OK ] F32_SPMM_MINMAX_8X2__NEONFMA.qmax (1 ms)
+[       OK ] F32_SPMM_MINMAX_8X2__NEONFMA.qmax (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X2__NEONFMA.half_sparse
-[       OK ] F32_SPMM_MINMAX_8X2__NEONFMA.half_sparse (2 ms)
+[       OK ] F32_SPMM_MINMAX_8X2__NEONFMA.half_sparse (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X2__NEONFMA.zero_weights
 [       OK ] F32_SPMM_MINMAX_8X2__NEONFMA.zero_weights (1 ms)
-[----------] 13 tests from F32_SPMM_MINMAX_8X2__NEONFMA (25 ms total)
+[----------] 13 tests from F32_SPMM_MINMAX_8X2__NEONFMA (26 ms total)
 
 [----------] 13 tests from F32_SPMM_MINMAX_8X4__NEONFMA
 [ RUN      ] F32_SPMM_MINMAX_8X4__NEONFMA.k_eq_1
@@ -190,7 +190,7 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [ RUN      ] F32_SPMM_MINMAX_8X4__NEONFMA.k_eq_1_subtile
 [       OK ] F32_SPMM_MINMAX_8X4__NEONFMA.k_eq_1_subtile (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X4__NEONFMA.k_gt_1
-[       OK ] F32_SPMM_MINMAX_8X4__NEONFMA.k_gt_1 (1 ms)
+[       OK ] F32_SPMM_MINMAX_8X4__NEONFMA.k_gt_1 (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X4__NEONFMA.k_gt_1_subtile
 [       OK ] F32_SPMM_MINMAX_8X4__NEONFMA.k_gt_1_subtile (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X4__NEONFMA.n_gt_4
@@ -200,41 +200,41 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [ RUN      ] F32_SPMM_MINMAX_8X4__NEONFMA.m_lt_8
 [       OK ] F32_SPMM_MINMAX_8X4__NEONFMA.m_lt_8 (8 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X4__NEONFMA.m_div_8
-[       OK ] F32_SPMM_MINMAX_8X4__NEONFMA.m_div_8 (4 ms)
+[       OK ] F32_SPMM_MINMAX_8X4__NEONFMA.m_div_8 (5 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X4__NEONFMA.m_gt_8
-[       OK ] F32_SPMM_MINMAX_8X4__NEONFMA.m_gt_8 (11 ms)
+[       OK ] F32_SPMM_MINMAX_8X4__NEONFMA.m_gt_8 (12 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X4__NEONFMA.qmin
 [       OK ] F32_SPMM_MINMAX_8X4__NEONFMA.qmin (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X4__NEONFMA.qmax
 [       OK ] F32_SPMM_MINMAX_8X4__NEONFMA.qmax (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X4__NEONFMA.half_sparse
-[       OK ] F32_SPMM_MINMAX_8X4__NEONFMA.half_sparse (1 ms)
+[       OK ] F32_SPMM_MINMAX_8X4__NEONFMA.half_sparse (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X4__NEONFMA.zero_weights
-[       OK ] F32_SPMM_MINMAX_8X4__NEONFMA.zero_weights (2 ms)
-[----------] 13 tests from F32_SPMM_MINMAX_8X4__NEONFMA (37 ms total)
+[       OK ] F32_SPMM_MINMAX_8X4__NEONFMA.zero_weights (1 ms)
+[----------] 13 tests from F32_SPMM_MINMAX_8X4__NEONFMA (40 ms total)
 
 [----------] 10 tests from F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.k_eq_1
 [       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.k_eq_1 (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.k_gt_1
-[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.k_gt_1 (1 ms)
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.k_gt_1 (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.n_gt_1
 [       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.n_gt_1 (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.m_lt_8
-[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.m_lt_8 (9 ms)
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.m_lt_8 (10 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.m_div_8
 [       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.m_div_8 (5 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.m_gt_8
-[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.m_gt_8 (12 ms)
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.m_gt_8 (13 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.qmin
-[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.qmin (2 ms)
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.qmin (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.qmax
 [       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.qmax (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.half_sparse
 [       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.half_sparse (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.zero_weights
 [       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.zero_weights (2 ms)
-[----------] 10 tests from F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED (38 ms total)
+[----------] 10 tests from F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED (40 ms total)
 
 [----------] 12 tests from F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.k_eq_2
@@ -244,24 +244,24 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.k_gt_2
 [       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.k_gt_2 (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.k_div_2
-[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.k_div_2 (1 ms)
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.k_div_2 (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.n_gt_1
 [       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.n_gt_1 (4 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.m_lt_8
-[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.m_lt_8 (15 ms)
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.m_lt_8 (16 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.m_div_8
-[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.m_div_8 (7 ms)
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.m_div_8 (8 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.m_gt_8
-[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.m_gt_8 (19 ms)
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.m_gt_8 (22 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.qmin
 [       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.qmin (4 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.qmax
-[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.qmax (3 ms)
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.qmax (4 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.half_sparse
-[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.half_sparse (3 ms)
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.half_sparse (4 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.zero_weights
 [       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.zero_weights (3 ms)
-[----------] 12 tests from F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2 (59 ms total)
+[----------] 12 tests from F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2 (67 ms total)
 
 [----------] 10 tests from F32_SPMM_MINMAX_12X1__NEONFMA
 [ RUN      ] F32_SPMM_MINMAX_12X1__NEONFMA.k_eq_1
@@ -269,26 +269,26 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [ RUN      ] F32_SPMM_MINMAX_12X1__NEONFMA.k_gt_1
 [       OK ] F32_SPMM_MINMAX_12X1__NEONFMA.k_gt_1 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_12X1__NEONFMA.n_gt_1
-[       OK ] F32_SPMM_MINMAX_12X1__NEONFMA.n_gt_1 (3 ms)
+[       OK ] F32_SPMM_MINMAX_12X1__NEONFMA.n_gt_1 (4 ms)
 [ RUN      ] F32_SPMM_MINMAX_12X1__NEONFMA.m_lt_12
-[       OK ] F32_SPMM_MINMAX_12X1__NEONFMA.m_lt_12 (16 ms)
+[       OK ] F32_SPMM_MINMAX_12X1__NEONFMA.m_lt_12 (17 ms)
 [ RUN      ] F32_SPMM_MINMAX_12X1__NEONFMA.m_div_12
 [       OK ] F32_SPMM_MINMAX_12X1__NEONFMA.m_div_12 (5 ms)
 [ RUN      ] F32_SPMM_MINMAX_12X1__NEONFMA.m_gt_12
-[       OK ] F32_SPMM_MINMAX_12X1__NEONFMA.m_gt_12 (22 ms)
+[       OK ] F32_SPMM_MINMAX_12X1__NEONFMA.m_gt_12 (24 ms)
 [ RUN      ] F32_SPMM_MINMAX_12X1__NEONFMA.qmin
-[       OK ] F32_SPMM_MINMAX_12X1__NEONFMA.qmin (2 ms)
+[       OK ] F32_SPMM_MINMAX_12X1__NEONFMA.qmin (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_12X1__NEONFMA.qmax
-[       OK ] F32_SPMM_MINMAX_12X1__NEONFMA.qmax (3 ms)
+[       OK ] F32_SPMM_MINMAX_12X1__NEONFMA.qmax (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_12X1__NEONFMA.half_sparse
-[       OK ] F32_SPMM_MINMAX_12X1__NEONFMA.half_sparse (2 ms)
+[       OK ] F32_SPMM_MINMAX_12X1__NEONFMA.half_sparse (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_12X1__NEONFMA.zero_weights
 [       OK ] F32_SPMM_MINMAX_12X1__NEONFMA.zero_weights (2 ms)
-[----------] 10 tests from F32_SPMM_MINMAX_12X1__NEONFMA (56 ms total)
+[----------] 10 tests from F32_SPMM_MINMAX_12X1__NEONFMA (62 ms total)
 
 [----------] 13 tests from F32_SPMM_MINMAX_12X2__NEONFMA
 [ RUN      ] F32_SPMM_MINMAX_12X2__NEONFMA.k_eq_1
-[       OK ] F32_SPMM_MINMAX_12X2__NEONFMA.k_eq_1 (0 ms)
+[       OK ] F32_SPMM_MINMAX_12X2__NEONFMA.k_eq_1 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_12X2__NEONFMA.k_eq_1_subtile
 [       OK ] F32_SPMM_MINMAX_12X2__NEONFMA.k_eq_1_subtile (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_12X2__NEONFMA.k_gt_1
@@ -298,22 +298,22 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [ RUN      ] F32_SPMM_MINMAX_12X2__NEONFMA.n_gt_2
 [       OK ] F32_SPMM_MINMAX_12X2__NEONFMA.n_gt_2 (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_12X2__NEONFMA.n_div_2
-[       OK ] F32_SPMM_MINMAX_12X2__NEONFMA.n_div_2 (0 ms)
+[       OK ] F32_SPMM_MINMAX_12X2__NEONFMA.n_div_2 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_12X2__NEONFMA.m_lt_12
-[       OK ] F32_SPMM_MINMAX_12X2__NEONFMA.m_lt_12 (9 ms)
+[       OK ] F32_SPMM_MINMAX_12X2__NEONFMA.m_lt_12 (10 ms)
 [ RUN      ] F32_SPMM_MINMAX_12X2__NEONFMA.m_div_12
 [       OK ] F32_SPMM_MINMAX_12X2__NEONFMA.m_div_12 (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_12X2__NEONFMA.m_gt_12
-[       OK ] F32_SPMM_MINMAX_12X2__NEONFMA.m_gt_12 (12 ms)
+[       OK ] F32_SPMM_MINMAX_12X2__NEONFMA.m_gt_12 (13 ms)
 [ RUN      ] F32_SPMM_MINMAX_12X2__NEONFMA.qmin
-[       OK ] F32_SPMM_MINMAX_12X2__NEONFMA.qmin (1 ms)
+[       OK ] F32_SPMM_MINMAX_12X2__NEONFMA.qmin (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_12X2__NEONFMA.qmax
-[       OK ] F32_SPMM_MINMAX_12X2__NEONFMA.qmax (2 ms)
+[       OK ] F32_SPMM_MINMAX_12X2__NEONFMA.qmax (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_12X2__NEONFMA.half_sparse
-[       OK ] F32_SPMM_MINMAX_12X2__NEONFMA.half_sparse (1 ms)
+[       OK ] F32_SPMM_MINMAX_12X2__NEONFMA.half_sparse (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_12X2__NEONFMA.zero_weights
 [       OK ] F32_SPMM_MINMAX_12X2__NEONFMA.zero_weights (1 ms)
-[----------] 13 tests from F32_SPMM_MINMAX_12X2__NEONFMA (35 ms total)
+[----------] 13 tests from F32_SPMM_MINMAX_12X2__NEONFMA (39 ms total)
 
 [----------] 13 tests from F32_SPMM_MINMAX_12X4__NEONFMA
 [ RUN      ] F32_SPMM_MINMAX_12X4__NEONFMA.k_eq_1
@@ -323,26 +323,26 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [ RUN      ] F32_SPMM_MINMAX_12X4__NEONFMA.k_gt_1
 [       OK ] F32_SPMM_MINMAX_12X4__NEONFMA.k_gt_1 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_12X4__NEONFMA.k_gt_1_subtile
-[       OK ] F32_SPMM_MINMAX_12X4__NEONFMA.k_gt_1_subtile (3 ms)
+[       OK ] F32_SPMM_MINMAX_12X4__NEONFMA.k_gt_1_subtile (4 ms)
 [ RUN      ] F32_SPMM_MINMAX_12X4__NEONFMA.n_gt_4
 [       OK ] F32_SPMM_MINMAX_12X4__NEONFMA.n_gt_4 (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_12X4__NEONFMA.n_div_4
 [       OK ] F32_SPMM_MINMAX_12X4__NEONFMA.n_div_4 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_12X4__NEONFMA.m_lt_12
-[       OK ] F32_SPMM_MINMAX_12X4__NEONFMA.m_lt_12 (14 ms)
+[       OK ] F32_SPMM_MINMAX_12X4__NEONFMA.m_lt_12 (15 ms)
 [ RUN      ] F32_SPMM_MINMAX_12X4__NEONFMA.m_div_12
-[       OK ] F32_SPMM_MINMAX_12X4__NEONFMA.m_div_12 (5 ms)
+[       OK ] F32_SPMM_MINMAX_12X4__NEONFMA.m_div_12 (6 ms)
 [ RUN      ] F32_SPMM_MINMAX_12X4__NEONFMA.m_gt_12
-[       OK ] F32_SPMM_MINMAX_12X4__NEONFMA.m_gt_12 (21 ms)
+[       OK ] F32_SPMM_MINMAX_12X4__NEONFMA.m_gt_12 (22 ms)
 [ RUN      ] F32_SPMM_MINMAX_12X4__NEONFMA.qmin
-[       OK ] F32_SPMM_MINMAX_12X4__NEONFMA.qmin (2 ms)
+[       OK ] F32_SPMM_MINMAX_12X4__NEONFMA.qmin (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_12X4__NEONFMA.qmax
 [       OK ] F32_SPMM_MINMAX_12X4__NEONFMA.qmax (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_12X4__NEONFMA.half_sparse
-[       OK ] F32_SPMM_MINMAX_12X4__NEONFMA.half_sparse (2 ms)
+[       OK ] F32_SPMM_MINMAX_12X4__NEONFMA.half_sparse (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_12X4__NEONFMA.zero_weights
 [       OK ] F32_SPMM_MINMAX_12X4__NEONFMA.zero_weights (2 ms)
-[----------] 13 tests from F32_SPMM_MINMAX_12X4__NEONFMA (57 ms total)
+[----------] 13 tests from F32_SPMM_MINMAX_12X4__NEONFMA (62 ms total)
 
 [----------] 10 tests from F32_SPMM_MINMAX_16X1__NEONFMA
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA.k_eq_1
@@ -352,24 +352,24 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA.n_gt_1
 [       OK ] F32_SPMM_MINMAX_16X1__NEONFMA.n_gt_1 (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA.m_lt_16
-[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA.m_lt_16 (23 ms)
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA.m_lt_16 (25 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA.m_div_16
-[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA.m_div_16 (6 ms)
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA.m_div_16 (7 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA.m_gt_16
-[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA.m_gt_16 (34 ms)
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA.m_gt_16 (38 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA.qmin
 [       OK ] F32_SPMM_MINMAX_16X1__NEONFMA.qmin (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA.qmax
-[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA.qmax (2 ms)
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA.qmax (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA.half_sparse
 [       OK ] F32_SPMM_MINMAX_16X1__NEONFMA.half_sparse (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA.zero_weights
-[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA.zero_weights (2 ms)
-[----------] 10 tests from F32_SPMM_MINMAX_16X1__NEONFMA (77 ms total)
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA.zero_weights (3 ms)
+[----------] 10 tests from F32_SPMM_MINMAX_16X1__NEONFMA (87 ms total)
 
 [----------] 13 tests from F32_SPMM_MINMAX_16X2__NEONFMA
 [ RUN      ] F32_SPMM_MINMAX_16X2__NEONFMA.k_eq_1
-[       OK ] F32_SPMM_MINMAX_16X2__NEONFMA.k_eq_1 (0 ms)
+[       OK ] F32_SPMM_MINMAX_16X2__NEONFMA.k_eq_1 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X2__NEONFMA.k_eq_1_subtile
 [       OK ] F32_SPMM_MINMAX_16X2__NEONFMA.k_eq_1_subtile (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X2__NEONFMA.k_gt_1
@@ -377,80 +377,488 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [ RUN      ] F32_SPMM_MINMAX_16X2__NEONFMA.k_gt_1_subtile
 [       OK ] F32_SPMM_MINMAX_16X2__NEONFMA.k_gt_1_subtile (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X2__NEONFMA.n_gt_2
-[       OK ] F32_SPMM_MINMAX_16X2__NEONFMA.n_gt_2 (2 ms)
+[       OK ] F32_SPMM_MINMAX_16X2__NEONFMA.n_gt_2 (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X2__NEONFMA.n_div_2
 [       OK ] F32_SPMM_MINMAX_16X2__NEONFMA.n_div_2 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X2__NEONFMA.m_lt_16
-[       OK ] F32_SPMM_MINMAX_16X2__NEONFMA.m_lt_16 (13 ms)
+[       OK ] F32_SPMM_MINMAX_16X2__NEONFMA.m_lt_16 (14 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X2__NEONFMA.m_div_16
-[       OK ] F32_SPMM_MINMAX_16X2__NEONFMA.m_div_16 (3 ms)
+[       OK ] F32_SPMM_MINMAX_16X2__NEONFMA.m_div_16 (4 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X2__NEONFMA.m_gt_16
-[       OK ] F32_SPMM_MINMAX_16X2__NEONFMA.m_gt_16 (19 ms)
+[       OK ] F32_SPMM_MINMAX_16X2__NEONFMA.m_gt_16 (21 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X2__NEONFMA.qmin
 [       OK ] F32_SPMM_MINMAX_16X2__NEONFMA.qmin (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X2__NEONFMA.qmax
-[       OK ] F32_SPMM_MINMAX_16X2__NEONFMA.qmax (2 ms)
+[       OK ] F32_SPMM_MINMAX_16X2__NEONFMA.qmax (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X2__NEONFMA.half_sparse
-[       OK ] F32_SPMM_MINMAX_16X2__NEONFMA.half_sparse (1 ms)
+[       OK ] F32_SPMM_MINMAX_16X2__NEONFMA.half_sparse (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X2__NEONFMA.zero_weights
 [       OK ] F32_SPMM_MINMAX_16X2__NEONFMA.zero_weights (1 ms)
-[----------] 13 tests from F32_SPMM_MINMAX_16X2__NEONFMA (47 ms total)
+[----------] 13 tests from F32_SPMM_MINMAX_16X2__NEONFMA (53 ms total)
 
 [----------] 13 tests from F32_SPMM_MINMAX_16X4__NEONFMA
 [ RUN      ] F32_SPMM_MINMAX_16X4__NEONFMA.k_eq_1
-[       OK ] F32_SPMM_MINMAX_16X4__NEONFMA.k_eq_1 (1 ms)
+[       OK ] F32_SPMM_MINMAX_16X4__NEONFMA.k_eq_1 (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X4__NEONFMA.k_eq_1_subtile
 [       OK ] F32_SPMM_MINMAX_16X4__NEONFMA.k_eq_1_subtile (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X4__NEONFMA.k_gt_1
 [       OK ] F32_SPMM_MINMAX_16X4__NEONFMA.k_gt_1 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X4__NEONFMA.k_gt_1_subtile
-[       OK ] F32_SPMM_MINMAX_16X4__NEONFMA.k_gt_1_subtile (4 ms)
+[       OK ] F32_SPMM_MINMAX_16X4__NEONFMA.k_gt_1_subtile (5 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X4__NEONFMA.n_gt_4
 [       OK ] F32_SPMM_MINMAX_16X4__NEONFMA.n_gt_4 (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X4__NEONFMA.n_div_4
-[       OK ] F32_SPMM_MINMAX_16X4__NEONFMA.n_div_4 (1 ms)
+[       OK ] F32_SPMM_MINMAX_16X4__NEONFMA.n_div_4 (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X4__NEONFMA.m_lt_16
 [       OK ] F32_SPMM_MINMAX_16X4__NEONFMA.m_lt_16 (21 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X4__NEONFMA.m_div_16
-[       OK ] F32_SPMM_MINMAX_16X4__NEONFMA.m_div_16 (6 ms)
+[       OK ] F32_SPMM_MINMAX_16X4__NEONFMA.m_div_16 (7 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X4__NEONFMA.m_gt_16
-[       OK ] F32_SPMM_MINMAX_16X4__NEONFMA.m_gt_16 (33 ms)
+[       OK ] F32_SPMM_MINMAX_16X4__NEONFMA.m_gt_16 (37 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X4__NEONFMA.qmin
-[       OK ] F32_SPMM_MINMAX_16X4__NEONFMA.qmin (2 ms)
+[       OK ] F32_SPMM_MINMAX_16X4__NEONFMA.qmin (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X4__NEONFMA.qmax
 [       OK ] F32_SPMM_MINMAX_16X4__NEONFMA.qmax (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X4__NEONFMA.half_sparse
 [       OK ] F32_SPMM_MINMAX_16X4__NEONFMA.half_sparse (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X4__NEONFMA.zero_weights
 [       OK ] F32_SPMM_MINMAX_16X4__NEONFMA.zero_weights (3 ms)
-[----------] 13 tests from F32_SPMM_MINMAX_16X4__NEONFMA (79 ms total)
+[----------] 13 tests from F32_SPMM_MINMAX_16X4__NEONFMA (86 ms total)
 
 [----------] 10 tests from F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.k_eq_1
-[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.k_eq_1 (0 ms)
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.k_eq_1 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.k_gt_1
-[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.k_gt_1 (1 ms)
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.43635684251785278, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.87872117757797241,
+c_ref[pxb * m() + oc] evaluates to 1.3150780200958252, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 1.3150780659998418e-06.
+at 0, 1: Mr x Nr x Kr = 16 x 1, M x N x K = 16 x 1 x 3
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.23769116401672363, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.18795838952064514,
+c_ref[pxb * m() + oc] evaluates to 0.42564955353736877, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 4.2564954583212966e-07.
+at 0, 5: Mr x Nr x Kr = 16 x 1, M x N x K = 16 x 1 x 4
+[  FAILED  ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.k_gt_1 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.n_gt_1
-[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.n_gt_1 (3 ms)
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.042168617248535156, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.5014108419418335,
+c_ref[pxb * m() + oc] evaluates to 0.54357945919036865, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 5.4357946055461071e-07.
+at 1, 0: Mr x Nr x Kr = 16 x 1, M x N x K = 16 x 2 x 1
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.18705606460571289, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.68762063980102539,
+c_ref[pxb * m() + oc] evaluates to 0.87467670440673828, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 8.7467668663521181e-07.
+at 0, 1: Mr x Nr x Kr = 16 x 1, M x N x K = 16 x 2 x 5
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.52002946846187115, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.02502472884953022,
+c_ref[pxb * m() + oc] evaluates to 0.54505419731140137, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 5.4505420621353551e-07.
+at 1, 0: Mr x Nr x Kr = 16 x 1, M x N x K = 16 x 4 x 1
+[  FAILED  ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.n_gt_1 (4 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.m_lt_16
-[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.m_lt_16 (24 ms)
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.m_lt_16 (25 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.m_div_16
-[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.m_div_16 (6 ms)
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.16991212964057922, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.30118432641029358,
+c_ref[pxb * m() + oc] evaluates to 0.13127219676971436, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 1.312722019974899e-07.
+at 1, 16: Mr x Nr x Kr = 16 x 1, M x N x K = 32 x 3 x 1
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.23171395808458328, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.070583604276180267,
+c_ref[pxb * m() + oc] evaluates to 0.30229756236076355, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 3.0229756475819158e-07.
+at 0, 20: Mr x Nr x Kr = 16 x 1, M x N x K = 32 x 9 x 3
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.12831199169158936, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.91798949241638184,
+c_ref[pxb * m() + oc] evaluates to 1.0463014841079712, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 1.0463014632478007e-06.
+at 0, 16: Mr x Nr x Kr = 16 x 1, M x N x K = 32 x 9 x 5
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.52174481749534607, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.16630765795707703,
+c_ref[pxb * m() + oc] evaluates to 0.6880524754524231, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 6.8805246655756491e-07.
+at 0, 33: Mr x Nr x Kr = 16 x 1, M x N x K = 48 x 1 x 3
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.84393597021698952, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.044980879873037338,
+c_ref[pxb * m() + oc] evaluates to 0.88891685009002686, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 8.8891687255454599e-07.
+at 1, 16: Mr x Nr x Kr = 16 x 1, M x N x K = 48 x 3 x 1
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.25719022750854492, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.44220024347305298,
+c_ref[pxb * m() + oc] evaluates to 0.6993904709815979, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 6.9939045488354168e-07.
+at 0, 2: Mr x Nr x Kr = 16 x 1, M x N x K = 48 x 3 x 3
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.14667224884033203, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.74883407354354858,
+c_ref[pxb * m() + oc] evaluates to 0.89550632238388062, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 8.9550633219914744e-07.
+at 0, 1: Mr x Nr x Kr = 16 x 1, M x N x K = 48 x 5 x 3
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.2737928219139576, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.3000633716583252,
+c_ref[pxb * m() + oc] evaluates to 0.026270549744367599, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 2.6270550179674501e-08.
+at 1, 16: Mr x Nr x Kr = 16 x 1, M x N x K = 48 x 7 x 1
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.48522800207138062, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.25612121820449829,
+c_ref[pxb * m() + oc] evaluates to 0.74134922027587891, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 7.4134919714197167e-07.
+at 0, 19: Mr x Nr x Kr = 16 x 1, M x N x K = 48 x 7 x 3
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.0027927905321121216, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.18732957541942596,
+c_ref[pxb * m() + oc] evaluates to 0.19012236595153809, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 1.9012236407434102e-07.
+at 0, 33: Mr x Nr x Kr = 16 x 1, M x N x K = 48 x 9 x 5
+[  FAILED  ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.m_div_16 (8 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.m_gt_16
-[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.m_gt_16 (33 ms)
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.32425260543823242, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.62721973657608032,
+c_ref[pxb * m() + oc] evaluates to 0.95147234201431274, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 9.5147231604642002e-07.
+at 0, 3: Mr x Nr x Kr = 16 x 1, M x N x K = 18 x 1 x 3
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.57034957408905029, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.69061958789825439,
+c_ref[pxb * m() + oc] evaluates to 0.1202700138092041, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 1.2027001616843336e-07.
+at 1, 0: Mr x Nr x Kr = 16 x 1, M x N x K = 18 x 3 x 1
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.033006072044372559, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.73314040899276733,
+c_ref[pxb * m() + oc] evaluates to 0.76614648103713989, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 7.6614645649897284e-07.
+at 0, 4: Mr x Nr x Kr = 16 x 1, M x N x K = 18 x 3 x 5
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.037329137325286865, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.50810825824737549,
+c_ref[pxb * m() + oc] evaluates to 0.54543739557266235, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 5.4543738770007621e-07.
+at 1, 0: Mr x Nr x Kr = 16 x 1, M x N x K = 18 x 7 x 1
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.36002671718597412, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.8071141242980957,
+c_ref[pxb * m() + oc] evaluates to 1.1671408414840698, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 1.1671407946778345e-06.
+at 0, 2: Mr x Nr x Kr = 16 x 1, M x N x K = 19 x 7 x 3
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.68352371454238892, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.55826109647750854,
+c_ref[pxb * m() + oc] evaluates to 1.2417848110198975, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 1.2417848438417423e-06.
+at 0, 1: Mr x Nr x Kr = 16 x 1, M x N x K = 19 x 9 x 3
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.019750356674194336, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.092824503779411316,
+c_ref[pxb * m() + oc] evaluates to 0.11257486045360565, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 1.1257485965643355e-07.
+at 0, 1: Mr x Nr x Kr = 16 x 1, M x N x K = 23 x 1 x 5
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.18353390693664551, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.91992688179016113,
+c_ref[pxb * m() + oc] evaluates to 1.1034607887268066, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 1.1034608178306371e-06.
+at 0, 1: Mr x Nr x Kr = 16 x 1, M x N x K = 23 x 7 x 3
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.039051055908203125, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.29134440422058105,
+c_ref[pxb * m() + oc] evaluates to 0.33039546012878418, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 3.30395465653055e-07.
+at 0, 8: Mr x Nr x Kr = 16 x 1, M x N x K = 23 x 9 x 3
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.12661647796630859, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.63525581359863281,
+c_ref[pxb * m() + oc] evaluates to 0.76187229156494141, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 7.6187228614799096e-07.
+at 0, 0: Mr x Nr x Kr = 16 x 1, M x N x K = 24 x 1 x 3
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.41503174602985382, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.10239706933498383,
+c_ref[pxb * m() + oc] evaluates to 0.51742881536483765, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 5.1742881623795256e-07.
+at 0, 1: Mr x Nr x Kr = 16 x 1, M x N x K = 24 x 1 x 5
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.11582863330841064, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.47830116748809814,
+c_ref[pxb * m() + oc] evaluates to 0.59412980079650879, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 5.9412980135675753e-07.
+at 0, 0: Mr x Nr x Kr = 16 x 1, M x N x K = 25 x 9 x 5
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.0090188682079315186, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.26687276363372803,
+c_ref[pxb * m() + oc] evaluates to 0.27589163184165955, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 2.7589163664742955e-07.
+at 0, 5: Mr x Nr x Kr = 16 x 1, M x N x K = 26 x 1 x 3
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.10142123699188232, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.9089844822883606,
+c_ref[pxb * m() + oc] evaluates to 0.80756324529647827, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 8.0756325360198389e-07.
+at 1, 0: Mr x Nr x Kr = 16 x 1, M x N x K = 26 x 5 x 1
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.11389034986495972, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.83150279521942139,
+c_ref[pxb * m() + oc] evaluates to 0.71761244535446167, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 7.176124654506566e-07.
+at 1, 0: Mr x Nr x Kr = 16 x 1, M x N x K = 26 x 9 x 1
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.15337258577346802, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.90729957818984985,
+c_ref[pxb * m() + oc] evaluates to 1.0606721639633179, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 1.0606721616568393e-06.
+at 0, 3: Mr x Nr x Kr = 16 x 1, M x N x K = 27 x 1 x 3
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.0052796006202697754, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.87890529632568359,
+c_ref[pxb * m() + oc] evaluates to 0.88418489694595337, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 8.8418488530805917e-07.
+at 0, 0: Mr x Nr x Kr = 16 x 1, M x N x K = 27 x 5 x 5
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.11071550846099854, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.25266700983047485,
+c_ref[pxb * m() + oc] evaluates to 0.36338251829147339, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 3.6338252584755537e-07.
+at 0, 1: Mr x Nr x Kr = 16 x 1, M x N x K = 28 x 1 x 3
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.11874866485595703, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.20623186230659485,
+c_ref[pxb * m() + oc] evaluates to 0.32498052716255188, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 3.24980533150665e-07.
+at 0, 9: Mr x Nr x Kr = 16 x 1, M x N x K = 28 x 3 x 3
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.025510132312774658, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.90061658620834351,
+c_ref[pxb * m() + oc] evaluates to 0.92612671852111816, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 9.2612668822766864e-07.
+at 0, 4: Mr x Nr x Kr = 16 x 1, M x N x K = 29 x 3 x 3
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.3717169500887394, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.41845011711120605,
+c_ref[pxb * m() + oc] evaluates to 0.04673316702246666, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 4.6733166669810089e-08.
+at 1, 0: Mr x Nr x Kr = 16 x 1, M x N x K = 29 x 5 x 1
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.092827677726745605, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.5859188437461853,
+c_ref[pxb * m() + oc] evaluates to 0.67874652147293091, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 6.7874651676902431e-07.
+at 0, 0: Mr x Nr x Kr = 16 x 1, M x N x K = 29 x 7 x 3
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.095782041549682617, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.66312432289123535,
+c_ref[pxb * m() + oc] evaluates to 0.75890636444091797, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 7.5890636708209058e-07.
+at 0, 7: Mr x Nr x Kr = 16 x 1, M x N x K = 30 x 3 x 5
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.82473247498273849, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.10317546874284744,
+c_ref[pxb * m() + oc] evaluates to 0.92790794372558594, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 9.2790793360109092e-07.
+at 1, 0: Mr x Nr x Kr = 16 x 1, M x N x K = 30 x 5 x 1
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.21505202353000641, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.073630765080451965,
+c_ref[pxb * m() + oc] evaluates to 0.28868278861045837, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 2.8868279855487344e-07.
+at 0, 11: Mr x Nr x Kr = 16 x 1, M x N x K = 30 x 5 x 3
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.035441689193248749, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.077303163707256317,
+c_ref[pxb * m() + oc] evaluates to 0.11274485290050507, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 1.1274484990053679e-07.
+at 0, 7: Mr x Nr x Kr = 16 x 1, M x N x K = 30 x 7 x 3
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.086554139852523804, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.33079829812049866,
+c_ref[pxb * m() + oc] evaluates to 0.41735243797302246, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 4.1735242461982125e-07.
+at 0, 6: Mr x Nr x Kr = 16 x 1, M x N x K = 31 x 1 x 3
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.01135021448135376, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.55698502063751221,
+c_ref[pxb * m() + oc] evaluates to 0.56833523511886597, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 5.6833522421584348e-07.
+at 0, 2: Mr x Nr x Kr = 16 x 1, M x N x K = 31 x 1 x 5
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.26097005605697632, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.21562746167182922,
+c_ref[pxb * m() + oc] evaluates to 0.47659751772880554, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 4.7659750634920783e-07.
+at 1, 0: Mr x Nr x Kr = 16 x 1, M x N x K = 31 x 3 x 1
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.74674690514802933, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.79384505748748779,
+c_ref[pxb * m() + oc] evaluates to 0.047098152339458466, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 4.709815115688798e-08.
+at 1, 0: Mr x Nr x Kr = 16 x 1, M x N x K = 31 x 5 x 1
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.26632508635520935, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.33676159381866455,
+c_ref[pxb * m() + oc] evaluates to 0.0704365074634552, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 7.0436506405258115e-08.
+at 1, 0: Mr x Nr x Kr = 16 x 1, M x N x K = 31 x 9 x 1
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.0022547245025634766, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.8213050365447998,
+c_ref[pxb * m() + oc] evaluates to 0.82355976104736328, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 8.2355973063386045e-07.
+at 0, 1: Mr x Nr x Kr = 16 x 1, M x N x K = 31 x 9 x 5
+[  FAILED  ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.m_gt_16 (43 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.qmin
-[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.qmin (3 ms)
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.23239505290985107, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.84166181087493896,
+c_ref[pxb * m() + oc] evaluates to 1.07405686378479, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 1.0740568541223183e-06.
+at 0, 5: Mr x Nr x Kr = 16 x 1, M x N x K = 32 x 1 x 3
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.49149841070175171, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.87393206357955933,
+c_ref[pxb * m() + oc] evaluates to 1.365430474281311, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 1.3654304211740964e-06.
+at 0, 7: Mr x Nr x Kr = 16 x 1, M x N x K = 32 x 1 x 5
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.23112547397613525, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.99910998344421387,
+c_ref[pxb * m() + oc] evaluates to 1.2302354574203491, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 1.2302353979976033e-06.
+at 0, 16: Mr x Nr x Kr = 16 x 1, M x N x K = 32 x 3 x 3
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.024675488471984863, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.88845837116241455,
+c_ref[pxb * m() + oc] evaluates to 0.91313385963439941, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 9.1313387429181603e-07.
+at 0, 4: Mr x Nr x Kr = 16 x 1, M x N x K = 32 x 3 x 5
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.0092704296112060547, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.84128671884536743,
+c_ref[pxb * m() + oc] evaluates to 0.85055714845657349, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 8.5055717136128806e-07.
+at 0, 23: Mr x Nr x Kr = 16 x 1, M x N x K = 32 x 5 x 3
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.15700650215148926, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.90499377250671387,
+c_ref[pxb * m() + oc] evaluates to 1.0620002746582031, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 1.0620002512951032e-06.
+at 0, 2: Mr x Nr x Kr = 16 x 1, M x N x K = 32 x 5 x 5
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.27240771055221558, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.97739177942276001,
+c_ref[pxb * m() + oc] evaluates to 1.2497994899749756, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 1.2497995385274407e-06.
+at 0, 0: Mr x Nr x Kr = 16 x 1, M x N x K = 32 x 9 x 5
+[  FAILED  ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.qmin (4 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.qmax
-[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.qmax (3 ms)
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.056453287601470947, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.94857567548751831,
+c_ref[pxb * m() + oc] evaluates to 1.0050289630889893, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 1.0050289347418584e-06.
+at 0, 0: Mr x Nr x Kr = 16 x 1, M x N x K = 32 x 1 x 3
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.63415169715881348, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.17045313119888306,
+c_ref[pxb * m() + oc] evaluates to 0.80460482835769653, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 8.0460483786737313e-07.
+at 0, 2: Mr x Nr x Kr = 16 x 1, M x N x K = 32 x 3 x 5
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.09164014458656311, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.16361573338508606,
+c_ref[pxb * m() + oc] evaluates to 0.25525587797164917, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 2.5525588398522814e-07.
+at 0, 27: Mr x Nr x Kr = 16 x 1, M x N x K = 32 x 9 x 3
+[  FAILED  ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.qmax (4 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.half_sparse
-[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.half_sparse (2 ms)
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.046629011631011963, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.6571539044380188,
+c_ref[pxb * m() + oc] evaluates to 0.70378291606903076, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 7.037829163891729e-07.
+at 0, 13: Mr x Nr x Kr = 16 x 1, M x N x K = 32 x 1 x 3
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.0095927119255065918, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.33174747228622437,
+c_ref[pxb * m() + oc] evaluates to 0.34134018421173096, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 3.4134018278564326e-07.
+at 0, 31: Mr x Nr x Kr = 16 x 1, M x N x K = 32 x 3 x 3
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.83166831731796265, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.9930916428565979,
+c_ref[pxb * m() + oc] evaluates to 1.8247599601745605, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 1.8247599200549303e-06.
+at 0, 16: Mr x Nr x Kr = 16 x 1, M x N x K = 32 x 3 x 5
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.63024639338254929, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.74326276779174805,
+c_ref[pxb * m() + oc] evaluates to 0.11301637440919876, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 1.1301637670158016e-07.
+at 1, 16: Mr x Nr x Kr = 16 x 1, M x N x K = 32 x 7 x 1
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.082327008247375488, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.84930306673049927,
+c_ref[pxb * m() + oc] evaluates to 0.93163007497787476, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 9.3163009751151549e-07.
+at 0, 8: Mr x Nr x Kr = 16 x 1, M x N x K = 32 x 7 x 5
+[  FAILED  ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.half_sparse (4 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.zero_weights
-[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.zero_weights (3 ms)
-[----------] 10 tests from F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED (78 ms total)
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.14879471063613892, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.58039093017578125,
+c_ref[pxb * m() + oc] evaluates to 0.72918564081192017, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 7.2918561500046053e-07.
+at 1, 0: Mr x Nr x Kr = 16 x 1, M x N x K = 32 x 3 x 1
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.28031051158905029, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.60945761203765869,
+c_ref[pxb * m() + oc] evaluates to 0.3291471004486084, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 3.2914709890974336e-07.
+at 1, 0: Mr x Nr x Kr = 16 x 1, M x N x K = 32 x 5 x 1
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.014203011989593506, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.24141395092010498,
+c_ref[pxb * m() + oc] evaluates to 0.25561696290969849, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 2.5561695338183199e-07.
+at 1, 0: Mr x Nr x Kr = 16 x 1, M x N x K = 32 x 5 x 5
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.061803407967090607, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.17640712857246399,
+c_ref[pxb * m() + oc] evaluates to 0.11460372060537338, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 1.1460372206784086e-07.
+at 1, 0: Mr x Nr x Kr = 16 x 1, M x N x K = 32 x 7 x 1
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.14478859305381775, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.34599083662033081,
+c_ref[pxb * m() + oc] evaluates to 0.49077942967414856, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 4.9077942776420969e-07.
+at 1, 16: Mr x Nr x Kr = 16 x 1, M x N x K = 32 x 7 x 5
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:287: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.024979457259178162, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.12921871244907379,
+c_ref[pxb * m() + oc] evaluates to 0.15419816970825195, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 1.5419817600559327e-07.
+at 1, 16: Mr x Nr x Kr = 16 x 1, M x N x K = 32 x 9 x 5
+[  FAILED  ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.zero_weights (3 ms)
+[----------] 10 tests from F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED (97 ms total)
 
 [----------] 12 tests from F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.k_eq_2
-[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.k_eq_2 (0 ms)
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.k_eq_2 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.k_lt_2
 [       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.k_lt_2 (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.k_gt_2
@@ -458,22 +866,22 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.k_div_2
 [       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.k_div_2 (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.n_gt_1
-[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.n_gt_1 (5 ms)
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.n_gt_1 (6 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.m_lt_16
-[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.m_lt_16 (37 ms)
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.m_lt_16 (40 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.m_div_16
-[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.m_div_16 (10 ms)
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.m_div_16 (13 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.m_gt_16
-[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.m_gt_16 (56 ms)
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.m_gt_16 (68 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.qmin
-[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.qmin (5 ms)
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.qmin (6 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.qmax
-[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.qmax (4 ms)
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.qmax (5 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.half_sparse
-[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.half_sparse (5 ms)
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.half_sparse (6 ms)
 [ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.zero_weights
-[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.zero_weights (4 ms)
-[----------] 12 tests from F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2 (128 ms total)
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.zero_weights (5 ms)
+[----------] 12 tests from F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2 (152 ms total)
 
 [----------] 10 tests from F32_SPMM_MINMAX_1X1__SCALAR
 [ RUN      ] F32_SPMM_MINMAX_1X1__SCALAR.k_eq_1
@@ -493,7 +901,7 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [ RUN      ] F32_SPMM_MINMAX_1X1__SCALAR.qmax
 [       OK ] F32_SPMM_MINMAX_1X1__SCALAR.qmax (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_1X1__SCALAR.half_sparse
-[       OK ] F32_SPMM_MINMAX_1X1__SCALAR.half_sparse (1 ms)
+[       OK ] F32_SPMM_MINMAX_1X1__SCALAR.half_sparse (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_1X1__SCALAR.zero_weights
 [       OK ] F32_SPMM_MINMAX_1X1__SCALAR.zero_weights (1 ms)
 [----------] 10 tests from F32_SPMM_MINMAX_1X1__SCALAR (11 ms total)
@@ -533,16 +941,16 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [ RUN      ] F32_SPMM_MINMAX_2X1__SCALAR.m_div_2
 [       OK ] F32_SPMM_MINMAX_2X1__SCALAR.m_div_2 (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_2X1__SCALAR.m_gt_2
-[       OK ] F32_SPMM_MINMAX_2X1__SCALAR.m_gt_2 (1 ms)
+[       OK ] F32_SPMM_MINMAX_2X1__SCALAR.m_gt_2 (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_2X1__SCALAR.qmin
 [       OK ] F32_SPMM_MINMAX_2X1__SCALAR.qmin (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_2X1__SCALAR.qmax
-[       OK ] F32_SPMM_MINMAX_2X1__SCALAR.qmax (1 ms)
+[       OK ] F32_SPMM_MINMAX_2X1__SCALAR.qmax (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_2X1__SCALAR.half_sparse
-[       OK ] F32_SPMM_MINMAX_2X1__SCALAR.half_sparse (2 ms)
+[       OK ] F32_SPMM_MINMAX_2X1__SCALAR.half_sparse (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_2X1__SCALAR.zero_weights
-[       OK ] F32_SPMM_MINMAX_2X1__SCALAR.zero_weights (1 ms)
-[----------] 10 tests from F32_SPMM_MINMAX_2X1__SCALAR (14 ms total)
+[       OK ] F32_SPMM_MINMAX_2X1__SCALAR.zero_weights (2 ms)
+[----------] 10 tests from F32_SPMM_MINMAX_2X1__SCALAR (15 ms total)
 
 [----------] 10 tests from F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED
 [ RUN      ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.k_eq_1
@@ -569,17 +977,17 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 
 [----------] 10 tests from F32_SPMM_MINMAX_4X1__SCALAR
 [ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR.k_eq_1
-[       OK ] F32_SPMM_MINMAX_4X1__SCALAR.k_eq_1 (0 ms)
+[       OK ] F32_SPMM_MINMAX_4X1__SCALAR.k_eq_1 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR.k_gt_1
-[       OK ] F32_SPMM_MINMAX_4X1__SCALAR.k_gt_1 (1 ms)
+[       OK ] F32_SPMM_MINMAX_4X1__SCALAR.k_gt_1 (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR.n_gt_1
-[       OK ] F32_SPMM_MINMAX_4X1__SCALAR.n_gt_1 (2 ms)
+[       OK ] F32_SPMM_MINMAX_4X1__SCALAR.n_gt_1 (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR.m_lt_4
 [       OK ] F32_SPMM_MINMAX_4X1__SCALAR.m_lt_4 (4 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR.m_div_4
-[       OK ] F32_SPMM_MINMAX_4X1__SCALAR.m_div_4 (4 ms)
+[       OK ] F32_SPMM_MINMAX_4X1__SCALAR.m_div_4 (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR.m_gt_4
-[       OK ] F32_SPMM_MINMAX_4X1__SCALAR.m_gt_4 (4 ms)
+[       OK ] F32_SPMM_MINMAX_4X1__SCALAR.m_gt_4 (5 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR.qmin
 [       OK ] F32_SPMM_MINMAX_4X1__SCALAR.qmin (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR.qmax
@@ -588,30 +996,30 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [       OK ] F32_SPMM_MINMAX_4X1__SCALAR.half_sparse (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR.zero_weights
 [       OK ] F32_SPMM_MINMAX_4X1__SCALAR.zero_weights (2 ms)
-[----------] 10 tests from F32_SPMM_MINMAX_4X1__SCALAR (22 ms total)
+[----------] 10 tests from F32_SPMM_MINMAX_4X1__SCALAR (23 ms total)
 
 [----------] 10 tests from F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED
 [ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.k_eq_1
 [       OK ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.k_eq_1 (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.k_gt_1
-[       OK ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.k_gt_1 (0 ms)
+[       OK ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.k_gt_1 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.n_gt_1
-[       OK ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.n_gt_1 (3 ms)
+[       OK ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.n_gt_1 (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.m_lt_4
 [       OK ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.m_lt_4 (4 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.m_div_4
-[       OK ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.m_div_4 (3 ms)
+[       OK ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.m_div_4 (4 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.m_gt_4
-[       OK ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.m_gt_4 (5 ms)
+[       OK ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.m_gt_4 (4 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.qmin
 [       OK ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.qmin (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.qmax
 [       OK ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.qmax (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.half_sparse
-[       OK ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.half_sparse (1 ms)
+[       OK ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.half_sparse (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.zero_weights
-[       OK ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.zero_weights (2 ms)
-[----------] 10 tests from F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED (21 ms total)
+[       OK ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.zero_weights (1 ms)
+[----------] 10 tests from F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED (22 ms total)
 
 [----------] 10 tests from F32_SPMM_MINMAX_8X1__SCALAR
 [ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR.k_eq_1
@@ -619,36 +1027,36 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR.k_gt_1
 [       OK ] F32_SPMM_MINMAX_8X1__SCALAR.k_gt_1 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR.n_gt_1
-[       OK ] F32_SPMM_MINMAX_8X1__SCALAR.n_gt_1 (2 ms)
+[       OK ] F32_SPMM_MINMAX_8X1__SCALAR.n_gt_1 (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR.m_lt_8
 [       OK ] F32_SPMM_MINMAX_8X1__SCALAR.m_lt_8 (10 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR.m_div_8
-[       OK ] F32_SPMM_MINMAX_8X1__SCALAR.m_div_8 (4 ms)
+[       OK ] F32_SPMM_MINMAX_8X1__SCALAR.m_div_8 (5 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR.m_gt_8
 [       OK ] F32_SPMM_MINMAX_8X1__SCALAR.m_gt_8 (13 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR.qmin
-[       OK ] F32_SPMM_MINMAX_8X1__SCALAR.qmin (2 ms)
+[       OK ] F32_SPMM_MINMAX_8X1__SCALAR.qmin (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR.qmax
 [       OK ] F32_SPMM_MINMAX_8X1__SCALAR.qmax (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR.half_sparse
 [       OK ] F32_SPMM_MINMAX_8X1__SCALAR.half_sparse (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR.zero_weights
 [       OK ] F32_SPMM_MINMAX_8X1__SCALAR.zero_weights (2 ms)
-[----------] 10 tests from F32_SPMM_MINMAX_8X1__SCALAR (38 ms total)
+[----------] 10 tests from F32_SPMM_MINMAX_8X1__SCALAR (41 ms total)
 
 [----------] 10 tests from F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED
 [ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.k_eq_1
 [       OK ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.k_eq_1 (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.k_gt_1
-[       OK ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.k_gt_1 (0 ms)
+[       OK ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.k_gt_1 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.n_gt_1
 [       OK ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.n_gt_1 (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.m_lt_8
 [       OK ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.m_lt_8 (10 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.m_div_8
-[       OK ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.m_div_8 (4 ms)
+[       OK ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.m_div_8 (5 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.m_gt_8
-[       OK ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.m_gt_8 (12 ms)
+[       OK ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.m_gt_8 (13 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.qmin
 [       OK ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.qmin (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.qmax
@@ -656,8 +1064,8 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.half_sparse
 [       OK ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.half_sparse (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.zero_weights
-[       OK ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.zero_weights (2 ms)
-[----------] 10 tests from F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED (37 ms total)
+[       OK ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.zero_weights (3 ms)
+[----------] 10 tests from F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED (41 ms total)
 
 [----------] 13 tests from F32_SPMM_MINMAX_8X2__SCALAR
 [ RUN      ] F32_SPMM_MINMAX_8X2__SCALAR.k_eq_1
@@ -665,7 +1073,7 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [ RUN      ] F32_SPMM_MINMAX_8X2__SCALAR.k_eq_1_subtile
 [       OK ] F32_SPMM_MINMAX_8X2__SCALAR.k_eq_1_subtile (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X2__SCALAR.k_gt_1
-[       OK ] F32_SPMM_MINMAX_8X2__SCALAR.k_gt_1 (0 ms)
+[       OK ] F32_SPMM_MINMAX_8X2__SCALAR.k_gt_1 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X2__SCALAR.k_gt_1_subtile
 [       OK ] F32_SPMM_MINMAX_8X2__SCALAR.k_gt_1_subtile (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X2__SCALAR.n_gt_2
@@ -675,24 +1083,24 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [ RUN      ] F32_SPMM_MINMAX_8X2__SCALAR.m_lt_8
 [       OK ] F32_SPMM_MINMAX_8X2__SCALAR.m_lt_8 (5 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X2__SCALAR.m_div_8
-[       OK ] F32_SPMM_MINMAX_8X2__SCALAR.m_div_8 (2 ms)
+[       OK ] F32_SPMM_MINMAX_8X2__SCALAR.m_div_8 (3 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X2__SCALAR.m_gt_8
 [       OK ] F32_SPMM_MINMAX_8X2__SCALAR.m_gt_8 (7 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X2__SCALAR.qmin
 [       OK ] F32_SPMM_MINMAX_8X2__SCALAR.qmin (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X2__SCALAR.qmax
-[       OK ] F32_SPMM_MINMAX_8X2__SCALAR.qmax (1 ms)
+[       OK ] F32_SPMM_MINMAX_8X2__SCALAR.qmax (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X2__SCALAR.half_sparse
 [       OK ] F32_SPMM_MINMAX_8X2__SCALAR.half_sparse (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X2__SCALAR.zero_weights
 [       OK ] F32_SPMM_MINMAX_8X2__SCALAR.zero_weights (1 ms)
-[----------] 13 tests from F32_SPMM_MINMAX_8X2__SCALAR (24 ms total)
+[----------] 13 tests from F32_SPMM_MINMAX_8X2__SCALAR (26 ms total)
 
 [----------] 13 tests from F32_SPMM_MINMAX_8X4__SCALAR
 [ RUN      ] F32_SPMM_MINMAX_8X4__SCALAR.k_eq_1
 [       OK ] F32_SPMM_MINMAX_8X4__SCALAR.k_eq_1 (0 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X4__SCALAR.k_eq_1_subtile
-[       OK ] F32_SPMM_MINMAX_8X4__SCALAR.k_eq_1_subtile (0 ms)
+[       OK ] F32_SPMM_MINMAX_8X4__SCALAR.k_eq_1_subtile (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X4__SCALAR.k_gt_1
 [       OK ] F32_SPMM_MINMAX_8X4__SCALAR.k_gt_1 (1 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X4__SCALAR.k_gt_1_subtile
@@ -704,9 +1112,9 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [ RUN      ] F32_SPMM_MINMAX_8X4__SCALAR.m_lt_8
 [       OK ] F32_SPMM_MINMAX_8X4__SCALAR.m_lt_8 (8 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X4__SCALAR.m_div_8
-[       OK ] F32_SPMM_MINMAX_8X4__SCALAR.m_div_8 (4 ms)
+[       OK ] F32_SPMM_MINMAX_8X4__SCALAR.m_div_8 (5 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X4__SCALAR.m_gt_8
-[       OK ] F32_SPMM_MINMAX_8X4__SCALAR.m_gt_8 (11 ms)
+[       OK ] F32_SPMM_MINMAX_8X4__SCALAR.m_gt_8 (12 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X4__SCALAR.qmin
 [       OK ] F32_SPMM_MINMAX_8X4__SCALAR.qmin (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X4__SCALAR.qmax
@@ -714,9 +1122,20 @@ Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtes
 [ RUN      ] F32_SPMM_MINMAX_8X4__SCALAR.half_sparse
 [       OK ] F32_SPMM_MINMAX_8X4__SCALAR.half_sparse (2 ms)
 [ RUN      ] F32_SPMM_MINMAX_8X4__SCALAR.zero_weights
-[       OK ] F32_SPMM_MINMAX_8X4__SCALAR.zero_weights (1 ms)
-[----------] 13 tests from F32_SPMM_MINMAX_8X4__SCALAR (37 ms total)
+[       OK ] F32_SPMM_MINMAX_8X4__SCALAR.zero_weights (2 ms)
+[----------] 13 tests from F32_SPMM_MINMAX_8X4__SCALAR (41 ms total)
 
 [----------] Global test environment tear-down
-[==========] 316 tests from 28 test suites ran. (1096 ms total)
-[  PASSED  ] 316 tests.
+[==========] 316 tests from 28 test suites ran. (1220 ms total)
+[  PASSED  ] 308 tests.
+[  FAILED  ] 8 tests, listed below:
+[  FAILED  ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.k_gt_1
+[  FAILED  ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.n_gt_1
+[  FAILED  ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.m_div_16
+[  FAILED  ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.m_gt_16
+[  FAILED  ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.qmin
+[  FAILED  ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.qmax
+[  FAILED  ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.half_sparse
+[  FAILED  ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.zero_weights
+
+ 8 FAILED TESTS
