@@ -10,7 +10,7 @@
 #include <vector>
 
 #include <xnnpack.h>
-#include <operator.h>//Wei
+#include "src/xnnpack/operator.h"//Wei
 #include <iostream>//Wei
 
 #include <benchmark/benchmark.h>
