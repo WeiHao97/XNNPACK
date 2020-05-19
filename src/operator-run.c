@@ -20,6 +20,8 @@
 #include <xnnpack/params.h>
 #include <xnnpack/compute.h>
 
+#include <iostream>//Wei
+
 
 void xnn_compute_grouped_gemm(
     const struct gemm_context context[restrict XNN_MIN_ELEMENTS(1)],
@@ -1074,5 +1076,15 @@ enum xnn_status xnn_run_operator(xnn_operator_t op, pthreadpool_t threadpool)
     default:
       XNN_UNREACHABLE;
   }
+
+//Wei
+      float n_zeros = 0;
+      for(size_t l = 0; l < op->output_width; l++ ){
+        if( *( op->output + l) == 0){n_zeros++;}
+      }
+
+      std::cout<< " Sparsity: "<< n_zeros/op->output_width <<"\n"; 
+
+
   return xnn_status_success;
 }
