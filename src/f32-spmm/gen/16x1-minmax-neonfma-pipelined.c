@@ -96,6 +96,28 @@ Otherwise, it is set to all zeros--*/
     i -= 16;
   }else{    
 
+      do {
+      uint32_t nnz = *nnzmap++;
+      float32x4_t cout_ = vminq_f32(vw, vmax);
+      cout_ = vmaxq_f32(cout_, vmin);
+      vst1q_f32(c, cout_);
+      vst1q_f32(c + 4, cout_);
+      vst1q_f32(c + 8, cout_);
+      vst1q_f32(c + 12, cout_);
+      c += m;
+      if XNN_LIKELY(nnz != 0) {
+        do {
+          a = (const float*restrict) ((uintptr_t) a + (uintptr_t) diff);
+          diff = *dmap++;
+        } while (--nnz != 0);
+      }
+
+    } while (--j != 0);
+    c -= m * n;
+    c += 16;
+    a += 16;
+    i -= 16;}
+/*
     do {
       float32x4_t cout_ = vminq_f32(vw, vmax);
       cout_ = vmaxq_f32(cout_, vmin);
@@ -109,7 +131,7 @@ Otherwise, it is set to all zeros--*/
     c += 16;
     a += 16;
     i -= 16;}
-
+*/
 
   }
   if XNN_UNLIKELY(i != 0) {
