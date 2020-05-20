@@ -1196,10 +1196,10 @@ int main() {
     return -1;
   }
 
-    for (const std::unique_ptr<xnn_operator, decltype(&xnn_delete_operator)>& op : execution_plan) {
+    for (const std::unique_ptr<xnn_operator, decltype(&xnn_delete_operator)>& op : operators) {
       xnn_status status = xnn_run_operator(op.get(), threadpool.get());
       if (status != xnn_status_success) {
-        state.SkipWithError("failed to run a model");
+        std::cerr << "failed to run a model" << std::endl;
         return;
       }
     }
