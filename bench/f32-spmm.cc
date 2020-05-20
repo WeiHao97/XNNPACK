@@ -150,7 +150,7 @@ static void SpMMBenchmark(benchmark::State& state,
 
    for(int cur_k = 0; cur_k < kc; cur_k++){
     for(int cur_m = 0; cur_m < mc; cur_m++){
-        a[cur*mc+cur_m ] = tmp_a[cur_m];}
+        a[cur_k*mc+cur_m ] = tmp_a[cur_m];}
   }
   
   std::fill(c.begin(), c.end(), nanf(""));
