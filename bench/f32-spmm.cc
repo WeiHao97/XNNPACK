@@ -160,6 +160,7 @@ static void SpMMBenchmark(benchmark::State& state,
 
 
 #if XNN_ARCH_ARM64
+/*
   static void spmm80_4x1__neonfma(benchmark::State& state, const char* net) {
     SpMMBenchmark(state, xnn_f32_spmm_minmax_ukernel_4x1__neonfma, 4, 1, 0.8f);
   }
@@ -224,12 +225,9 @@ static void SpMMBenchmark(benchmark::State& state,
 
   static void spmm80_8x1__neonfma_pipelined(benchmark::State& state, const char* net) {
     SpMMBenchmark(state, xnn_f32_spmm_minmax_ukernel_8x1__neonfma_pipelined, 8, 1, 0.8f);
-  }
+  } 
 
-  static void spmm80_16x1__neonfma_pipelined(benchmark::State& state, const char* net) {
-    SpMMBenchmark(state, xnn_f32_spmm_minmax_ukernel_16x1__neonfma_pipelined, 16, 1, 0.8f);
-  }
-
+  BENCHMARK_GEMM(spmm80_16x1__neonfma)
   BENCHMARK_GEMM(spmm80_4x1__neonfma)
   BENCHMARK_GEMM(spmm80_4x2__neonfma)
   BENCHMARK_GEMM(spmm80_4x4__neonfma)
@@ -239,14 +237,17 @@ static void SpMMBenchmark(benchmark::State& state,
   BENCHMARK_GEMM(spmm80_12x1__neonfma)
   BENCHMARK_GEMM(spmm80_12x2__neonfma)
   BENCHMARK_GEMM(spmm80_12x4__neonfma)
-  BENCHMARK_GEMM(spmm80_16x1__neonfma)
   BENCHMARK_GEMM(spmm80_16x2__neonfma)
   BENCHMARK_GEMM(spmm80_16x4__neonfma)
   BENCHMARK_GEMM(spmm80_4x1__neonfma_unroll2)
   BENCHMARK_GEMM(spmm80_8x1__neonfma_unroll2)
   BENCHMARK_GEMM(spmm80_16x1__neonfma_unroll2)
   BENCHMARK_GEMM(spmm80_4x1__neonfma_pipelined)
-  BENCHMARK_GEMM(spmm80_8x1__neonfma_pipelined)
+  BENCHMARK_GEMM(spmm80_8x1__neonfma_pipelined)*/
+
+  static void spmm80_16x1__neonfma_pipelined(benchmark::State& state, const char* net) {
+    SpMMBenchmark(state, xnn_f32_spmm_minmax_ukernel_16x1__neonfma_pipelined, 16, 1, 0.8f);
+  }
   BENCHMARK_GEMM(spmm80_16x1__neonfma_pipelined)
 #endif  // XNN_ARCH_ARM64
 
@@ -263,6 +264,7 @@ static void SpMMBenchmark(benchmark::State& state,
   BENCHMARK_GEMM(spmm80_8x1__sse)
 #endif  // XNN_ARCH_X86 || XNN_ARCH_X86_64
 
+/*
 static void spmm80_1x1__scalar(benchmark::State& state, const char* net) {
   SpMMBenchmark(state, xnn_f32_spmm_minmax_ukernel_1x1__scalar, 1, 1, 0.8f);
 }
@@ -312,7 +314,8 @@ BENCHMARK_GEMM(spmm80_8x4__scalar)
 BENCHMARK_GEMM(spmm80_1x1__scalar_pipelined)
 BENCHMARK_GEMM(spmm80_2x1__scalar_pipelined)
 BENCHMARK_GEMM(spmm80_4x1__scalar_pipelined)
-BENCHMARK_GEMM(spmm80_8x1__scalar_pipelined)
+BENCHMARK_GEMM(spmm80_8x1__scalar_pipelined) 
+*/
 
 #ifndef XNNPACK_BENCHMARK_NO_MAIN
 BENCHMARK_MAIN();
