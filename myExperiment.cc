@@ -1223,7 +1223,7 @@ if(argv[2]){
     &op0);
   if (status != xnn_status_success) {
     std::cerr << "failed to create operation #0" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
   operators.emplace_back(op0, xnn_delete_operator);
 
@@ -1231,10 +1231,10 @@ if(argv[2]){
     op0,
     1 /* batch size */, 224 /* input height */, 224 /* input width */,
     &v2[0] /* input */, &v3[0] /* output */,
-    threadpool /* threadpool */);
+    threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #0" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
 
   xnn_operator_t op1 = nullptr;
@@ -1256,17 +1256,17 @@ if(argv[2]){
 
   if (status != xnn_status_success) {
     std::cerr << "failed to create operation #1" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
   operators.emplace_back(op1, xnn_delete_operator);
   status = xnn_setup_convolution2d_nhwc_f32(
     op1,
     1 /* batch size */, 112 /* input height */, 112 /* input width */,
     &v3[0] /* input */, &v4[0] /* output */,
-    threadpool /* threadpool */);
+    threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #1" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
 
   xnn_operator_t op2 = nullptr;
@@ -1287,7 +1287,7 @@ if(argv[2]){
     &op2);
   if (status != xnn_status_success) {
     std::cerr << "failed to create operation #2" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
   operators.emplace_back(op2, xnn_delete_operator);
 
@@ -1295,10 +1295,10 @@ if(argv[2]){
     op2,
     1 /* batch size */, 112 /* input height */, 112 /* input width */,
     &v4[0] /* input */, &v5[0] /* output */,
-    threadpool /* threadpool */);
+    threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #2" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
 
   xnn_operator_t op3 = nullptr;
@@ -1320,17 +1320,17 @@ if(argv[2]){
 
   if (status != xnn_status_success) {
     std::cerr << "failed to create operation #3" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
   operators.emplace_back(op3, xnn_delete_operator);
   status = xnn_setup_convolution2d_nhwc_f32(
     op3,
     1 /* batch size */, 112 /* input height */, 112 /* input width */,
     &v5[0] /* input */, &v6[0] /* output */,
-    threadpool /* threadpool */);
+    threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #3" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
 
   xnn_operator_t op4 = nullptr;
@@ -1351,7 +1351,7 @@ if(argv[2]){
     &op4);
   if (status != xnn_status_success) {
     std::cerr << "failed to create operation #4" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
   operators.emplace_back(op4, xnn_delete_operator);
 
@@ -1359,10 +1359,10 @@ if(argv[2]){
     op4,
     1 /* batch size */, 56 /* input height */, 56 /* input width */,
     &v6[0] /* input */, &v7[0] /* output */,
-    threadpool /* threadpool */);
+    threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #4" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
 
   xnn_operator_t op5 = nullptr;
@@ -1384,17 +1384,17 @@ if(argv[2]){
 
   if (status != xnn_status_success) {
     std::cerr << "failed to create operation #5" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
   operators.emplace_back(op5, xnn_delete_operator);
   status = xnn_setup_convolution2d_nhwc_f32(
     op5,
     1 /* batch size */, 56 /* input height */, 56 /* input width */,
     &v7[0] /* input */, &v8[0] /* output */,
-    threadpool /* threadpool */);
+    threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #5" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
 
   xnn_operator_t op6 = nullptr;
@@ -1415,7 +1415,7 @@ if(argv[2]){
     &op6);
   if (status != xnn_status_success) {
     std::cerr << "failed to create operation #6" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
   operators.emplace_back(op6, xnn_delete_operator);
 
@@ -1423,10 +1423,10 @@ if(argv[2]){
     op6,
     1 /* batch size */,  56/* input height */,  56/* input width */,
     &v8[0] /* input */, &v9[0] /* output */,
-    threadpool /* threadpool */);
+    threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #6" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
 
   xnn_operator_t op7 = nullptr;
@@ -1448,17 +1448,17 @@ if(argv[2]){
 
   if (status != xnn_status_success) {
     std::cerr << "failed to create operation #7" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
   operators.emplace_back(op7, xnn_delete_operator);
   status = xnn_setup_convolution2d_nhwc_f32(
     op7,
     1 /* batch size */,  56/* input height */,  56/* input width */,
     &v9[0] /* input */, &v10[0] /* output */,
-    threadpool /* threadpool */);
+    threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #7" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
 
   xnn_operator_t op8 = nullptr;
@@ -1479,7 +1479,7 @@ if(argv[2]){
     &op8);
   if (status != xnn_status_success) {
     std::cerr << "failed to create operation #8" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
   operators.emplace_back(op8, xnn_delete_operator);
 
@@ -1487,10 +1487,10 @@ if(argv[2]){
     op8,
     1 /* batch size */,  28/* input height */,  28/* input width */,
     &v10[0] /* input */, &v11[0] /* output */,
-    threadpool /* threadpool */);
+    threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #8" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
 
   xnn_operator_t op9 = nullptr;
@@ -1512,17 +1512,17 @@ if(argv[2]){
 
   if (status != xnn_status_success) {
     std::cerr << "failed to create operation #9" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
   operators.emplace_back(op9, xnn_delete_operator);
   status = xnn_setup_convolution2d_nhwc_f32(
     op9,
     1 /* batch size */,  28/* input height */,  28/* input width */,
     &v11[0] /* input */, &v12[0] /* output */,
-    threadpool /* threadpool */);
+    threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #9" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
 
   xnn_operator_t op10 = nullptr;
@@ -1543,7 +1543,7 @@ if(argv[2]){
     &op10);
   if (status != xnn_status_success) {
     std::cerr << "failed to create operation #10" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
   operators.emplace_back(op10, xnn_delete_operator);
 
@@ -1551,10 +1551,10 @@ if(argv[2]){
     op10,
     1 /* batch size */,  28/* input height */,  28/* input width */,
     &v12[0] /* input */, &v13[0] /* output */,
-    threadpool /* threadpool */);
+    threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #10" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
 
   xnn_operator_t op11 = nullptr;
@@ -1576,17 +1576,17 @@ if(argv[2]){
 
   if (status != xnn_status_success) {
     std::cerr << "failed to create operation #11" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
   operators.emplace_back(op11, xnn_delete_operator);
   status = xnn_setup_convolution2d_nhwc_f32(
     op11,
     1 /* batch size */,  28/* input height */,  28/* input width */,
     &v13[0] /* input */, &v14[0] /* output */,
-    threadpool /* threadpool */);
+    threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #11" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
 
   xnn_operator_t op12 = nullptr;
@@ -1607,7 +1607,7 @@ if(argv[2]){
     &op12);
   if (status != xnn_status_success) {
     std::cerr << "failed to create operation #12" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
   operators.emplace_back(op12, xnn_delete_operator);
 
@@ -1615,10 +1615,10 @@ if(argv[2]){
     op12,
     1 /* batch size */,  14/* input height */,  14/* input width */,
     &v14[0] /* input */, &v15[0] /* output */,
-    threadpool /* threadpool */);
+    threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #12" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
 
   xnn_operator_t op13 = nullptr;
@@ -1640,17 +1640,17 @@ if(argv[2]){
 
   if (status != xnn_status_success) {
     std::cerr << "failed to create operation #13" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
   operators.emplace_back(op13, xnn_delete_operator);
   status = xnn_setup_convolution2d_nhwc_f32(
     op13,
     1 /* batch size */,  14/* input height */,  14/* input width */,
     &v15[0] /* input */, &v16[0] /* output */,
-    threadpool /* threadpool */);
+    threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #13" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
 
   xnn_operator_t op14 = nullptr;
@@ -1671,7 +1671,7 @@ if(argv[2]){
     &op14);
   if (status != xnn_status_success) {
     std::cerr << "failed to create operation #14" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
   operators.emplace_back(op14, xnn_delete_operator);
 
@@ -1679,10 +1679,10 @@ if(argv[2]){
     op14,
     1 /* batch size */,  14/* input height */,  14/* input width */,
     &v16[0] /* input */, &v17[0] /* output */,
-    threadpool /* threadpool */);
+    threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #14" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
 
   xnn_operator_t op15 = nullptr;
@@ -1704,17 +1704,17 @@ if(argv[2]){
 
   if (status != xnn_status_success) {
     std::cerr << "failed to create operation #15" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
   operators.emplace_back(op15, xnn_delete_operator);
   status = xnn_setup_convolution2d_nhwc_f32(
     op15,
     1 /* batch size */,  14/* input height */,  14/* input width */,
     &v17[0] /* input */, &v18[0] /* output */,
-    threadpool /* threadpool */);
+    threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #15" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
 
   xnn_operator_t op16 = nullptr;
@@ -1735,7 +1735,7 @@ if(argv[2]){
     &op16);
   if (status != xnn_status_success) {
     std::cerr << "failed to create operation #16" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
   operators.emplace_back(op16, xnn_delete_operator);
 
@@ -1743,10 +1743,10 @@ if(argv[2]){
     op16,
     1 /* batch size */,  14/* input height */,  14/* input width */,
     &v18[0] /* input */, &v19[0] /* output */,
-    threadpool /* threadpool */);
+    threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #16" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
 
   xnn_operator_t op17 = nullptr;
@@ -1768,17 +1768,17 @@ if(argv[2]){
 
   if (status != xnn_status_success) {
     std::cerr << "failed to create operation #17" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
   operators.emplace_back(op17, xnn_delete_operator);
   status = xnn_setup_convolution2d_nhwc_f32(
     op17,
     1 /* batch size */,  14/* input height */,  14/* input width */,
     &v19[0] /* input */, &v20[0] /* output */,
-    threadpool /* threadpool */);
+    threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #17" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
     xnn_operator_t op18 = nullptr;
   status = xnn_create_convolution2d_nhwc_f32(
@@ -1799,17 +1799,17 @@ if(argv[2]){
 
   if (status != xnn_status_success) {
     std::cerr << "failed to create operation #18" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
   operators.emplace_back(op18, xnn_delete_operator);
   status = xnn_setup_convolution2d_nhwc_f32(
     op18,
     1 /* batch size */,  14/* input height */,  14/* input width */,
     &v20[0] /* input */, &v21[0] /* output */,
-    threadpool /* threadpool */);
+    threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #18" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
     xnn_operator_t op19 = nullptr;
   status = xnn_create_convolution2d_nhwc_f32(
@@ -1830,17 +1830,17 @@ if(argv[2]){
 
   if (status != xnn_status_success) {
     std::cerr << "failed to create operation #19" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
   operators.emplace_back(op19, xnn_delete_operator);
   status = xnn_setup_convolution2d_nhwc_f32(
     op19,
     1 /* batch size */,  14/* input height */,  14/* input width */,
     &v21[0] /* input */, &v22[0] /* output */,
-    threadpool /* threadpool */);
+    threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #19" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
     xnn_operator_t op20 = nullptr;
   status = xnn_create_convolution2d_nhwc_f32(
@@ -1861,17 +1861,17 @@ if(argv[2]){
 
   if (status != xnn_status_success) {
     std::cerr << "failed to create operation #20" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
   operators.emplace_back(op20, xnn_delete_operator);
   status = xnn_setup_convolution2d_nhwc_f32(
     op20,
     1 /* batch size */,  14/* input height */,  14/* input width */,
     &v22[0] /* input */, &v23[0] /* output */,
-    threadpool /* threadpool */);
+    threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #20" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
   
   xnn_operator_t op21 = nullptr;
@@ -1893,17 +1893,17 @@ if(argv[2]){
 
   if (status != xnn_status_success) {
     std::cerr << "failed to create operation #21" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
   operators.emplace_back(op21, xnn_delete_operator);
   status = xnn_setup_convolution2d_nhwc_f32(
     op21,
     1 /* batch size */,  14/* input height */,  14/* input width */,
     &v23[0] /* input */, &v24[0] /* output */,
-    threadpool /* threadpool */);
+    threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #21" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
 
   xnn_operator_t op22 = nullptr;
@@ -1925,17 +1925,17 @@ if(argv[2]){
 
   if (status != xnn_status_success) {
     std::cerr << "failed to create operation #22" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
   operators.emplace_back(op22, xnn_delete_operator);
   status = xnn_setup_convolution2d_nhwc_f32(
     op22,
     1 /* batch size */,  14/* input height */,  14/* input width */,
     &v24[0] /* input */, &v25[0] /* output */,
-    threadpool /* threadpool */);
+    threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #22" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
   
   xnn_operator_t op23 = nullptr;
@@ -1957,17 +1957,17 @@ if(argv[2]){
 
   if (status != xnn_status_success) {
     std::cerr << "failed to create operation #23" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
   operators.emplace_back(op23, xnn_delete_operator);
   status = xnn_setup_convolution2d_nhwc_f32(
     op23,
     1 /* batch size */,  14/* input height */,  14/* input width */,
     &v25[0] /* input */, &v26[0] /* output */,
-    threadpool /* threadpool */);
+    threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #23" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
 
   xnn_operator_t op24 = nullptr;
@@ -1989,17 +1989,17 @@ if(argv[2]){
 
   if (status != xnn_status_success) {
     std::cerr << "failed to create operation #24" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
   operators.emplace_back(op24, xnn_delete_operator);
   status = xnn_setup_convolution2d_nhwc_f32(
     op24,
     1 /* batch size */,  7/* input height */,  7/* input width */,
     &v26[0] /* input */, &v27[0] /* output */,
-    threadpool /* threadpool */);
+    threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #24" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
   
   xnn_operator_t op25 = nullptr;
@@ -2021,17 +2021,17 @@ if(argv[2]){
 
   if (status != xnn_status_success) {
     std::cerr << "failed to create operation #25" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
   operators.emplace_back(op25, xnn_delete_operator);
   status = xnn_setup_convolution2d_nhwc_f32(
     op25,
     1 /* batch size */,  7/* input height */,  7/* input width */,
     &v27[0] /* input */, &v28[0] /* output */,
-    threadpool /* threadpool */);
+    threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #25" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
 
   xnn_operator_t op26 = nullptr;
@@ -2053,17 +2053,17 @@ if(argv[2]){
 
   if (status != xnn_status_success) {
     std::cerr << "failed to create operation #26" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
   operators.emplace_back(op26, xnn_delete_operator);
   status = xnn_setup_convolution2d_nhwc_f32(
     op26,
     1 /* batch size */,  7/* input height */,  7/* input width */,
     &v28[0] /* input */, &v29[0] /* output */,
-    threadpool /* threadpool */);
+    threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #26" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
 
   xnn_operator_t op27 = nullptr;
@@ -2074,17 +2074,17 @@ if(argv[2]){
     &op27);
   if (status != xnn_status_success) {
     std::cerr << "failed to create operation #27" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
   operators.emplace_back(op27, xnn_delete_operator);
   status = xnn_setup_global_average_pooling_nwc_f32(
     op27,
     1 /* batch size */, 49 /* width */,
     &v29[0] /* input */, &v30[0] /* output */,
-    threadpool /* threadpool */);
+    threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #27" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
 
   xnn_operator_t op28 = nullptr;
@@ -2101,7 +2101,7 @@ if(argv[2]){
 
   if (status != xnn_status_success) {
     std::cerr << "failed to create operation #28" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
   operators.emplace_back(op28, xnn_delete_operator);
   status = xnn_setup_fully_connected_nc_f32(
@@ -2112,7 +2112,7 @@ if(argv[2]){
   threadpool);
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #28" << std::endl;
-    return ExecutionPlan();
+    return -1;
   }
 
 }
