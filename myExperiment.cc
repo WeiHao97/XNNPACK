@@ -1235,10 +1235,10 @@ int main() {
     std::cout << "v6 Sparsity: "<< (float)n_zeros/150528 << "   n_zeros: "<< n_zeros << std::endl; 
 
     n_zeros = 0;
-    for(size_t l=0 ; l<sizeof(v7); l++ ){
+    for(size_t l=0 ; l<301056; l++ ){
         if(v7[l] == 0) n_zeros++;
     }
-    std::cout << "v7 Sparsity: "<< (float)n_zeros/sizeof(v7) << "   n_zeros: "<< n_zeros << std::endl;
+    std::cout << "v7 Sparsity: "<< (float)n_zeros/301056 << "   n_zeros: "<< n_zeros << std::endl;
 
     n_zeros = 0;
     for(size_t l=0 ; l<301056; l++ ){
