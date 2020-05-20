@@ -1322,6 +1322,7 @@ int main() {
     n_zeros = 0;
     for(size_t l=0 ; l<sizeof(v21); l++ ){
         if(v21[l] == 0) n_zeros++;
+    }
     std::cout << "v21 Sparsity: "<< n_zeros/sizeof(v21) << std::endl;
 
     n_zeros = 0;
@@ -1373,5 +1374,5 @@ int main() {
     std::cout << "v29 Sparsity: "<< n_zeros/sizeof(v29) << std::endl;
 
   return 0;
-  
+
 }
