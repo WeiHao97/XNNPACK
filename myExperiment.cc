@@ -165,7 +165,8 @@ int main (int argc, char *argv[]){
   std::generate(w52, w52 + 589824, std::ref(f32rng));
   std::generate(w54, w54 + 768000, std::ref(f32rng));
   std::generate(w55, w55 + 1000, std::ref(f32rng));
-if(argv[2] == "1"){
+
+if(std::stoi(argv[2]) == "1"){
   std::cout << "Bias on" << std::endl;
   std::generate(w1, w1 + 24, std::ref(f32rng));
   std::generate(w3, w3 + 24, std::ref(f32rng));
@@ -194,6 +195,8 @@ if(argv[2] == "1"){
   std::generate(w49, w49 + 768, std::ref(f32rng));
   std::generate(w51, w51 + 768, std::ref(f32rng));
   std::generate(w53, w53 + 768, std::ref(f32rng));
+  }else{
+    std::cout << "Bias off" << std::endl;
   }
 
   if (xnn_initialize(nullptr /* allocator */) != xnn_status_success) {
@@ -207,7 +210,7 @@ if(argv[2] == "1"){
     pthreadpool_create(num_threads), pthreadpool_destroy);
 
 
-if(argv[3] == "1"){
+if(std::stoi(argv[3]) == 1){
 
   std::cout << "Using spmm" << std::endl;
   xnn_operator_t op0 = nullptr;
@@ -1208,6 +1211,8 @@ if(argv[3] == "1"){
     return -1;
   }
 }else{
+
+  std::cout << "Using gemm" << std::endl;
 
   xnn_operator_t op0 = nullptr;
   status = xnn_create_convolution2d_nhwc_f32(
