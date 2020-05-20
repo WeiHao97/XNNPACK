@@ -41,13 +41,16 @@ void xnn_f32_spmm_minmax_ukernel_16x1__neonfma_pipelined(
     float32x4_t vaCDEF = vld1q_f32(a + 12);
     __builtin_prefetch(a + 16);
     size_t j = n;
+
+//wei sparsitycheck
 /*
-//wei
     float32x4_t tmp1 = vaddq_f32(va0123,va4567);
     float32x4_t tmp2 = vaddq_f32(tmp1,va89AB);
     float32x4_t tmp3 = vaddq_f32(tmp2,vaCDEF);
     if(tmp3[0] != 0 || tmp3[1] != 0 || tmp3[2] != 0 || tmp3[3] != 0){
       */
+//wei sparsitycheck   
+  
     do {
       uint32_t nnz = *nnzmap++;
       float32x4_t vacc0123 = vw;
@@ -92,34 +95,34 @@ void xnn_f32_spmm_minmax_ukernel_16x1__neonfma_pipelined(
     a += 16;
     i -= 16;
 
+//wei sparsitycheck
 /*    
   }else{    
-
-//wei
       do {
       uint32_t nnz = *nnzmap++;
-      //float32x4_t cout_ = vminq_f32(vw, vmax);
-      //cout_ = vmaxq_f32(cout_, vmin);
-      //vst1q_f32(c, cout_);
-      //vst1q_f32(c + 4, cout_);
-      //vst1q_f32(c + 8, cout_);
-      //vst1q_f32(c + 12, cout_);
-      //c += m;
-      //w += nnz;
+      //float32x4_t cout_ = vminq_f32(vw, vmax); //with bias 
+      //cout_ = vmaxq_f32(cout_, vmin);          //with bias 
+      //vst1q_f32(c, cout_);                     //with bias 
+      //vst1q_f32(c + 4, cout_);                 //with bias 
+      //vst1q_f32(c + 8, cout_);                 //with bias 
+      //vst1q_f32(c + 12, cout_);                //with bias 
+      //c += m;                                  //with bias 
+      //w += nnz;                                //with bias 
       if XNN_LIKELY(nnz != 0) {
         do {
           a = (const float*restrict) ((uintptr_t) a + (uintptr_t) diff);
           diff = *dmap++;
         } while (--nnz != 0);
       }
-      //vw = vld1q_dup_f32(w);
-      //w += 1;
+      //vw = vld1q_dup_f32(w);                   //with bias 
+      //w += 1;                                  //with bias 
 
     } while (--j != 0);
-    //c -= m * n;
+    //c -= m * n;                                //with bias 
     c += 16;
     a += 16;
     i -= 16;}*/
+//wei sparsitycheck
 
   }
   if XNN_UNLIKELY(i != 0) {
