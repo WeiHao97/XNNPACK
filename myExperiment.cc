@@ -186,6 +186,10 @@ int main() {
   std::generate(w53, w53 + 768, std::ref(f32rng));
 
   */
+  if (xnn_initialize(nullptr /* allocator */) != xnn_status_success) {
+    state.SkipWithError("failed to initialize XNNPACK");
+    return;
+  }
   models::ExecutionPlan operators;
   xnn_status status;
   const size_t num_threads = 1;
