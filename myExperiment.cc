@@ -113,7 +113,7 @@ int main (int argc, char *argv[]){
 
   std::random_device random_device;
   auto rng = std::mt19937(random_device());
-  float Sparsity = 1- argv[0]/100;
+  float Sparsity = 1- std::stof(argv[0])/100;
   std::bernoulli_distribution random_bool_generator(Sparsity);// 0.1 => 90% sparse
   auto f32rng = std::bind(random_bool_generator, rng);
   std::ifstream inputFile("/users/Wei_Hao/XNNPACK/sparse_224.data");
@@ -2109,7 +2109,7 @@ if(argv[2]){
   1,//size_t batch_size,
   &v30[0],//const float* input,
   &v31[0],//float* output,
-  threadpool);
+  threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #28" << std::endl;
     return -1;
