@@ -22,6 +22,7 @@ int main (int argc, char *argv[]){
         std::cout<< "Sparsity: 0-100"<< std::endl;
         std::cout<< "Bias: on:1, off:0"<< std::endl;
         std::cout<< "Mode: spmm:1, gemm:0"<< std::endl;
+        return -1;
     }
   alignas(16) static float v2[150528];
   alignas(16) static float v3[301056];
