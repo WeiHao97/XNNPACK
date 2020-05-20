@@ -130,7 +130,7 @@ static void SpMMBenchmark(benchmark::State& state,
 //wei
   //std::generate(a.begin(), a.end(), std::ref(f32rng));
   std::ifstream inputFile("/users/Wei_Hao/XNNPACK/sparse_224.data");
-
+  std::vector<float, AlignedAllocator<float, 64>> tmp_a(mc * 3);
   // test file open
   int size = 0; 
   //int z_count = 0;
@@ -138,8 +138,7 @@ static void SpMMBenchmark(benchmark::State& state,
   if (inputFile) {        
     while (getline(inputFile, s))
     {
-        for(int cur = 0; cur < kc; cur++){
-        a[cur*mc+size] = std::stof(s);}
+        tmp_a[size] = std::stof(s);
         //if(v2[size] == 0) z_count++;
         size++;
     }
@@ -148,6 +147,11 @@ static void SpMMBenchmark(benchmark::State& state,
         std::cout<< "Can't open file"<< std::endl;
   }
   inputFile.close();
+
+   for(int cur_k = 0; cur_k < kc; cur_k++){
+    for(int cur_m = 0; cur_m < mc; cur++){
+        a[cur*mc+cur_m ] = tmp_a[cur_m];}
+  }
   
   std::fill(c.begin(), c.end(), nanf(""));
 
