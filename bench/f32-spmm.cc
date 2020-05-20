@@ -246,7 +246,7 @@ static void SpMMBenchmark(benchmark::State& state,
   BENCHMARK_GEMM(spmm80_8x1__neonfma_pipelined)*/
 
   static void spmm80_16x1__neonfma_pipelined(benchmark::State& state, const char* net) {
-    SpMMBenchmark(state, xnn_f32_spmm_minmax_ukernel_16x1__neonfma_pipelined, 16, 1, 0.8f);
+    SpMMBenchmark(state, xnn_f32_spmm_minmax_ukernel_16x1__neonfma_pipelined, 16, 1, 0.8f); //wei
   }
   BENCHMARK_GEMM(spmm80_16x1__neonfma_pipelined)
 #endif  // XNN_ARCH_ARM64

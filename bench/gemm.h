@@ -11,7 +11,7 @@
 #include <benchmark/benchmark.h>
 
 #define BENCHMARK_GEMM(gemm_fn) \
-  BENCHMARK_CAPTURE(gemm_fn, mobilenet_v1, "MobileNet v1")->Apply(MobileNetV1GemmArguments)->UseRealTime(); \
+  BENCHMARK_CAPTURE(gemm_fn, mobilenet_v1, "MobileNet v1")->Apply(MobileNetV1GemmArguments)->UseRealTime(); /*\
   BENCHMARK_CAPTURE(gemm_fn, mobilenet_v2, "MobileNet v2")->Apply(MobileNetV2GemmArguments)->UseRealTime(); \
   BENCHMARK_CAPTURE(gemm_fn, mobilenet_v3_small, "MobileNet v3 Small")->Apply(MobileNetV3SmallGemmArguments)->UseRealTime(); \
   BENCHMARK_CAPTURE(gemm_fn, mobilenet_v3_large, "MobileNet v3 Large")->Apply(MobileNetV3LargeGemmArguments)->UseRealTime(); \
@@ -31,7 +31,7 @@
   BENCHMARK_CAPTURE(gemm_fn, squeezenet_v11, "SqueezeNet 1.1")->Apply(SqueezeNetV11GemmArguments)->UseRealTime(); \
   BENCHMARK_CAPTURE(gemm_fn, vgg, "VGG")->Apply(VGGGemmArguments)->UseRealTime(); \
   BENCHMARK_CAPTURE(gemm_fn, srcnn915, "SRCNN (9-1-5)")->Apply(SRCNN915GemmArguments)->UseRealTime(); \
-  BENCHMARK_CAPTURE(gemm_fn, srcnn935, "SRCNN (9-3-5)")->Apply(SRCNN935GemmArguments)->UseRealTime();
+  BENCHMARK_CAPTURE(gemm_fn, srcnn935, "SRCNN (9-3-5)")->Apply(SRCNN935GemmArguments)->UseRealTime();*/
 
 // Removed due to OOM SEGFAULT on 32 bit ARM.
 //  BENCHMARK_CAPTURE(gemm_fn, srcnn955, "SRCNN (9-5-5)")->Apply(SRCNN955GemmArguments)->UseRealTime();
@@ -204,6 +204,7 @@ static void MobileNetV1GemmArguments(benchmark::internal::Benchmark* b) {
   b->ArgNames({"M", "N", "K"});
 
   /*           M        N          K    */
+  /*
   b->Args({112 * 112,   32,    3 * 3 * 3});
   b->Args({112 * 112,   64,   32 * 1 * 1});
   b->Args({ 56 *  56,  128,   64 * 1 * 1});
@@ -213,7 +214,9 @@ static void MobileNetV1GemmArguments(benchmark::internal::Benchmark* b) {
   b->Args({ 14 *  14,  512,  256 * 1 * 1});
   b->Args({ 14 *  14,  512,  512 * 1 * 1});
   b->Args({  7 *   7, 1024,  512 * 1 * 1});
-  b->Args({  7 *   7, 1024, 1024 * 1 * 1});
+  b->Args({  7 *   7, 1024, 1024 * 1 * 1});*/
+
+  b->Args({224 * 224,   48,    24 * 1 * 1});//wei
 }
 
 static void MobileNetV2GemmArguments(benchmark::internal::Benchmark* b) {
