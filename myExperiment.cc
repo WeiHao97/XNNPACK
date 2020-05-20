@@ -166,7 +166,7 @@ int main (int argc, char *argv[]){
   std::generate(w54, w54 + 768000, std::ref(f32rng));
   std::generate(w55, w55 + 1000, std::ref(f32rng));
 
-if(std::stoi(argv[2]) == "1"){
+if(std::stoi(argv[2]) == 1){
   std::cout << "Bias on" << std::endl;
   std::generate(w1, w1 + 24, std::ref(f32rng));
   std::generate(w3, w3 + 24, std::ref(f32rng));
