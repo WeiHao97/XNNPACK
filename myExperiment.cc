@@ -1200,7 +1200,7 @@ int main() {
       xnn_status status = xnn_run_operator(op.get(), threadpool.get());
       if (status != xnn_status_success) {
         std::cerr << "failed to run a model" << std::endl;
-        return;
+        return -1;
       }
     }
 
