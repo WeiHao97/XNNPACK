@@ -188,7 +188,7 @@ int main() {
   */
   if (xnn_initialize(nullptr /* allocator */) != xnn_status_success) {
     std::cerr << "failed to initialize XNNPACK" << std::endl;
-    return;
+    return -1;
   }
   models::ExecutionPlan operators;
   xnn_status status;
