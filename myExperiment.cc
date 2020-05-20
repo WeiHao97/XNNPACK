@@ -136,6 +136,7 @@ int main (int argc, char *argv[]){
   }else{
         std::cout<< "Can't open file"<< std::endl;
   }
+  inputFile.close();
   //std::cout<< "Size: " << size << " Sparsity: "<< (float)z_count/150528 <<"\n";
   //std::generate(v2, v2 + 150528, std::ref(f32rng));
   std::generate(w0, w0 + 648, std::ref(f32rng));

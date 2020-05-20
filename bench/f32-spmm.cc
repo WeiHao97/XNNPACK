@@ -21,6 +21,9 @@
 #include <xnnpack/params.h>
 #include <xnnpack/spmm.h>
 
+#include <fstream>//wei
+#include <iostream>
+
 
 static void SpMMBenchmark(benchmark::State& state,
   xnn_f32_spmm_minmax_ukernel_function spmm, uint32_t mr, uint32_t nr, float sparsity)
@@ -124,7 +127,27 @@ static void SpMMBenchmark(benchmark::State& state,
   std::vector<float, AlignedAllocator<float, 64>> a(kc * mc);
   std::vector<float, AlignedAllocator<float, 64>> c(num_buffers * c_elements);
 
-  std::generate(a.begin(), a.end(), std::ref(f32rng));
+//wei
+  //std::generate(a.begin(), a.end(), std::ref(f32rng));
+  std::ifstream inputFile("/users/Wei_Hao/XNNPACK/sparse_224.data");
+
+  // test file open
+  int size = 0; 
+  //int z_count = 0;
+  std::string s;   
+  if (inputFile) {        
+    while (getline(inputFile, s))
+    {
+        a[size] = std::stof(s);
+        //if(v2[size] == 0) z_count++;
+        size++;
+    }
+
+  }else{
+        std::cout<< "Can't open file"<< std::endl;
+  }
+  inputFile.close();
+  
   std::fill(c.begin(), c.end(), nanf(""));
 
   xnn_f32_minmax_params params =
