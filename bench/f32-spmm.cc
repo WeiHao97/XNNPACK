@@ -133,13 +133,13 @@ static void SpMMBenchmark(benchmark::State& state,
   std::vector<float, AlignedAllocator<float, 64>> tmp_a(mc * 3);
   // test file open
   int size = 0; 
-  //int z_count = 0;
+  int z_count = 0;
   std::string s;   
   if (inputFile) {        
     while (getline(inputFile, s))
     {
         tmp_a[size] = std::stof(s);
-        //if(v2[size] == 0) z_count++;
+        if(tmp_a[size] == 0) z_count++;
         size++;
     }
 
@@ -147,6 +147,7 @@ static void SpMMBenchmark(benchmark::State& state,
         std::cout<< "Can't open file"<< std::endl;
   }
   inputFile.close();
+  std::cout<< "z_count: "<< z_count << std::endl;
 
    for(int cur_k = 0; cur_k < kc; cur_k++){
     for(int cur_m = 0; cur_m < mc; cur_m++){
