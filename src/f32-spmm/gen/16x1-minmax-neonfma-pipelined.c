@@ -92,25 +92,28 @@ void xnn_f32_spmm_minmax_ukernel_16x1__neonfma_pipelined(
     i -= 16;
   }else{    
 
+//wei
       do {
       uint32_t nnz = *nnzmap++;
-      float32x4_t cout_ = vminq_f32(vw, vmax);
-      cout_ = vmaxq_f32(cout_, vmin);
-      vst1q_f32(c, cout_);
-      vst1q_f32(c + 4, cout_);
-      vst1q_f32(c + 8, cout_);
-      vst1q_f32(c + 12, cout_);
-      c += m;w += nnz;
+      //float32x4_t cout_ = vminq_f32(vw, vmax);
+      //cout_ = vmaxq_f32(cout_, vmin);
+      //vst1q_f32(c, cout_);
+      //vst1q_f32(c + 4, cout_);
+      //vst1q_f32(c + 8, cout_);
+      //vst1q_f32(c + 12, cout_);
+      //c += m;
+      //w += nnz;
       if XNN_LIKELY(nnz != 0) {
         do {
           a = (const float*restrict) ((uintptr_t) a + (uintptr_t) diff);
           diff = *dmap++;
         } while (--nnz != 0);
       }
-      vw = vld1q_dup_f32(w);w += 1;
+      //vw = vld1q_dup_f32(w);
+      //w += 1;
 
     } while (--j != 0);
-    c -= m * n;
+    //c -= m * n;
     c += 16;
     a += 16;
     i -= 16;}
