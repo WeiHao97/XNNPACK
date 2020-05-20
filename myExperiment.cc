@@ -17,7 +17,7 @@
 
 int main (int argc, char *argv[]){
 
-    if(argc != 3){
+    if(argc != 4){
         std::cout<< "Usage:"<< std::endl;
         std::cout<< "Sparsity: 0-100"<< std::endl;
         std::cout<< "Bias: on:1, off:0"<< std::endl;
@@ -114,7 +114,7 @@ int main (int argc, char *argv[]){
 
   std::random_device random_device;
   auto rng = std::mt19937(random_device());
-  float Sparsity = 1- std::stof(argv[0])/100;
+  float Sparsity = 1- std::stof(argv[1])/100;
   std::bernoulli_distribution random_bool_generator(Sparsity);// 0.1 => 90% sparse
   auto f32rng = std::bind(random_bool_generator, rng);
   std::ifstream inputFile("/users/Wei_Hao/XNNPACK/sparse_224.data");
@@ -165,7 +165,8 @@ int main (int argc, char *argv[]){
   std::generate(w52, w52 + 589824, std::ref(f32rng));
   std::generate(w54, w54 + 768000, std::ref(f32rng));
   std::generate(w55, w55 + 1000, std::ref(f32rng));
-if(argv[1]){
+if(argv[2] == "1"){
+  std::cout << "Bias on" << std::endl;
   std::generate(w1, w1 + 24, std::ref(f32rng));
   std::generate(w3, w3 + 24, std::ref(f32rng));
   std::generate(w5, w5 + 48, std::ref(f32rng));
@@ -206,7 +207,9 @@ if(argv[1]){
     pthreadpool_create(num_threads), pthreadpool_destroy);
 
 
-if(argv[2]){
+if(argv[3] == "1"){
+
+  std::ceout << "Using spmm" << std::endl;
   xnn_operator_t op0 = nullptr;
   status = xnn_create_convolution2d_nchw_f32(
     1 /* top padding */, 1 /* right padding */,
