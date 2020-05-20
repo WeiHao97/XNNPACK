@@ -209,7 +209,7 @@ if(argv[2] == "1"){
 
 if(argv[3] == "1"){
 
-  std::ceout << "Using spmm" << std::endl;
+  std::cout << "Using spmm" << std::endl;
   xnn_operator_t op0 = nullptr;
   status = xnn_create_convolution2d_nchw_f32(
     1 /* top padding */, 1 /* right padding */,
