@@ -186,8 +186,12 @@ int main() {
   std::generate(w53, w53 + 768, std::ref(f32rng));
 
   */
-  ExecutionPlan operators;
+  models::ExecutionPlan operators;
   xnn_status status;
+  const size_t num_threads = 1;
+  std::unique_ptr<pthreadpool, decltype(&pthreadpool_destroy)> threadpool(
+    pthreadpool_create(num_threads), pthreadpool_destroy);
+
 
 
   xnn_operator_t op0 = nullptr;
@@ -219,7 +223,7 @@ int main() {
   224, //input_width,
   &v2[0],//const float* input,
   &v3[0],//float* output,
-  threadpool);
+  threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #0" << std::endl;
     return -1;
@@ -256,7 +260,7 @@ int main() {
   112, //input_width,
   &v3[0],//const float* input,
   &v4[0],//float* output,
-  threadpool);
+  threadpool.get());
 
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #1" << std::endl;
@@ -292,7 +296,7 @@ int main() {
   112, //input_width,
   &v4[0],//const float* input,
   &v5[0],//float* output,
-  threadpool);
+  threadpool.get());
 
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #2" << std::endl;
@@ -328,7 +332,7 @@ int main() {
   112, //input_width,
   &v5[0],//const float* input,
   &v6[0],//float* output,
-  threadpool);
+  threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #3" << std::endl;
     return -1;
@@ -363,7 +367,7 @@ int main() {
   56, //input_width,
   &v6[0],//const float* input,
   &v7[0],//float* output,
-  threadpool);
+  threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #4" << std::endl;
     return -1;
@@ -398,7 +402,7 @@ int main() {
   56, //input_width,
   &v7[0],//const float* input,
   &v8[0],//float* output,
-  threadpool);
+  threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #5" << std::endl;
     return -1;
@@ -433,7 +437,7 @@ int main() {
   56, //input_width,
   &v8[0],//const float* input,
   &v9[0],//float* output,
-  threadpool);
+  threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #6" << std::endl;
     return -1;
@@ -468,7 +472,7 @@ int main() {
   56, //input_width,
   &v9[0],//const float* input,
   &v10[0],//float* output,
-  threadpool);
+  threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #7" << std::endl;
     return -1;
@@ -503,7 +507,7 @@ int main() {
   28, //input_width,
   &v10[0],//const float* input,
   &v11[0],//float* output,
-  threadpool);
+  threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #8" << std::endl;
     return -1;
@@ -538,7 +542,7 @@ int main() {
   28, //input_width,
   &v11[0],//const float* input,
   &v12[0],//float* output,
-  threadpool);
+  threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #9" << std::endl;
     return -1;
@@ -573,7 +577,7 @@ int main() {
   28, //input_width,
   &v12[0],//const float* input,
   &v13[0],//float* output,
-  threadpool);
+  threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #10" << std::endl;
     return -1;
@@ -608,7 +612,7 @@ int main() {
   28, //input_width,
   &v13[0],//const float* input,
   &v14[0],//float* output,
-  threadpool);
+  threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #11" << std::endl;
     return -1;
@@ -643,7 +647,7 @@ int main() {
   14, //input_width,
   &v14[0],//const float* input,
   &v15[0],//float* output,
-  threadpool);
+  threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #12" << std::endl;
     return -1;
@@ -678,7 +682,7 @@ int main() {
   14, //input_width,
   &v15[0],//const float* input,
   &v16[0],//float* output,
-  threadpool);
+  threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #13" << std::endl;
     return -1;
@@ -713,7 +717,7 @@ int main() {
   14, //input_width,
   &v16[0],//const float* input,
   &v17[0],//float* output,
-  threadpool);
+  threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #14" << std::endl;
     return -1;
@@ -748,7 +752,7 @@ int main() {
   14, //input_width,
   &v17[0],//const float* input,
   &v18[0],//float* output,
-  threadpool);
+  threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #15" << std::endl;
     return -1;
@@ -783,7 +787,7 @@ int main() {
   14, //input_width,
   &v18[0],//const float* input,
   &v19[0],//float* output,
-  threadpool);
+  threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #16" << std::endl;
     return -1;
@@ -818,7 +822,7 @@ int main() {
   14, //input_width,
   &v19[0],//const float* input,
   &v20[0],//float* output,
-  threadpool);
+  threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #17" << std::endl;
     return -1;
@@ -853,7 +857,7 @@ int main() {
   14, //input_width,
   &v20[0],//const float* input,
   &v21[0],//float* output,
-  threadpool);
+  threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #18" << std::endl;
     return -1;
@@ -888,7 +892,7 @@ int main() {
   14, //input_width,
   &v21[0],//const float* input,
   &v22[0],//float* output,
-  threadpool);
+  threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #19" << std::endl;
     return -1;
@@ -923,7 +927,7 @@ int main() {
   14, //input_width,
   &v22[0],//const float* input,
   &v23[0],//float* output,
-  threadpool);
+  threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #20" << std::endl;
     return -1;
@@ -958,7 +962,7 @@ int main() {
   14, //input_width,
   &v23[0],//const float* input,
   &v24[0],//float* output,
-  threadpool);
+  threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #21" << std::endl;
     return -1;
@@ -993,7 +997,7 @@ int main() {
   14, //input_width,
   &v24[0],//const float* input,
   &v25[0],//float* output,
-  threadpool);
+  threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #22" << std::endl;
     return -1;
@@ -1028,7 +1032,7 @@ int main() {
   14, //input_width,
   &v25[0],//const float* input,
   &v26[0],//float* output,
-  threadpool);
+  threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #23" << std::endl;
     return -1;
@@ -1063,7 +1067,7 @@ int main() {
   7, //input_width,
   &v26[0],//const float* input,
   &v27[0],//float* output,
-  threadpool);
+  threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #24" << std::endl;
     return -1;
@@ -1098,7 +1102,7 @@ int main() {
   7, //input_width,
   &v27[0],//const float* input,
   &v28[0],//float* output,
-  threadpool);
+  threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #25" << std::endl;
     return -1;
@@ -1133,7 +1137,7 @@ int main() {
   7, //input_width,
   &v28[0],//const float* input,
   &v29[0],//float* output,
-  threadpool);
+  threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #26" << std::endl;
     return -1;
@@ -1154,7 +1158,7 @@ int main() {
     op27,
     1 /* batch size */, 49 /* width */,
     &v29[0] /* input */, &v30[0] /* output */,
-    threadpool /* threadpool */);
+    threadpool.get() /* threadpool.get() */);
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #27" << std::endl;
     return -1;
@@ -1182,7 +1186,7 @@ int main() {
   1,//size_t batch_size,
   &v30[0],//const float* input,
   &v31[0],//float* output,
-  threadpool);
+  threadpool.get());
   if (status != xnn_status_success) {
     std::cerr << "failed to setup operation #28" << std::endl;
     return -1;
