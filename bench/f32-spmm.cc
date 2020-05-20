@@ -138,7 +138,8 @@ static void SpMMBenchmark(benchmark::State& state,
   if (inputFile) {        
     while (getline(inputFile, s))
     {
-        a[size] = std::stof(s);
+        for(int cur = 0; cur < kc; cur++){
+        a[cur*mc+size] = std::stof(s);}
         //if(v2[size] == 0) z_count++;
         size++;
     }
