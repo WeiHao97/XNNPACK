@@ -100,29 +100,29 @@ void xnn_f32_spmm_minmax_ukernel_16x1__neonfma_pipelined(
   }else{    
       do {
       uint32_t nnz = *nnzmap++;
-      //float32x4_t cout_ = vminq_f32(vw, vmax); //with bias 
-      //cout_ = vmaxq_f32(cout_, vmin);          //with bias 
-      //vst1q_f32(c, cout_);                     //with bias 
-      //vst1q_f32(c + 4, cout_);                 //with bias 
-      //vst1q_f32(c + 8, cout_);                 //with bias 
-      //vst1q_f32(c + 12, cout_);                //with bias 
-      //c += m;                                  //with bias 
-      //w += nnz;                                //with bias 
+      float32x4_t cout_ = vminq_f32(vw, vmax); //with bias 
+      cout_ = vmaxq_f32(cout_, vmin);          //with bias 
+      vst1q_f32(c, cout_);                     //with bias 
+      vst1q_f32(c + 4, cout_);                 //with bias 
+      vst1q_f32(c + 8, cout_);                 //with bias 
+      vst1q_f32(c + 12, cout_);                //with bias 
+      c += m;                                  //with bias 
+      w += nnz;                                //with bias 
       if XNN_LIKELY(nnz != 0) {
         do {
           a = (const float*restrict) ((uintptr_t) a + (uintptr_t) diff);
           diff = *dmap++;
         } while (--nnz != 0);
       }
-      //vw = vld1q_dup_f32(w);                   //with bias 
-      //w += 1;                                  //with bias 
+      vw = vld1q_dup_f32(w);                   //with bias 
+      w += 1;                                  //with bias 
 
     } while (--j != 0);
-    //c -= m * n;                                //with bias 
+    c -= m * n;                                //with bias 
     c += 16;
     a += 16;
     i -= 16;}
-    
+
 //wei sparsitycheck
 
   }
