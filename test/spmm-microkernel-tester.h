@@ -156,14 +156,14 @@ class SpMMMicrokernelTester {
       }
 
       //wei test sparse input
-      /*
+      
       for (float& a_value : a) {
-        if (prng() <= 0.9f) {
+        if (prng() <= 0.8f) {
           a_value = 0.0f;
         }
       }
-      */
-
+   
+/*
       for(int i = 0; i<m(); i++){
         if (prng() <= 0.8f) {
           for(int j = 0; j<k(); j++){
@@ -171,7 +171,7 @@ class SpMMMicrokernelTester {
           }
         }
 
-      }
+      }   */
 
       uint32_t nnz = 0;
       uint32_t wcnt = 0;
