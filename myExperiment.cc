@@ -116,7 +116,9 @@ int main (int argc, char *argv[]){
   auto rng = std::mt19937(random_device());
   float Sparsity = 1- std::stof(argv[1])/100;
   std::bernoulli_distribution random_bool_generator(Sparsity);// 0.1 => 90% sparse
+  std::bernoulli_distribution random_bool_generator_bias(0.9);
   auto f32rng = std::bind(random_bool_generator, rng);
+  auto f32rng_bias = std::bind(random_bool_generator_bias, rng);
   std::ifstream inputFile("/users/Wei_Hao/XNNPACK/sparse_224.data");
 
   // test file open
@@ -168,33 +170,33 @@ int main (int argc, char *argv[]){
 
 if(std::stoi(argv[2]) == 1){
   std::cout << "Bias on" << std::endl;
-  std::generate(w1, w1 + 24, std::ref(f32rng));
-  std::generate(w3, w3 + 24, std::ref(f32rng));
-  std::generate(w5, w5 + 48, std::ref(f32rng));
-  std::generate(w7, w7 + 48, std::ref(f32rng));
-  std::generate(w9, w9 + 96, std::ref(f32rng));
-  std::generate(w11, w11 + 96, std::ref(f32rng));
-  std::generate(w13, w13 + 96, std::ref(f32rng));
-  std::generate(w15, w15 + 96, std::ref(f32rng));
-  std::generate(w17, w17 + 192, std::ref(f32rng));
-  std::generate(w19, w19 + 192, std::ref(f32rng));
-  std::generate(w21, w21 + 192, std::ref(f32rng));
-  std::generate(w23, w23 + 192, std::ref(f32rng));
-  std::generate(w25, w25 + 384, std::ref(f32rng));
-  std::generate(w27, w27 + 384, std::ref(f32rng));
-  std::generate(w29, w29 + 384, std::ref(f32rng));
-  std::generate(w31, w31 + 384, std::ref(f32rng));
-  std::generate(w33, w33 + 384, std::ref(f32rng));
-  std::generate(w35, w35 + 384, std::ref(f32rng));
-  std::generate(w37, w37 + 384, std::ref(f32rng));
-  std::generate(w39, w39 + 384, std::ref(f32rng));
-  std::generate(w41, w41 + 384, std::ref(f32rng));
-  std::generate(w43, w43 + 384, std::ref(f32rng));
-  std::generate(w45, w45 + 384, std::ref(f32rng));
-  std::generate(w47, w47 + 384, std::ref(f32rng));
-  std::generate(w49, w49 + 768, std::ref(f32rng));
-  std::generate(w51, w51 + 768, std::ref(f32rng));
-  std::generate(w53, w53 + 768, std::ref(f32rng));
+  std::generate(w1, w1 + 24, std::ref(f32rng_bias));
+  std::generate(w3, w3 + 24, std::ref(f32rng_bias));
+  std::generate(w5, w5 + 48, std::ref(f32rng_bias));
+  std::generate(w7, w7 + 48, std::ref(f32rng_bias));
+  std::generate(w9, w9 + 96, std::ref(f32rng_bias));
+  std::generate(w11, w11 + 96, std::ref(f32rng_bias));
+  std::generate(w13, w13 + 96, std::ref(f32rng_bias));
+  std::generate(w15, w15 + 96, std::ref(f32rng_bias));
+  std::generate(w17, w17 + 192, std::ref(f32rng_bias));
+  std::generate(w19, w19 + 192, std::ref(f32rng_bias));
+  std::generate(w21, w21 + 192, std::ref(f32rng_bias));
+  std::generate(w23, w23 + 192, std::ref(f32rng_bias));
+  std::generate(w25, w25 + 384, std::ref(f32rng_bias));
+  std::generate(w27, w27 + 384, std::ref(f32rng_bias));
+  std::generate(w29, w29 + 384, std::ref(f32rng_bias));
+  std::generate(w31, w31 + 384, std::ref(f32rng_bias));
+  std::generate(w33, w33 + 384, std::ref(f32rng_bias));
+  std::generate(w35, w35 + 384, std::ref(f32rng_bias));
+  std::generate(w37, w37 + 384, std::ref(f32rng_bias));
+  std::generate(w39, w39 + 384, std::ref(f32rng_bias));
+  std::generate(w41, w41 + 384, std::ref(f32rng_bias));
+  std::generate(w43, w43 + 384, std::ref(f32rng_bias));
+  std::generate(w45, w45 + 384, std::ref(f32rng_bias));
+  std::generate(w47, w47 + 384, std::ref(f32rng_bias));
+  std::generate(w49, w49 + 768, std::ref(f32rng_bias));
+  std::generate(w51, w51 + 768, std::ref(f32rng_bias));
+  std::generate(w53, w53 + 768, std::ref(f32rng_bias));
   }else{
     std::cout << "Bias off" << std::endl;
   }
