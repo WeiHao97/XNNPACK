@@ -1205,34 +1205,34 @@ int main() {
     }
 
     size_t n_zeros = 0;
-    for(size_t l=0 ; l<sizeof(v2); l++ ){
+    for(size_t l=0 ; l<150528; l++ ){
         if(v2[l] == 0) n_zeros++;
     }
-    std::cout << "v2 Sparsity: "<< (float)n_zeros/sizeof(v2) << "   n_zeros: "<< n_zeros << std::endl;
+    std::cout << "v2 Sparsity: "<< (float)n_zeros/150528 << "   n_zeros: "<< n_zeros << std::endl;
 
     n_zeros = 0;
-    for(size_t l=0 ; l<sizeof(v3); l++ ){
+    for(size_t l=0 ; l<301056; l++ ){
         if(v3[l] == 0) n_zeros++;
     }
-    std::cout << "v3 Sparsity: "<< (float)n_zeros/sizeof(v3) << "   n_zeros: "<< n_zeros << std::endl;
+    std::cout << "v3 Sparsity: "<< (float)n_zeros/301056 << "   n_zeros: "<< n_zeros << std::endl;
 
     n_zeros = 0;
-    for(size_t l=0 ; l<sizeof(v4); l++ ){
+    for(size_t l=0 ; l<301056; l++ ){
         if(v4[l] == 0) n_zeros++;
     }
-    std::cout << "v4 Sparsity: "<< (float)n_zeros/sizeof(v4) << "   n_zeros: "<< n_zeros << std::endl; 
+    std::cout << "v4 Sparsity: "<< (float)n_zeros/301056 << "   n_zeros: "<< n_zeros << std::endl; 
 
     n_zeros = 0;
-    for(size_t l=0 ; l<sizeof(v5); l++ ){
+    for(size_t l=0 ; l<602112; l++ ){
         if(v5[l] == 0) n_zeros++;
     }
-    std::cout << "v5 Sparsity: "<< (float)n_zeros/sizeof(v5) << "   n_zeros: "<< n_zeros << std::endl;
+    std::cout << "v5 Sparsity: "<< (float)n_zeros/602112 << "   n_zeros: "<< n_zeros << std::endl;
 
     n_zeros = 0;
-    for(size_t l=0 ; l<sizeof(v6); l++ ){
+    for(size_t l=0 ; l<150528; l++ ){
         if(v6[l] == 0) n_zeros++;
     }
-    std::cout << "v6 Sparsity: "<< (float)n_zeros/sizeof(v6) << "   n_zeros: "<< n_zeros << std::endl; 
+    std::cout << "v6 Sparsity: "<< (float)n_zeros/150528 << "   n_zeros: "<< n_zeros << std::endl; 
 
     n_zeros = 0;
     for(size_t l=0 ; l<sizeof(v7); l++ ){
@@ -1241,136 +1241,136 @@ int main() {
     std::cout << "v7 Sparsity: "<< (float)n_zeros/sizeof(v7) << "   n_zeros: "<< n_zeros << std::endl;
 
     n_zeros = 0;
-    for(size_t l=0 ; l<sizeof(v8); l++ ){
+    for(size_t l=0 ; l<301056; l++ ){
         if(v8[l] == 0) n_zeros++;
     }
-    std::cout << "v8 Sparsity: "<< (float)n_zeros/sizeof(v8) << "   n_zeros: "<< n_zeros << std::endl;
+    std::cout << "v8 Sparsity: "<< (float)n_zeros/301056 << "   n_zeros: "<< n_zeros << std::endl;
 
     n_zeros = 0;
-    for(size_t l=0 ; l<sizeof(v9); l++ ){
+    for(size_t l=0 ; l<301056; l++ ){
         if(v9[l] == 0) n_zeros++;
     }
-    std::cout << "v9 Sparsity: "<< (float)n_zeros/sizeof(v9) << "   n_zeros: "<< n_zeros << std::endl;
+    std::cout << "v9 Sparsity: "<< (float)n_zeros/301056 << "   n_zeros: "<< n_zeros << std::endl;
 
     n_zeros = 0;
-    for(size_t l=0 ; l<sizeof(v10); l++ ){
+    for(size_t l=0 ; l<75264; l++ ){
         if(v10[l] == 0) n_zeros++;
     }
-    std::cout << "v10 Sparsity: "<< (float)n_zeros/sizeof(v10) << "   n_zeros: "<< n_zeros << std::endl;
+    std::cout << "v10 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << std::endl;
 
     n_zeros = 0;
-    for(size_t l=0 ; l<sizeof(v11); l++ ){
+    for(size_t l=0 ; l<150528; l++ ){
         if(v11[l] == 0) n_zeros++;
     }
-    std::cout << "v11 Sparsity: "<< (float)n_zeros/sizeof(v11) << "   n_zeros: "<< n_zeros << std::endl;
+    std::cout << "v11 Sparsity: "<< (float)n_zeros/150528 << "   n_zeros: "<< n_zeros << std::endl;
 
     n_zeros = 0;
-    for(size_t l=0 ; l<sizeof(v12); l++ ){
+    for(size_t l=0 ; l<150528; l++ ){
         if(v12[l] == 0) n_zeros++;
     }
-    std::cout << "v12 Sparsity: "<< (float)n_zeros/sizeof(v12) << "   n_zeros: "<< n_zeros << std::endl; 
+    std::cout << "v12 Sparsity: "<< (float)n_zeros/150528 << "   n_zeros: "<< n_zeros << std::endl; 
 
     n_zeros = 0;
-    for(size_t l=0 ; l<sizeof(v13); l++ ){
+    for(size_t l=0 ; l<150528; l++ ){
         if(v13[l] == 0) n_zeros++;
     }
-    std::cout << "v13 Sparsity: "<< (float)n_zeros/sizeof(v13) << "   n_zeros: "<< n_zeros << std::endl;
+    std::cout << "v13 Sparsity: "<< (float)n_zeros/150528 << "   n_zeros: "<< n_zeros << std::endl;
 
     n_zeros = 0;
-    for(size_t l=0 ; l<sizeof(v14); l++ ){
+    for(size_t l=0 ; l<37632; l++ ){
         if(v14[l] == 0) n_zeros++;
     }
-    std::cout << "v14 Sparsity: "<< (float)n_zeros/sizeof(v14) << "   n_zeros: "<< n_zeros << std::endl;
+    std::cout << "v14 Sparsity: "<< (float)n_zeros/37632 << "   n_zeros: "<< n_zeros << std::endl;
 
     n_zeros = 0;
-    for(size_t l=0 ; l<sizeof(v15); l++ ){
+    for(size_t l=0 ; l<75264; l++ ){
         if(v15[l] == 0) n_zeros++;
     }
-    std::cout << "v15 Sparsity: "<< (float)n_zeros/sizeof(v15) << "   n_zeros: "<< n_zeros << std::endl;
+    std::cout << "v15 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << std::endl;
 
     n_zeros = 0;
-    for(size_t l=0 ; l<sizeof(v16); l++ ){
+    for(size_t l=0 ; l<75264; l++ ){
         if(v16[l] == 0) n_zeros++;
     }
-    std::cout << "v16 Sparsity: "<< (float)n_zeros/sizeof(v16) << "   n_zeros: "<< n_zeros << std::endl; 
+    std::cout << "v16 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << std::endl; 
 
     n_zeros = 0;
-    for(size_t l=0 ; l<sizeof(v17); l++ ){
+    for(size_t l=0 ; l<75264; l++ ){
         if(v17[l] == 0) n_zeros++;
     }
-    std::cout << "v17 Sparsity: "<< (float)n_zeros/sizeof(v17) << "   n_zeros: "<< n_zeros << std::endl;
+    std::cout << "v17 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << std::endl;
 
     n_zeros = 0;
-    for(size_t l=0 ; l<sizeof(v18); l++ ){
+    for(size_t l=0 ; l<75264; l++ ){
         if(v18[l] == 0) n_zeros++;
     }
-    std::cout << "v18 Sparsity: "<< (float)n_zeros/sizeof(v18) << "   n_zeros: "<< n_zeros << std::endl;
+    std::cout << "v18 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << std::endl;
 
     n_zeros = 0;
-    for(size_t l=0 ; l<sizeof(v19); l++ ){
+    for(size_t l=0 ; l<75264; l++ ){
         if(v19[l] == 0) n_zeros++;
     }
-    std::cout << "v19 Sparsity: "<< (float)n_zeros/sizeof(v19) << "   n_zeros: "<< n_zeros << std::endl; 
+    std::cout << "v19 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << std::endl; 
 
     n_zeros = 0;
-    for(size_t l=0 ; l<sizeof(v20); l++ ){
+    for(size_t l=0 ; l<75264; l++ ){
         if(v20[l] == 0) n_zeros++;
     }
-    std::cout << "v20 Sparsity: "<< (float)n_zeros/sizeof(v20) << "   n_zeros: "<< n_zeros << std::endl;
+    std::cout << "v20 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << std::endl;
 
     n_zeros = 0;
-    for(size_t l=0 ; l<sizeof(v21); l++ ){
+    for(size_t l=0 ; l<75264; l++ ){
         if(v21[l] == 0) n_zeros++;
     }
-    std::cout << "v21 Sparsity: "<< (float)n_zeros/sizeof(v21) << "   n_zeros: "<< n_zeros << std::endl;
+    std::cout << "v21 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << std::endl;
 
     n_zeros = 0;
-    for(size_t l=0 ; l<sizeof(v22); l++ ){
+    for(size_t l=0 ; l<75264; l++ ){
         if(v22[l] == 0) n_zeros++;
     }
-    std::cout << "v22 Sparsity: "<< (float)n_zeros/sizeof(v22) << "   n_zeros: "<< n_zeros << std::endl;
+    std::cout << "v22 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << std::endl;
 
     n_zeros = 0;
-    for(size_t l=0 ; l<sizeof(v23); l++ ){
+    for(size_t l=0 ; l<75264; l++ ){
         if(v23[l] == 0) n_zeros++;
     }
-    std::cout << "v23 Sparsity: "<< (float)n_zeros/sizeof(v23) << "   n_zeros: "<< n_zeros << std::endl;
+    std::cout << "v23 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << std::endl;
 
     n_zeros = 0;
-    for(size_t l=0 ; l<sizeof(v24); l++ ){
+    for(size_t l=0 ; l<75264; l++ ){
         if(v24[l] == 0) n_zeros++;
     }
-    std::cout << "v24 Sparsity: "<< (float)n_zeros/sizeof(v24) << "   n_zeros: "<< n_zeros << std::endl;
+    std::cout << "v24 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << std::endl;
 
     n_zeros = 0;
-    for(size_t l=0 ; l<sizeof(v25); l++ ){
+    for(size_t l=0 ; l<75264; l++ ){
         if(v25[l] == 0) n_zeros++;
     }
-    std::cout << "v25 Sparsity: "<< (float)n_zeros/sizeof(v25) << "   n_zeros: "<< n_zeros << std::endl;
+    std::cout << "v25 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << std::endl;
 
     n_zeros = 0;
-    for(size_t l=0 ; l<sizeof(v26); l++ ){
+    for(size_t l=0 ; l<18816; l++ ){
         if(v26[l] == 0) n_zeros++;
     }
-    std::cout << "v26 Sparsity: "<< (float)n_zeros/sizeof(v26) << "   n_zeros: "<< n_zeros << std::endl;
+    std::cout << "v26 Sparsity: "<< (float)n_zeros/18816 << "   n_zeros: "<< n_zeros << std::endl;
 
     n_zeros = 0;
-    for(size_t l=0 ; l<sizeof(v27); l++ ){
+    for(size_t l=0 ; l<37632; l++ ){
         if(v27[l] == 0) n_zeros++;
     }
-    std::cout << "v27 Sparsity: "<< (float)n_zeros/sizeof(v27) << "   n_zeros: "<< n_zeros << std::endl;
+    std::cout << "v27 Sparsity: "<< (float)n_zeros/37632 << "   n_zeros: "<< n_zeros << std::endl;
 
     n_zeros = 0;
-    for(size_t l=0 ; l<sizeof(v28); l++ ){
+    for(size_t l=0 ; l<37632; l++ ){
         if(v28[l] == 0) n_zeros++;
     }
-    std::cout << "v28 Sparsity: "<< (float)n_zeros/sizeof(v28) << "   n_zeros: "<< n_zeros << std::endl;
+    std::cout << "v28 Sparsity: "<< (float)n_zeros/37632 << "   n_zeros: "<< n_zeros << std::endl;
 
     n_zeros = 0;
-    for(size_t l=0 ; l<sizeof(v29); l++ ){
+    for(size_t l=0 ; l<37632; l++ ){
         if(v29[l] == 0) n_zeros++;
     }
-    std::cout << "v29 Sparsity: "<< (float)n_zeros/sizeof(v29) << "   n_zeros: "<< n_zeros << std::endl;
+    std::cout << "v29 Sparsity: "<< (float)n_zeros/37632 << "   n_zeros: "<< n_zeros << std::endl;
 
   return 0;
 
