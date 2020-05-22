@@ -112,13 +112,17 @@ int main (int argc, char *argv[]){
   alignas(16) static float w55[1000];
 
 
+/*
   std::random_device random_device;
   auto rng = std::mt19937(random_device());
   float Sparsity = 1- std::stof(argv[1])/100;
   std::bernoulli_distribution random_bool_generator(Sparsity);// 0.1 => 90% sparse
   std::bernoulli_distribution random_bool_generator_bias(0.9);
   auto f32rng = std::bind(random_bool_generator, rng);
-  auto f32rng_bias = std::bind(random_bool_generator_bias, rng);
+  auto f32rng_bias = std::bind(random_bool_generator_bias, rng);*/
+  std::default_random_engine generator (1);
+  auto f32rng = std::bind(random_bool_generator, generator );
+  auto f32rng_bias = std::bind(random_bool_generator_bias, generator );
   std::ifstream inputFile("/users/Wei_Hao/XNNPACK/sparse_224.data");
 
   // test file open
