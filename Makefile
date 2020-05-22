@@ -337,6 +337,19 @@ f32-gemm-e2e-bench/fast:
 .PHONY : f32-gemm-e2e-bench/fast
 
 #=============================================================================
+# Target rules for targets named myExperiment
+
+# Build rule for target.
+myExperiment: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 myExperiment
+.PHONY : myExperiment
+
+# fast build rule for target.
+myExperiment/fast:
+	$(MAKE) -f CMakeFiles/myExperiment.dir/build.make CMakeFiles/myExperiment.dir/build
+.PHONY : myExperiment/fast
+
+#=============================================================================
 # Target rules for targets named f32-expminus-eval
 
 # Build rule for target.
@@ -3128,6 +3141,33 @@ models/mobilenet-v3-small.s: models/mobilenet-v3-small.cc.s
 models/mobilenet-v3-small.cc.s:
 	$(MAKE) -f CMakeFiles/bench-models.dir/build.make CMakeFiles/bench-models.dir/models/mobilenet-v3-small.cc.s
 .PHONY : models/mobilenet-v3-small.cc.s
+
+myExperiment.o: myExperiment.cc.o
+
+.PHONY : myExperiment.o
+
+# target to build an object file
+myExperiment.cc.o:
+	$(MAKE) -f CMakeFiles/myExperiment.dir/build.make CMakeFiles/myExperiment.dir/myExperiment.cc.o
+.PHONY : myExperiment.cc.o
+
+myExperiment.i: myExperiment.cc.i
+
+.PHONY : myExperiment.i
+
+# target to preprocess a source file
+myExperiment.cc.i:
+	$(MAKE) -f CMakeFiles/myExperiment.dir/build.make CMakeFiles/myExperiment.dir/myExperiment.cc.i
+.PHONY : myExperiment.cc.i
+
+myExperiment.s: myExperiment.cc.s
+
+.PHONY : myExperiment.s
+
+# target to generate assembly for a file
+myExperiment.cc.s:
+	$(MAKE) -f CMakeFiles/myExperiment.dir/build.make CMakeFiles/myExperiment.dir/myExperiment.cc.s
+.PHONY : myExperiment.cc.s
 
 src/f16-gemm/gen-inc/1x16inc-minmax-aarch64-neonfp16arith-ld32.o: src/f16-gemm/gen-inc/1x16inc-minmax-aarch64-neonfp16arith-ld32.S.o
 
@@ -28446,6 +28486,7 @@ help:
 	@echo "... average-pooling-bench"
 	@echo "... add-bench"
 	@echo "... f32-gemm-e2e-bench"
+	@echo "... myExperiment"
 	@echo "... f32-expminus-eval"
 	@echo "... bench-utils"
 	@echo "... requantization-test"
@@ -28700,6 +28741,9 @@ help:
 	@echo "... models/mobilenet-v3-small.o"
 	@echo "... models/mobilenet-v3-small.i"
 	@echo "... models/mobilenet-v3-small.s"
+	@echo "... myExperiment.o"
+	@echo "... myExperiment.i"
+	@echo "... myExperiment.s"
 	@echo "... src/f16-gemm/gen-inc/1x16inc-minmax-aarch64-neonfp16arith-ld32.o"
 	@echo "... src/f16-gemm/gen-inc/1x16inc-minmax-neonfp16arith-ld64.o"
 	@echo "... src/f16-gemm/gen-inc/1x16inc-minmax-neonfp16arith-ld64.i"

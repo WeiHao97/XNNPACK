@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/myExperiment.dir/myExperiment.cc.o  -o myExperiment libXNNPACK.a deps/googlebenchmark/src/libbenchmark.a libbench-models.a libbench-utils.a libXNNPACK.a /usr/lib/aarch64-linux-gnu/libm.so pthreadpool/libpthreadpool.a deps/googlebenchmark/src/libbenchmark.a /usr/lib/aarch64-linux-gnu/librt.so cpuinfo/libcpuinfo.a clog/libclog.a -pthread 
