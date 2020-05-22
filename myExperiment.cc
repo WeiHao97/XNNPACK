@@ -2145,7 +2145,7 @@ if(std::stoi(argv[3]) == 1){
         f << v2[l] << "n";
         if(v2[l] == 0) n_zeros++;
     }
-    f.close("./v2.data");
+    f.close();
     std::cout << "v2 Sparsity: "<< (float)n_zeros/150528 << "   n_zeros: "<< n_zeros << std::endl;
 
     n_zeros = 0;
@@ -2154,7 +2154,7 @@ if(std::stoi(argv[3]) == 1){
         f << v3[l] << "n";
         if(v3[l] == 0) n_zeros++;
     }
-    f.close("./v3.data");
+    f.close();
     std::cout << "v3 Sparsity: "<< (float)n_zeros/301056 << "   n_zeros: "<< n_zeros << std::endl;
 
     n_zeros = 0;
@@ -2163,7 +2163,7 @@ if(std::stoi(argv[3]) == 1){
         f << v4[l] << "n";
         if(v4[l] == 0) n_zeros++;
     }
-    f.close("./v4.data");
+    f.close();
     std::cout << "v4 Sparsity: "<< (float)n_zeros/301056 << "   n_zeros: "<< n_zeros << std::endl; 
 
     n_zeros = 0;
@@ -2172,7 +2172,7 @@ if(std::stoi(argv[3]) == 1){
         f << v5[l] << "n";
         if(v5[l] == 0) n_zeros++;
     }
-    f.close("./v5.data");
+    f.close();
     std::cout << "v5 Sparsity: "<< (float)n_zeros/602112 << "   n_zeros: "<< n_zeros << std::endl;
 
     n_zeros = 0;
