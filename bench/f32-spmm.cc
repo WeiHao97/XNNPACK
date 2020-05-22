@@ -129,7 +129,7 @@ static void SpMMBenchmark(benchmark::State& state,
 
 //wei
   //std::generate(a.begin(), a.end(), std::ref(f32rng));
-  std::ifstream inputFile("/users/Wei_Hao/XNNPACK/sparse_224.data");
+  std::ifstream inputFile("/users/Wei_Hao/XNNPACK/sparse_224_chw.data");
   std::vector<float, AlignedAllocator<float, 64>> tmp_a(mc * 3);
   // test file open
   int size = 0; 
