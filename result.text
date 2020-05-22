@@ -1,0 +1,764 @@
+Running main() from /users/Wei_Hao/XNNPACK/googletest-source/googletest/src/gtest_main.cc
+[==========] Running 316 tests from 28 test suites.
+[----------] Global test environment set-up.
+[----------] 10 tests from F32_SPMM_MINMAX_4X1__NEONFMA
+[ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA.k_eq_1
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA.k_eq_1 (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA.k_gt_1
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA.k_gt_1 (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA.n_gt_1
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA.n_gt_1 (3 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA.m_lt_4
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA.m_lt_4 (4 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA.m_div_4
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA.m_div_4 (4 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA.m_gt_4
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA.m_gt_4 (5 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA.qmin
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA.qmin (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA.qmax
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA.qmax (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA.half_sparse
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA.half_sparse (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA.zero_weights
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA.zero_weights (1 ms)
+[----------] 10 tests from F32_SPMM_MINMAX_4X1__NEONFMA (23 ms total)
+
+[----------] 13 tests from F32_SPMM_MINMAX_4X2__NEONFMA
+[ RUN      ] F32_SPMM_MINMAX_4X2__NEONFMA.k_eq_1
+[       OK ] F32_SPMM_MINMAX_4X2__NEONFMA.k_eq_1 (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X2__NEONFMA.k_eq_1_subtile
+[       OK ] F32_SPMM_MINMAX_4X2__NEONFMA.k_eq_1_subtile (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X2__NEONFMA.k_gt_1
+[       OK ] F32_SPMM_MINMAX_4X2__NEONFMA.k_gt_1 (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X2__NEONFMA.k_gt_1_subtile
+[       OK ] F32_SPMM_MINMAX_4X2__NEONFMA.k_gt_1_subtile (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X2__NEONFMA.n_gt_2
+[       OK ] F32_SPMM_MINMAX_4X2__NEONFMA.n_gt_2 (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X2__NEONFMA.n_div_2
+[       OK ] F32_SPMM_MINMAX_4X2__NEONFMA.n_div_2 (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X2__NEONFMA.m_lt_4
+[       OK ] F32_SPMM_MINMAX_4X2__NEONFMA.m_lt_4 (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X2__NEONFMA.m_div_4
+[       OK ] F32_SPMM_MINMAX_4X2__NEONFMA.m_div_4 (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X2__NEONFMA.m_gt_4
+[       OK ] F32_SPMM_MINMAX_4X2__NEONFMA.m_gt_4 (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X2__NEONFMA.qmin
+[       OK ] F32_SPMM_MINMAX_4X2__NEONFMA.qmin (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X2__NEONFMA.qmax
+[       OK ] F32_SPMM_MINMAX_4X2__NEONFMA.qmax (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X2__NEONFMA.half_sparse
+[       OK ] F32_SPMM_MINMAX_4X2__NEONFMA.half_sparse (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X2__NEONFMA.zero_weights
+[       OK ] F32_SPMM_MINMAX_4X2__NEONFMA.zero_weights (1 ms)
+[----------] 13 tests from F32_SPMM_MINMAX_4X2__NEONFMA (15 ms total)
+
+[----------] 13 tests from F32_SPMM_MINMAX_4X4__NEONFMA
+[ RUN      ] F32_SPMM_MINMAX_4X4__NEONFMA.k_eq_1
+[       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.k_eq_1 (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X4__NEONFMA.k_eq_1_subtile
+[       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.k_eq_1_subtile (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X4__NEONFMA.k_gt_1
+[       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.k_gt_1 (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X4__NEONFMA.k_gt_1_subtile
+[       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.k_gt_1_subtile (3 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X4__NEONFMA.n_gt_4
+[       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.n_gt_4 (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X4__NEONFMA.n_div_4
+[       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.n_div_4 (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X4__NEONFMA.m_lt_4
+[       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.m_lt_4 (3 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X4__NEONFMA.m_div_4
+[       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.m_div_4 (4 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X4__NEONFMA.m_gt_4
+[       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.m_gt_4 (4 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X4__NEONFMA.qmin
+[       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.qmin (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X4__NEONFMA.qmax
+[       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.qmax (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X4__NEONFMA.half_sparse
+[       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.half_sparse (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X4__NEONFMA.zero_weights
+[       OK ] F32_SPMM_MINMAX_4X4__NEONFMA.zero_weights (2 ms)
+[----------] 13 tests from F32_SPMM_MINMAX_4X4__NEONFMA (24 ms total)
+
+[----------] 10 tests from F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED
+[ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.k_eq_1
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.k_eq_1 (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.k_gt_1
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.k_gt_1 (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.n_gt_1
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.n_gt_1 (3 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.m_lt_4
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.m_lt_4 (4 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.m_div_4
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.m_div_4 (3 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.m_gt_4
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.m_gt_4 (5 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.qmin
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.qmin (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.qmax
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.qmax (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.half_sparse
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.half_sparse (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.zero_weights
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED.zero_weights (2 ms)
+[----------] 10 tests from F32_SPMM_MINMAX_4X1__NEONFMA_PIPELINED (22 ms total)
+
+[----------] 12 tests from F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2
+[ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.k_eq_2
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.k_eq_2 (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.k_lt_2
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.k_lt_2 (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.k_gt_2
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.k_gt_2 (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.k_div_2
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.k_div_2 (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.n_gt_1
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.n_gt_1 (4 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.m_lt_4
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.m_lt_4 (6 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.m_div_4
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.m_div_4 (6 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.m_gt_4
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.m_gt_4 (7 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.qmin
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.qmin (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.qmax
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.qmax (3 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.half_sparse
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.half_sparse (4 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.zero_weights
+[       OK ] F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2.zero_weights (2 ms)
+[----------] 12 tests from F32_SPMM_MINMAX_4X1__NEONFMA_UNROLL2 (36 ms total)
+
+[----------] 10 tests from F32_SPMM_MINMAX_8X1__NEONFMA
+[ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA.k_eq_1
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA.k_eq_1 (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA.k_gt_1
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA.k_gt_1 (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA.n_gt_1
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA.n_gt_1 (3 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA.m_lt_8
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA.m_lt_8 (10 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA.m_div_8
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA.m_div_8 (5 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA.m_gt_8
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA.m_gt_8 (13 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA.qmin
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA.qmin (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA.qmax
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA.qmax (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA.half_sparse
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA.half_sparse (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA.zero_weights
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA.zero_weights (3 ms)
+[----------] 10 tests from F32_SPMM_MINMAX_8X1__NEONFMA (41 ms total)
+
+[----------] 13 tests from F32_SPMM_MINMAX_8X2__NEONFMA
+[ RUN      ] F32_SPMM_MINMAX_8X2__NEONFMA.k_eq_1
+[       OK ] F32_SPMM_MINMAX_8X2__NEONFMA.k_eq_1 (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X2__NEONFMA.k_eq_1_subtile
+[       OK ] F32_SPMM_MINMAX_8X2__NEONFMA.k_eq_1_subtile (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X2__NEONFMA.k_gt_1
+[       OK ] F32_SPMM_MINMAX_8X2__NEONFMA.k_gt_1 (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X2__NEONFMA.k_gt_1_subtile
+[       OK ] F32_SPMM_MINMAX_8X2__NEONFMA.k_gt_1_subtile (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X2__NEONFMA.n_gt_2
+[       OK ] F32_SPMM_MINMAX_8X2__NEONFMA.n_gt_2 (3 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X2__NEONFMA.n_div_2
+[       OK ] F32_SPMM_MINMAX_8X2__NEONFMA.n_div_2 (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X2__NEONFMA.m_lt_8
+[       OK ] F32_SPMM_MINMAX_8X2__NEONFMA.m_lt_8 (5 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X2__NEONFMA.m_div_8
+[       OK ] F32_SPMM_MINMAX_8X2__NEONFMA.m_div_8 (3 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X2__NEONFMA.m_gt_8
+[       OK ] F32_SPMM_MINMAX_8X2__NEONFMA.m_gt_8 (7 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X2__NEONFMA.qmin
+[       OK ] F32_SPMM_MINMAX_8X2__NEONFMA.qmin (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X2__NEONFMA.qmax
+[       OK ] F32_SPMM_MINMAX_8X2__NEONFMA.qmax (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X2__NEONFMA.half_sparse
+[       OK ] F32_SPMM_MINMAX_8X2__NEONFMA.half_sparse (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X2__NEONFMA.zero_weights
+[       OK ] F32_SPMM_MINMAX_8X2__NEONFMA.zero_weights (1 ms)
+[----------] 13 tests from F32_SPMM_MINMAX_8X2__NEONFMA (26 ms total)
+
+[----------] 13 tests from F32_SPMM_MINMAX_8X4__NEONFMA
+[ RUN      ] F32_SPMM_MINMAX_8X4__NEONFMA.k_eq_1
+[       OK ] F32_SPMM_MINMAX_8X4__NEONFMA.k_eq_1 (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X4__NEONFMA.k_eq_1_subtile
+[       OK ] F32_SPMM_MINMAX_8X4__NEONFMA.k_eq_1_subtile (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X4__NEONFMA.k_gt_1
+[       OK ] F32_SPMM_MINMAX_8X4__NEONFMA.k_gt_1 (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X4__NEONFMA.k_gt_1_subtile
+[       OK ] F32_SPMM_MINMAX_8X4__NEONFMA.k_gt_1_subtile (4 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X4__NEONFMA.n_gt_4
+[       OK ] F32_SPMM_MINMAX_8X4__NEONFMA.n_gt_4 (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X4__NEONFMA.n_div_4
+[       OK ] F32_SPMM_MINMAX_8X4__NEONFMA.n_div_4 (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X4__NEONFMA.m_lt_8
+[       OK ] F32_SPMM_MINMAX_8X4__NEONFMA.m_lt_8 (8 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X4__NEONFMA.m_div_8
+[       OK ] F32_SPMM_MINMAX_8X4__NEONFMA.m_div_8 (4 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X4__NEONFMA.m_gt_8
+[       OK ] F32_SPMM_MINMAX_8X4__NEONFMA.m_gt_8 (12 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X4__NEONFMA.qmin
+[       OK ] F32_SPMM_MINMAX_8X4__NEONFMA.qmin (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X4__NEONFMA.qmax
+[       OK ] F32_SPMM_MINMAX_8X4__NEONFMA.qmax (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X4__NEONFMA.half_sparse
+[       OK ] F32_SPMM_MINMAX_8X4__NEONFMA.half_sparse (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X4__NEONFMA.zero_weights
+[       OK ] F32_SPMM_MINMAX_8X4__NEONFMA.zero_weights (2 ms)
+[----------] 13 tests from F32_SPMM_MINMAX_8X4__NEONFMA (40 ms total)
+
+[----------] 10 tests from F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED
+[ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.k_eq_1
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.k_eq_1 (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.k_gt_1
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.k_gt_1 (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.n_gt_1
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.n_gt_1 (3 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.m_lt_8
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.m_lt_8 (10 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.m_div_8
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.m_div_8 (5 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.m_gt_8
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.m_gt_8 (13 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.qmin
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.qmin (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.qmax
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.qmax (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.half_sparse
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.half_sparse (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.zero_weights
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED.zero_weights (2 ms)
+[----------] 10 tests from F32_SPMM_MINMAX_8X1__NEONFMA_PIPELINED (41 ms total)
+
+[----------] 12 tests from F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2
+[ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.k_eq_2
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.k_eq_2 (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.k_lt_2
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.k_lt_2 (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.k_gt_2
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.k_gt_2 (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.k_div_2
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.k_div_2 (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.n_gt_1
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.n_gt_1 (5 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.m_lt_8
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.m_lt_8 (15 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.m_div_8
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.m_div_8 (9 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.m_gt_8
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.m_gt_8 (22 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.qmin
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.qmin (3 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.qmax
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.qmax (4 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.half_sparse
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.half_sparse (3 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.zero_weights
+[       OK ] F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2.zero_weights (4 ms)
+[----------] 12 tests from F32_SPMM_MINMAX_8X1__NEONFMA_UNROLL2 (66 ms total)
+
+[----------] 10 tests from F32_SPMM_MINMAX_12X1__NEONFMA
+[ RUN      ] F32_SPMM_MINMAX_12X1__NEONFMA.k_eq_1
+[       OK ] F32_SPMM_MINMAX_12X1__NEONFMA.k_eq_1 (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_12X1__NEONFMA.k_gt_1
+[       OK ] F32_SPMM_MINMAX_12X1__NEONFMA.k_gt_1 (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_12X1__NEONFMA.n_gt_1
+[       OK ] F32_SPMM_MINMAX_12X1__NEONFMA.n_gt_1 (3 ms)
+[ RUN      ] F32_SPMM_MINMAX_12X1__NEONFMA.m_lt_12
+[       OK ] F32_SPMM_MINMAX_12X1__NEONFMA.m_lt_12 (17 ms)
+[ RUN      ] F32_SPMM_MINMAX_12X1__NEONFMA.m_div_12
+[       OK ] F32_SPMM_MINMAX_12X1__NEONFMA.m_div_12 (6 ms)
+[ RUN      ] F32_SPMM_MINMAX_12X1__NEONFMA.m_gt_12
+[       OK ] F32_SPMM_MINMAX_12X1__NEONFMA.m_gt_12 (25 ms)
+[ RUN      ] F32_SPMM_MINMAX_12X1__NEONFMA.qmin
+[       OK ] F32_SPMM_MINMAX_12X1__NEONFMA.qmin (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_12X1__NEONFMA.qmax
+[       OK ] F32_SPMM_MINMAX_12X1__NEONFMA.qmax (3 ms)
+[ RUN      ] F32_SPMM_MINMAX_12X1__NEONFMA.half_sparse
+[       OK ] F32_SPMM_MINMAX_12X1__NEONFMA.half_sparse (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_12X1__NEONFMA.zero_weights
+[       OK ] F32_SPMM_MINMAX_12X1__NEONFMA.zero_weights (3 ms)
+[----------] 10 tests from F32_SPMM_MINMAX_12X1__NEONFMA (62 ms total)
+
+[----------] 13 tests from F32_SPMM_MINMAX_12X2__NEONFMA
+[ RUN      ] F32_SPMM_MINMAX_12X2__NEONFMA.k_eq_1
+[       OK ] F32_SPMM_MINMAX_12X2__NEONFMA.k_eq_1 (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_12X2__NEONFMA.k_eq_1_subtile
+[       OK ] F32_SPMM_MINMAX_12X2__NEONFMA.k_eq_1_subtile (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_12X2__NEONFMA.k_gt_1
+[       OK ] F32_SPMM_MINMAX_12X2__NEONFMA.k_gt_1 (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_12X2__NEONFMA.k_gt_1_subtile
+[       OK ] F32_SPMM_MINMAX_12X2__NEONFMA.k_gt_1_subtile (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_12X2__NEONFMA.n_gt_2
+[       OK ] F32_SPMM_MINMAX_12X2__NEONFMA.n_gt_2 (3 ms)
+[ RUN      ] F32_SPMM_MINMAX_12X2__NEONFMA.n_div_2
+[       OK ] F32_SPMM_MINMAX_12X2__NEONFMA.n_div_2 (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_12X2__NEONFMA.m_lt_12
+[       OK ] F32_SPMM_MINMAX_12X2__NEONFMA.m_lt_12 (9 ms)
+[ RUN      ] F32_SPMM_MINMAX_12X2__NEONFMA.m_div_12
+[       OK ] F32_SPMM_MINMAX_12X2__NEONFMA.m_div_12 (3 ms)
+[ RUN      ] F32_SPMM_MINMAX_12X2__NEONFMA.m_gt_12
+[       OK ] F32_SPMM_MINMAX_12X2__NEONFMA.m_gt_12 (14 ms)
+[ RUN      ] F32_SPMM_MINMAX_12X2__NEONFMA.qmin
+[       OK ] F32_SPMM_MINMAX_12X2__NEONFMA.qmin (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_12X2__NEONFMA.qmax
+[       OK ] F32_SPMM_MINMAX_12X2__NEONFMA.qmax (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_12X2__NEONFMA.half_sparse
+[       OK ] F32_SPMM_MINMAX_12X2__NEONFMA.half_sparse (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_12X2__NEONFMA.zero_weights
+[       OK ] F32_SPMM_MINMAX_12X2__NEONFMA.zero_weights (2 ms)
+[----------] 13 tests from F32_SPMM_MINMAX_12X2__NEONFMA (39 ms total)
+
+[----------] 13 tests from F32_SPMM_MINMAX_12X4__NEONFMA
+[ RUN      ] F32_SPMM_MINMAX_12X4__NEONFMA.k_eq_1
+[       OK ] F32_SPMM_MINMAX_12X4__NEONFMA.k_eq_1 (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_12X4__NEONFMA.k_eq_1_subtile
+[       OK ] F32_SPMM_MINMAX_12X4__NEONFMA.k_eq_1_subtile (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_12X4__NEONFMA.k_gt_1
+[       OK ] F32_SPMM_MINMAX_12X4__NEONFMA.k_gt_1 (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_12X4__NEONFMA.k_gt_1_subtile
+[       OK ] F32_SPMM_MINMAX_12X4__NEONFMA.k_gt_1_subtile (4 ms)
+[ RUN      ] F32_SPMM_MINMAX_12X4__NEONFMA.n_gt_4
+[       OK ] F32_SPMM_MINMAX_12X4__NEONFMA.n_gt_4 (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_12X4__NEONFMA.n_div_4
+[       OK ] F32_SPMM_MINMAX_12X4__NEONFMA.n_div_4 (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_12X4__NEONFMA.m_lt_12
+[       OK ] F32_SPMM_MINMAX_12X4__NEONFMA.m_lt_12 (14 ms)
+[ RUN      ] F32_SPMM_MINMAX_12X4__NEONFMA.m_div_12
+[       OK ] F32_SPMM_MINMAX_12X4__NEONFMA.m_div_12 (6 ms)
+[ RUN      ] F32_SPMM_MINMAX_12X4__NEONFMA.m_gt_12
+[       OK ] F32_SPMM_MINMAX_12X4__NEONFMA.m_gt_12 (23 ms)
+[ RUN      ] F32_SPMM_MINMAX_12X4__NEONFMA.qmin
+[       OK ] F32_SPMM_MINMAX_12X4__NEONFMA.qmin (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_12X4__NEONFMA.qmax
+[       OK ] F32_SPMM_MINMAX_12X4__NEONFMA.qmax (3 ms)
+[ RUN      ] F32_SPMM_MINMAX_12X4__NEONFMA.half_sparse
+[       OK ] F32_SPMM_MINMAX_12X4__NEONFMA.half_sparse (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_12X4__NEONFMA.zero_weights
+[       OK ] F32_SPMM_MINMAX_12X4__NEONFMA.zero_weights (2 ms)
+[----------] 13 tests from F32_SPMM_MINMAX_12X4__NEONFMA (61 ms total)
+
+[----------] 10 tests from F32_SPMM_MINMAX_16X1__NEONFMA
+[ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA.k_eq_1
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA.k_eq_1 (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA.k_gt_1
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA.k_gt_1 (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA.n_gt_1
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA.n_gt_1 (3 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA.m_lt_16
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA.m_lt_16 (25 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA.m_div_16
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA.m_div_16 (7 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA.m_gt_16
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA.m_gt_16 (38 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA.qmin
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA.qmin (3 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA.qmax
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA.qmax (3 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA.half_sparse
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA.half_sparse (3 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA.zero_weights
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA.zero_weights (3 ms)
+[----------] 10 tests from F32_SPMM_MINMAX_16X1__NEONFMA (87 ms total)
+
+[----------] 13 tests from F32_SPMM_MINMAX_16X2__NEONFMA
+[ RUN      ] F32_SPMM_MINMAX_16X2__NEONFMA.k_eq_1
+[       OK ] F32_SPMM_MINMAX_16X2__NEONFMA.k_eq_1 (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X2__NEONFMA.k_eq_1_subtile
+[       OK ] F32_SPMM_MINMAX_16X2__NEONFMA.k_eq_1_subtile (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X2__NEONFMA.k_gt_1
+[       OK ] F32_SPMM_MINMAX_16X2__NEONFMA.k_gt_1 (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X2__NEONFMA.k_gt_1_subtile
+[       OK ] F32_SPMM_MINMAX_16X2__NEONFMA.k_gt_1_subtile (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X2__NEONFMA.n_gt_2
+[       OK ] F32_SPMM_MINMAX_16X2__NEONFMA.n_gt_2 (3 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X2__NEONFMA.n_div_2
+[       OK ] F32_SPMM_MINMAX_16X2__NEONFMA.n_div_2 (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X2__NEONFMA.m_lt_16
+[       OK ] F32_SPMM_MINMAX_16X2__NEONFMA.m_lt_16 (14 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X2__NEONFMA.m_div_16
+[       OK ] F32_SPMM_MINMAX_16X2__NEONFMA.m_div_16 (4 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X2__NEONFMA.m_gt_16
+[       OK ] F32_SPMM_MINMAX_16X2__NEONFMA.m_gt_16 (20 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X2__NEONFMA.qmin
+[       OK ] F32_SPMM_MINMAX_16X2__NEONFMA.qmin (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X2__NEONFMA.qmax
+[       OK ] F32_SPMM_MINMAX_16X2__NEONFMA.qmax (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X2__NEONFMA.half_sparse
+[       OK ] F32_SPMM_MINMAX_16X2__NEONFMA.half_sparse (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X2__NEONFMA.zero_weights
+[       OK ] F32_SPMM_MINMAX_16X2__NEONFMA.zero_weights (2 ms)
+[----------] 13 tests from F32_SPMM_MINMAX_16X2__NEONFMA (53 ms total)
+
+[----------] 13 tests from F32_SPMM_MINMAX_16X4__NEONFMA
+[ RUN      ] F32_SPMM_MINMAX_16X4__NEONFMA.k_eq_1
+[       OK ] F32_SPMM_MINMAX_16X4__NEONFMA.k_eq_1 (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X4__NEONFMA.k_eq_1_subtile
+[       OK ] F32_SPMM_MINMAX_16X4__NEONFMA.k_eq_1_subtile (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X4__NEONFMA.k_gt_1
+[       OK ] F32_SPMM_MINMAX_16X4__NEONFMA.k_gt_1 (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X4__NEONFMA.k_gt_1_subtile
+[       OK ] F32_SPMM_MINMAX_16X4__NEONFMA.k_gt_1_subtile (5 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X4__NEONFMA.n_gt_4
+[       OK ] F32_SPMM_MINMAX_16X4__NEONFMA.n_gt_4 (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X4__NEONFMA.n_div_4
+[       OK ] F32_SPMM_MINMAX_16X4__NEONFMA.n_div_4 (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X4__NEONFMA.m_lt_16
+[       OK ] F32_SPMM_MINMAX_16X4__NEONFMA.m_lt_16 (22 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X4__NEONFMA.m_div_16
+[       OK ] F32_SPMM_MINMAX_16X4__NEONFMA.m_div_16 (7 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X4__NEONFMA.m_gt_16
+[       OK ] F32_SPMM_MINMAX_16X4__NEONFMA.m_gt_16 (36 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X4__NEONFMA.qmin
+[       OK ] F32_SPMM_MINMAX_16X4__NEONFMA.qmin (3 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X4__NEONFMA.qmax
+[       OK ] F32_SPMM_MINMAX_16X4__NEONFMA.qmax (3 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X4__NEONFMA.half_sparse
+[       OK ] F32_SPMM_MINMAX_16X4__NEONFMA.half_sparse (3 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X4__NEONFMA.zero_weights
+[       OK ] F32_SPMM_MINMAX_16X4__NEONFMA.zero_weights (3 ms)
+[----------] 13 tests from F32_SPMM_MINMAX_16X4__NEONFMA (87 ms total)
+
+[----------] 10 tests from F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED
+[ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.k_eq_1
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.k_eq_1 (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.k_gt_1
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.k_gt_1 (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.n_gt_1
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.n_gt_1 (3 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.m_lt_16
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.m_lt_16 (25 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.m_div_16
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:298: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.51738359034061432, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.1358828991651535,
+c_ref[pxb * m() + oc] evaluates to 0.65326648950576782, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 6.5326651110808598e-07.
+at 0, 0: Mr x Nr x Kr = 16 x 1, M x N x K = 32 x 3 x 5
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:298: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.41569042205810547, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.57970017194747925,
+c_ref[pxb * m() + oc] evaluates to 0.99539059400558472, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 9.9539056463981979e-07.
+at 0, 17: Mr x Nr x Kr = 16 x 1, M x N x K = 48 x 7 x 3
+[  FAILED  ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.m_div_16 (8 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.m_gt_16
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:298: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.24190682172775269, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.90013819932937622,
+c_ref[pxb * m() + oc] evaluates to 1.1420450210571289, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 1.1420449936849764e-06.
+at 0, 1: Mr x Nr x Kr = 16 x 1, M x N x K = 17 x 1 x 5
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:298: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.097085356712341309, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.89683133363723755,
+c_ref[pxb * m() + oc] evaluates to 0.99391669034957886, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 9.9391672847559676e-07.
+at 0, 2: Mr x Nr x Kr = 16 x 1, M x N x K = 26 x 1 x 3
+[  FAILED  ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.m_gt_16 (38 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.qmin
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:298: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.42038941383361816, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.89592385292053223,
+c_ref[pxb * m() + oc] evaluates to 1.3163132667541504, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 1.3163132734916871e-06.
+at 0, 1: Mr x Nr x Kr = 16 x 1, M x N x K = 32 x 7 x 3
+/users/Wei_Hao/XNNPACK/test/spmm-microkernel-tester.h:298: Failure
+The difference between c[pxb * m() + oc] and c_ref[pxb * m() + oc] is 0.2164536714553833, which exceeds std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f, where
+c[pxb * m() + oc] evaluates to 0.79178130626678467,
+c_ref[pxb * m() + oc] evaluates to 1.008234977722168, and
+std::abs(c_ref[pxb * m() + oc]) * 1.0e-6f evaluates to 1.0082350172524457e-06.
+at 0, 17: Mr x Nr x Kr = 16 x 1, M x N x K = 32 x 9 x 5
+[  FAILED  ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.qmin (4 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.qmax
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.qmax (3 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.half_sparse
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.half_sparse (3 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.zero_weights
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.zero_weights (3 ms)
+[----------] 10 tests from F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED (88 ms total)
+
+[----------] 12 tests from F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2
+[ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.k_eq_2
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.k_eq_2 (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.k_lt_2
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.k_lt_2 (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.k_gt_2
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.k_gt_2 (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.k_div_2
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.k_div_2 (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.n_gt_1
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.n_gt_1 (6 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.m_lt_16
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.m_lt_16 (40 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.m_div_16
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.m_div_16 (13 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.m_gt_16
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.m_gt_16 (67 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.qmin
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.qmin (6 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.qmax
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.qmax (5 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.half_sparse
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.half_sparse (6 ms)
+[ RUN      ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.zero_weights
+[       OK ] F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2.zero_weights (5 ms)
+[----------] 12 tests from F32_SPMM_MINMAX_16X1__NEONFMA_UNROLL2 (150 ms total)
+
+[----------] 10 tests from F32_SPMM_MINMAX_1X1__SCALAR
+[ RUN      ] F32_SPMM_MINMAX_1X1__SCALAR.k_eq_1
+[       OK ] F32_SPMM_MINMAX_1X1__SCALAR.k_eq_1 (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_1X1__SCALAR.k_gt_1
+[       OK ] F32_SPMM_MINMAX_1X1__SCALAR.k_gt_1 (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_1X1__SCALAR.n_gt_1
+[       OK ] F32_SPMM_MINMAX_1X1__SCALAR.n_gt_1 (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_1X1__SCALAR.m_lt_1
+[       OK ] F32_SPMM_MINMAX_1X1__SCALAR.m_lt_1 (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_1X1__SCALAR.m_div_1
+[       OK ] F32_SPMM_MINMAX_1X1__SCALAR.m_div_1 (3 ms)
+[ RUN      ] F32_SPMM_MINMAX_1X1__SCALAR.m_gt_1
+[       OK ] F32_SPMM_MINMAX_1X1__SCALAR.m_gt_1 (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_1X1__SCALAR.qmin
+[       OK ] F32_SPMM_MINMAX_1X1__SCALAR.qmin (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_1X1__SCALAR.qmax
+[       OK ] F32_SPMM_MINMAX_1X1__SCALAR.qmax (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_1X1__SCALAR.half_sparse
+[       OK ] F32_SPMM_MINMAX_1X1__SCALAR.half_sparse (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_1X1__SCALAR.zero_weights
+[       OK ] F32_SPMM_MINMAX_1X1__SCALAR.zero_weights (1 ms)
+[----------] 10 tests from F32_SPMM_MINMAX_1X1__SCALAR (11 ms total)
+
+[----------] 10 tests from F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED
+[ RUN      ] F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED.k_eq_1
+[       OK ] F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED.k_eq_1 (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED.k_gt_1
+[       OK ] F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED.k_gt_1 (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED.n_gt_1
+[       OK ] F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED.n_gt_1 (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED.m_lt_1
+[       OK ] F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED.m_lt_1 (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED.m_div_1
+[       OK ] F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED.m_div_1 (3 ms)
+[ RUN      ] F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED.m_gt_1
+[       OK ] F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED.m_gt_1 (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED.qmin
+[       OK ] F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED.qmin (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED.qmax
+[       OK ] F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED.qmax (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED.half_sparse
+[       OK ] F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED.half_sparse (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED.zero_weights
+[       OK ] F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED.zero_weights (1 ms)
+[----------] 10 tests from F32_SPMM_MINMAX_1X1__SCALAR_PIPELINED (11 ms total)
+
+[----------] 10 tests from F32_SPMM_MINMAX_2X1__SCALAR
+[ RUN      ] F32_SPMM_MINMAX_2X1__SCALAR.k_eq_1
+[       OK ] F32_SPMM_MINMAX_2X1__SCALAR.k_eq_1 (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_2X1__SCALAR.k_gt_1
+[       OK ] F32_SPMM_MINMAX_2X1__SCALAR.k_gt_1 (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_2X1__SCALAR.n_gt_1
+[       OK ] F32_SPMM_MINMAX_2X1__SCALAR.n_gt_1 (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_2X1__SCALAR.m_lt_2
+[       OK ] F32_SPMM_MINMAX_2X1__SCALAR.m_lt_2 (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_2X1__SCALAR.m_div_2
+[       OK ] F32_SPMM_MINMAX_2X1__SCALAR.m_div_2 (3 ms)
+[ RUN      ] F32_SPMM_MINMAX_2X1__SCALAR.m_gt_2
+[       OK ] F32_SPMM_MINMAX_2X1__SCALAR.m_gt_2 (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_2X1__SCALAR.qmin
+[       OK ] F32_SPMM_MINMAX_2X1__SCALAR.qmin (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_2X1__SCALAR.qmax
+[       OK ] F32_SPMM_MINMAX_2X1__SCALAR.qmax (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_2X1__SCALAR.half_sparse
+[       OK ] F32_SPMM_MINMAX_2X1__SCALAR.half_sparse (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_2X1__SCALAR.zero_weights
+[       OK ] F32_SPMM_MINMAX_2X1__SCALAR.zero_weights (2 ms)
+[----------] 10 tests from F32_SPMM_MINMAX_2X1__SCALAR (15 ms total)
+
+[----------] 10 tests from F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED
+[ RUN      ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.k_eq_1
+[       OK ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.k_eq_1 (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.k_gt_1
+[       OK ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.k_gt_1 (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.n_gt_1
+[       OK ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.n_gt_1 (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.m_lt_2
+[       OK ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.m_lt_2 (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.m_div_2
+[       OK ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.m_div_2 (3 ms)
+[ RUN      ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.m_gt_2
+[       OK ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.m_gt_2 (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.qmin
+[       OK ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.qmin (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.qmax
+[       OK ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.qmax (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.half_sparse
+[       OK ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.half_sparse (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.zero_weights
+[       OK ] F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED.zero_weights (1 ms)
+[----------] 10 tests from F32_SPMM_MINMAX_2X1__SCALAR_PIPELINED (14 ms total)
+
+[----------] 10 tests from F32_SPMM_MINMAX_4X1__SCALAR
+[ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR.k_eq_1
+[       OK ] F32_SPMM_MINMAX_4X1__SCALAR.k_eq_1 (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR.k_gt_1
+[       OK ] F32_SPMM_MINMAX_4X1__SCALAR.k_gt_1 (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR.n_gt_1
+[       OK ] F32_SPMM_MINMAX_4X1__SCALAR.n_gt_1 (3 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR.m_lt_4
+[       OK ] F32_SPMM_MINMAX_4X1__SCALAR.m_lt_4 (4 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR.m_div_4
+[       OK ] F32_SPMM_MINMAX_4X1__SCALAR.m_div_4 (3 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR.m_gt_4
+[       OK ] F32_SPMM_MINMAX_4X1__SCALAR.m_gt_4 (5 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR.qmin
+[       OK ] F32_SPMM_MINMAX_4X1__SCALAR.qmin (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR.qmax
+[       OK ] F32_SPMM_MINMAX_4X1__SCALAR.qmax (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR.half_sparse
+[       OK ] F32_SPMM_MINMAX_4X1__SCALAR.half_sparse (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR.zero_weights
+[       OK ] F32_SPMM_MINMAX_4X1__SCALAR.zero_weights (2 ms)
+[----------] 10 tests from F32_SPMM_MINMAX_4X1__SCALAR (23 ms total)
+
+[----------] 10 tests from F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED
+[ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.k_eq_1
+[       OK ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.k_eq_1 (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.k_gt_1
+[       OK ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.k_gt_1 (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.n_gt_1
+[       OK ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.n_gt_1 (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.m_lt_4
+[       OK ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.m_lt_4 (4 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.m_div_4
+[       OK ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.m_div_4 (4 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.m_gt_4
+[       OK ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.m_gt_4 (4 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.qmin
+[       OK ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.qmin (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.qmax
+[       OK ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.qmax (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.half_sparse
+[       OK ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.half_sparse (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.zero_weights
+[       OK ] F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED.zero_weights (1 ms)
+[----------] 10 tests from F32_SPMM_MINMAX_4X1__SCALAR_PIPELINED (22 ms total)
+
+[----------] 10 tests from F32_SPMM_MINMAX_8X1__SCALAR
+[ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR.k_eq_1
+[       OK ] F32_SPMM_MINMAX_8X1__SCALAR.k_eq_1 (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR.k_gt_1
+[       OK ] F32_SPMM_MINMAX_8X1__SCALAR.k_gt_1 (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR.n_gt_1
+[       OK ] F32_SPMM_MINMAX_8X1__SCALAR.n_gt_1 (3 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR.m_lt_8
+[       OK ] F32_SPMM_MINMAX_8X1__SCALAR.m_lt_8 (10 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR.m_div_8
+[       OK ] F32_SPMM_MINMAX_8X1__SCALAR.m_div_8 (5 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR.m_gt_8
+[       OK ] F32_SPMM_MINMAX_8X1__SCALAR.m_gt_8 (13 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR.qmin
+[       OK ] F32_SPMM_MINMAX_8X1__SCALAR.qmin (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR.qmax
+[       OK ] F32_SPMM_MINMAX_8X1__SCALAR.qmax (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR.half_sparse
+[       OK ] F32_SPMM_MINMAX_8X1__SCALAR.half_sparse (3 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR.zero_weights
+[       OK ] F32_SPMM_MINMAX_8X1__SCALAR.zero_weights (2 ms)
+[----------] 10 tests from F32_SPMM_MINMAX_8X1__SCALAR (41 ms total)
+
+[----------] 10 tests from F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED
+[ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.k_eq_1
+[       OK ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.k_eq_1 (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.k_gt_1
+[       OK ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.k_gt_1 (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.n_gt_1
+[       OK ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.n_gt_1 (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.m_lt_8
+[       OK ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.m_lt_8 (11 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.m_div_8
+[       OK ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.m_div_8 (4 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.m_gt_8
+[       OK ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.m_gt_8 (14 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.qmin
+[       OK ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.qmin (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.qmax
+[       OK ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.qmax (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.half_sparse
+[       OK ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.half_sparse (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.zero_weights
+[       OK ] F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED.zero_weights (2 ms)
+[----------] 10 tests from F32_SPMM_MINMAX_8X1__SCALAR_PIPELINED (40 ms total)
+
+[----------] 13 tests from F32_SPMM_MINMAX_8X2__SCALAR
+[ RUN      ] F32_SPMM_MINMAX_8X2__SCALAR.k_eq_1
+[       OK ] F32_SPMM_MINMAX_8X2__SCALAR.k_eq_1 (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X2__SCALAR.k_eq_1_subtile
+[       OK ] F32_SPMM_MINMAX_8X2__SCALAR.k_eq_1_subtile (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X2__SCALAR.k_gt_1
+[       OK ] F32_SPMM_MINMAX_8X2__SCALAR.k_gt_1 (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X2__SCALAR.k_gt_1_subtile
+[       OK ] F32_SPMM_MINMAX_8X2__SCALAR.k_gt_1_subtile (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X2__SCALAR.n_gt_2
+[       OK ] F32_SPMM_MINMAX_8X2__SCALAR.n_gt_2 (3 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X2__SCALAR.n_div_2
+[       OK ] F32_SPMM_MINMAX_8X2__SCALAR.n_div_2 (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X2__SCALAR.m_lt_8
+[       OK ] F32_SPMM_MINMAX_8X2__SCALAR.m_lt_8 (6 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X2__SCALAR.m_div_8
+[       OK ] F32_SPMM_MINMAX_8X2__SCALAR.m_div_8 (3 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X2__SCALAR.m_gt_8
+[       OK ] F32_SPMM_MINMAX_8X2__SCALAR.m_gt_8 (7 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X2__SCALAR.qmin
+[       OK ] F32_SPMM_MINMAX_8X2__SCALAR.qmin (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X2__SCALAR.qmax
+[       OK ] F32_SPMM_MINMAX_8X2__SCALAR.qmax (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X2__SCALAR.half_sparse
+[       OK ] F32_SPMM_MINMAX_8X2__SCALAR.half_sparse (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X2__SCALAR.zero_weights
+[       OK ] F32_SPMM_MINMAX_8X2__SCALAR.zero_weights (1 ms)
+[----------] 13 tests from F32_SPMM_MINMAX_8X2__SCALAR (27 ms total)
+
+[----------] 13 tests from F32_SPMM_MINMAX_8X4__SCALAR
+[ RUN      ] F32_SPMM_MINMAX_8X4__SCALAR.k_eq_1
+[       OK ] F32_SPMM_MINMAX_8X4__SCALAR.k_eq_1 (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X4__SCALAR.k_eq_1_subtile
+[       OK ] F32_SPMM_MINMAX_8X4__SCALAR.k_eq_1_subtile (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X4__SCALAR.k_gt_1
+[       OK ] F32_SPMM_MINMAX_8X4__SCALAR.k_gt_1 (1 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X4__SCALAR.k_gt_1_subtile
+[       OK ] F32_SPMM_MINMAX_8X4__SCALAR.k_gt_1_subtile (4 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X4__SCALAR.n_gt_4
+[       OK ] F32_SPMM_MINMAX_8X4__SCALAR.n_gt_4 (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X4__SCALAR.n_div_4
+[       OK ] F32_SPMM_MINMAX_8X4__SCALAR.n_div_4 (0 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X4__SCALAR.m_lt_8
+[       OK ] F32_SPMM_MINMAX_8X4__SCALAR.m_lt_8 (9 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X4__SCALAR.m_div_8
+[       OK ] F32_SPMM_MINMAX_8X4__SCALAR.m_div_8 (5 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X4__SCALAR.m_gt_8
+[       OK ] F32_SPMM_MINMAX_8X4__SCALAR.m_gt_8 (12 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X4__SCALAR.qmin
+[       OK ] F32_SPMM_MINMAX_8X4__SCALAR.qmin (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X4__SCALAR.qmax
+[       OK ] F32_SPMM_MINMAX_8X4__SCALAR.qmax (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X4__SCALAR.half_sparse
+[       OK ] F32_SPMM_MINMAX_8X4__SCALAR.half_sparse (2 ms)
+[ RUN      ] F32_SPMM_MINMAX_8X4__SCALAR.zero_weights
+[       OK ] F32_SPMM_MINMAX_8X4__SCALAR.zero_weights (1 ms)
+[----------] 13 tests from F32_SPMM_MINMAX_8X4__SCALAR (41 ms total)
+
+[----------] Global test environment tear-down
+[==========] 316 tests from 28 test suites ran. (1208 ms total)
+[  PASSED  ] 313 tests.
+[  FAILED  ] 3 tests, listed below:
+[  FAILED  ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.m_div_16
+[  FAILED  ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.m_gt_16
+[  FAILED  ] F32_SPMM_MINMAX_16X1__NEONFMA_PIPELINED.qmin
+
+ 3 FAILED TESTS
