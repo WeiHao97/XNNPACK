@@ -120,6 +120,9 @@ int main (int argc, char *argv[]){
   std::bernoulli_distribution random_bool_generator_bias(0.9);
   auto f32rng = std::bind(random_bool_generator, rng);
   auto f32rng_bias = std::bind(random_bool_generator_bias, rng);*/
+  float Sparsity = 1- std::stof(argv[1])/100;
+  std::bernoulli_distribution random_bool_generator(Sparsity);// 0.1 => 90% sparse
+  std::bernoulli_distribution random_bool_generator_bias(0.9);
   std::default_random_engine generator (1);
   auto f32rng = std::bind(random_bool_generator, generator );
   auto f32rng_bias = std::bind(random_bool_generator_bias, generator );
