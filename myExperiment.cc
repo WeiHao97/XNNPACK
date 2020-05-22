@@ -2142,7 +2142,7 @@ if(std::stoi(argv[3]) == 1){
     f.open("./v2.data");
     size_t n_zeros = 0;
     for(size_t l=0 ; l<150528; l++ ){
-        f << v2[l] << "n";
+        f << v2[l] << std::endl;
         if(v2[l] == 0) n_zeros++;
     }
     f.close();
@@ -2151,7 +2151,7 @@ if(std::stoi(argv[3]) == 1){
     n_zeros = 0;
     f.open("./v3.data");
     for(size_t l=0 ; l<301056; l++ ){
-        f << v3[l] << "n";
+        f << v3[l] << std::endl;
         if(v3[l] == 0) n_zeros++;
     }
     f.close();
@@ -2160,7 +2160,7 @@ if(std::stoi(argv[3]) == 1){
     n_zeros = 0;
     f.open("./v4.data");
     for(size_t l=0 ; l<301056; l++ ){
-        f << v4[l] << "n";
+        f << v4[l] << std::endl;
         if(v4[l] == 0) n_zeros++;
     }
     f.close();
@@ -2169,7 +2169,7 @@ if(std::stoi(argv[3]) == 1){
     n_zeros = 0;
     f.open("./v5.data");
     for(size_t l=0 ; l<602112; l++ ){
-        f << v5[l] << "n";
+        f << v5[l] << std::endl;
         if(v5[l] == 0) n_zeros++;
     }
     f.close();
