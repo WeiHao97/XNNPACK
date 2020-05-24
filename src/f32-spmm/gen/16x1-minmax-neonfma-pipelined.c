@@ -43,12 +43,12 @@ void xnn_f32_spmm_minmax_ukernel_16x1__neonfma_pipelined(
     size_t j = n;
 
 //wei sparsitycheck
-
+/*
     float32x4_t tmp1 = vaddq_f32(va0123,va4567);
     float32x4_t tmp2 = vaddq_f32(tmp1,va89AB);
     float32x4_t tmp3 = vaddq_f32(tmp2,vaCDEF);
     if(tmp3[0] != 0 || tmp3[1] != 0 || tmp3[2] != 0 || tmp3[3] != 0){
-    
+    */
 //wei sparsitycheck   
   
     do {
@@ -96,7 +96,7 @@ void xnn_f32_spmm_minmax_ukernel_16x1__neonfma_pipelined(
     i -= 16;
 
 //wei sparsitycheck
-
+/*
   }else{    
       do {
       uint32_t nnz = *nnzmap++;
@@ -122,7 +122,7 @@ void xnn_f32_spmm_minmax_ukernel_16x1__neonfma_pipelined(
     c += 16;
     a += 16;
     i -= 16;}
-
+*/
 //wei sparsitycheck
 
   }
