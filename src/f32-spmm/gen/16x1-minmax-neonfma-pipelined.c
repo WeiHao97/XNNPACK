@@ -12,6 +12,7 @@
 #include <arm_neon.h>
 
 #include <xnnpack/spmm.h>
+#include <stdio.h>
 
 
 void xnn_f32_spmm_minmax_ukernel_16x1__neonfma_pipelined(
@@ -24,6 +25,7 @@ void xnn_f32_spmm_minmax_ukernel_16x1__neonfma_pipelined(
     float*restrict c,
     const union xnn_f32_minmax_params params[restrict XNN_MIN_ELEMENTS(1)])
 {
+  printf("spmm ");
   assert(m != 0);
 
   const float32x4_t vmin = vld1q_dup_f32(&params->scalar.min);
