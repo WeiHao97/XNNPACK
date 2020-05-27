@@ -176,6 +176,36 @@ int main (int argc, char *argv[]){
   std::generate(w54, w54 + 768000, std::ref(f32rng));
   std::generate(w55, w55 + 1000, std::ref(f32rng));
 
+  // first channel all ones
+  std::generate(w0, w0 + 27, 1.0f);
+  std::generate(w2, w2 + 216, 1.0f);
+  std::generate(w4, w4 + 24, 1.0f);
+  std::generate(w6, w6 + 432, 1.0f);
+  std::generate(w8, w8 + 48, 1.0f);
+  std::generate(w10, w10 + 864, 1.0f);
+  std::generate(w12, w12 + 96, 1.0f);
+  std::generate(w14, w14 + 864, 1.0f);
+  std::generate(w16, w16 + 96, 1.0f);
+  std::generate(w18, w18 + 1728, 1.0f);
+  std::generate(w20, w20 + 192, 1.0f);
+  std::generate(w22, w22 + 1728, 1.0f);
+  std::generate(w24, w24 + 192, 1.0f);
+  std::generate(w26, w26 + 3456, 1.0f);
+  std::generate(w28, w28 + 384, 1.0f);
+  std::generate(w30, w30 + 3456, 1.0f);
+  std::generate(w32, w32 + 384, 1.0f);
+  std::generate(w34, w34 + 3456, 1.0f);
+  std::generate(w36, w36 + 384, 1.0f);
+  std::generate(w38, w38 + 3456, 1.0f);
+  std::generate(w40, w40 + 384, 1.0f);
+  std::generate(w42, w42 + 3456, 1.0f);
+  std::generate(w44, w44 + 384, 1.0f);
+  std::generate(w46, w46 + 3456, 1.0f);
+  std::generate(w48, w48 + 384, 1.0f);
+  std::generate(w50, w50 + 6912, 1.0f);
+  std::generate(w52, w52 + 768, 1.0f);
+
+
 if(std::stoi(argv[2]) == 1){
   std::cout << "Bias on" << std::endl;
   std::generate(w1, w1 + 24, std::ref(f32rng_bias));
