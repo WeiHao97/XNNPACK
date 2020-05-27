@@ -158,6 +158,36 @@ ExecutionPlan MobileNetV1(pthreadpool_t threadpool) {
   std::generate(w52, w52 + 589824, std::ref(f32rng));
   std::generate(w54, w54 + 768000, std::ref(f32rng));
   std::generate(w55, w55 + 1000, std::ref(f32rng));
+
+    // first channel all ones
+  std::fill(w0, w0 + 27, 1.0f);
+  std::fill(w2, w2 + 216, 1.0f);
+  std::fill(w4, w4 + 24, 1.0f);
+  std::fill(w6, w6 + 432, 1.0f);
+  std::fill(w8, w8 + 48, 1.0f);
+  std::fill(w10, w10 + 864, 1.0f);
+  std::fill(w12, w12 + 96, 1.0f);
+  std::fill(w14, w14 + 864, 1.0f);
+  std::fill(w16, w16 + 96, 1.0f);
+  std::fill(w18, w18 + 1728, 1.0f);
+  std::fill(w20, w20 + 192, 1.0f);
+  std::fill(w22, w22 + 1728, 1.0f);
+  std::fill(w24, w24 + 192, 1.0f);
+  std::fill(w26, w26 + 3456, 1.0f);
+  std::fill(w28, w28 + 384, 1.0f);
+  std::fill(w30, w30 + 3456, 1.0f);
+  std::fill(w32, w32 + 384, 1.0f);
+  std::fill(w34, w34 + 3456, 1.0f);
+  std::fill(w36, w36 + 384, 1.0f);
+  std::fill(w38, w38 + 3456, 1.0f);
+  std::fill(w40, w40 + 384, 1.0f);
+  std::fill(w42, w42 + 3456, 1.0f);
+  std::fill(w44, w44 + 384, 1.0f);
+  std::fill(w46, w46 + 3456, 1.0f);
+  std::fill(w48, w48 + 384, 1.0f);
+  std::fill(w50, w50 + 6912, 1.0f);
+  std::fill(w52, w52 + 768, 1.0f);
+  
 /*
   std::generate(w1, w1 + 24, std::ref(f32rng));
   std::generate(w3, w3 + 24, std::ref(f32rng));
