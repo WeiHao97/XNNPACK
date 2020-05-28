@@ -2184,6 +2184,20 @@ if(stoi(argv[3]) == 1){
       }
     }
 
+    int sum_time = 0;
+    for(int i = 0 ; i<28; i++){
+      sum_time += timeConsume[i].count();
+    }
+
+    int spmm_time = 0;
+    for(int i = 2 ; i<28; i +=2){
+      spmm_time += timeConsume[i].count();
+    }
+
+    cout << "Total time: "<< sum_time << " us"<<endl;
+    cout << "Total spmm time: "<< spmm_time << " us   "<< "Portion:   "<< (int)(100*(float)spmm_time/sum_time)<<"%"<<endl;
+    cout << "-----------------------"<<endl;
+
     ofstream f;
     f.open("./v2.data");
     size_t n_zeros = 0;
@@ -2193,7 +2207,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v2 Sparsity: "<< (float)n_zeros/150528 << "   n_zeros: "<< n_zeros << endl;
-    cout << "time: "<< timeConsume[0].count() << "us"<< endl;
+    cout << "time: "<< timeConsume[0].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[0].count()/sum_time)<<"%"<<endl;
 
     n_zeros = 0;
     f.open("./v3.data");
@@ -2203,7 +2217,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v3 Sparsity: "<< (float)n_zeros/301056 << "   n_zeros: "<< n_zeros << endl;
-    cout << "time: "<< timeConsume[1].count() << "us"<< endl;
+    cout << "time: "<< timeConsume[1].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[1].count()/sum_time)<<"%"<<endl;
 
     n_zeros = 0;
     f.open("./v4.data");
@@ -2213,7 +2227,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v4 Sparsity: "<< (float)n_zeros/301056 << "   n_zeros: "<< n_zeros << endl;
-    cout << "time: "<< timeConsume[2].count() << "us"<< endl; 
+    cout << "spmm time: "<< timeConsume[2].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[2].count()/sum_time)<<"%"<<endl; 
 
     n_zeros = 0;
     f.open("./v5.data");
@@ -2223,7 +2237,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v5 Sparsity: "<< (float)n_zeros/602112 << "   n_zeros: "<< n_zeros << endl;
-    cout << "time: "<< timeConsume[3].count() << "us"<< endl;
+    cout << "time: "<< timeConsume[3].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[3].count()/sum_time)<<"%"<<endl;
 
     n_zeros = 0;
     f.open("./v6.data");
@@ -2233,7 +2247,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v6 Sparsity: "<< (float)n_zeros/150528 << "   n_zeros: "<< n_zeros << endl;
-    cout << "time: "<< timeConsume[4].count() << "us"<< endl; 
+    cout << "spmm time: "<< timeConsume[4].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[4].count()/sum_time)<<"%"<<endl; 
 
     n_zeros = 0;
     f.open("./v7.data");
@@ -2243,7 +2257,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v7 Sparsity: "<< (float)n_zeros/301056 << "   n_zeros: "<< n_zeros << endl;
-    cout << "time: "<< timeConsume[5].count() << "us"<< endl;
+    cout << "time: "<< timeConsume[5].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[5].count()/sum_time)<<"%"<<endl;
 
     n_zeros = 0;
     f.open("./v8.data");
@@ -2253,7 +2267,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v8 Sparsity: "<< (float)n_zeros/301056 << "   n_zeros: "<< n_zeros << endl;
-    cout << "time: "<< timeConsume[6].count() << "us"<< endl;
+    cout << "spmm time: "<< timeConsume[6].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[6].count()/sum_time)<<"%"<<endl;
 
     n_zeros = 0;
     f.open("./v9.data");
@@ -2263,7 +2277,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v9 Sparsity: "<< (float)n_zeros/301056 << "   n_zeros: "<< n_zeros << endl;
-    cout << "time: "<< timeConsume[7].count() << "us"<< endl;
+    cout << "time: "<< timeConsume[7].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[7].count()/sum_time)<<"%"<<endl;
 
     n_zeros = 0;
     f.open("./v10.data");
@@ -2273,7 +2287,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v10 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << endl;
-    cout << "time: "<< timeConsume[8].count() << "us"<< endl;
+    cout << "spmm time: "<< timeConsume[8].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[8].count()/sum_time)<<"%"<<endl;
 
     n_zeros = 0;
     f.open("./v11.data");
@@ -2283,7 +2297,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v11 Sparsity: "<< (float)n_zeros/150528 << "   n_zeros: "<< n_zeros << endl;
-    cout << "time: "<< timeConsume[9].count() << "us"<< endl;
+    cout << "time: "<< timeConsume[9].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[9].count()/sum_time)<<"%"<<endl;
 
     n_zeros = 0;
     f.open("./v12.data");
@@ -2293,7 +2307,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v12 Sparsity: "<< (float)n_zeros/150528 << "   n_zeros: "<< n_zeros << endl;
-    cout << "time: "<< timeConsume[10].count() << "us"<< endl; 
+    cout << "spmm time: "<< timeConsume[10].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[10].count()/sum_time)<<"%"<<endl; 
 
     n_zeros = 0;
     f.open("./v13.data");
@@ -2303,7 +2317,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v13 Sparsity: "<< (float)n_zeros/150528 << "   n_zeros: "<< n_zeros << endl;
-    cout << "time: "<< timeConsume[11].count() << "us"<< endl;
+    cout << "time: "<< timeConsume[11].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[11].count()/sum_time)<<"%"<<endl;
 
     n_zeros = 0;
     f.open("./v14.data");
@@ -2313,7 +2327,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v14 Sparsity: "<< (float)n_zeros/37632 << "   n_zeros: "<< n_zeros << endl;
-    cout << "time: "<< timeConsume[12].count() << "us"<< endl;
+    cout << "spmm time: "<< timeConsume[12].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[12].count()/sum_time)<<"%"<<endl;
 
     n_zeros = 0;
     f.open("./v15.data");
@@ -2323,7 +2337,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v15 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << endl;
-    cout << "time: "<< timeConsume[13].count() << "us"<< endl;
+    cout << "time: "<< timeConsume[13].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[13].count()/sum_time)<<"%"<<endl;
 
     n_zeros = 0;
     f.open("./v16.data");
@@ -2333,7 +2347,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v16 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << endl;
-    cout << "time: "<< timeConsume[14].count() << "us"<< endl; 
+    cout << "spmm time: "<< timeConsume[14].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[14].count()/sum_time)<<"%"<<endl; 
 
     n_zeros = 0;
     f.open("./v17.data");
@@ -2343,7 +2357,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v17 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << endl;
-    cout << "time: "<< timeConsume[15].count() << "us"<< endl;
+    cout << "time: "<< timeConsume[15].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[15].count()/sum_time)<<"%"<<endl;
 
     n_zeros = 0;
     f.open("./v18.data");
@@ -2353,7 +2367,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v18 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << endl;
-    cout << "time: "<< timeConsume[16].count() << "us"<< endl;
+    cout << "spmm time: "<< timeConsume[16].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[16].count()/sum_time)<<"%"<<endl;
 
     n_zeros = 0;
     f.open("./v19.data");
@@ -2363,7 +2377,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v19 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << endl;
-    cout << "time: "<< timeConsume[17].count() << "us"<< endl; 
+    cout << "time: "<< timeConsume[17].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[17].count()/sum_time)<<"%"<<endl; 
 
     n_zeros = 0;
     f.open("./v20.data");
@@ -2373,7 +2387,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v20 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << endl;
-    cout << "time: "<< timeConsume[18].count() << "us"<< endl;
+    cout << "spmm time: "<< timeConsume[18].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[18].count()/sum_time)<<"%"<<endl;
 
     n_zeros = 0;
     f.open("./v21.data");
@@ -2383,7 +2397,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v21 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << endl;
-    cout << "time: "<< timeConsume[19].count() << "us"<< endl;
+    cout << "time: "<< timeConsume[19].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[19].count()/sum_time)<<"%"<<endl;
 
     n_zeros = 0;
     f.open("./v22.data");
@@ -2393,7 +2407,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v22 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << endl;
-    cout << "time: "<< timeConsume[20].count() << "us"<< endl;
+    cout << "spmm time: "<< timeConsume[20].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[20].count()/sum_time)<<"%"<<endl;
 
     n_zeros = 0;
     f.open("./v23.data");
@@ -2403,7 +2417,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v23 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << endl;
-    cout << "time: "<< timeConsume[21].count() << "us"<< endl;
+    cout << "time: "<< timeConsume[21].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[21].count()/sum_time)<<"%"<<endl;
 
     n_zeros = 0;
     f.open("./v24.data");
@@ -2413,7 +2427,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v24 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << endl;
-    cout << "time: "<< timeConsume[22].count() << "us"<< endl;
+    cout << "spmm time: "<< timeConsume[22].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[22].count()/sum_time)<<"%"<<endl;
 
     n_zeros = 0;
     f.open("./v25.data");
@@ -2423,7 +2437,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v25 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << endl;
-    cout << "time: "<< timeConsume[23].count() << "us"<< endl;
+    cout << "time: "<< timeConsume[23].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[23].count()/sum_time)<<"%"<<endl;
 
     n_zeros = 0;
     f.open("./v26.data");
@@ -2433,7 +2447,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v26 Sparsity: "<< (float)n_zeros/18816 << "   n_zeros: "<< n_zeros << endl;
-    cout << "time: "<< timeConsume[24].count() << "us"<< endl;
+    cout << "spmm time: "<< timeConsume[24].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[24].count()/sum_time)<<"%"<<endl;
 
     n_zeros = 0;
     f.open("./v27.data");
@@ -2443,7 +2457,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v27 Sparsity: "<< (float)n_zeros/37632 << "   n_zeros: "<< n_zeros << endl;
-    cout << "time: "<< timeConsume[25].count() << "us"<< endl;
+    cout << "time: "<< timeConsume[25].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[25].count()/sum_time)<<"%"<<endl;
 
     n_zeros = 0;
     f.open("./v28.data");
@@ -2453,7 +2467,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v28 Sparsity: "<< (float)n_zeros/37632 << "   n_zeros: "<< n_zeros << endl;
-    cout << "time: "<< timeConsume[26].count() << "us"<< endl;
+    cout << "spmm time: "<< timeConsume[26].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[26].count()/sum_time)<<"%"<<endl;
 
     n_zeros = 0;
     f.open("./v29.data");
@@ -2463,7 +2477,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v29 Sparsity: "<< (float)n_zeros/37632 << "   n_zeros: "<< n_zeros << endl;
-    cout << "time: "<< timeConsume[27].count() << "us"<< endl;
+    cout << "time: "<< timeConsume[27].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[27].count()/sum_time)<<"%"<<endl;
 
   return 0;
 
