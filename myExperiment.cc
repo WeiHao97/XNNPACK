@@ -2193,6 +2193,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v2 Sparsity: "<< (float)n_zeros/150528 << "   n_zeros: "<< n_zeros << endl;
+    cout << "time: "<< timeConsume[0].count() << endl;
 
     n_zeros = 0;
     f.open("./v3.data");
@@ -2202,6 +2203,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v3 Sparsity: "<< (float)n_zeros/301056 << "   n_zeros: "<< n_zeros << endl;
+    cout << "time: "<< timeConsume[1].count() << endl;
 
     n_zeros = 0;
     f.open("./v4.data");
@@ -2210,7 +2212,8 @@ if(stoi(argv[3]) == 1){
         if(v4[l] == 0) n_zeros++;
     }
     f.close();
-    cout << "v4 Sparsity: "<< (float)n_zeros/301056 << "   n_zeros: "<< n_zeros << endl; 
+    cout << "v4 Sparsity: "<< (float)n_zeros/301056 << "   n_zeros: "<< n_zeros << endl;
+    cout << "time: "<< timeConsume[2].count() << endl; 
 
     n_zeros = 0;
     f.open("./v5.data");
@@ -2220,6 +2223,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v5 Sparsity: "<< (float)n_zeros/602112 << "   n_zeros: "<< n_zeros << endl;
+    cout << "time: "<< timeConsume[3].count() << endl;
 
     n_zeros = 0;
     f.open("./v6.data");
@@ -2228,7 +2232,8 @@ if(stoi(argv[3]) == 1){
         if(v6[l] == 0) n_zeros++;
     }
     f.close();
-    cout << "v6 Sparsity: "<< (float)n_zeros/150528 << "   n_zeros: "<< n_zeros << endl; 
+    cout << "v6 Sparsity: "<< (float)n_zeros/150528 << "   n_zeros: "<< n_zeros << endl;
+    cout << "time: "<< timeConsume[4].count() << endl; 
 
     n_zeros = 0;
     f.open("./v7.data");
@@ -2238,6 +2243,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v7 Sparsity: "<< (float)n_zeros/301056 << "   n_zeros: "<< n_zeros << endl;
+    cout << "time: "<< timeConsume[5].count() << endl;
 
     n_zeros = 0;
     f.open("./v8.data");
@@ -2247,6 +2253,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v8 Sparsity: "<< (float)n_zeros/301056 << "   n_zeros: "<< n_zeros << endl;
+    cout << "time: "<< timeConsume[6].count() << endl;
 
     n_zeros = 0;
     f.open("./v9.data");
@@ -2256,6 +2263,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v9 Sparsity: "<< (float)n_zeros/301056 << "   n_zeros: "<< n_zeros << endl;
+    cout << "time: "<< timeConsume[7].count() << endl;
 
     n_zeros = 0;
     f.open("./v10.data");
@@ -2265,6 +2273,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v10 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << endl;
+    cout << "time: "<< timeConsume[8].count() << endl;
 
     n_zeros = 0;
     f.open("./v11.data");
@@ -2274,6 +2283,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v11 Sparsity: "<< (float)n_zeros/150528 << "   n_zeros: "<< n_zeros << endl;
+    cout << "time: "<< timeConsume[9].count() << endl;
 
     n_zeros = 0;
     f.open("./v12.data");
@@ -2282,7 +2292,8 @@ if(stoi(argv[3]) == 1){
         if(v12[l] == 0) n_zeros++;
     }
     f.close();
-    cout << "v12 Sparsity: "<< (float)n_zeros/150528 << "   n_zeros: "<< n_zeros << endl; 
+    cout << "v12 Sparsity: "<< (float)n_zeros/150528 << "   n_zeros: "<< n_zeros << endl;
+    cout << "time: "<< timeConsume[10].count() << endl; 
 
     n_zeros = 0;
     f.open("./v13.data");
@@ -2292,6 +2303,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v13 Sparsity: "<< (float)n_zeros/150528 << "   n_zeros: "<< n_zeros << endl;
+    cout << "time: "<< timeConsume[11].count() << endl;
 
     n_zeros = 0;
     f.open("./v14.data");
@@ -2301,6 +2313,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v14 Sparsity: "<< (float)n_zeros/37632 << "   n_zeros: "<< n_zeros << endl;
+    cout << "time: "<< timeConsume[12].count() << endl;
 
     n_zeros = 0;
     f.open("./v15.data");
@@ -2310,6 +2323,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v15 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << endl;
+    cout << "time: "<< timeConsume[13].count() << endl;
 
     n_zeros = 0;
     f.open("./v16.data");
@@ -2318,7 +2332,8 @@ if(stoi(argv[3]) == 1){
         if(v16[l] == 0) n_zeros++;
     }
     f.close();
-    cout << "v16 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << endl; 
+    cout << "v16 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << endl;
+    cout << "time: "<< timeConsume[14].count() << endl; 
 
     n_zeros = 0;
     f.open("./v17.data");
@@ -2328,6 +2343,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v17 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << endl;
+    cout << "time: "<< timeConsume[15].count() << endl;
 
     n_zeros = 0;
     f.open("./v18.data");
@@ -2337,6 +2353,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v18 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << endl;
+    cout << "time: "<< timeConsume[16].count() << endl;
 
     n_zeros = 0;
     f.open("./v19.data");
@@ -2345,7 +2362,8 @@ if(stoi(argv[3]) == 1){
         if(v19[l] == 0) n_zeros++;
     }
     f.close();
-    cout << "v19 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << endl; 
+    cout << "v19 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << endl;
+    cout << "time: "<< timeConsume[17].count() << endl; 
 
     n_zeros = 0;
     f.open("./v20.data");
@@ -2355,6 +2373,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v20 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << endl;
+    cout << "time: "<< timeConsume[18].count() << endl;
 
     n_zeros = 0;
     f.open("./v21.data");
@@ -2364,6 +2383,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v21 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << endl;
+    cout << "time: "<< timeConsume[19].count() << endl;
 
     n_zeros = 0;
     f.open("./v22.data");
@@ -2373,6 +2393,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v22 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << endl;
+    cout << "time: "<< timeConsume[20].count() << endl;
 
     n_zeros = 0;
     f.open("./v23.data");
@@ -2382,6 +2403,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v23 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << endl;
+    cout << "time: "<< timeConsume[21].count() << endl;
 
     n_zeros = 0;
     f.open("./v24.data");
@@ -2391,6 +2413,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v24 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << endl;
+    cout << "time: "<< timeConsume[22].count() << endl;
 
     n_zeros = 0;
     f.open("./v25.data");
@@ -2400,6 +2423,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v25 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << endl;
+    cout << "time: "<< timeConsume[23].count() << endl;
 
     n_zeros = 0;
     f.open("./v26.data");
@@ -2409,6 +2433,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v26 Sparsity: "<< (float)n_zeros/18816 << "   n_zeros: "<< n_zeros << endl;
+    cout << "time: "<< timeConsume[24].count() << endl;
 
     n_zeros = 0;
     f.open("./v27.data");
@@ -2418,6 +2443,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v27 Sparsity: "<< (float)n_zeros/37632 << "   n_zeros: "<< n_zeros << endl;
+    cout << "time: "<< timeConsume[25].count() << endl;
 
     n_zeros = 0;
     f.open("./v28.data");
@@ -2427,6 +2453,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v28 Sparsity: "<< (float)n_zeros/37632 << "   n_zeros: "<< n_zeros << endl;
+    cout << "time: "<< timeConsume[26].count() << endl;
 
     n_zeros = 0;
     f.open("./v29.data");
@@ -2436,6 +2463,7 @@ if(stoi(argv[3]) == 1){
     }
     f.close();
     cout << "v29 Sparsity: "<< (float)n_zeros/37632 << "   n_zeros: "<< n_zeros << endl;
+    cout << "time: "<< timeConsume[27].count() << endl;
 
   return 0;
 
