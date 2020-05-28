@@ -2169,9 +2169,9 @@ if(stoi(argv[3]) == 1){
 
 }
 
-    vector<auto> timeConsume;
-    auto start;
-    auto stop;
+    vector<microseconds> timeConsume;
+    auto start= high_resolution_clock::now();
+    auto stop = high_resolution_clock::now();
 
     for (const unique_ptr<xnn_operator, decltype(&xnn_delete_operator)>& op : operators) {
       start = high_resolution_clock::now(); 
