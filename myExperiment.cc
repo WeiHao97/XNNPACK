@@ -2169,9 +2169,15 @@ if(stoi(argv[3]) == 1){
 
 }
 
+    vector<auto> timeConsume;
+    auto start;
+    auto stop;
 
     for (const unique_ptr<xnn_operator, decltype(&xnn_delete_operator)>& op : operators) {
+      start = high_resolution_clock::now(); 
       xnn_status status = xnn_run_operator(op.get(), threadpool.get());
+      stop = high_resolution_clock::now();
+      timeConsume.push_back (duration_cast<microseconds>(stop - start));
       if (status != xnn_status_success) {
         cerr << "failed to run a model" << endl;
         return -1;
