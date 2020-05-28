@@ -12,16 +12,19 @@
 #include <limits>
 #include <random>
 #include <string>
+#include <chrono> 
 #include "models/models.h"
 
+using namespace std;
+using namespace std::chrono; 
 
 int main (int argc, char *argv[]){
 
     if(argc != 4){
-        std::cout<< "Usage:"<< std::endl;
-        std::cout<< "Sparsity: 0-100"<< std::endl;
-        std::cout<< "Bias: on:1, off:0"<< std::endl;
-        std::cout<< "Mode: spmm:1, gemm:0"<< std::endl;
+        cout<< "Usage:"<< endl;
+        cout<< "Sparsity: 0-100"<< endl;
+        cout<< "Bias: on:1, off:0"<< endl;
+        cout<< "Mode: spmm:1, gemm:0"<< endl;
         return -1;
     }
   alignas(16) static float v2[150528];
@@ -120,139 +123,139 @@ int main (int argc, char *argv[]){
   std::bernoulli_distribution random_bool_generator_bias(0.9);
   auto f32rng = std::bind(random_bool_generator, rng);
   auto f32rng_bias = std::bind(random_bool_generator_bias, rng);*/
-  float Sparsity = 1- std::stof(argv[1])/100;
-  std::bernoulli_distribution random_bool_generator(Sparsity);// 0.1 => 90% sparse
-  std::bernoulli_distribution random_bool_generator_bias(0.9);
-  std::default_random_engine generator (1);
-  auto f32rng = std::bind(random_bool_generator, generator );
-  auto f32rng_bias = std::bind(random_bool_generator_bias, generator );
-  std::ifstream inputFile("/users/Wei_Hao/XNNPACK/sparse_224.data");
+  float Sparsity = 1- stof(argv[1])/100;
+  bernoulli_distribution random_bool_generator(Sparsity);// 0.1 => 90% sparse
+  bernoulli_distribution random_bool_generator_bias(0.9);
+  default_random_engine generator (1);
+  auto f32rng = bind(random_bool_generator, generator );
+  auto f32rng_bias = bind(random_bool_generator_bias, generator );
+  ifstream inputFile("/users/Wei_Hao/XNNPACK/sparse_224.data");
 
   // test file open
   int size = 0; 
   //int z_count = 0;
-  std::string s;   
+  string s;   
   if (inputFile) {        
     while (getline(inputFile, s))
     {
-        v2[size] = std::stof(s);
+        v2[size] = stof(s);
         //if(v2[size] == 0) z_count++;
         size++;
     }
 
   }else{
-        std::cout<< "Can't open file"<< std::endl;
+        cout<< "Can't open file"<< endl;
   }
   inputFile.close();
   //std::cout<< "Size: " << size << " Sparsity: "<< (float)z_count/150528 <<"\n";
   //std::generate(v2, v2 + 150528, std::ref(f32rng));
-  std::generate(w0, w0 + 648, std::ref(f32rng));
-  std::generate(w2, w2 + 216, std::ref(f32rng));
-  std::generate(w4, w4 + 1152, std::ref(f32rng));
-  std::generate(w6, w6 + 432, std::ref(f32rng));
-  std::generate(w8, w8 + 4608, std::ref(f32rng));
-  std::generate(w10, w10 + 864, std::ref(f32rng));
-  std::generate(w12, w12 + 9216, std::ref(f32rng));
-  std::generate(w14, w14 + 864, std::ref(f32rng));
-  std::generate(w16, w16 + 18432, std::ref(f32rng));
-  std::generate(w18, w18 + 1728, std::ref(f32rng));
-  std::generate(w20, w20 + 36864, std::ref(f32rng));
-  std::generate(w22, w22 + 1728, std::ref(f32rng));
-  std::generate(w24, w24 + 147456, std::ref(f32rng));
-  std::generate(w26, w26 + 3456, std::ref(f32rng));
-  std::generate(w28, w28 + 147456, std::ref(f32rng));
-  std::generate(w30, w30 + 3456, std::ref(f32rng));
-  std::generate(w32, w32 + 147456, std::ref(f32rng));
-  std::generate(w34, w34 + 3456, std::ref(f32rng));
-  std::generate(w36, w36 + 147456, std::ref(f32rng));
-  std::generate(w38, w38 + 3456, std::ref(f32rng));
-  std::generate(w40, w40 + 147456, std::ref(f32rng));
-  std::generate(w42, w42 + 3456, std::ref(f32rng));
-  std::generate(w44, w44 + 147456, std::ref(f32rng));
-  std::generate(w46, w46 + 3456, std::ref(f32rng));
-  std::generate(w48, w48 + 29412, std::ref(f32rng));
-  std::generate(w50, w50 + 6912, std::ref(f32rng));
-  std::generate(w52, w52 + 589824, std::ref(f32rng));
-  std::generate(w54, w54 + 768000, std::ref(f32rng));
-  std::generate(w55, w55 + 1000, std::ref(f32rng));
+  generate(w0, w0 + 648, ref(f32rng));
+  generate(w2, w2 + 216, ref(f32rng));
+  generate(w4, w4 + 1152, ref(f32rng));
+  generate(w6, w6 + 432, ref(f32rng));
+  generate(w8, w8 + 4608, ref(f32rng));
+  generate(w10, w10 + 864, ref(f32rng));
+  generate(w12, w12 + 9216, ref(f32rng));
+  generate(w14, w14 + 864, ref(f32rng));
+  generate(w16, w16 + 18432, ref(f32rng));
+  generate(w18, w18 + 1728, ref(f32rng));
+  generate(w20, w20 + 36864, ref(f32rng));
+  generate(w22, w22 + 1728, ref(f32rng));
+  generate(w24, w24 + 147456, ref(f32rng));
+  generate(w26, w26 + 3456, ref(f32rng));
+  generate(w28, w28 + 147456, ref(f32rng));
+  generate(w30, w30 + 3456, ref(f32rng));
+  generate(w32, w32 + 147456, ref(f32rng));
+  generate(w34, w34 + 3456, ref(f32rng));
+  generate(w36, w36 + 147456, ref(f32rng));
+  generate(w38, w38 + 3456, ref(f32rng));
+  generate(w40, w40 + 147456, ref(f32rng));
+  generate(w42, w42 + 3456, ref(f32rng));
+  generate(w44, w44 + 147456, ref(f32rng));
+  generate(w46, w46 + 3456, ref(f32rng));
+  generate(w48, w48 + 29412, ref(f32rng));
+  generate(w50, w50 + 6912, ref(f32rng));
+  generate(w52, w52 + 589824, ref(f32rng));
+  generate(w54, w54 + 768000, ref(f32rng));
+  generate(w55, w55 + 1000, ref(f32rng));
 
   // first channel all ones
-  std::fill(w0, w0 + 27, 1.0f);
-  std::fill(w2, w2 + 216, 1.0f);
-  std::fill(w4, w4 + 24, 1.0f);
-  std::fill(w6, w6 + 432, 1.0f);
-  std::fill(w8, w8 + 48, 1.0f);
-  std::fill(w10, w10 + 864, 1.0f);
-  std::fill(w12, w12 + 96, 1.0f);
-  std::fill(w14, w14 + 864, 1.0f);
-  std::fill(w16, w16 + 96, 1.0f);
-  std::fill(w18, w18 + 1728, 1.0f);
-  std::fill(w20, w20 + 192, 1.0f);
-  std::fill(w22, w22 + 1728, 1.0f);
-  std::fill(w24, w24 + 192, 1.0f);
-  std::fill(w26, w26 + 3456, 1.0f);
-  std::fill(w28, w28 + 384, 1.0f);
-  std::fill(w30, w30 + 3456, 1.0f);
-  std::fill(w32, w32 + 384, 1.0f);
-  std::fill(w34, w34 + 3456, 1.0f);
-  std::fill(w36, w36 + 384, 1.0f);
-  std::fill(w38, w38 + 3456, 1.0f);
-  std::fill(w40, w40 + 384, 1.0f);
-  std::fill(w42, w42 + 3456, 1.0f);
-  std::fill(w44, w44 + 384, 1.0f);
-  std::fill(w46, w46 + 3456, 1.0f);
-  std::fill(w48, w48 + 384, 1.0f);
-  std::fill(w50, w50 + 6912, 1.0f);
-  std::fill(w52, w52 + 768, 1.0f);
+  fill(w0, w0 + 27, 1.0f);
+  fill(w2, w2 + 216, 1.0f);
+  fill(w4, w4 + 24, 1.0f);
+  fill(w6, w6 + 432, 1.0f);
+  fill(w8, w8 + 48, 1.0f);
+  fill(w10, w10 + 864, 1.0f);
+  fill(w12, w12 + 96, 1.0f);
+  fill(w14, w14 + 864, 1.0f);
+  fill(w16, w16 + 96, 1.0f);
+  fill(w18, w18 + 1728, 1.0f);
+  fill(w20, w20 + 192, 1.0f);
+  fill(w22, w22 + 1728, 1.0f);
+  fill(w24, w24 + 192, 1.0f);
+  fill(w26, w26 + 3456, 1.0f);
+  fill(w28, w28 + 384, 1.0f);
+  fill(w30, w30 + 3456, 1.0f);
+  fill(w32, w32 + 384, 1.0f);
+  fill(w34, w34 + 3456, 1.0f);
+  fill(w36, w36 + 384, 1.0f);
+  fill(w38, w38 + 3456, 1.0f);
+  fill(w40, w40 + 384, 1.0f);
+  fill(w42, w42 + 3456, 1.0f);
+  fill(w44, w44 + 384, 1.0f);
+  fill(w46, w46 + 3456, 1.0f);
+  fill(w48, w48 + 384, 1.0f);
+  fill(w50, w50 + 6912, 1.0f);
+  fill(w52, w52 + 768, 1.0f);
 
 
-if(std::stoi(argv[2]) == 1){
-  std::cout << "Bias on" << std::endl;
-  std::generate(w1, w1 + 24, std::ref(f32rng_bias));
-  std::generate(w3, w3 + 24, std::ref(f32rng_bias));
-  std::generate(w5, w5 + 48, std::ref(f32rng_bias));
-  std::generate(w7, w7 + 48, std::ref(f32rng_bias));
-  std::generate(w9, w9 + 96, std::ref(f32rng_bias));
-  std::generate(w11, w11 + 96, std::ref(f32rng_bias));
-  std::generate(w13, w13 + 96, std::ref(f32rng_bias));
-  std::generate(w15, w15 + 96, std::ref(f32rng_bias));
-  std::generate(w17, w17 + 192, std::ref(f32rng_bias));
-  std::generate(w19, w19 + 192, std::ref(f32rng_bias));
-  std::generate(w21, w21 + 192, std::ref(f32rng_bias));
-  std::generate(w23, w23 + 192, std::ref(f32rng_bias));
-  std::generate(w25, w25 + 384, std::ref(f32rng_bias));
-  std::generate(w27, w27 + 384, std::ref(f32rng_bias));
-  std::generate(w29, w29 + 384, std::ref(f32rng_bias));
-  std::generate(w31, w31 + 384, std::ref(f32rng_bias));
-  std::generate(w33, w33 + 384, std::ref(f32rng_bias));
-  std::generate(w35, w35 + 384, std::ref(f32rng_bias));
-  std::generate(w37, w37 + 384, std::ref(f32rng_bias));
-  std::generate(w39, w39 + 384, std::ref(f32rng_bias));
-  std::generate(w41, w41 + 384, std::ref(f32rng_bias));
-  std::generate(w43, w43 + 384, std::ref(f32rng_bias));
-  std::generate(w45, w45 + 384, std::ref(f32rng_bias));
-  std::generate(w47, w47 + 384, std::ref(f32rng_bias));
-  std::generate(w49, w49 + 768, std::ref(f32rng_bias));
-  std::generate(w51, w51 + 768, std::ref(f32rng_bias));
-  std::generate(w53, w53 + 768, std::ref(f32rng_bias));
+if(stoi(argv[2]) == 1){
+  cout << "Bias on" << endl;
+  generate(w1, w1 + 24, ref(f32rng_bias));
+  generate(w3, w3 + 24, ref(f32rng_bias));
+  generate(w5, w5 + 48, ref(f32rng_bias));
+  generate(w7, w7 + 48, ref(f32rng_bias));
+  generate(w9, w9 + 96, ref(f32rng_bias));
+  generate(w11, w11 + 96, ref(f32rng_bias));
+  generate(w13, w13 + 96, ref(f32rng_bias));
+  generate(w15, w15 + 96, ref(f32rng_bias));
+  generate(w17, w17 + 192, ref(f32rng_bias));
+  generate(w19, w19 + 192, ref(f32rng_bias));
+  generate(w21, w21 + 192, ref(f32rng_bias));
+  generate(w23, w23 + 192, ref(f32rng_bias));
+  generate(w25, w25 + 384, ref(f32rng_bias));
+  generate(w27, w27 + 384, ref(f32rng_bias));
+  generate(w29, w29 + 384, ref(f32rng_bias));
+  generate(w31, w31 + 384, ref(f32rng_bias));
+  generate(w33, w33 + 384, ref(f32rng_bias));
+  generate(w35, w35 + 384, ref(f32rng_bias));
+  generate(w37, w37 + 384, ref(f32rng_bias));
+  generate(w39, w39 + 384, ref(f32rng_bias));
+  generate(w41, w41 + 384, ref(f32rng_bias));
+  generate(w43, w43 + 384, ref(f32rng_bias));
+  generate(w45, w45 + 384, ref(f32rng_bias));
+  generate(w47, w47 + 384, ref(f32rng_bias));
+  generate(w49, w49 + 768, ref(f32rng_bias));
+  generate(w51, w51 + 768, ref(f32rng_bias));
+  generate(w53, w53 + 768, ref(f32rng_bias));
   }else{
-    std::cout << "Bias off" << std::endl;
+    cout << "Bias off" << endl;
   }
 
   if (xnn_initialize(nullptr /* allocator */) != xnn_status_success) {
-    std::cerr << "failed to initialize XNNPACK" << std::endl;
+    cerr << "failed to initialize XNNPACK" << endl;
     return -1;
   }
   models::ExecutionPlan operators;
   xnn_status status;
   const size_t num_threads = 1;
-  std::unique_ptr<pthreadpool, decltype(&pthreadpool_destroy)> threadpool(
+  unique_ptr<pthreadpool, decltype(&pthreadpool_destroy)> threadpool(
     pthreadpool_create(num_threads), pthreadpool_destroy);
 
 
-if(std::stoi(argv[3]) == 1){
+if(stoi(argv[3]) == 1){
 
-  std::cout << "Using spmm" << std::endl;
+  cout << "Using spmm" << endl;
   xnn_operator_t op0 = nullptr;
   status = xnn_create_convolution2d_nchw_f32(
     1 /* top padding */, 1 /* right padding */,
@@ -268,7 +271,7 @@ if(std::stoi(argv[3]) == 1){
     XNN_FLAG_INPUT_NHWC/* flags */,
     &op0);
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #0" << std::endl;
+    cerr << "failed to create operation #0" << endl;
     return -1;
   }
   operators.emplace_back(op0, xnn_delete_operator);
@@ -284,7 +287,7 @@ if(std::stoi(argv[3]) == 1){
   &v3[0],//float* output,
   threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #0" << std::endl;
+    cerr << "failed to setup operation #0" << endl;
     return -1;
   }
 
@@ -306,7 +309,7 @@ if(std::stoi(argv[3]) == 1){
     &op1);
 
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #1" << std::endl;
+    cerr << "failed to create operation #1" << endl;
     return -1;
   }
   operators.emplace_back(op1, xnn_delete_operator);
@@ -322,7 +325,7 @@ if(std::stoi(argv[3]) == 1){
   threadpool.get());
 
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #1" << std::endl;
+    cerr << "failed to setup operation #1" << endl;
     return -1;
   }
 
@@ -341,7 +344,7 @@ if(std::stoi(argv[3]) == 1){
     0 /* flags */,
     &op2);
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #2" << std::endl;
+    cerr << "failed to create operation #2" << endl;
     return -1;
   }
   operators.emplace_back(op2, xnn_delete_operator);
@@ -358,7 +361,7 @@ if(std::stoi(argv[3]) == 1){
   threadpool.get());
 
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #2" << std::endl;
+    cerr << "failed to setup operation #2" << endl;
     return -1;
   }
 
@@ -378,7 +381,7 @@ if(std::stoi(argv[3]) == 1){
     &op3);
 
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #3" << std::endl;
+    cerr << "failed to create operation #3" << endl;
     return -1;
   }
   operators.emplace_back(op3, xnn_delete_operator);
@@ -393,7 +396,7 @@ if(std::stoi(argv[3]) == 1){
   &v6[0],//float* output,
   threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #3" << std::endl;
+    cerr << "failed to setup operation #3" << endl;
     return -1;
   }
 
@@ -412,7 +415,7 @@ if(std::stoi(argv[3]) == 1){
     0 /* flags */,
     &op4);
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #4" << std::endl;
+    cerr << "failed to create operation #4" << endl;
     return -1;
   }
   operators.emplace_back(op4, xnn_delete_operator);
@@ -428,7 +431,7 @@ if(std::stoi(argv[3]) == 1){
   &v7[0],//float* output,
   threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #4" << std::endl;
+    cerr << "failed to setup operation #4" << endl;
     return -1;
   }
 
@@ -448,7 +451,7 @@ if(std::stoi(argv[3]) == 1){
     &op5);
 
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #5" << std::endl;
+    cerr << "failed to create operation #5" << endl;
     return -1;
   }
   operators.emplace_back(op5, xnn_delete_operator);
@@ -463,7 +466,7 @@ if(std::stoi(argv[3]) == 1){
   &v8[0],//float* output,
   threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #5" << std::endl;
+    cerr << "failed to setup operation #5" << endl;
     return -1;
   }
 
@@ -482,7 +485,7 @@ if(std::stoi(argv[3]) == 1){
     0 /* flags */,
     &op6);
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #6" << std::endl;
+    cerr << "failed to create operation #6" << endl;
     return -1;
   }
   operators.emplace_back(op6, xnn_delete_operator);
@@ -498,7 +501,7 @@ if(std::stoi(argv[3]) == 1){
   &v9[0],//float* output,
   threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #6" << std::endl;
+    cerr << "failed to setup operation #6" << endl;
     return -1;
   }
 
@@ -518,7 +521,7 @@ if(std::stoi(argv[3]) == 1){
     &op7);
 
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #7" << std::endl;
+    cerr << "failed to create operation #7" << endl;
     return -1;
   }
   operators.emplace_back(op7, xnn_delete_operator);
@@ -533,7 +536,7 @@ if(std::stoi(argv[3]) == 1){
   &v10[0],//float* output,
   threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #7" << std::endl;
+    cerr << "failed to setup operation #7" << endl;
     return -1;
   }
 
@@ -552,7 +555,7 @@ if(std::stoi(argv[3]) == 1){
     0 /* flags */,
     &op8);
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #8" << std::endl;
+    cerr << "failed to create operation #8" << endl;
     return -1;
   }
   operators.emplace_back(op8, xnn_delete_operator);
@@ -568,7 +571,7 @@ if(std::stoi(argv[3]) == 1){
   &v11[0],//float* output,
   threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #8" << std::endl;
+    cerr << "failed to setup operation #8" << endl;
     return -1;
   }
 
@@ -588,7 +591,7 @@ if(std::stoi(argv[3]) == 1){
     &op9);
 
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #9" << std::endl;
+    cerr << "failed to create operation #9" << endl;
     return -1;
   }
   operators.emplace_back(op9, xnn_delete_operator);
@@ -603,7 +606,7 @@ if(std::stoi(argv[3]) == 1){
   &v12[0],//float* output,
   threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #9" << std::endl;
+    cerr << "failed to setup operation #9" << endl;
     return -1;
   }
 
@@ -622,7 +625,7 @@ if(std::stoi(argv[3]) == 1){
     0 /* flags */,
     &op10);
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #10" << std::endl;
+    cerr << "failed to create operation #10" << endl;
     return -1;
   }
   operators.emplace_back(op10, xnn_delete_operator);
@@ -638,7 +641,7 @@ if(std::stoi(argv[3]) == 1){
   &v13[0],//float* output,
   threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #10" << std::endl;
+    cerr << "failed to setup operation #10" << endl;
     return -1;
   }
 
@@ -658,7 +661,7 @@ if(std::stoi(argv[3]) == 1){
     &op11);
 
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #11" << std::endl;
+    cerr << "failed to create operation #11" << endl;
     return -1;
   }
   operators.emplace_back(op11, xnn_delete_operator);
@@ -673,7 +676,7 @@ if(std::stoi(argv[3]) == 1){
   &v14[0],//float* output,
   threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #11" << std::endl;
+    cerr << "failed to setup operation #11" << endl;
     return -1;
   }
 
@@ -692,7 +695,7 @@ if(std::stoi(argv[3]) == 1){
     0 /* flags */,
     &op12);
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #12" << std::endl;
+    cerr << "failed to create operation #12" << endl;
     return -1;
   }
   operators.emplace_back(op12, xnn_delete_operator);
@@ -708,7 +711,7 @@ if(std::stoi(argv[3]) == 1){
   &v15[0],//float* output,
   threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #12" << std::endl;
+    cerr << "failed to setup operation #12" << endl;
     return -1;
   }
 
@@ -728,7 +731,7 @@ if(std::stoi(argv[3]) == 1){
     &op13);
 
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #13" << std::endl;
+    cerr << "failed to create operation #13" << endl;
     return -1;
   }
   operators.emplace_back(op13, xnn_delete_operator);
@@ -743,7 +746,7 @@ if(std::stoi(argv[3]) == 1){
   &v16[0],//float* output,
   threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #13" << std::endl;
+    cerr << "failed to setup operation #13" << endl;
     return -1;
   }
 
@@ -762,7 +765,7 @@ if(std::stoi(argv[3]) == 1){
     0 /* flags */,
     &op14);
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #14" << std::endl;
+    cerr << "failed to create operation #14" << endl;
     return -1;
   }
   operators.emplace_back(op14, xnn_delete_operator);
@@ -778,7 +781,7 @@ if(std::stoi(argv[3]) == 1){
   &v17[0],//float* output,
   threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #14" << std::endl;
+    cerr << "failed to setup operation #14" << endl;
     return -1;
   }
 
@@ -798,7 +801,7 @@ if(std::stoi(argv[3]) == 1){
     &op15);
 
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #15" << std::endl;
+    cerr << "failed to create operation #15" << endl;
     return -1;
   }
   operators.emplace_back(op15, xnn_delete_operator);
@@ -813,7 +816,7 @@ if(std::stoi(argv[3]) == 1){
   &v18[0],//float* output,
   threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #15" << std::endl;
+    cerr << "failed to setup operation #15" << endl;
     return -1;
   }
 
@@ -832,7 +835,7 @@ if(std::stoi(argv[3]) == 1){
     0 /* flags */,
     &op16);
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #16" << std::endl;
+    cerr << "failed to create operation #16" << endl;
     return -1;
   }
   operators.emplace_back(op16, xnn_delete_operator);
@@ -848,7 +851,7 @@ if(std::stoi(argv[3]) == 1){
   &v19[0],//float* output,
   threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #16" << std::endl;
+    cerr << "failed to setup operation #16" << endl;
     return -1;
   }
 
@@ -868,7 +871,7 @@ if(std::stoi(argv[3]) == 1){
     &op17);
 
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #17" << std::endl;
+    cerr << "failed to create operation #17" << endl;
     return -1;
   }
   operators.emplace_back(op17, xnn_delete_operator);
@@ -883,7 +886,7 @@ if(std::stoi(argv[3]) == 1){
   &v20[0],//float* output,
   threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #17" << std::endl;
+    cerr << "failed to setup operation #17" << endl;
     return -1;
   }
 
@@ -903,7 +906,7 @@ if(std::stoi(argv[3]) == 1){
     &op18);
 
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #18" << std::endl;
+    cerr << "failed to create operation #18" << endl;
     return -1;
   }
   operators.emplace_back(op18, xnn_delete_operator);
@@ -918,7 +921,7 @@ if(std::stoi(argv[3]) == 1){
   &v21[0],//float* output,
   threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #18" << std::endl;
+    cerr << "failed to setup operation #18" << endl;
     return -1;
   }
 
@@ -938,7 +941,7 @@ if(std::stoi(argv[3]) == 1){
     &op19);
 
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #19" << std::endl;
+    cerr << "failed to create operation #19" << endl;
     return -1;
   }
   operators.emplace_back(op19, xnn_delete_operator);
@@ -953,7 +956,7 @@ if(std::stoi(argv[3]) == 1){
   &v22[0],//float* output,
   threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #19" << std::endl;
+    cerr << "failed to setup operation #19" << endl;
     return -1;
   }
 
@@ -973,7 +976,7 @@ if(std::stoi(argv[3]) == 1){
     &op20);
 
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #20" << std::endl;
+    cerr << "failed to create operation #20" << endl;
     return -1;
   }
   operators.emplace_back(op20, xnn_delete_operator);
@@ -988,7 +991,7 @@ if(std::stoi(argv[3]) == 1){
   &v23[0],//float* output,
   threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #20" << std::endl;
+    cerr << "failed to setup operation #20" << endl;
     return -1;
   }
 
@@ -1008,7 +1011,7 @@ if(std::stoi(argv[3]) == 1){
     &op21);
 
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #21" << std::endl;
+    cerr << "failed to create operation #21" << endl;
     return -1;
   }
   operators.emplace_back(op21, xnn_delete_operator);
@@ -1023,7 +1026,7 @@ if(std::stoi(argv[3]) == 1){
   &v24[0],//float* output,
   threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #21" << std::endl;
+    cerr << "failed to setup operation #21" << endl;
     return -1;
   }
 
@@ -1043,7 +1046,7 @@ if(std::stoi(argv[3]) == 1){
     &op22);
 
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #22" << std::endl;
+    cerr << "failed to create operation #22" << endl;
     return -1;
   }
   operators.emplace_back(op22, xnn_delete_operator);
@@ -1058,7 +1061,7 @@ if(std::stoi(argv[3]) == 1){
   &v25[0],//float* output,
   threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #22" << std::endl;
+    cerr << "failed to setup operation #22" << endl;
     return -1;
   }
 
@@ -1078,7 +1081,7 @@ if(std::stoi(argv[3]) == 1){
     &op23);
 
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #23" << std::endl;
+    cerr << "failed to create operation #23" << endl;
     return -1;
   }
   operators.emplace_back(op23, xnn_delete_operator);
@@ -1093,7 +1096,7 @@ if(std::stoi(argv[3]) == 1){
   &v26[0],//float* output,
   threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #23" << std::endl;
+    cerr << "failed to setup operation #23" << endl;
     return -1;
   }
 
@@ -1113,7 +1116,7 @@ if(std::stoi(argv[3]) == 1){
     &op24);
 
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #24" << std::endl;
+    cerr << "failed to create operation #24" << endl;
     return -1;
   }
   operators.emplace_back(op24, xnn_delete_operator);
@@ -1128,7 +1131,7 @@ if(std::stoi(argv[3]) == 1){
   &v27[0],//float* output,
   threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #24" << std::endl;
+    cerr << "failed to setup operation #24" << endl;
     return -1;
   }
 
@@ -1148,7 +1151,7 @@ if(std::stoi(argv[3]) == 1){
     &op25);
 
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #25" << std::endl;
+    cerr << "failed to create operation #25" << endl;
     return -1;
   }
   operators.emplace_back(op25, xnn_delete_operator);
@@ -1163,7 +1166,7 @@ if(std::stoi(argv[3]) == 1){
   &v28[0],//float* output,
   threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #25" << std::endl;
+    cerr << "failed to setup operation #25" << endl;
     return -1;
   }
 
@@ -1183,7 +1186,7 @@ if(std::stoi(argv[3]) == 1){
     &op26);
 
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #26" << std::endl;
+    cerr << "failed to create operation #26" << endl;
     return -1;
   }
   operators.emplace_back(op26, xnn_delete_operator);
@@ -1198,18 +1201,18 @@ if(std::stoi(argv[3]) == 1){
   &v29[0],//float* output,
   threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #26" << std::endl;
+    cerr << "failed to setup operation #26" << endl;
     return -1;
   }
 
   xnn_operator_t op27 = nullptr;
   status = xnn_create_global_average_pooling_ncw_f32(
     768 /* channels */,
-    -std::numeric_limits<float>::infinity(), std::numeric_limits<float>::infinity(),
+    -numeric_limits<float>::infinity(), numeric_limits<float>::infinity(),
     0 /* flags */,
     &op27);
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #27" << std::endl;
+    cerr << "failed to create operation #27" << endl;
     return -1;
   }
   operators.emplace_back(op27, xnn_delete_operator);
@@ -1219,7 +1222,7 @@ if(std::stoi(argv[3]) == 1){
     &v29[0] /* input */, &v30[0] /* output */,
     threadpool.get() /* threadpool.get() */);
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #27" << std::endl;
+    cerr << "failed to setup operation #27" << endl;
     return -1;
   }
 
@@ -1231,12 +1234,12 @@ if(std::stoi(argv[3]) == 1){
   1000,//size_t output_stride,
   w54,//const float* kernel,
   w55,//const float* bias,
-  -std::numeric_limits<float>::infinity(), std::numeric_limits<float>::infinity(),
+  -numeric_limits<float>::infinity(), numeric_limits<float>::infinity(),
   0,//uint32_t flags,
   &op28);
 
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #28" << std::endl;
+    cerr << "failed to create operation #28" << endl;
     return -1;
   }
   operators.emplace_back(op28, xnn_delete_operator);
@@ -1247,12 +1250,12 @@ if(std::stoi(argv[3]) == 1){
   &v31[0],//float* output,
   threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #28" << std::endl;
+    cerr << "failed to setup operation #28" << endl;
     return -1;
   }
 }else{
 
-  std::cout << "Using gemm" << std::endl;
+  cout << "Using gemm" << endl;
 
   xnn_operator_t op0 = nullptr;
   status = xnn_create_convolution2d_nhwc_f32(
@@ -1271,7 +1274,7 @@ if(std::stoi(argv[3]) == 1){
     0 /* flags */,
     &op0);
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #0" << std::endl;
+    cerr << "failed to create operation #0" << endl;
     return -1;
   }
   operators.emplace_back(op0, xnn_delete_operator);
@@ -1282,7 +1285,7 @@ if(std::stoi(argv[3]) == 1){
     &v2[0] /* input */, &v3[0] /* output */,
     threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #0" << std::endl;
+    cerr << "failed to setup operation #0" << endl;
     return -1;
   }
 
@@ -1304,7 +1307,7 @@ if(std::stoi(argv[3]) == 1){
     &op1);
 
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #1" << std::endl;
+    cerr << "failed to create operation #1" << endl;
     return -1;
   }
   operators.emplace_back(op1, xnn_delete_operator);
@@ -1314,7 +1317,7 @@ if(std::stoi(argv[3]) == 1){
     &v3[0] /* input */, &v4[0] /* output */,
     threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #1" << std::endl;
+    cerr << "failed to setup operation #1" << endl;
     return -1;
   }
 
@@ -1335,7 +1338,7 @@ if(std::stoi(argv[3]) == 1){
     0 /* flags */,
     &op2);
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #2" << std::endl;
+    cerr << "failed to create operation #2" << endl;
     return -1;
   }
   operators.emplace_back(op2, xnn_delete_operator);
@@ -1346,7 +1349,7 @@ if(std::stoi(argv[3]) == 1){
     &v4[0] /* input */, &v5[0] /* output */,
     threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #2" << std::endl;
+    cerr << "failed to setup operation #2" << endl;
     return -1;
   }
 
@@ -1368,7 +1371,7 @@ if(std::stoi(argv[3]) == 1){
     &op3);
 
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #3" << std::endl;
+    cerr << "failed to create operation #3" << endl;
     return -1;
   }
   operators.emplace_back(op3, xnn_delete_operator);
@@ -1378,7 +1381,7 @@ if(std::stoi(argv[3]) == 1){
     &v5[0] /* input */, &v6[0] /* output */,
     threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #3" << std::endl;
+    cerr << "failed to setup operation #3" << endl;
     return -1;
   }
 
@@ -1399,7 +1402,7 @@ if(std::stoi(argv[3]) == 1){
     0 /* flags */,
     &op4);
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #4" << std::endl;
+    cerr << "failed to create operation #4" << endl;
     return -1;
   }
   operators.emplace_back(op4, xnn_delete_operator);
@@ -1410,7 +1413,7 @@ if(std::stoi(argv[3]) == 1){
     &v6[0] /* input */, &v7[0] /* output */,
     threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #4" << std::endl;
+    cerr << "failed to setup operation #4" << endl;
     return -1;
   }
 
@@ -1432,7 +1435,7 @@ if(std::stoi(argv[3]) == 1){
     &op5);
 
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #5" << std::endl;
+    cerr << "failed to create operation #5" << endl;
     return -1;
   }
   operators.emplace_back(op5, xnn_delete_operator);
@@ -1442,7 +1445,7 @@ if(std::stoi(argv[3]) == 1){
     &v7[0] /* input */, &v8[0] /* output */,
     threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #5" << std::endl;
+    cerr << "failed to setup operation #5" << endl;
     return -1;
   }
 
@@ -1463,7 +1466,7 @@ if(std::stoi(argv[3]) == 1){
     0 /* flags */,
     &op6);
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #6" << std::endl;
+    cerr << "failed to create operation #6" << endl;
     return -1;
   }
   operators.emplace_back(op6, xnn_delete_operator);
@@ -1474,7 +1477,7 @@ if(std::stoi(argv[3]) == 1){
     &v8[0] /* input */, &v9[0] /* output */,
     threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #6" << std::endl;
+    cerr << "failed to setup operation #6" << endl;
     return -1;
   }
 
@@ -1496,7 +1499,7 @@ if(std::stoi(argv[3]) == 1){
     &op7);
 
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #7" << std::endl;
+    cerr << "failed to create operation #7" << endl;
     return -1;
   }
   operators.emplace_back(op7, xnn_delete_operator);
@@ -1506,7 +1509,7 @@ if(std::stoi(argv[3]) == 1){
     &v9[0] /* input */, &v10[0] /* output */,
     threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #7" << std::endl;
+    cerr << "failed to setup operation #7" << endl;
     return -1;
   }
 
@@ -1527,7 +1530,7 @@ if(std::stoi(argv[3]) == 1){
     0 /* flags */,
     &op8);
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #8" << std::endl;
+    cerr << "failed to create operation #8" << endl;
     return -1;
   }
   operators.emplace_back(op8, xnn_delete_operator);
@@ -1538,7 +1541,7 @@ if(std::stoi(argv[3]) == 1){
     &v10[0] /* input */, &v11[0] /* output */,
     threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #8" << std::endl;
+    cerr << "failed to setup operation #8" << endl;
     return -1;
   }
 
@@ -1560,7 +1563,7 @@ if(std::stoi(argv[3]) == 1){
     &op9);
 
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #9" << std::endl;
+    cerr << "failed to create operation #9" << endl;
     return -1;
   }
   operators.emplace_back(op9, xnn_delete_operator);
@@ -1570,7 +1573,7 @@ if(std::stoi(argv[3]) == 1){
     &v11[0] /* input */, &v12[0] /* output */,
     threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #9" << std::endl;
+    cerr << "failed to setup operation #9" << endl;
     return -1;
   }
 
@@ -1591,7 +1594,7 @@ if(std::stoi(argv[3]) == 1){
     0 /* flags */,
     &op10);
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #10" << std::endl;
+    cerr << "failed to create operation #10" << endl;
     return -1;
   }
   operators.emplace_back(op10, xnn_delete_operator);
@@ -1602,7 +1605,7 @@ if(std::stoi(argv[3]) == 1){
     &v12[0] /* input */, &v13[0] /* output */,
     threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #10" << std::endl;
+    cerr << "failed to setup operation #10" << endl;
     return -1;
   }
 
@@ -1624,7 +1627,7 @@ if(std::stoi(argv[3]) == 1){
     &op11);
 
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #11" << std::endl;
+    cerr << "failed to create operation #11" << endl;
     return -1;
   }
   operators.emplace_back(op11, xnn_delete_operator);
@@ -1634,7 +1637,7 @@ if(std::stoi(argv[3]) == 1){
     &v13[0] /* input */, &v14[0] /* output */,
     threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #11" << std::endl;
+    cerr << "failed to setup operation #11" << endl;
     return -1;
   }
 
@@ -1655,7 +1658,7 @@ if(std::stoi(argv[3]) == 1){
     0 /* flags */,
     &op12);
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #12" << std::endl;
+    cerr << "failed to create operation #12" << endl;
     return -1;
   }
   operators.emplace_back(op12, xnn_delete_operator);
@@ -1666,7 +1669,7 @@ if(std::stoi(argv[3]) == 1){
     &v14[0] /* input */, &v15[0] /* output */,
     threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #12" << std::endl;
+    cerr << "failed to setup operation #12" << endl;
     return -1;
   }
 
@@ -1688,7 +1691,7 @@ if(std::stoi(argv[3]) == 1){
     &op13);
 
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #13" << std::endl;
+    cerr << "failed to create operation #13" << endl;
     return -1;
   }
   operators.emplace_back(op13, xnn_delete_operator);
@@ -1698,7 +1701,7 @@ if(std::stoi(argv[3]) == 1){
     &v15[0] /* input */, &v16[0] /* output */,
     threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #13" << std::endl;
+    cerr << "failed to setup operation #13" << endl;
     return -1;
   }
 
@@ -1719,7 +1722,7 @@ if(std::stoi(argv[3]) == 1){
     0 /* flags */,
     &op14);
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #14" << std::endl;
+    cerr << "failed to create operation #14" << endl;
     return -1;
   }
   operators.emplace_back(op14, xnn_delete_operator);
@@ -1730,7 +1733,7 @@ if(std::stoi(argv[3]) == 1){
     &v16[0] /* input */, &v17[0] /* output */,
     threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #14" << std::endl;
+    cerr << "failed to setup operation #14" << endl;
     return -1;
   }
 
@@ -1752,7 +1755,7 @@ if(std::stoi(argv[3]) == 1){
     &op15);
 
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #15" << std::endl;
+    cerr << "failed to create operation #15" << endl;
     return -1;
   }
   operators.emplace_back(op15, xnn_delete_operator);
@@ -1762,7 +1765,7 @@ if(std::stoi(argv[3]) == 1){
     &v17[0] /* input */, &v18[0] /* output */,
     threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #15" << std::endl;
+    cerr << "failed to setup operation #15" << endl;
     return -1;
   }
 
@@ -1783,7 +1786,7 @@ if(std::stoi(argv[3]) == 1){
     0 /* flags */,
     &op16);
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #16" << std::endl;
+    cerr << "failed to create operation #16" << endl;
     return -1;
   }
   operators.emplace_back(op16, xnn_delete_operator);
@@ -1794,7 +1797,7 @@ if(std::stoi(argv[3]) == 1){
     &v18[0] /* input */, &v19[0] /* output */,
     threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #16" << std::endl;
+    cerr << "failed to setup operation #16" << endl;
     return -1;
   }
 
@@ -1816,7 +1819,7 @@ if(std::stoi(argv[3]) == 1){
     &op17);
 
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #17" << std::endl;
+    cerr << "failed to create operation #17" << endl;
     return -1;
   }
   operators.emplace_back(op17, xnn_delete_operator);
@@ -1826,7 +1829,7 @@ if(std::stoi(argv[3]) == 1){
     &v19[0] /* input */, &v20[0] /* output */,
     threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #17" << std::endl;
+    cerr << "failed to setup operation #17" << endl;
     return -1;
   }
     xnn_operator_t op18 = nullptr;
@@ -1847,7 +1850,7 @@ if(std::stoi(argv[3]) == 1){
     &op18);
 
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #18" << std::endl;
+    cerr << "failed to create operation #18" << endl;
     return -1;
   }
   operators.emplace_back(op18, xnn_delete_operator);
@@ -1857,7 +1860,7 @@ if(std::stoi(argv[3]) == 1){
     &v20[0] /* input */, &v21[0] /* output */,
     threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #18" << std::endl;
+    cerr << "failed to setup operation #18" << endl;
     return -1;
   }
     xnn_operator_t op19 = nullptr;
@@ -1878,7 +1881,7 @@ if(std::stoi(argv[3]) == 1){
     &op19);
 
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #19" << std::endl;
+    cerr << "failed to create operation #19" << endl;
     return -1;
   }
   operators.emplace_back(op19, xnn_delete_operator);
@@ -1888,7 +1891,7 @@ if(std::stoi(argv[3]) == 1){
     &v21[0] /* input */, &v22[0] /* output */,
     threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #19" << std::endl;
+    cerr << "failed to setup operation #19" << endl;
     return -1;
   }
     xnn_operator_t op20 = nullptr;
@@ -1909,7 +1912,7 @@ if(std::stoi(argv[3]) == 1){
     &op20);
 
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #20" << std::endl;
+    cerr << "failed to create operation #20" << endl;
     return -1;
   }
   operators.emplace_back(op20, xnn_delete_operator);
@@ -1919,7 +1922,7 @@ if(std::stoi(argv[3]) == 1){
     &v22[0] /* input */, &v23[0] /* output */,
     threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #20" << std::endl;
+    cerr << "failed to setup operation #20" << endl;
     return -1;
   }
   
@@ -1941,7 +1944,7 @@ if(std::stoi(argv[3]) == 1){
     &op21);
 
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #21" << std::endl;
+    cerr << "failed to create operation #21" << endl;
     return -1;
   }
   operators.emplace_back(op21, xnn_delete_operator);
@@ -1951,7 +1954,7 @@ if(std::stoi(argv[3]) == 1){
     &v23[0] /* input */, &v24[0] /* output */,
     threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #21" << std::endl;
+    cerr << "failed to setup operation #21" << endl;
     return -1;
   }
 
@@ -1973,7 +1976,7 @@ if(std::stoi(argv[3]) == 1){
     &op22);
 
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #22" << std::endl;
+    cerr << "failed to create operation #22" << endl;
     return -1;
   }
   operators.emplace_back(op22, xnn_delete_operator);
@@ -1983,7 +1986,7 @@ if(std::stoi(argv[3]) == 1){
     &v24[0] /* input */, &v25[0] /* output */,
     threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #22" << std::endl;
+    cerr << "failed to setup operation #22" << endl;
     return -1;
   }
   
@@ -2005,7 +2008,7 @@ if(std::stoi(argv[3]) == 1){
     &op23);
 
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #23" << std::endl;
+    cerr << "failed to create operation #23" << endl;
     return -1;
   }
   operators.emplace_back(op23, xnn_delete_operator);
@@ -2015,7 +2018,7 @@ if(std::stoi(argv[3]) == 1){
     &v25[0] /* input */, &v26[0] /* output */,
     threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #23" << std::endl;
+    cerr << "failed to setup operation #23" << endl;
     return -1;
   }
 
@@ -2037,7 +2040,7 @@ if(std::stoi(argv[3]) == 1){
     &op24);
 
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #24" << std::endl;
+    cerr << "failed to create operation #24" << endl;
     return -1;
   }
   operators.emplace_back(op24, xnn_delete_operator);
@@ -2047,7 +2050,7 @@ if(std::stoi(argv[3]) == 1){
     &v26[0] /* input */, &v27[0] /* output */,
     threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #24" << std::endl;
+    cerr << "failed to setup operation #24" << endl;
     return -1;
   }
   
@@ -2069,7 +2072,7 @@ if(std::stoi(argv[3]) == 1){
     &op25);
 
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #25" << std::endl;
+    cerr << "failed to create operation #25" << endl;
     return -1;
   }
   operators.emplace_back(op25, xnn_delete_operator);
@@ -2079,7 +2082,7 @@ if(std::stoi(argv[3]) == 1){
     &v27[0] /* input */, &v28[0] /* output */,
     threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #25" << std::endl;
+    cerr << "failed to setup operation #25" << endl;
     return -1;
   }
 
@@ -2101,7 +2104,7 @@ if(std::stoi(argv[3]) == 1){
     &op26);
 
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #26" << std::endl;
+    cerr << "failed to create operation #26" << endl;
     return -1;
   }
   operators.emplace_back(op26, xnn_delete_operator);
@@ -2111,18 +2114,18 @@ if(std::stoi(argv[3]) == 1){
     &v28[0] /* input */, &v29[0] /* output */,
     threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #26" << std::endl;
+    cerr << "failed to setup operation #26" << endl;
     return -1;
   }
 
   xnn_operator_t op27 = nullptr;
   status = xnn_create_global_average_pooling_nwc_f32(
     768 /* channels */, 768 /* input stride */, 768 /* output stride */,
-    -std::numeric_limits<float>::infinity(), std::numeric_limits<float>::infinity(),
+    -numeric_limits<float>::infinity(), numeric_limits<float>::infinity(),
     0 /* flags */,
     &op27);
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #27" << std::endl;
+    cerr << "failed to create operation #27" << endl;
     return -1;
   }
   operators.emplace_back(op27, xnn_delete_operator);
@@ -2132,7 +2135,7 @@ if(std::stoi(argv[3]) == 1){
     &v29[0] /* input */, &v30[0] /* output */,
     threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #27" << std::endl;
+    cerr << "failed to setup operation #27" << endl;
     return -1;
   }
 
@@ -2144,12 +2147,12 @@ if(std::stoi(argv[3]) == 1){
   1000,//size_t output_stride,
   w54,//const float* kernel,
   w55,//const float* bias,
-  -std::numeric_limits<float>::infinity(), std::numeric_limits<float>::infinity(),
+  -numeric_limits<float>::infinity(), numeric_limits<float>::infinity(),
   0,//uint32_t flags,
   &op28);
 
   if (status != xnn_status_success) {
-    std::cerr << "failed to create operation #28" << std::endl;
+    cerr << "failed to create operation #28" << endl;
     return -1;
   }
   operators.emplace_back(op28, xnn_delete_operator);
@@ -2160,273 +2163,273 @@ if(std::stoi(argv[3]) == 1){
   &v31[0],//float* output,
   threadpool.get());
   if (status != xnn_status_success) {
-    std::cerr << "failed to setup operation #28" << std::endl;
+    cerr << "failed to setup operation #28" << endl;
     return -1;
   }
 
 }
 
 
-    for (const std::unique_ptr<xnn_operator, decltype(&xnn_delete_operator)>& op : operators) {
+    for (const unique_ptr<xnn_operator, decltype(&xnn_delete_operator)>& op : operators) {
       xnn_status status = xnn_run_operator(op.get(), threadpool.get());
       if (status != xnn_status_success) {
-        std::cerr << "failed to run a model" << std::endl;
+        cerr << "failed to run a model" << endl;
         return -1;
       }
     }
 
-    std::ofstream f;
+    ofstream f;
     f.open("./v2.data");
     size_t n_zeros = 0;
     for(size_t l=0 ; l<150528; l++ ){
-        f << v2[l] << std::endl;
+        f << v2[l] << endl;
         if(v2[l] == 0) n_zeros++;
     }
     f.close();
-    std::cout << "v2 Sparsity: "<< (float)n_zeros/150528 << "   n_zeros: "<< n_zeros << std::endl;
+    cout << "v2 Sparsity: "<< (float)n_zeros/150528 << "   n_zeros: "<< n_zeros << endl;
 
     n_zeros = 0;
     f.open("./v3.data");
     for(size_t l=0 ; l<301056; l++ ){
-        f << v3[l] << std::endl;
+        f << v3[l] << endl;
         if(v3[l] == 0) n_zeros++;
     }
     f.close();
-    std::cout << "v3 Sparsity: "<< (float)n_zeros/301056 << "   n_zeros: "<< n_zeros << std::endl;
+    cout << "v3 Sparsity: "<< (float)n_zeros/301056 << "   n_zeros: "<< n_zeros << endl;
 
     n_zeros = 0;
     f.open("./v4.data");
     for(size_t l=0 ; l<301056; l++ ){
-        f << v4[l] << std::endl;
+        f << v4[l] << endl;
         if(v4[l] == 0) n_zeros++;
     }
     f.close();
-    std::cout << "v4 Sparsity: "<< (float)n_zeros/301056 << "   n_zeros: "<< n_zeros << std::endl; 
+    cout << "v4 Sparsity: "<< (float)n_zeros/301056 << "   n_zeros: "<< n_zeros << endl; 
 
     n_zeros = 0;
     f.open("./v5.data");
     for(size_t l=0 ; l<602112; l++ ){
-        f << v5[l] << std::endl;
+        f << v5[l] << endl;
         if(v5[l] == 0) n_zeros++;
     }
     f.close();
-    std::cout << "v5 Sparsity: "<< (float)n_zeros/602112 << "   n_zeros: "<< n_zeros << std::endl;
+    cout << "v5 Sparsity: "<< (float)n_zeros/602112 << "   n_zeros: "<< n_zeros << endl;
 
     n_zeros = 0;
     f.open("./v6.data");
     for(size_t l=0 ; l<150528; l++ ){
-        f << v6[l] << std::endl;
+        f << v6[l] << endl;
         if(v6[l] == 0) n_zeros++;
     }
     f.close();
-    std::cout << "v6 Sparsity: "<< (float)n_zeros/150528 << "   n_zeros: "<< n_zeros << std::endl; 
+    cout << "v6 Sparsity: "<< (float)n_zeros/150528 << "   n_zeros: "<< n_zeros << endl; 
 
     n_zeros = 0;
     f.open("./v7.data");
     for(size_t l=0 ; l<301056; l++ ){
-        f << v7[l] << std::endl;
+        f << v7[l] << endl;
         if(v7[l] == 0) n_zeros++;
     }
     f.close();
-    std::cout << "v7 Sparsity: "<< (float)n_zeros/301056 << "   n_zeros: "<< n_zeros << std::endl;
+    cout << "v7 Sparsity: "<< (float)n_zeros/301056 << "   n_zeros: "<< n_zeros << endl;
 
     n_zeros = 0;
     f.open("./v8.data");
     for(size_t l=0 ; l<301056; l++ ){
-        f << v8[l] << std::endl;
+        f << v8[l] << endl;
         if(v8[l] == 0) n_zeros++;
     }
     f.close();
-    std::cout << "v8 Sparsity: "<< (float)n_zeros/301056 << "   n_zeros: "<< n_zeros << std::endl;
+    cout << "v8 Sparsity: "<< (float)n_zeros/301056 << "   n_zeros: "<< n_zeros << endl;
 
     n_zeros = 0;
     f.open("./v9.data");
     for(size_t l=0 ; l<301056; l++ ){
-        f << v9[l] << std::endl;
+        f << v9[l] << endl;
         if(v9[l] == 0) n_zeros++;
     }
     f.close();
-    std::cout << "v9 Sparsity: "<< (float)n_zeros/301056 << "   n_zeros: "<< n_zeros << std::endl;
+    cout << "v9 Sparsity: "<< (float)n_zeros/301056 << "   n_zeros: "<< n_zeros << endl;
 
     n_zeros = 0;
     f.open("./v10.data");
     for(size_t l=0 ; l<75264; l++ ){
-        f << v10[l] << std::endl;
+        f << v10[l] << endl;
         if(v10[l] == 0) n_zeros++;
     }
     f.close();
-    std::cout << "v10 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << std::endl;
+    cout << "v10 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << endl;
 
     n_zeros = 0;
     f.open("./v11.data");
     for(size_t l=0 ; l<150528; l++ ){
-        f << v11[l] << std::endl;
+        f << v11[l] << endl;
         if(v11[l] == 0) n_zeros++;
     }
     f.close();
-    std::cout << "v11 Sparsity: "<< (float)n_zeros/150528 << "   n_zeros: "<< n_zeros << std::endl;
+    cout << "v11 Sparsity: "<< (float)n_zeros/150528 << "   n_zeros: "<< n_zeros << endl;
 
     n_zeros = 0;
     f.open("./v12.data");
     for(size_t l=0 ; l<150528; l++ ){
-        f << v12[l] << std::endl;
+        f << v12[l] << endl;
         if(v12[l] == 0) n_zeros++;
     }
     f.close();
-    std::cout << "v12 Sparsity: "<< (float)n_zeros/150528 << "   n_zeros: "<< n_zeros << std::endl; 
+    cout << "v12 Sparsity: "<< (float)n_zeros/150528 << "   n_zeros: "<< n_zeros << endl; 
 
     n_zeros = 0;
     f.open("./v13.data");
     for(size_t l=0 ; l<150528; l++ ){
-        f << v13[l] << std::endl;
+        f << v13[l] << endl;
         if(v13[l] == 0) n_zeros++;
     }
     f.close();
-    std::cout << "v13 Sparsity: "<< (float)n_zeros/150528 << "   n_zeros: "<< n_zeros << std::endl;
+    cout << "v13 Sparsity: "<< (float)n_zeros/150528 << "   n_zeros: "<< n_zeros << endl;
 
     n_zeros = 0;
     f.open("./v14.data");
     for(size_t l=0 ; l<37632; l++ ){
-        f << v14[l] << std::endl;
+        f << v14[l] << endl;
         if(v14[l] == 0) n_zeros++;
     }
     f.close();
-    std::cout << "v14 Sparsity: "<< (float)n_zeros/37632 << "   n_zeros: "<< n_zeros << std::endl;
+    cout << "v14 Sparsity: "<< (float)n_zeros/37632 << "   n_zeros: "<< n_zeros << endl;
 
     n_zeros = 0;
     f.open("./v15.data");
     for(size_t l=0 ; l<75264; l++ ){
-        f << v15[l] << std::endl;
+        f << v15[l] << endl;
         if(v15[l] == 0) n_zeros++;
     }
     f.close();
-    std::cout << "v15 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << std::endl;
+    cout << "v15 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << endl;
 
     n_zeros = 0;
     f.open("./v16.data");
     for(size_t l=0 ; l<75264; l++ ){
-        f << v16[l] << std::endl;
+        f << v16[l] << endl;
         if(v16[l] == 0) n_zeros++;
     }
     f.close();
-    std::cout << "v16 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << std::endl; 
+    cout << "v16 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << endl; 
 
     n_zeros = 0;
     f.open("./v17.data");
     for(size_t l=0 ; l<75264; l++ ){
-        f << v17[l] << std::endl;
+        f << v17[l] << endl;
         if(v17[l] == 0) n_zeros++;
     }
     f.close();
-    std::cout << "v17 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << std::endl;
+    cout << "v17 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << endl;
 
     n_zeros = 0;
     f.open("./v18.data");
     for(size_t l=0 ; l<75264; l++ ){
-        f << v18[l] << std::endl;
+        f << v18[l] << endl;
         if(v18[l] == 0) n_zeros++;
     }
     f.close();
-    std::cout << "v18 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << std::endl;
+    cout << "v18 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << endl;
 
     n_zeros = 0;
     f.open("./v19.data");
     for(size_t l=0 ; l<75264; l++ ){
-        f << v19[l] << std::endl;
+        f << v19[l] << endl;
         if(v19[l] == 0) n_zeros++;
     }
     f.close();
-    std::cout << "v19 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << std::endl; 
+    cout << "v19 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << endl; 
 
     n_zeros = 0;
     f.open("./v20.data");
     for(size_t l=0 ; l<75264; l++ ){
-        f << v20[l] << std::endl;
+        f << v20[l] << endl;
         if(v20[l] == 0) n_zeros++;
     }
     f.close();
-    std::cout << "v20 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << std::endl;
+    cout << "v20 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << endl;
 
     n_zeros = 0;
     f.open("./v21.data");
     for(size_t l=0 ; l<75264; l++ ){
-        f << v21[l] << std::endl;
+        f << v21[l] << endl;
         if(v21[l] == 0) n_zeros++;
     }
     f.close();
-    std::cout << "v21 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << std::endl;
+    cout << "v21 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << endl;
 
     n_zeros = 0;
     f.open("./v22.data");
     for(size_t l=0 ; l<75264; l++ ){
-        f << v22[l] << std::endl;
+        f << v22[l] << endl;
         if(v22[l] == 0) n_zeros++;
     }
     f.close();
-    std::cout << "v22 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << std::endl;
+    cout << "v22 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << endl;
 
     n_zeros = 0;
     f.open("./v23.data");
     for(size_t l=0 ; l<75264; l++ ){
-        f << v23[l] << std::endl;
+        f << v23[l] << endl;
         if(v23[l] == 0) n_zeros++;
     }
     f.close();
-    std::cout << "v23 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << std::endl;
+    cout << "v23 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << endl;
 
     n_zeros = 0;
     f.open("./v24.data");
     for(size_t l=0 ; l<75264; l++ ){
-        f << v24[l] << std::endl;
+        f << v24[l] << endl;
         if(v24[l] == 0) n_zeros++;
     }
     f.close();
-    std::cout << "v24 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << std::endl;
+    cout << "v24 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << endl;
 
     n_zeros = 0;
     f.open("./v25.data");
     for(size_t l=0 ; l<75264; l++ ){
-        f << v25[l] << std::endl;
+        f << v25[l] << endl;
         if(v25[l] == 0) n_zeros++;
     }
     f.close();
-    std::cout << "v25 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << std::endl;
+    cout << "v25 Sparsity: "<< (float)n_zeros/75264 << "   n_zeros: "<< n_zeros << endl;
 
     n_zeros = 0;
     f.open("./v26.data");
     for(size_t l=0 ; l<18816; l++ ){
-        f << v26[l] << std::endl;
+        f << v26[l] << endl;
         if(v26[l] == 0) n_zeros++;
     }
     f.close();
-    std::cout << "v26 Sparsity: "<< (float)n_zeros/18816 << "   n_zeros: "<< n_zeros << std::endl;
+    cout << "v26 Sparsity: "<< (float)n_zeros/18816 << "   n_zeros: "<< n_zeros << endl;
 
     n_zeros = 0;
     f.open("./v27.data");
     for(size_t l=0 ; l<37632; l++ ){
-        f << v27[l] << std::endl;
+        f << v27[l] << endl;
         if(v27[l] == 0) n_zeros++;
     }
     f.close();
-    std::cout << "v27 Sparsity: "<< (float)n_zeros/37632 << "   n_zeros: "<< n_zeros << std::endl;
+    cout << "v27 Sparsity: "<< (float)n_zeros/37632 << "   n_zeros: "<< n_zeros << endl;
 
     n_zeros = 0;
     f.open("./v28.data");
     for(size_t l=0 ; l<37632; l++ ){
-        f << v28[l] << std::endl;
+        f << v28[l] << endl;
         if(v28[l] == 0) n_zeros++;
     }
     f.close();
-    std::cout << "v28 Sparsity: "<< (float)n_zeros/37632 << "   n_zeros: "<< n_zeros << std::endl;
+    cout << "v28 Sparsity: "<< (float)n_zeros/37632 << "   n_zeros: "<< n_zeros << endl;
 
     n_zeros = 0;
     f.open("./v29.data");
     for(size_t l=0 ; l<37632; l++ ){
-        f << v29[l] << std::endl;
+        f << v29[l] << endl;
         if(v29[l] == 0) n_zeros++;
     }
     f.close();
-    std::cout << "v29 Sparsity: "<< (float)n_zeros/37632 << "   n_zeros: "<< n_zeros << std::endl;
+    cout << "v29 Sparsity: "<< (float)n_zeros/37632 << "   n_zeros: "<< n_zeros << endl;
 
   return 0;
 
