@@ -129,7 +129,7 @@ int main (int argc, char *argv[]){
   default_random_engine generator (1);
   auto f32rng = bind(random_bool_generator, generator );
   auto f32rng_bias = bind(random_bool_generator_bias, generator );
-  ifstream inputFile("/users/Wei_Hao/XNNPACK/sparse_224.data");
+  ifstream inputFile("/users/Wei_Hao/XNNPACK/orig_224.data");
 
   // test file open
   int size = 0; 
