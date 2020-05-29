@@ -1,61 +1,61 @@
 Bias off
-Using spmm
-Total time: 33648 us
-Total spmm time: 19078 us   Portion:   56%
+Using gemm
+Total time: 100430 us
+Total spmm time: 86326 us   Portion:   85%
 -----------------------
 v2 Sparsity: 0.993224   n_zeros: 149508
-time: 4282 us   Portion:   12%
-v3 Sparsity: 0.99146   n_zeros: 298485
-time: 1556 us   Portion:   4%
-v4 Sparsity: 0.985186   n_zeros: 296596
-spmm time: 1634 us   Portion:   4%
-v5 Sparsity: 0.984569   n_zeros: 592821
-time: 2013 us   Portion:   5%
-v6 Sparsity: 0.979652   n_zeros: 147465
-spmm time: 1192 us   Portion:   3%
-v7 Sparsity: 0.975167   n_zeros: 293580
-time: 1837 us   Portion:   5%
-v8 Sparsity: 0.960658   n_zeros: 289212
-spmm time: 2069 us   Portion:   6%
-v9 Sparsity: 0.96014   n_zeros: 289056
-time: 1060 us   Portion:   3%
+time: 3961 us   Portion:   3%
+v3 Sparsity: 0.991407   n_zeros: 298469
+time: 1977 us   Portion:   1%
+v4 Sparsity: 0.984867   n_zeros: 296500
+spmm time: 4769 us   Portion:   4%
+v5 Sparsity: 0.984229   n_zeros: 592616
+time: 1868 us   Portion:   1%
+v6 Sparsity: 0.977493   n_zeros: 147140
+spmm time: 4101 us   Portion:   4%
+v7 Sparsity: 0.971776   n_zeros: 292559
+time: 1790 us   Portion:   1%
+v8 Sparsity: 0.956623   n_zeros: 287997
+spmm time: 7993 us   Portion:   7%
+v9 Sparsity: 0.955995   n_zeros: 287808
+time: 793 us   Portion:   0%
 v10 Sparsity: 0.945153   n_zeros: 71136
-spmm time: 1033 us   Portion:   3%
+spmm time: 4054 us   Portion:   4%
 v11 Sparsity: 0.945153   n_zeros: 142272
-time: 746 us   Portion:   2%
+time: 826 us   Portion:   0%
 v12 Sparsity: 0.904337   n_zeros: 136128
-spmm time: 1605 us   Portion:   4%
+spmm time: 7807 us   Portion:   7%
 v13 Sparsity: 0.904337   n_zeros: 136128
-time: 516 us   Portion:   1%
+time: 385 us   Portion:   0%
 v14 Sparsity: 0.852041   n_zeros: 32064
-spmm time: 867 us   Portion:   2%
+spmm time: 4073 us   Portion:   4%
 v15 Sparsity: 0.852041   n_zeros: 64128
-time: 412 us   Portion:   1%
-v16 Sparsity: 0.760204   n_zeros: 57216
-spmm time: 1541 us   Portion:   4%
-v17 Sparsity: 0.760204   n_zeros: 57216
-time: 412 us   Portion:   1%
-v18 Sparsity: 0.683673   n_zeros: 51456
-spmm time: 1601 us   Portion:   4%
-v19 Sparsity: 0.683673   n_zeros: 51456
-time: 413 us   Portion:   1%
-v20 Sparsity: 0.596939   n_zeros: 44928
-spmm time: 1540 us   Portion:   4%
-v21 Sparsity: 0.596939   n_zeros: 44928
-time: 412 us   Portion:   1%
-v22 Sparsity: 0.5   n_zeros: 37632
-spmm time: 1591 us   Portion:   4%
-v23 Sparsity: 0.5   n_zeros: 37632
-time: 412 us   Portion:   1%
-v24 Sparsity: 0.392857   n_zeros: 29568
-spmm time: 1559 us   Portion:   4%
-v25 Sparsity: 0.392857   n_zeros: 29568
-time: 200 us   Portion:   0%
-v26 Sparsity: 0.285714   n_zeros: 5376
-spmm time: 150 us   Portion:   0%
-v27 Sparsity: 0.928385   n_zeros: 34937
-time: 252 us   Portion:   0%
-v28 Sparsity: 0.914062   n_zeros: 34398
-spmm time: 2696 us   Portion:   8%
-v29 Sparsity: 0.142857   n_zeros: 5376
-time: 47 us   Portion:   0%
+time: 380 us   Portion:   0%
+v16 Sparsity: 0.852041   n_zeros: 64128
+spmm time: 8119 us   Portion:   8%
+v17 Sparsity: 0.852041   n_zeros: 64128
+time: 381 us   Portion:   0%
+v18 Sparsity: 0.806122   n_zeros: 60672
+spmm time: 8105 us   Portion:   8%
+v19 Sparsity: 0.806122   n_zeros: 60672
+time: 389 us   Portion:   0%
+v20 Sparsity: 0.765306   n_zeros: 57600
+spmm time: 8092 us   Portion:   8%
+v21 Sparsity: 0.765306   n_zeros: 57600
+time: 420 us   Portion:   0%
+v22 Sparsity: 0.678571   n_zeros: 51072
+spmm time: 8060 us   Portion:   8%
+v23 Sparsity: 0.678571   n_zeros: 51072
+time: 422 us   Portion:   0%
+v24 Sparsity: 0.596939   n_zeros: 44928
+spmm time: 8040 us   Portion:   8%
+v25 Sparsity: 0.596939   n_zeros: 44928
+time: 182 us   Portion:   0%
+v26 Sparsity: 0.571429   n_zeros: 10752
+spmm time: 4353 us   Portion:   4%
+v27 Sparsity: 0.957031   n_zeros: 36015
+time: 295 us   Portion:   0%
+v28 Sparsity: 0.942708   n_zeros: 35476
+spmm time: 8760 us   Portion:   8%
+v29 Sparsity: 0.428571   n_zeros: 16128
+time: 35 us   Portion:   0%
