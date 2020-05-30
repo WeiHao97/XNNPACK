@@ -1,34 +1,160 @@
-if(EXISTS "/users/Wei_Hao/XNNPACK/clog-download/clog-prefix/src/d5e37adf1406cf899d7d9ec1d317c47506ccb970.tar.gz")
-  file("SHA256" "/users/Wei_Hao/XNNPACK/clog-download/clog-prefix/src/d5e37adf1406cf899d7d9ec1d317c47506ccb970.tar.gz" hash_value)
-  if("x${hash_value}" STREQUAL "x3f2dc1970f397a0e59db72f9fca6ff144b216895c1d606f6c94a507c1e53a025")
+# Distributed under the OSI-approved BSD 3-Clause License.  See accompanying
+# file Copyright.txt or https://cmake.org/licensing for details.
+
+cmake_minimum_required(VERSION 3.5)
+
+function(check_file_hash has_hash hash_is_good)
+  if("${has_hash}" STREQUAL "")
+    message(FATAL_ERROR "has_hash Can't be empty")
+  endif()
+
+  if("${hash_is_good}" STREQUAL "")
+    message(FATAL_ERROR "hash_is_good Can't be empty")
+  endif()
+
+  if("SHA256" STREQUAL "")
+    # No check
+    set("${has_hash}" FALSE PARENT_SCOPE)
+    set("${hash_is_good}" FALSE PARENT_SCOPE)
     return()
   endif()
+
+  set("${has_hash}" TRUE PARENT_SCOPE)
+
+  message(STATUS "verifying file...
+       file='/users/Wei_Hao/XNNPACK/clog-download/clog-prefix/src/d5e37adf1406cf899d7d9ec1d317c47506ccb970.tar.gz'")
+
+  file("SHA256" "/users/Wei_Hao/XNNPACK/clog-download/clog-prefix/src/d5e37adf1406cf899d7d9ec1d317c47506ccb970.tar.gz" actual_value)
+
+  if(NOT "${actual_value}" STREQUAL "3f2dc1970f397a0e59db72f9fca6ff144b216895c1d606f6c94a507c1e53a025")
+    set("${hash_is_good}" FALSE PARENT_SCOPE)
+    message(STATUS "SHA256 hash of
+    /users/Wei_Hao/XNNPACK/clog-download/clog-prefix/src/d5e37adf1406cf899d7d9ec1d317c47506ccb970.tar.gz
+  does not match expected value
+    expected: '3f2dc1970f397a0e59db72f9fca6ff144b216895c1d606f6c94a507c1e53a025'
+      actual: '${actual_value}'")
+  else()
+    set("${hash_is_good}" TRUE PARENT_SCOPE)
+  endif()
+endfunction()
+
+function(sleep_before_download attempt)
+  if(attempt EQUAL 0)
+    return()
+  endif()
+
+  if(attempt EQUAL 1)
+    message(STATUS "Retrying...")
+    return()
+  endif()
+
+  set(sleep_seconds 0)
+
+  if(attempt EQUAL 2)
+    set(sleep_seconds 5)
+  elseif(attempt EQUAL 3)
+    set(sleep_seconds 5)
+  elseif(attempt EQUAL 4)
+    set(sleep_seconds 15)
+  elseif(attempt EQUAL 5)
+    set(sleep_seconds 60)
+  elseif(attempt EQUAL 6)
+    set(sleep_seconds 90)
+  elseif(attempt EQUAL 7)
+    set(sleep_seconds 300)
+  else()
+    set(sleep_seconds 1200)
+  endif()
+
+  message(STATUS "Retry after ${sleep_seconds} seconds (attempt #${attempt}) ...")
+
+  execute_process(COMMAND "${CMAKE_COMMAND}" -E sleep "${sleep_seconds}")
+endfunction()
+
+if("/users/Wei_Hao/XNNPACK/clog-download/clog-prefix/src/d5e37adf1406cf899d7d9ec1d317c47506ccb970.tar.gz" STREQUAL "")
+  message(FATAL_ERROR "LOCAL can't be empty")
 endif()
-message(STATUS "downloading...
-     src='https://github.com/pytorch/cpuinfo/archive/d5e37adf1406cf899d7d9ec1d317c47506ccb970.tar.gz'
-     dst='/users/Wei_Hao/XNNPACK/clog-download/clog-prefix/src/d5e37adf1406cf899d7d9ec1d317c47506ccb970.tar.gz'
-     timeout='none'")
 
-
-
-
-file(DOWNLOAD
-  "https://github.com/pytorch/cpuinfo/archive/d5e37adf1406cf899d7d9ec1d317c47506ccb970.tar.gz"
-  "/users/Wei_Hao/XNNPACK/clog-download/clog-prefix/src/d5e37adf1406cf899d7d9ec1d317c47506ccb970.tar.gz"
-  SHOW_PROGRESS
-  # no TIMEOUT
-  STATUS status
-  LOG log)
-
-list(GET status 0 status_code)
-list(GET status 1 status_string)
-
-if(NOT status_code EQUAL 0)
-  message(FATAL_ERROR "error: downloading 'https://github.com/pytorch/cpuinfo/archive/d5e37adf1406cf899d7d9ec1d317c47506ccb970.tar.gz' failed
-  status_code: ${status_code}
-  status_string: ${status_string}
-  log: ${log}
-")
+if("https://github.com/pytorch/cpuinfo/archive/d5e37adf1406cf899d7d9ec1d317c47506ccb970.tar.gz" STREQUAL "")
+  message(FATAL_ERROR "REMOTE can't be empty")
 endif()
 
-message(STATUS "downloading... done")
+if(EXISTS "/users/Wei_Hao/XNNPACK/clog-download/clog-prefix/src/d5e37adf1406cf899d7d9ec1d317c47506ccb970.tar.gz")
+  check_file_hash(has_hash hash_is_good)
+  if(has_hash)
+    if(hash_is_good)
+      message(STATUS "File already exists and hash match (skip download):
+  file='/users/Wei_Hao/XNNPACK/clog-download/clog-prefix/src/d5e37adf1406cf899d7d9ec1d317c47506ccb970.tar.gz'
+  SHA256='3f2dc1970f397a0e59db72f9fca6ff144b216895c1d606f6c94a507c1e53a025'"
+      )
+      return()
+    else()
+      message(STATUS "File already exists but hash mismatch. Removing...")
+      file(REMOVE "/users/Wei_Hao/XNNPACK/clog-download/clog-prefix/src/d5e37adf1406cf899d7d9ec1d317c47506ccb970.tar.gz")
+    endif()
+  else()
+    message(STATUS "File already exists but no hash specified (use URL_HASH):
+  file='/users/Wei_Hao/XNNPACK/clog-download/clog-prefix/src/d5e37adf1406cf899d7d9ec1d317c47506ccb970.tar.gz'
+Old file will be removed and new file downloaded from URL."
+    )
+    file(REMOVE "/users/Wei_Hao/XNNPACK/clog-download/clog-prefix/src/d5e37adf1406cf899d7d9ec1d317c47506ccb970.tar.gz")
+  endif()
+endif()
+
+set(retry_number 5)
+
+message(STATUS "Downloading...
+   dst='/users/Wei_Hao/XNNPACK/clog-download/clog-prefix/src/d5e37adf1406cf899d7d9ec1d317c47506ccb970.tar.gz'
+   timeout='none'"
+)
+
+foreach(i RANGE ${retry_number})
+  sleep_before_download(${i})
+
+  foreach(url https://github.com/pytorch/cpuinfo/archive/d5e37adf1406cf899d7d9ec1d317c47506ccb970.tar.gz)
+    message(STATUS "Using src='${url}'")
+
+    
+    
+
+    file(
+        DOWNLOAD
+        "${url}" "/users/Wei_Hao/XNNPACK/clog-download/clog-prefix/src/d5e37adf1406cf899d7d9ec1d317c47506ccb970.tar.gz"
+        SHOW_PROGRESS
+        # no TIMEOUT
+        STATUS status
+        LOG log
+        
+        
+    )
+
+    list(GET status 0 status_code)
+    list(GET status 1 status_string)
+
+    if(status_code EQUAL 0)
+      check_file_hash(has_hash hash_is_good)
+      if(has_hash AND NOT hash_is_good)
+        message(STATUS "Hash mismatch, removing...")
+        file(REMOVE "/users/Wei_Hao/XNNPACK/clog-download/clog-prefix/src/d5e37adf1406cf899d7d9ec1d317c47506ccb970.tar.gz")
+      else()
+        message(STATUS "Downloading... done")
+        return()
+      endif()
+    else()
+      string(APPEND logFailedURLs "error: downloading '${url}' failed
+       status_code: ${status_code}
+       status_string: ${status_string}
+       log:
+       --- LOG BEGIN ---
+       ${log}
+       --- LOG END ---
+       "
+      )
+    endif()
+  endforeach()
+endforeach()
+
+message(FATAL_ERROR "Each download failed!
+  ${logFailedURLs}
+  "
+)
