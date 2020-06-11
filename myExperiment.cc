@@ -207,7 +207,7 @@ w[55] = w55;
   }
   inputFile.close();
 
-if(argv[2] == 1){
+if(stoi(argv[2]) == 1){
   for(int i = 0; i<56 ; i+=2){
   ifstream inputFile("/users/Wei_Hao/XNNPACK/models/mbv1.75_12_90_64.4_weight/" + to_string(i/2) + ".data");
 
