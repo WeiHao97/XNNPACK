@@ -58,6 +58,7 @@ int main (int argc, char *argv[]){
   alignas(16) static float v29[37632];
   alignas(16) static float v30[768];
   alignas(16) static float v31[1000];
+  static float* w[56];
   alignas(16) static float w0[648];
   alignas(16) static float w1[24];
   alignas(16) static float w2[216];
@@ -114,6 +115,62 @@ int main (int argc, char *argv[]){
   alignas(16) static float w53[768];
   alignas(16) static float w54[768000];
   alignas(16) static float w55[1000];
+w[0] = w0;
+w[1] = w1;
+w[2] = w2;
+w[3] = w3;
+w[4] = w4;
+w[5] = w5;
+w[6] = w6;
+w[7] = w7;
+w[8] = w8;
+w[9] = w9;
+w[10] = w10;
+w[11] = w11;
+w[12] = w12;
+w[13] = w13;
+w[14] = w14;
+w[15] = w15;
+w[16] = w16;
+w[17] = w17;
+w[18] = w18;
+w[19] = w19;
+w[20] = w20;
+w[21] = w21;
+w[22] = w22;
+w[23] = w23;
+w[24] = w24;
+w[25] = w25;
+w[26] = w26;
+w[27] = w27;
+w[28] = w28;
+w[29] = w29;
+w[30] = w30;
+w[31] = w31;
+w[32] = w32;
+w[33] = w33;
+w[34] = w34;
+w[35] = w35;
+w[36] = w36;
+w[37] = w37;
+w[38] = w38;
+w[39] = w39;
+w[40] = w40;
+w[41] = w41;
+w[42] = w42;
+w[43] = w43;
+w[44] = w44;
+w[45] = w45;
+w[46] = w46;
+w[47] = w47;
+w[48] = w48;
+w[49] = w49;
+w[50] = w50;
+w[51] = w51;
+w[52] = w52;
+w[53] = w53;
+w[54] = w54;
+w[55] = w55;
 
 
 /*
@@ -148,6 +205,27 @@ int main (int argc, char *argv[]){
         cout<< "Can't open file"<< endl;
   }
   inputFile.close();
+
+  for(int i = 0; i<56 ; i+=2){
+  ifstream inputFile("/users/Wei_Hao/XNNPACK/models/mbv1.75_12_90_64.4_weight/" + itos(i) + ".data");
+
+  // test file open
+  int size = 0; 
+  //int z_count = 0;
+  string s;   
+  if (inputFile) {        
+    while (getline(inputFile, s))
+    {
+        stringstream(s) >> w[i][size];
+        //if(v2[size] == 0) z_count++;
+        size++;
+    }
+
+  }else{
+        cout<< "Can't open file"<< endl;
+  }
+  inputFile.close();
+}
   //std::cout<< "Size: " << size << " Sparsity: "<< (float)z_count/150528 <<"\n";
   //std::generate(v2, v2 + 150528, std::ref(f32rng));
   generate(w0, w0 + 648, ref(f32rng));
