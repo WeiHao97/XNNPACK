@@ -2199,10 +2199,9 @@ if(stoi(argv[3]) == 1){
     cout << "-----------------------"<<endl;
 
     ofstream f;
-    if(stoi(argv[3]) == 1){
-      string spmm = "spmm";
-    }else{spmm = ""}
-    
+    string spmm = "";
+    if(stoi(argv[3]) == 1) spmm = "spmm";
+
     f.open("./" + spmm + "_v2.data");
     size_t n_zeros = 0;
     for(size_t l=0 ; l<150528; l++ ){
