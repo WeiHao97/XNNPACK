@@ -207,7 +207,7 @@ w[55] = w55;
   inputFile.close();
 
   for(int i = 0; i<56 ; i+=2){
-  ifstream inputFile("/users/Wei_Hao/XNNPACK/models/mbv1.75_12_90_64.4_weight/" + itos(i) + ".data");
+  ifstream inputFile("/users/Wei_Hao/XNNPACK/models/mbv1.75_12_90_64.4_weight/" + to_string(i) + ".data");
 
   // test file open
   int size = 0; 
