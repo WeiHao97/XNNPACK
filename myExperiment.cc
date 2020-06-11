@@ -21,9 +21,10 @@ using namespace std::chrono;
 
 int main (int argc, char *argv[]){
 
-    if(argc != 4){
+    if(argc != 5){
         cout<< "Usage:"<< endl;
         cout<< "Sparsity: 0-100"<< endl;
+        cout<< "Weight: real:1, fake:0"<< endl;
         cout<< "Bias: on:1, off:0"<< endl;
         cout<< "Mode: spmm:1, gemm:0"<< endl;
         return -1;
@@ -202,12 +203,13 @@ w[55] = w55;
     }
 
   }else{
-        cout<< "Can't open file"<< endl;
+        cout<< "Can't open Input file"<< endl;
   }
   inputFile.close();
 
+if(argv[2] == 1){
   for(int i = 0; i<56 ; i+=2){
-  ifstream inputFile("/users/Wei_Hao/XNNPACK/models/mbv1.75_12_90_64.4_weight/" + to_string(i) + ".data");
+  ifstream inputFile("/users/Wei_Hao/XNNPACK/models/mbv1.75_12_90_64.4_weight/" + to_string(i/2) + ".data");
 
   // test file open
   int size = 0; 
@@ -222,10 +224,32 @@ w[55] = w55;
     }
 
   }else{
-        cout<< "Can't open file"<< endl;
+        cout<< "Can't open weight file"<< endl;
   }
   inputFile.close();
-}
+ }
+
+ ifstream inputFile("/users/Wei_Hao/XNNPACK/models/mbv1.75_12_90_64.4_weight/28.data");
+
+  // test file open
+  int size = 0; 
+  //int z_count = 0;
+  string s;   
+  if (inputFile) {        
+    while (getline(inputFile, s))
+    {
+        stringstream(s) >> w[54][size];
+        //if(v2[size] == 0) z_count++;
+        size++;
+    }
+
+  }else{
+        cout<< "Can't open weight file"<< endl;
+  }
+  inputFile.close();
+
+
+}else{
   //std::cout<< "Size: " << size << " Sparsity: "<< (float)z_count/150528 <<"\n";
   //std::generate(v2, v2 + 150528, std::ref(f32rng));
   generate(w0, w0 + 648, ref(f32rng));
@@ -285,11 +309,54 @@ w[55] = w55;
   fill(w46, w46 + 3456, 1.0f);
   fill(w48, w48 + 384, 1.0f);
   fill(w50, w50 + 6912, 1.0f);
-  fill(w52, w52 + 768, 1.0f);
+  fill(w52, w52 + 768, 1.0f);}
 
 
-if(stoi(argv[2]) == 1){
+if(stoi(argv[3]) == 1){
   cout << "Bias on" << endl;
+  if(stoi(argv[2]) == 1){
+      
+        for(int i = 0; i<27 ; i++){
+  ifstream inputFile("/users/Wei_Hao/XNNPACK/models/mbv1.75_12_90_64.4_weight/" + to_string(i) + ".data");
+
+  // test file open
+  int size = 0; 
+  //int z_count = 0;
+  string s;   
+  if (inputFile) {        
+    while (getline(inputFile, s))
+    {
+        stringstream(s) >> w[i*2+1][size];
+        //if(v2[size] == 0) z_count++;
+        size++;
+    }
+
+  }else{
+        cout<< "Can't open weight file"<< endl;
+  }
+  inputFile.close();
+ }
+
+ ifstream inputFile("/users/Wei_Hao/XNNPACK/models/mbv1.75_12_90_64.4_weight/28b.data");
+
+  // test file open
+  int size = 0; 
+  //int z_count = 0;
+  string s;   
+  if (inputFile) {        
+    while (getline(inputFile, s))
+    {
+        stringstream(s) >> w[55][size];
+        //if(v2[size] == 0) z_count++;
+        size++;
+    }
+
+  }else{
+        cout<< "Can't open weight file"<< endl;
+  }
+  inputFile.close();
+
+  }else{
   generate(w1, w1 + 24, ref(f32rng_bias));
   generate(w3, w3 + 24, ref(f32rng_bias));
   generate(w5, w5 + 48, ref(f32rng_bias));
@@ -317,6 +384,8 @@ if(stoi(argv[2]) == 1){
   generate(w49, w49 + 768, ref(f32rng_bias));
   generate(w51, w51 + 768, ref(f32rng_bias));
   generate(w53, w53 + 768, ref(f32rng_bias));
+    }
+
   }else{
     cout << "Bias off" << endl;
   }
@@ -332,7 +401,7 @@ if(stoi(argv[2]) == 1){
     pthreadpool_create(num_threads), pthreadpool_destroy);
 
 
-if(stoi(argv[3]) == 1){
+if(stoi(argv[4]) == 1){
 
   cout << "Using spmm" << endl;
   xnn_operator_t op0 = nullptr;
@@ -2279,7 +2348,7 @@ if(stoi(argv[3]) == 1){
 
     ofstream f;
     string spmm = "";
-    if(stoi(argv[3]) == 1) spmm = "spmm";
+    if(stoi(argv[4]) == 1) spmm = "spmm";
 
     f.open("./" + spmm + "_v2.data");
     size_t n_zeros = 0;
