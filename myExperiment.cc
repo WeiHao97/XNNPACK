@@ -129,7 +129,7 @@ int main (int argc, char *argv[]){
   default_random_engine generator (1);
   auto f32rng = bind(random_bool_generator, generator );
   auto f32rng_bias = bind(random_bool_generator_bias, generator );
-  ifstream inputFile("/users/Wei_Hao/XNNPACK/orig_224.data");
+  ifstream inputFile("/users/Wei_Hao/XNNPACK/sparse_224.data");
 
   // test file open
   int size = 0; 
@@ -2199,7 +2199,11 @@ if(stoi(argv[3]) == 1){
     cout << "-----------------------"<<endl;
 
     ofstream f;
-    f.open("./v2.data");
+    if(stoi(argv[3]) == 1){
+      string spmm = "spmm";
+    }else{spmm = ""}
+    
+    f.open("./" + spmm + "_v2.data");
     size_t n_zeros = 0;
     for(size_t l=0 ; l<150528; l++ ){
         f << v2[l] << endl;
@@ -2210,7 +2214,7 @@ if(stoi(argv[3]) == 1){
     cout << "time: "<< timeConsume[0].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[0].count()/sum_time)<<"%"<<endl;
 
     n_zeros = 0;
-    f.open("./v3.data");
+    f.open("./" + spmm + "_v3.data");
     for(size_t l=0 ; l<301056; l++ ){
         f << v3[l] << endl;
         if(v3[l] == 0) n_zeros++;
@@ -2220,7 +2224,7 @@ if(stoi(argv[3]) == 1){
     cout << "time: "<< timeConsume[1].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[1].count()/sum_time)<<"%"<<endl;
 
     n_zeros = 0;
-    f.open("./v4.data");
+    f.open("./" + spmm + "_v4.data");
     for(size_t l=0 ; l<301056; l++ ){
         f << v4[l] << endl;
         if(v4[l] == 0) n_zeros++;
@@ -2230,7 +2234,7 @@ if(stoi(argv[3]) == 1){
     cout << "spmm time: "<< timeConsume[2].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[2].count()/sum_time)<<"%"<<endl; 
 
     n_zeros = 0;
-    f.open("./v5.data");
+    f.open("./" + spmm + "_v5.data");
     for(size_t l=0 ; l<602112; l++ ){
         f << v5[l] << endl;
         if(v5[l] == 0) n_zeros++;
@@ -2240,7 +2244,7 @@ if(stoi(argv[3]) == 1){
     cout << "time: "<< timeConsume[3].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[3].count()/sum_time)<<"%"<<endl;
 
     n_zeros = 0;
-    f.open("./v6.data");
+    f.open("./" + spmm + "_v6.data");
     for(size_t l=0 ; l<150528; l++ ){
         f << v6[l] << endl;
         if(v6[l] == 0) n_zeros++;
@@ -2250,7 +2254,7 @@ if(stoi(argv[3]) == 1){
     cout << "spmm time: "<< timeConsume[4].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[4].count()/sum_time)<<"%"<<endl; 
 
     n_zeros = 0;
-    f.open("./v7.data");
+    f.open("./" + spmm + "_v7.data");
     for(size_t l=0 ; l<301056; l++ ){
         f << v7[l] << endl;
         if(v7[l] == 0) n_zeros++;
@@ -2260,7 +2264,7 @@ if(stoi(argv[3]) == 1){
     cout << "time: "<< timeConsume[5].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[5].count()/sum_time)<<"%"<<endl;
 
     n_zeros = 0;
-    f.open("./v8.data");
+    f.open("./" + spmm + "_v8.data");
     for(size_t l=0 ; l<301056; l++ ){
         f << v8[l] << endl;
         if(v8[l] == 0) n_zeros++;
@@ -2270,7 +2274,7 @@ if(stoi(argv[3]) == 1){
     cout << "spmm time: "<< timeConsume[6].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[6].count()/sum_time)<<"%"<<endl;
 
     n_zeros = 0;
-    f.open("./v9.data");
+    f.open("./" + spmm + "_v9.data");
     for(size_t l=0 ; l<301056; l++ ){
         f << v9[l] << endl;
         if(v9[l] == 0) n_zeros++;
@@ -2280,7 +2284,7 @@ if(stoi(argv[3]) == 1){
     cout << "time: "<< timeConsume[7].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[7].count()/sum_time)<<"%"<<endl;
 
     n_zeros = 0;
-    f.open("./v10.data");
+    f.open("./" + spmm + "_v10.data");
     for(size_t l=0 ; l<75264; l++ ){
         f << v10[l] << endl;
         if(v10[l] == 0) n_zeros++;
@@ -2290,7 +2294,7 @@ if(stoi(argv[3]) == 1){
     cout << "spmm time: "<< timeConsume[8].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[8].count()/sum_time)<<"%"<<endl;
 
     n_zeros = 0;
-    f.open("./v11.data");
+    f.open("./" + spmm + "_v11.data");
     for(size_t l=0 ; l<150528; l++ ){
         f << v11[l] << endl;
         if(v11[l] == 0) n_zeros++;
@@ -2300,7 +2304,7 @@ if(stoi(argv[3]) == 1){
     cout << "time: "<< timeConsume[9].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[9].count()/sum_time)<<"%"<<endl;
 
     n_zeros = 0;
-    f.open("./v12.data");
+    f.open("./" + spmm + "_v12.data");
     for(size_t l=0 ; l<150528; l++ ){
         f << v12[l] << endl;
         if(v12[l] == 0) n_zeros++;
@@ -2310,7 +2314,7 @@ if(stoi(argv[3]) == 1){
     cout << "spmm time: "<< timeConsume[10].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[10].count()/sum_time)<<"%"<<endl; 
 
     n_zeros = 0;
-    f.open("./v13.data");
+    f.open("./" + spmm + "_v13.data");
     for(size_t l=0 ; l<150528; l++ ){
         f << v13[l] << endl;
         if(v13[l] == 0) n_zeros++;
@@ -2320,7 +2324,7 @@ if(stoi(argv[3]) == 1){
     cout << "time: "<< timeConsume[11].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[11].count()/sum_time)<<"%"<<endl;
 
     n_zeros = 0;
-    f.open("./v14.data");
+    f.open("./" + spmm + "_v14.data");
     for(size_t l=0 ; l<37632; l++ ){
         f << v14[l] << endl;
         if(v14[l] == 0) n_zeros++;
@@ -2330,7 +2334,7 @@ if(stoi(argv[3]) == 1){
     cout << "spmm time: "<< timeConsume[12].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[12].count()/sum_time)<<"%"<<endl;
 
     n_zeros = 0;
-    f.open("./v15.data");
+    f.open("./" + spmm + "_v15.data");
     for(size_t l=0 ; l<75264; l++ ){
         f << v15[l] << endl;
         if(v15[l] == 0) n_zeros++;
@@ -2340,7 +2344,7 @@ if(stoi(argv[3]) == 1){
     cout << "time: "<< timeConsume[13].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[13].count()/sum_time)<<"%"<<endl;
 
     n_zeros = 0;
-    f.open("./v16.data");
+    f.open("./" + spmm + "_v16.data");
     for(size_t l=0 ; l<75264; l++ ){
         f << v16[l] << endl;
         if(v16[l] == 0) n_zeros++;
@@ -2350,7 +2354,7 @@ if(stoi(argv[3]) == 1){
     cout << "spmm time: "<< timeConsume[14].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[14].count()/sum_time)<<"%"<<endl; 
 
     n_zeros = 0;
-    f.open("./v17.data");
+    f.open("./" + spmm + "_v17.data");
     for(size_t l=0 ; l<75264; l++ ){
         f << v17[l] << endl;
         if(v17[l] == 0) n_zeros++;
@@ -2360,7 +2364,7 @@ if(stoi(argv[3]) == 1){
     cout << "time: "<< timeConsume[15].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[15].count()/sum_time)<<"%"<<endl;
 
     n_zeros = 0;
-    f.open("./v18.data");
+    f.open("./" + spmm + "_v18.data");
     for(size_t l=0 ; l<75264; l++ ){
         f << v18[l] << endl;
         if(v18[l] == 0) n_zeros++;
@@ -2370,7 +2374,7 @@ if(stoi(argv[3]) == 1){
     cout << "spmm time: "<< timeConsume[16].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[16].count()/sum_time)<<"%"<<endl;
 
     n_zeros = 0;
-    f.open("./v19.data");
+    f.open("./" + spmm + "_v19.data");
     for(size_t l=0 ; l<75264; l++ ){
         f << v19[l] << endl;
         if(v19[l] == 0) n_zeros++;
@@ -2380,7 +2384,7 @@ if(stoi(argv[3]) == 1){
     cout << "time: "<< timeConsume[17].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[17].count()/sum_time)<<"%"<<endl; 
 
     n_zeros = 0;
-    f.open("./v20.data");
+    f.open("./" + spmm + "_v20.data");
     for(size_t l=0 ; l<75264; l++ ){
         f << v20[l] << endl;
         if(v20[l] == 0) n_zeros++;
@@ -2390,7 +2394,7 @@ if(stoi(argv[3]) == 1){
     cout << "spmm time: "<< timeConsume[18].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[18].count()/sum_time)<<"%"<<endl;
 
     n_zeros = 0;
-    f.open("./v21.data");
+    f.open("./" + spmm + "_v21.data");
     for(size_t l=0 ; l<75264; l++ ){
         f << v21[l] << endl;
         if(v21[l] == 0) n_zeros++;
@@ -2400,7 +2404,7 @@ if(stoi(argv[3]) == 1){
     cout << "time: "<< timeConsume[19].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[19].count()/sum_time)<<"%"<<endl;
 
     n_zeros = 0;
-    f.open("./v22.data");
+    f.open("./" + spmm + "_v22.data");
     for(size_t l=0 ; l<75264; l++ ){
         f << v22[l] << endl;
         if(v22[l] == 0) n_zeros++;
@@ -2410,7 +2414,7 @@ if(stoi(argv[3]) == 1){
     cout << "spmm time: "<< timeConsume[20].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[20].count()/sum_time)<<"%"<<endl;
 
     n_zeros = 0;
-    f.open("./v23.data");
+    f.open("./" + spmm + "_v23.data");
     for(size_t l=0 ; l<75264; l++ ){
         f << v23[l] << endl;
         if(v23[l] == 0) n_zeros++;
@@ -2420,7 +2424,7 @@ if(stoi(argv[3]) == 1){
     cout << "time: "<< timeConsume[21].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[21].count()/sum_time)<<"%"<<endl;
 
     n_zeros = 0;
-    f.open("./v24.data");
+    f.open("./" + spmm + "_v24.data");
     for(size_t l=0 ; l<75264; l++ ){
         f << v24[l] << endl;
         if(v24[l] == 0) n_zeros++;
@@ -2430,7 +2434,7 @@ if(stoi(argv[3]) == 1){
     cout << "spmm time: "<< timeConsume[22].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[22].count()/sum_time)<<"%"<<endl;
 
     n_zeros = 0;
-    f.open("./v25.data");
+    f.open("./" + spmm + "_v25.data");
     for(size_t l=0 ; l<75264; l++ ){
         f << v25[l] << endl;
         if(v25[l] == 0) n_zeros++;
@@ -2440,7 +2444,7 @@ if(stoi(argv[3]) == 1){
     cout << "time: "<< timeConsume[23].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[23].count()/sum_time)<<"%"<<endl;
 
     n_zeros = 0;
-    f.open("./v26.data");
+    f.open("./" + spmm + "_v26.data");
     for(size_t l=0 ; l<18816; l++ ){
         f << v26[l] << endl;
         if(v26[l] == 0) n_zeros++;
@@ -2450,7 +2454,7 @@ if(stoi(argv[3]) == 1){
     cout << "spmm time: "<< timeConsume[24].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[24].count()/sum_time)<<"%"<<endl;
 
     n_zeros = 0;
-    f.open("./v27.data");
+    f.open("./" + spmm + "_v27.data");
     for(size_t l=0 ; l<37632; l++ ){
         f << v27[l] << endl;
         if(v27[l] == 0) n_zeros++;
@@ -2460,7 +2464,7 @@ if(stoi(argv[3]) == 1){
     cout << "time: "<< timeConsume[25].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[25].count()/sum_time)<<"%"<<endl;
 
     n_zeros = 0;
-    f.open("./v28.data");
+    f.open("./" + spmm + "_v28.data");
     for(size_t l=0 ; l<37632; l++ ){
         f << v28[l] << endl;
         if(v28[l] == 0) n_zeros++;
@@ -2470,7 +2474,7 @@ if(stoi(argv[3]) == 1){
     cout << "spmm time: "<< timeConsume[26].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[26].count()/sum_time)<<"%"<<endl;
 
     n_zeros = 0;
-    f.open("./v29.data");
+    f.open("./" + spmm + "_v29.data");
     for(size_t l=0 ; l<37632; l++ ){
         f << v29[l] << endl;
         if(v29[l] == 0) n_zeros++;
