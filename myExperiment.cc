@@ -1675,8 +1675,8 @@ if(stoi(argv[3]) == 1){
 
   xnn_operator_t op13 = nullptr;
   status = xnn_create_convolution2d_nhwc_f32(
-    0 /* top padding */, 1 /* right padding */,
-    1 /* bottom padding */, 0 /* left padding */,
+    1 /* top padding */, 1 /* right padding */,
+    1 /* bottom padding */, 1 /* left padding */,
     3 /* kernel height */, 3 /* kernel width */,
     1 /* subsampling height */, 1 /* subsampling width */,
     1 /* dilation_height */, 1 /* dilation_width */,
@@ -1739,8 +1739,8 @@ if(stoi(argv[3]) == 1){
 
   xnn_operator_t op15 = nullptr;
   status = xnn_create_convolution2d_nhwc_f32(
-    0 /* top padding */, 1 /* right padding */,
-    1 /* bottom padding */, 0 /* left padding */,
+    1 /* top padding */, 1 /* right padding */,
+    1 /* bottom padding */, 1 /* left padding */,
     3 /* kernel height */, 3 /* kernel width */,
     1 /* subsampling height */, 1 /* subsampling width */,
     1 /* dilation_height */, 1 /* dilation_width */,
@@ -1803,8 +1803,8 @@ if(stoi(argv[3]) == 1){
 
   xnn_operator_t op17 = nullptr;
   status = xnn_create_convolution2d_nhwc_f32(
-    0 /* top padding */, 1 /* right padding */,
-    1 /* bottom padding */, 0 /* left padding */,
+    1 /* top padding */, 1 /* right padding */,
+    1 /* bottom padding */, 1 /* left padding */,
     3 /* kernel height */, 3 /* kernel width */,
     1 /* subsampling height */, 1 /* subsampling width */,
     1 /* dilation_height */, 1 /* dilation_width */,
