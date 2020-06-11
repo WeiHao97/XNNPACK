@@ -13,6 +13,7 @@
 #include <random>
 #include <string>
 #include <chrono> 
+#include <sstream>
 #include "models/models.h"
 
 using namespace std;
@@ -138,7 +139,7 @@ int main (int argc, char *argv[]){
   if (inputFile) {        
     while (getline(inputFile, s))
     {
-        v2[size] = stof(s);
+        stringstream(s) >> v2[size];
         //if(v2[size] == 0) z_count++;
         size++;
     }
