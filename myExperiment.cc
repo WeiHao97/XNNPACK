@@ -2358,7 +2358,7 @@ if(stoi(argv[4]) == 1){
     ofstream f;
     string spmm = "";
     if(stoi(argv[4]) == 1) spmm = "spmm";
-    if(stoi(argv[5]) != 0 && stoi(argv[5]) != 1 ) spmm = "example";
+    if(stoi(argv[5]) == 2 ) spmm = "example";
 
     f.open("./" + spmm + "_v2.data");
     size_t n_zeros = 0;
