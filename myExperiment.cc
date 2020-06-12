@@ -189,13 +189,13 @@ w[55] = w55;
   default_random_engine generator (1);
   auto f32rng = bind(random_bool_generator, generator );
   auto f32rng_bias = bind(random_bool_generator_bias, generator );
-  ifstream inputFile("null");
+  ifstream inputFile;
   if(stoi(argv[5]) == 1){
-    ifstream inputFile("/users/Wei_Hao/XNNPACK/sparse_224.data");
+    inputFile.open("/users/Wei_Hao/XNNPACK/sparse_224.data");
   }else if(stoi(argv[5]) == 0){
-    ifstream inputFile("/users/Wei_Hao/XNNPACK/orig_224.data");
+    inputFile.open("/users/Wei_Hao/XNNPACK/orig_224.data");
   }else{
-    ifstream inputFile("/users/Wei_Hao/XNNPACK/example.data");
+    inputFile.open("/users/Wei_Hao/XNNPACK/example.data");
   }
 
   // test file open
