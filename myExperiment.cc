@@ -191,11 +191,11 @@ w[55] = w55;
   auto f32rng_bias = bind(random_bool_generator_bias, generator );
   ifstream inputFile("null");
   if(stoi(argv[5]) == 1){
-    inputFile("/users/Wei_Hao/XNNPACK/sparse_224.data");
+    ifstream inputFile("/users/Wei_Hao/XNNPACK/sparse_224.data");
   }else if(stoi(argv[5]) == 0){
-    inputFile("/users/Wei_Hao/XNNPACK/orig_224.data");
+    ifstream inputFile("/users/Wei_Hao/XNNPACK/orig_224.data");
   }else{
-    inputFile("/users/Wei_Hao/XNNPACK/example.data");
+    ifstream inputFile("/users/Wei_Hao/XNNPACK/example.data");
   }
 
   // test file open
