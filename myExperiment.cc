@@ -27,7 +27,7 @@ int main (int argc, char *argv[]){
         cout<< "Weight: real:1, fake:0"<< endl;
         cout<< "Bias: on:1, off:0"<< endl;
         cout<< "Mode: spmm:1, gemm:0"<< endl;
-        cout<< "Input Source: sparse:1, dense:0, example: -1"<< endl;
+        cout<< "Input Source: sparse:1, dense:0, example: 2"<< endl;
         return -1;
     }
   alignas(16) static float v2[150528];
