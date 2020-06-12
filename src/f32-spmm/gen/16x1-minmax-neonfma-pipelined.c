@@ -48,7 +48,7 @@ void xnn_f32_spmm_minmax_ukernel_16x1__neonfma_pipelined(
     float32x4_t tmp2 = vaddq_f32(tmp1,va89AB);
     float32x4_t tmp3 = vaddq_f32(tmp2,vaCDEF);
     if(tmp3[0] != 0 || tmp3[1] != 0 || tmp3[2] != 0 || tmp3[3] != 0){
- */   
+    */
 //wei sparsitycheck   
   
     do {
@@ -60,15 +60,10 @@ void xnn_f32_spmm_minmax_ukernel_16x1__neonfma_pipelined(
       vw = vld1q_dup_f32(w); w += 1;
       if XNN_LIKELY(nnz != 0) {
         do {
-          int flag = 0;
-          for(int i = 0; i < 16 ; i++){
-            if(a[i] != 0) flag = 1;
-          }
-          if(flag){
           vacc0123 = vfmaq_f32(vacc0123, va0123, vw);
           vacc4567 = vfmaq_f32(vacc4567, va4567, vw);
           vacc89AB = vfmaq_f32(vacc89AB, va89AB, vw);
-          vaccCDEF = vfmaq_f32(vaccCDEF, vaCDEF, vw);}
+          vaccCDEF = vfmaq_f32(vaccCDEF, vaCDEF, vw);
           a = (const float*restrict) ((uintptr_t) a + (uintptr_t) diff);
 
           diff = *dmap++;

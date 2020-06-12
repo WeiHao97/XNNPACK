@@ -322,10 +322,11 @@ if(stoi(argv[2]) == 1){
 
 if(stoi(argv[3]) == 1){
   cout << "Bias on" << endl;
+
   if(stoi(argv[2]) == 1){
       
         for(int i = 0; i<27 ; i++){
-  ifstream inputFile("/users/Wei_Hao/XNNPACK/models/mbv1.75_12_90_64.4_weight/" + to_string(i) + ".data");
+  ifstream inputFile("/users/Wei_Hao/XNNPACK/models/mbv1.75_12_90_64.4_weight/" + to_string(i) + "b.data");
 
   // test file open
   int size = 0; 
