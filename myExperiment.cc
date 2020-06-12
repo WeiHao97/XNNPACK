@@ -189,7 +189,7 @@ w[55] = w55;
   default_random_engine generator (1);
   auto f32rng = bind(random_bool_generator, generator );
   auto f32rng_bias = bind(random_bool_generator_bias, generator );
-  ifstream inputFile();
+  ifstream inputFile("null");
   if(stoi(argv[5]) == 1){
     inputFile("/users/Wei_Hao/XNNPACK/sparse_224.data");
   }else if(stoi(argv[5]) == 0){
