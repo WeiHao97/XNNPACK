@@ -21,12 +21,13 @@ using namespace std::chrono;
 
 int main (int argc, char *argv[]){
 
-    if(argc != 5){
+    if(argc != 6){
         cout<< "Usage:"<< endl;
         cout<< "Sparsity: 0-100"<< endl;
         cout<< "Weight: real:1, fake:0"<< endl;
         cout<< "Bias: on:1, off:0"<< endl;
         cout<< "Mode: spmm:1, gemm:0"<< endl;
+        cout<< "Input Source: sparse:1, dense:0, example: -1"<< endl;
         return -1;
     }
   alignas(16) static float v2[150528];
@@ -188,7 +189,13 @@ w[55] = w55;
   default_random_engine generator (1);
   auto f32rng = bind(random_bool_generator, generator );
   auto f32rng_bias = bind(random_bool_generator_bias, generator );
-  ifstream inputFile("/users/Wei_Hao/XNNPACK/sparse_224.data");
+  if(stoi(argv[5]) == 1){
+    ifstream inputFile("/users/Wei_Hao/XNNPACK/sparse_224.data");
+  }else if(){
+    ifstream inputFile("/users/Wei_Hao/XNNPACK/orig_224.data");
+  }else{
+    ifstream inputFile("/users/Wei_Hao/XNNPACK/example.data");
+  }
 
   // test file open
   int size = 0; 
@@ -415,7 +422,7 @@ if(stoi(argv[4]) == 1){
     3 /* input channels per group */,
     24 /* output_channels_per_group */,
     w0, w1,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     XNN_FLAG_INPUT_NHWC/* flags */,
     &op0);
   if (status != xnn_status_success) {
@@ -452,7 +459,7 @@ if(stoi(argv[4]) == 1){
     1 /* input channels per group */,
     1 /* output_channels_per_group */,
     w2, w3,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op1);
 
@@ -488,7 +495,7 @@ if(stoi(argv[4]) == 1){
     24 /* input channels per group */,
     48 /* output_channels_per_group */,
     w4, w5,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op2);
   if (status != xnn_status_success) {
@@ -524,7 +531,7 @@ if(stoi(argv[4]) == 1){
     1 /* input channels per group */,
     1 /* output_channels_per_group */,
     w6, w7,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op3);
 
@@ -559,7 +566,7 @@ if(stoi(argv[4]) == 1){
     48 /* input channels per group */,
     96 /* output_channels_per_group */,
     w8, w9,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op4);
   if (status != xnn_status_success) {
@@ -594,7 +601,7 @@ if(stoi(argv[4]) == 1){
     1 /* input channels per group */,
     1 /* output_channels_per_group */,
     w10, w11,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op5);
 
@@ -629,7 +636,7 @@ if(stoi(argv[4]) == 1){
     96 /* input channels per group */,
     96 /* output_channels_per_group */,
     w12, w13,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op6);
   if (status != xnn_status_success) {
@@ -664,7 +671,7 @@ if(stoi(argv[4]) == 1){
     1 /* input channels per group */,
     1 /* output_channels_per_group */,
     w14, w15,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op7);
 
@@ -699,7 +706,7 @@ if(stoi(argv[4]) == 1){
     96 /* input channels per group */,
     192 /* output_channels_per_group */,
     w16, w17,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op8);
   if (status != xnn_status_success) {
@@ -734,7 +741,7 @@ if(stoi(argv[4]) == 1){
     1 /* input channels per group */,
     1 /* output_channels_per_group */,
     w18, w19,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op9);
 
@@ -769,7 +776,7 @@ if(stoi(argv[4]) == 1){
     192 /* input channels per group */,
     192 /* output_channels_per_group */,
     w20, w21,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op10);
   if (status != xnn_status_success) {
@@ -804,7 +811,7 @@ if(stoi(argv[4]) == 1){
     1 /* input channels per group */,
     1 /* output_channels_per_group */,
     w22, w23,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op11);
 
@@ -839,7 +846,7 @@ if(stoi(argv[4]) == 1){
     192 /* input channels per group */,
     384 /* output_channels_per_group */,
     w24, w25,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op12);
   if (status != xnn_status_success) {
@@ -874,7 +881,7 @@ if(stoi(argv[4]) == 1){
     1 /* input channels per group */,
     1 /* output_channels_per_group */,
     w26, w27,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op13);
 
@@ -909,7 +916,7 @@ if(stoi(argv[4]) == 1){
     384 /* input channels per group */,
     384 /* output_channels_per_group */,
     w28, w29,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op14);
   if (status != xnn_status_success) {
@@ -944,7 +951,7 @@ if(stoi(argv[4]) == 1){
     1 /* input channels per group */,
     1 /* output_channels_per_group */,
     w30, w31,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op15);
 
@@ -979,7 +986,7 @@ if(stoi(argv[4]) == 1){
     384 /* input channels per group */,
     384 /* output_channels_per_group */,
     w32, w33,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op16);
   if (status != xnn_status_success) {
@@ -1014,7 +1021,7 @@ if(stoi(argv[4]) == 1){
     1 /* input channels per group */,
     1 /* output_channels_per_group */,
     w34, w35,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op17);
 
@@ -1049,7 +1056,7 @@ if(stoi(argv[4]) == 1){
     384 /* input channels per group */,
     384 /* output_channels_per_group */,
     w36, w37,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op18);
 
@@ -1084,7 +1091,7 @@ if(stoi(argv[4]) == 1){
     1 /* input channels per group */,
     1 /* output_channels_per_group */,
     w38, w39,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op19);
 
@@ -1119,7 +1126,7 @@ if(stoi(argv[4]) == 1){
     384 /* input channels per group */,
     384 /* output_channels_per_group */,
     w40, w41,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op20);
 
@@ -1154,7 +1161,7 @@ if(stoi(argv[4]) == 1){
     1 /* input channels per group */,
     1 /* output_channels_per_group */,
     w42, w43,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op21);
 
@@ -1189,7 +1196,7 @@ if(stoi(argv[4]) == 1){
     384 /* input channels per group */,
     384 /* output_channels_per_group */,
     w44, w45,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op22);
 
@@ -1224,7 +1231,7 @@ if(stoi(argv[4]) == 1){
     1 /* input channels per group */,
     1 /* output_channels_per_group */,
     w46, w47,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op23);
 
@@ -1259,7 +1266,7 @@ if(stoi(argv[4]) == 1){
     384 /* input channels per group */,
     768 /* output_channels_per_group */,
     w48, w49,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op24);
 
@@ -1294,7 +1301,7 @@ if(stoi(argv[4]) == 1){
     1 /* input channels per group */,
     1 /* output_channels_per_group */,
     w50, w51,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op25);
 
@@ -1329,7 +1336,7 @@ if(stoi(argv[4]) == 1){
     768 /* input channels per group */,
     768 /* output_channels_per_group */,
     w52, w53,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op26);
 
@@ -1418,7 +1425,7 @@ if(stoi(argv[4]) == 1){
     3 /* input pixel stride */,
     24 /* output pixel stride */,
     w0, w1,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op0);
   if (status != xnn_status_success) {
@@ -1450,7 +1457,7 @@ if(stoi(argv[4]) == 1){
     24 /* input pixel stride */,
     24 /* output pixel stride */,
     w2, w3,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op1);
 
@@ -1482,7 +1489,7 @@ if(stoi(argv[4]) == 1){
     24 /* input pixel stride */,
     48 /* output pixel stride */,
     w4, w5,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op2);
   if (status != xnn_status_success) {
@@ -1514,7 +1521,7 @@ if(stoi(argv[4]) == 1){
     48 /* input pixel stride */,
     48 /* output pixel stride */,
     w6, w7,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op3);
 
@@ -1546,7 +1553,7 @@ if(stoi(argv[4]) == 1){
     48 /* input pixel stride */,
     96 /* output pixel stride */,
     w8, w9,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op4);
   if (status != xnn_status_success) {
@@ -1578,7 +1585,7 @@ if(stoi(argv[4]) == 1){
     96 /* input pixel stride */,
     96 /* output pixel stride */,
     w10, w11,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op5);
 
@@ -1610,7 +1617,7 @@ if(stoi(argv[4]) == 1){
     96 /* input pixel stride */,
     96 /* output pixel stride */,
     w12, w13,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op6);
   if (status != xnn_status_success) {
@@ -1642,7 +1649,7 @@ if(stoi(argv[4]) == 1){
     96 /* input pixel stride */,
     96 /* output pixel stride */,
     w14, w15,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op7);
 
@@ -1674,7 +1681,7 @@ if(stoi(argv[4]) == 1){
     96 /* input pixel stride */,
     192 /* output pixel stride */,
     w16, w17,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op8);
   if (status != xnn_status_success) {
@@ -1706,7 +1713,7 @@ if(stoi(argv[4]) == 1){
     192 /* input pixel stride */,
     192 /* output pixel stride */,
     w18, w19,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op9);
 
@@ -1738,7 +1745,7 @@ if(stoi(argv[4]) == 1){
     192 /* input pixel stride */,
     192 /* output pixel stride */,
     w20, w21,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op10);
   if (status != xnn_status_success) {
@@ -1770,7 +1777,7 @@ if(stoi(argv[4]) == 1){
     192 /* input pixel stride */,
     192 /* output pixel stride */,
     w22, w23,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op11);
 
@@ -1802,7 +1809,7 @@ if(stoi(argv[4]) == 1){
     192 /* input pixel stride */,
     384 /* output pixel stride */,
     w24, w25,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op12);
   if (status != xnn_status_success) {
@@ -1834,7 +1841,7 @@ if(stoi(argv[4]) == 1){
     384 /* input pixel stride */,
     384 /* output pixel stride */,
     w26, w27,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op13);
 
@@ -1866,7 +1873,7 @@ if(stoi(argv[4]) == 1){
     384 /* input pixel stride */,
     384 /* output pixel stride */,
     w28, w29,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op14);
   if (status != xnn_status_success) {
@@ -1898,7 +1905,7 @@ if(stoi(argv[4]) == 1){
     384 /* input pixel stride */,
     384 /* output pixel stride */,
     w30, w31,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op15);
 
@@ -1930,7 +1937,7 @@ if(stoi(argv[4]) == 1){
     384 /* input pixel stride */,
     384 /* output pixel stride */,
     w32, w33,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op16);
   if (status != xnn_status_success) {
@@ -1962,7 +1969,7 @@ if(stoi(argv[4]) == 1){
     384 /* input pixel stride */,
     384 /* output pixel stride */,
     w34, w35,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op17);
 
@@ -1993,7 +2000,7 @@ if(stoi(argv[4]) == 1){
     384 /* input pixel stride */,
     384 /* output pixel stride */,
     w36, w37,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op18);
 
@@ -2024,7 +2031,7 @@ if(stoi(argv[4]) == 1){
     384 /* input pixel stride */,
     384 /* output pixel stride */,
     w38, w39,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op19);
 
@@ -2055,7 +2062,7 @@ if(stoi(argv[4]) == 1){
     384 /* input pixel stride */,
     384 /* output pixel stride */,
     w40, w41,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op20);
 
@@ -2087,7 +2094,7 @@ if(stoi(argv[4]) == 1){
     384 /* input pixel stride */,
     384 /* output pixel stride */,
     w42, w43,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op21);
 
@@ -2119,7 +2126,7 @@ if(stoi(argv[4]) == 1){
     384 /* input pixel stride */,
     384 /* output pixel stride */,
     w44, w45,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op22);
 
@@ -2151,7 +2158,7 @@ if(stoi(argv[4]) == 1){
     384 /* input pixel stride */,
     384 /* output pixel stride */,
     w46, w47,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op23);
 
@@ -2183,7 +2190,7 @@ if(stoi(argv[4]) == 1){
     384 /* input pixel stride */,
     768 /* output pixel stride */,
     w48, w49,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op24);
 
@@ -2215,7 +2222,7 @@ if(stoi(argv[4]) == 1){
     768 /* input pixel stride */,
     768 /* output pixel stride */,
     w50, w51,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op25);
 
@@ -2247,7 +2254,7 @@ if(stoi(argv[4]) == 1){
     768 /* input pixel stride */,
     768 /* output pixel stride */,
     w52, w53,
-    0.0f /* output min */, 6.0f /* output max */,
+    0.0f /* output min */, numeric_limits<float>::infinity() /* output max */,
     0 /* flags */,
     &op26);
 
@@ -2629,6 +2636,12 @@ if(stoi(argv[4]) == 1){
     f.close();
     cout << "v29 Sparsity: "<< (float)n_zeros/37632 << "   n_zeros: "<< n_zeros << endl;
     cout << "time: "<< timeConsume[27].count() << " us   "<< "Portion:   "<< (int)(100*(float)timeConsume[27].count()/sum_time)<<"%"<<endl;
+
+    f.open("./" + spmm + "_v31.data");
+    for(size_t l=0 ; l<1000; l++ ){
+        f << v31[l] << endl;
+    }
+    f.close();
 
   return 0;
 
